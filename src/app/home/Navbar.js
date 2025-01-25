@@ -4,7 +4,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null); // Track open dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -14,9 +15,20 @@ const Navbar = () => {
     setDropdownOpen(dropdownOpen === dropdownName ? null : dropdownName);
   };
 
+  const handleMouseEnter = (dropdownName) => {
+    clearTimeout(dropdownTimeout);
+    toggleDropdown(dropdownName);
+  };
+
+  const handleMouseLeave = (dropdownName) => {
+    setDropdownTimeout(setTimeout(() => {
+      toggleDropdown(null);
+    }, 300));
+  };
+
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
+    { label: "Keynotes", href: "/keynotes" },
     {
       label: "Call for Papers",
       dropdown: [
@@ -25,16 +37,15 @@ const Navbar = () => {
         { label: "Awards", href: "/awards" },
       ],
     },
-    
     { label: "Speakers", href: "/speakers" },
     { label: "Committee", href: "/committee",
-      dropdown:[
+      dropdown: [
         { label: "Organizing Committee", href: "/organizing-committee" },
         { label: "Advisory Committee", href: "/advisory-committee" },
       ]
     },
-    { label: "Venue & Travel", href: "/venue" ,
-      dropdown:[
+    { label: "Venue & Travel", href: "/venue",
+      dropdown: [
         { label: "Conference Venue", href: "/conference" },
         { label: "Award Ceremony Venue", href: "/awceremony" },
       ]
@@ -53,21 +64,21 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 lg:space-x-8">
-          {menuItems.map((item) => (
-            <div key={item.label} className="relative group"> {/* Added relative wrapper and group class */}
+          {menuItems.map((item, index) => (
+            <div key={index} className="relative group">
               <Link
-                href={item.href || "#"} // Prevent navigation if it's a dropdown trigger
+                href={item.href || "#"}
                 className={`text-lg font-medium hover:text-purple-500 transition-colors duration-300 ${item.dropdown ? 'cursor-pointer' : ''}`}
-                onMouseEnter={item.dropdown ? () => toggleDropdown(item.label) : null}
-                onMouseLeave={item.dropdown ? () => toggleDropdown(null) : null}
+                onMouseEnter={item.dropdown ? () => handleMouseEnter(item.label) : null}
+                onMouseLeave={item.dropdown ? () => handleMouseLeave(item.label) : null}
               >
                 {item.label}
               </Link>
               {item.dropdown && dropdownOpen === item.label && (
-                <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg z-10 group-hover:block hidden"> {/* Dropdown styles and conditional rendering */}
-                  {item.dropdown.map((dropdownItem) => (
+                <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg z-10 group-hover:block hidden">
+                  {item.dropdown.map((dropdownItem, index) => (
                     <Link
-                      key={dropdownItem.label}
+                      key={index}
                       href={dropdownItem.href}
                       className="block px-4 py-2 text-sm font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
                     >
@@ -91,26 +102,28 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-gray-900 text-white shadow-lg rounded-b-lg py-4">
             <div className="flex flex-col">
-              {menuItems.map((item) => (
-                <React.Fragment key={item.label}>
+              {menuItems.map((item, index) => (
+                <React.Fragment key={index}>
                   <Link
-                    href={item.href || "#"}
+                    href={item.href}
                     className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
-                    onClick={() => { toggleMobileMenu(); item.href && router.push(item.href)}}
+                    onClick={toggleMobileMenu}
                   >
                     {item.label}
                   </Link>
                   {item.dropdown && (
-                      <div className="flex flex-col ml-6">
-                          {item.dropdown.map((dropdownItem) =>(
-                              <Link key={dropdownItem.label}
-                              href={dropdownItem.href}
-                              className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
-                              onClick={toggleMobileMenu}>
-                                  {dropdownItem.label}
-                              </Link>
-                          ))}
-                      </div>
+                    <div className="pl-6">
+                      {item.dropdown.map((dropdownItem, index) => (
+                        <Link
+                          key={index}
+                          href={dropdownItem.href}
+                          className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
+                          onClick={toggleMobileMenu}
+                        >
+                          {dropdownItem.label}
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </React.Fragment>
               ))}
