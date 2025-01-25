@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import ContactUs from "./contsct";
 import AboutSection from "./about";
 import SpeakersSection from "./speaker";
+import Keynotes from "../keynotes/page";
 
 const images = [
   "/images/iit-ropar-5.avif",
@@ -21,17 +22,14 @@ const sponsors = [
   { src: "/sponsors/sponsor-3.png", alt: "Sponsor 3" },
   { src: "/sponsors/sponsor-4.png", alt: "Sponsor 4" },
   { src: "/sponsors/sponsor-5.webp", alt: "Sponsor 5" },
-
 ];
 
 const endorsedBy = [
   { src: "/logos/logo-1.png", alt: "Endorsed Sponsor 1" },
   { src: "/logos/logo-2.jpg", alt: "Endorsed Sponsor 2" },
   { src: "/logos/logo-3.jpg", alt: "Endorsed Sponsor 3" },
-  { src: "/logos/logo-4.jpg", alt: "Endorsed Sponsor 3" },
-  { src: "/logos/logo-5.jpg", alt: "Endorsed Sponsor 3" },
-  //{ src: "/logos/logo-6.webp", alt: "Endorsed Sponsor 3" },
-
+  { src: "/logos/logo-4.jpg", alt: "Endorsed Sponsor 4" },
+  { src: "/logos/logo-5.jpg", alt: "Endorsed Sponsor 5" },
 ];
 
 const speakers = [
@@ -56,7 +54,6 @@ const speakers = [
     website: "https://profiles.stanford.edu/fei-fei-li",
     image: "/images/speaker-3.jpg",
   },
-  
 ];
 
 const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
@@ -74,27 +71,25 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
       ))}
     </div>
     <Navbar />
-    <div className=" flex-grow flex items-center justify-start z-10 relative ml-28">
-  <div className="max-w-2xl"> {/* Added max-width for better readability on larger screens */}
-    <h1 className="text-xl lg:text-6xl font-bold border-y-black text-purple-800 mb-6"> {/* Increased font sizes, added leading */}
-      9th International Conference on<br/>
-      Computer Vision & Image Processing
-    </h1>
-    <p className="text-xl lg:text-2xl text-purple-300 text mb-8 font-medium"> {/* Increased font sizes, added font-medium, slightly lighter color */}
-      04-06 December, 2025 | IIT Ropar, Punjab - 140001, INDIA
-    </p>
-    <Link
-  href="#about"
-  scroll={true}
-  className="group relative overflow-hidden bg-black text-purple-900 text-lg font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
->
-  <span href = "#about"className="relative z-10 ">About</span>
-  <span 
-    className="absolute inset-0 bg-purple-950 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-  />
-</Link>
-  </div>
-</div>
+    <div className="flex-grow flex items-center justify-start z-10 relative ml-28">
+      <div className="max-w-2xl">
+        <h1 className="text-xl lg:text-6xl font-bold border-y-black text-purple-800 mb-6">
+          9th International Conference on<br />
+          Computer Vision & Image Processing
+        </h1>
+        <p className="text-xl lg:text-2xl text-purple-300 text mb-8 font-medium">
+          04-06 December, 2025 | IIT Ropar, Punjab - 140001, INDIA
+        </p>
+        <Link
+          href="#about"
+          scroll={true}
+          className="group relative overflow-hidden bg-black text-purple-900 text-lg font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+        >
+          <span className="relative z-10">About</span>
+          <span className="absolute inset-0 bg-purple-950 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+        </Link>
+      </div>
+    </div>
     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50 z-0"></div>
   </div>
 );
@@ -106,7 +101,7 @@ const SponsorsSection = ({ title, items }) => (
       {items.map((item, index) => (
         <div
           key={index}
-          className="w-full aspect-square flex justify-center items-center bg-white rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:filter-none filter grayscale"
+          className="w-full aspect-square flex justify-center items-center bg-white rounded-lg shadow-md"
         >
           <Image
             src={item.src}
@@ -120,6 +115,7 @@ const SponsorsSection = ({ title, items }) => (
     </div>
   </section>
 );
+
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

@@ -42,7 +42,7 @@ const SpeakersSection = ({ speakers }) => {
       setSpeakerData(speakers); // Use provided data directly
       setIsLoading(false);
     }
-  }, [speakers]); // Only run when speakers prop changes
+  }, []); // Only run when speakers prop changes
 
   if (isLoading) {
     return (

@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,18 +19,21 @@ const Navbar = () => {
   };
 
   const handleMouseEnter = (dropdownName) => {
-    clearTimeout(dropdownTimeout);
-    toggleDropdown(dropdownName);
+    if (dropdownTimeout) clearTimeout(dropdownTimeout); // Clear any pending timeout
+    if (dropdownOpen !== dropdownName) setDropdownOpen(dropdownName); // Update state only if necessary
+  };
+  
+  const handleMouseLeave = () => {
+    setDropdownTimeout(
+      setTimeout(() => {
+        setDropdownOpen(null); // Close the dropdown after a delay
+      }, 300)
+    );
   };
 
-  const handleMouseLeave = (dropdownName) => {
-    setDropdownTimeout(setTimeout(() => {
-      toggleDropdown(null);
-    }, 300));
-  };
 
   const menuItems = [
-    { label: "Home", href: "/" },
+    { label: "Home", href: "/home" },
     { label: "Keynotes", href: "/keynotes" },
     {
       label: "Call for Papers",
@@ -71,6 +77,7 @@ const Navbar = () => {
                 className={`text-lg font-medium hover:text-purple-500 transition-colors duration-300 ${item.dropdown ? 'cursor-pointer' : ''}`}
                 onMouseEnter={item.dropdown ? () => handleMouseEnter(item.label) : null}
                 onMouseLeave={item.dropdown ? () => handleMouseLeave(item.label) : null}
+        
               >
                 {item.label}
               </Link>
