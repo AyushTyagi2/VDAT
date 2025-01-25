@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,42 +10,66 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50"> {/* Sticky navbar */}
-      <div className="container mx-auto px-6 py-3 flex justify-between items-center relative"> {/* Added relative positioning */}
-        <Link href="/" className="text-xl font-bold text-gray-800">
-          My Website
+    <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-lg sticky top-0 z-50 text-white">
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <Link href="/" className="text-2xl font-extrabold tracking-wide">
+          MyWebsite
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6"> {/* Hidden on mobile, flex on medium screens and up */}
-          <Link href="/" className="text-gray-700 hover:text-blue-500 transition duration-300">
+        <div className="hidden md:flex space-x-8">
+          <Link
+            href="/"
+            className="text-lg hover:text-yellow-300 transition-all duration-300"
+          >
             Home
           </Link>
-          <Link href="/about" className="text-gray-700 hover:text-blue-500 transition duration-300">
+          <Link
+            href="/about"
+            className="text-lg hover:text-yellow-300 transition-all duration-300"
+          >
             About
           </Link>
-          <Link href="/contact" className="text-gray-700 hover:text-blue-500 transition duration-300">
+          <Link
+            href="/contact"
+            className="text-lg hover:text-yellow-300 transition-all duration-300"
+          >
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden"> {/* Hidden on medium screens and up */}
-          <button onClick={toggleMobileMenu} className="text-gray-700 focus:outline-none">
-            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />} {/* Icon changes based on menu state */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-white focus:outline-none"
+          >
+            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu (collapsible) */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md flex flex-col py-2"> {/* Absolute positioning for dropdown */}
-            <Link href="/" className="px-6 py-2 text-gray-700 hover:text-blue-500 transition duration-300" onClick={toggleMobileMenu}>
+          <div className="absolute top-full left-0 right-0 bg-white text-gray-800 shadow-lg rounded-lg py-4 transition-all duration-300 ease-in-out transform">
+            <Link
+              href="/"
+              className="block px-6 py-3 text-lg hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+              onClick={toggleMobileMenu}
+            >
               Home
             </Link>
-            <Link href="/about" className="px-6 py-2 text-gray-700 hover:text-blue-500 transition duration-300" onClick={toggleMobileMenu}>
+            <Link
+              href="/about"
+              className="block px-6 py-3 text-lg hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+              onClick={toggleMobileMenu}
+            >
               About
             </Link>
-            <Link href="/contact" className="px-6 py-2 text-gray-700 hover:text-blue-500 transition duration-300" onClick={toggleMobileMenu}>
+            <Link
+              href="/contact"
+              className="block px-6 py-3 text-lg hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+              onClick={toggleMobileMenu}
+            >
               Contact
             </Link>
           </div>
