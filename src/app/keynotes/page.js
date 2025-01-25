@@ -2,7 +2,8 @@
 
 import React, { memo } from "react";
 import Image from "next/image";
-
+import Navbar from "../home/Navbar";
+import Footer from "../footer/footer";
 const speakers = [
   { name: "Petia Radeva", affiliation: "University of Barcelona, Spain", img: "/images/Petia Radeva.jpg" },
   { name: "Bharat Biswal", affiliation: "NJIT, USA", img: "/images/bharat.jpg" },
@@ -38,16 +39,20 @@ const SpeakerCard = memo(({ name, affiliation, img }) => {
 const Keynotes = () => {
   return (
     <div>
+      <div>
+      <Navbar />
       <header
         className="text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60 relative"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
+      
+
         <div className="bg-black bg-opacity-50 py-20 px-4">
           <h1 className="text-5xl font-extrabold">Keynote / Plenary</h1>
           <p className="text-xl mt-4 font-light">Meet our distinguished speakers</p>
         </div>
       </header>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 bg-gray-50">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 bg-gray-50 py-36">
         {speakers.map((speaker) => (
           <SpeakerCard
             key={speaker.name}
@@ -57,6 +62,8 @@ const Keynotes = () => {
           />
         ))}
       </section>
+      <Footer/>
+    </div>
     </div>
   );
 };

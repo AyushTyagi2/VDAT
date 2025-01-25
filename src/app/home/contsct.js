@@ -54,8 +54,7 @@ const ContactUs = () => {
 
     try {
       const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        
         body: JSON.stringify(formData),
       });
 
@@ -77,8 +76,8 @@ const ContactUs = () => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Contact Us</h2>
-        {submissionMessage && (
+      <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
+Contact Us</h2>        {submissionMessage && (
           <div
             className={`mb-4 p-4 rounded-md ${
               submissionMessage.startsWith("An") ? "bg-red-100 text-red-700" : "bg-green-100 text-green-700"
@@ -90,9 +89,9 @@ const ContactUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="text-xl font-semibold mb-4 text-gray-700">Address:</h3>
+            <h3 className="text-xl font-semibold mb-4 text-black">Address:</h3>
             <p className="text-gray-600 mb-4">IIT Ropar, Punjab-140001, INDIA</p>
-            <h3 className="text-xl font-semibold mb-4 text-gray-700">Email:</h3>
+            <h3 className="text-xl font-semibold mb-4 text-black">Email:</h3>
             <p className="text-gray-600 mb-4">cvip2025@iitrpr.ac.in</p>
             <div className="mt-4">
               <iframe
@@ -111,7 +110,7 @@ const ContactUs = () => {
           <div className="bg-white rounded-lg shadow-md p-8">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="fullName" className="block text-gray-700 font-bold mb-2">
+                <label htmlFor="fullName" className="block text-black font-bold mb-2">
                   Full Name *
                 </label>
                 <input
@@ -128,7 +127,7 @@ const ContactUs = () => {
                 {formErrors.fullName && <p className="text-red-500 text-xs mt-1">{formErrors.fullName}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-gray-700 font-bold mb-2">
+                <label htmlFor="subject" className="block text-black font-bold mb-2">
                   Subject *
                 </label>
                 <input
@@ -145,7 +144,7 @@ const ContactUs = () => {
                 {formErrors.subject && <p className="text-red-500 text-xs mt-1">{formErrors.subject}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+                <label htmlFor="email" className="block text-black font-bold mb-2">
                   Email *
                 </label>
                 <input
@@ -162,7 +161,7 @@ const ContactUs = () => {
                 {formErrors.email && <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">
+                <label htmlFor="phone" className="block text-black font-bold mb-2">
                   Phone
                 </label>
                 <input
@@ -178,7 +177,7 @@ const ContactUs = () => {
                 {formErrors.phone && <p className="text-red-500 text-xs mt-1">{formErrors.phone}</p>}
               </div>
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
+                <label htmlFor="message" className="block text-black font-bold mb-2">
                   Message *
                 </label>
                 <textarea
@@ -196,7 +195,7 @@ const ContactUs = () => {
               </div>
               <button
                 type="submit" href ="/"
-                className={`w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600 ${
+                className={`w-full bg-purple-800 text-white rounded-md py-2 hover:bg-blue-600 ${
                   isSubmitting && "opacity-50 cursor-not-allowed"
                 }`}
                 disabled={isSubmitting}

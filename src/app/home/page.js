@@ -9,6 +9,7 @@ import ContactUs from "./contsct";
 import AboutSection from "./about";
 import SpeakersSection from "./speaker";
 import Keynotes from "../keynotes/page";
+import Footer from "../footer/footer";
 
 const images = [
   "/images/iit-ropar-5.avif",
@@ -18,9 +19,9 @@ const images = [
 
 const sponsors = [
   { src: "/sponsors/sponsor-1.jpg", alt: "Sponsor 1" },
-  { src: "/sponsors/sponsor-2.png", alt: "Sponsor 2" },
-  { src: "/sponsors/sponsor-3.png", alt: "Sponsor 3" },
-  { src: "/sponsors/sponsor-4.png", alt: "Sponsor 4" },
+  { src: "/sponsors/sponsor-8.svg", alt: "Sponsor 2" },
+  { src: "/sponsors/sponsor-7.svg", alt: "Sponsor 3" },
+  { src: "/sponsors/sponsor-6.svg", alt: "Sponsor 4" },
   { src: "/sponsors/sponsor-5.webp", alt: "Sponsor 5" },
 ];
 
@@ -28,7 +29,7 @@ const endorsedBy = [
   { src: "/logos/logo-1.png", alt: "Endorsed Sponsor 1" },
   { src: "/logos/logo-2.jpg", alt: "Endorsed Sponsor 2" },
   { src: "/logos/logo-3.jpg", alt: "Endorsed Sponsor 3" },
-  { src: "/logos/logo-4.jpg", alt: "Endorsed Sponsor 4" },
+  { src: "/logos/logo-6.svg", alt: "Endorsed Sponsor 4" },
   { src: "/logos/logo-5.jpg", alt: "Endorsed Sponsor 5" },
 ];
 
@@ -95,26 +96,29 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
 );
 
 const SponsorsSection = ({ title, items }) => (
+ 
   <section className="py-12 bg-gray-100">
-    <h2 className="text-3xl text-purple-500 font-bold text-center mb-8">{title}</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mx-auto max-w-7xl px-4">
+   <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
+  {title}
+</h2>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mx-auto max-w-7xl px-4"> {/* Removed hover from the grid */}
       {items.map((item, index) => (
         <div
           key={index}
-          className="w-full aspect-square flex justify-center items-center bg-white rounded-lg shadow-md"
+          className="w-full flex justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px] hover:shadow-lg" // Added transition
         >
           <Image
             src={item.src}
             alt={item.alt}
             width={300}
             height={300}
-            className="object-contain"
+            className="object-contain transition duration-300 ease-in-out" // Added transition to the image as well
           />
         </div>
       ))}
     </div>
   </section>
-);
+  );
 
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -140,6 +144,7 @@ const HomePage = () => {
       <AboutSection />
       <SpeakersSection speakers={speakers} />
       <ContactUs />
+      <Footer/>
     </div>
   );
 };
