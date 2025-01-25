@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
+    { label: "Keynotes", href: "/keynotes" },
     {
       label: "Call for Papers",
       dropdown: [

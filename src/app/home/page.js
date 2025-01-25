@@ -84,7 +84,7 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
       04-06 December, 2025 | IIT Ropar, Punjab - 140001, INDIA
     </p>
     <Link
-  href="#about"
+  href ="#about"
   scroll={true}
   className="group relative overflow-hidden bg-black text-purple-900 text-lg font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
 >
