@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const AboutSection = () => {
   const eventDate = new Date("2025-12-04T00:00:00");
-  const [remainingDays, setRemainingDays] = useState({
+  const [remainingTime, setRemainingTime] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -11,65 +11,45 @@ const AboutSection = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const today = new Date();
-      const difference = eventDate - today;
+      const now = new Date();
+      const difference = eventDate - now;
 
       if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        setRemainingDays({ days, hours, minutes, seconds });
+        setRemainingTime({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / (1000 * 60)) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
       } else {
-        setRemainingDays({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setRemainingTime({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
 
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+    calculateTimeLeft(); // Initial calculation
+    const timer = setInterval(calculateTimeLeft, 1000); // Update every second
 
-    return () => clearInterval(timer);
-  }, [eventDate]);
+    return () => clearInterval(timer); // Cleanup on component unmount
+  }, [eventDate]); // Add `eventDate` as a dependency (it should not change)
 
   return (
-    <section className="bg-black bg-opacity-0 py-16  text-white" id="about"> {/* Improved opacity syntax */}
-      <div className="  max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start">
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <h2 className="text-3xl font-bold mb-4 text-purple-500">About CVIP 2025</h2>
-          <p className="text-lg leading-7">
-            The Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP) is India’s premier
-            conference in these fields. Starting in 1998, it became an annual international event from 2022, providing a
-            platform for technological advancements and research findings.
-          </p>
-        </div>
-        <div className="md:w-1/3">
-          <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center">Countdown</h2>
-          <div className="flex justify-center space-x-4">
-            <div className="text-center">
-              <div className="text-4xl font-bold border border-purple-500 rounded p-2">
-                {remainingDays.days}
+    <section id="about" className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl text-purple-600 font-bold mb-6">About the Conference</h2>
+        <p className="text-lg text-gray-700">
+          The 9th International Conference on Computer Vision and Image Processing (CVIP) brings together researchers,
+          practitioners, and enthusiasts to discuss cutting-edge advancements in computer vision, machine learning, and
+          image processing.
+        </p>
+        <div className="mt-6 text-center">
+          <h3 className="text-2xl font-bold text-purple-600 mb-4">Countdown to the Event</h3>
+          <div className="flex justify-center space-x-6">
+            {Object.entries(remainingTime).map(([unit, value]) => (
+              <div key={unit} className="text-center">
+                <span className="block text-4xl font-bold text-purple-700">{value}</span>
+                <span className="block text-sm text-gray-500">{unit}</span>
               </div>
-              <div className="text-sm">Days</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold border border-purple-500 rounded p-2">
-                {remainingDays.hours}
-              </div>
-              <div className="text-sm">Hours</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold border border-purple-500 rounded p-2">
-                {remainingDays.minutes}
-              </div>
-              <div className="text-sm">Min.</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold border border-purple-500 rounded p-2">
-                {remainingDays.seconds}
-              </div>
-              <div className="text-sm">Sec.</div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

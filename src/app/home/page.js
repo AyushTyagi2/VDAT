@@ -76,19 +76,19 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
     <Navbar />
     <div className=" flex-grow flex items-center justify-start z-10 relative ml-28">
   <div className="max-w-2xl"> {/* Added max-width for better readability on larger screens */}
-    <h1 className="text-xl lg:text-6xl font-bold border-y-black text-purple-500 mb-6"> {/* Increased font sizes, added leading */}
+    <h1 className="text-xl lg:text-6xl font-bold border-y-black text-purple-800 mb-6"> {/* Increased font sizes, added leading */}
       9th International Conference on<br/>
       Computer Vision & Image Processing
     </h1>
-    <p className="text-xl lg:text-2xl text-purple-300 border-y-black mb-8 font-medium"> {/* Increased font sizes, added font-medium, slightly lighter color */}
+    <p className="text-xl lg:text-2xl text-purple-300 text mb-8 font-medium"> {/* Increased font sizes, added font-medium, slightly lighter color */}
       04-06 December, 2025 | IIT Ropar, Punjab - 140001, INDIA
     </p>
     <Link
-  href="/home/#about"
-  scroll={false}
+  href="#about"
+  scroll={true}
   className="group relative overflow-hidden bg-black text-purple-900 text-lg font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
 >
-  <span className="relative z-10 ">Learn More</span>
+  <span href = "#about"className="relative z-10 ">About</span>
   <span 
     className="absolute inset-0 bg-purple-950 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
   />

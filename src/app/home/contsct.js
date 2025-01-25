@@ -195,7 +195,7 @@ const ContactUs = () => {
                 {formErrors.message && <p className="text-red-500 text-xs mt-1">{formErrors.message}</p>}
               </div>
               <button
-                type="submit"
+                type="submit" href ="/"
                 className={`w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600 ${
                   isSubmitting && "opacity-50 cursor-not-allowed"
                 }`}
