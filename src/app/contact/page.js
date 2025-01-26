@@ -11,7 +11,7 @@ const SpeakersSection = () => {
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <div className="bg-black bg-opacity-50 py-20 px-4">
-          <h1 className="text-5xl font-extrabold">Speakers</h1>
+          <h1 className="text-5xl font-extrabold">Contact-Us</h1>
           <p className="text-xl mt-4 font-light"></p>
         </div>
       </header>

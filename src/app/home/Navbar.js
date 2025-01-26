@@ -22,7 +22,7 @@ const Navbar = () => {
         { label: "Awards", href: "/awards" },
       ],
     },
-    { label: "Speakers", href: "/speakers" },
+    { label: "Speakers", href: "/Speakers" },
     { 
       label: "Committee", 
       dropdown: [
