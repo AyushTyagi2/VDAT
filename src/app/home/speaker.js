@@ -71,6 +71,7 @@ const SpeakersSection = ({ speakers }) => {
               <img
                 src={speaker.image}
                 alt={`${speaker.name}'s photo`}
+                
                 width={70}
                 height={80}
                 className="w-80 h-full "
