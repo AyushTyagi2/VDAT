@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* IIT Ropar Info (Updated) */}
         <div className="md:col-span-1 flex flex-col items-start">
-          <Image src="/iitrpr.png" alt="IIT Ropar Logo" width={150} height={75} />
+          <Image src="/images/iitrpr.png" alt="IIT Ropar Logo" width={150} height={75} />
           <div className="mt-4">
             <p className="text-sm">Indian Institute of Technology Ropar</p>
             <p className="text-sm">Ropar, Nangal Road, Rupnagar, Punjab, INDIA 140001</p>
