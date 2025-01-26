@@ -147,9 +147,10 @@ const HomePage = () => {
   return (
     <>
       <Carousel images={images} currentImageIndex={currentImageIndex} swipeHandlers={handlers} />
-      <AboutSection />
+    
       <SponsorsSection title="Our Sponsors" items={sponsors} />
       <SponsorsSection title="Endorsed By" items={endorsedBy} />
+      <AboutSection />
       <SpeakersSection speakers={speakers} />
       <ContactUs />
       <Footer />

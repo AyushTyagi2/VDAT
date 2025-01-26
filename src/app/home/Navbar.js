@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: "Home", href: "/home" },
+    { label: "Home", href: "/" },
     { label: "Keynotes", href: "/keynotes" },
     {
       label: "Call for Papers",
