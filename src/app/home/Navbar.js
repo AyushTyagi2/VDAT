@@ -1,36 +1,15 @@
-'use client'
+"use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null);
-  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  const toggleDropdown = (dropdownName) => {
-    setDropdownOpen(dropdownOpen === dropdownName ? null : dropdownName);
-  };
-
-  const handleMouseEnter = (dropdownName) => {
-    if (dropdownTimeout) clearTimeout(dropdownTimeout); // Clear any pending timeout
-    if (dropdownOpen !== dropdownName) setDropdownOpen(dropdownName); // Update state only if necessary
-  };
-  
-  const handleMouseLeave = () => {
-    setDropdownTimeout(
-      setTimeout(() => {
-        setDropdownOpen(null); // Close the dropdown after a delay
-      }, 300)
-    );
-  };
-
 
   const menuItems = [
     { label: "Home", href: "/home" },
@@ -44,16 +23,18 @@ const Navbar = () => {
       ],
     },
     { label: "Speakers", href: "/speakers" },
-    { label: "Committee", href: "/committee",
+    { 
+      label: "Committee", 
       dropdown: [
         { label: "Organizing Committee", href: "/organizing-committee" },
         { label: "Advisory Committee", href: "/advisory-committee" },
       ]
     },
-    { label: "Venue & Travel", href: "/venue",
+    { 
+      label: "Venue & Travel", 
       dropdown: [
-        { label: "Conference Venue", href: "/conference" },
-        { label: "Award Ceremony Venue", href: "/awceremony" },
+        { label: "Accommodation", href: "/accomodation" },
+        { label: "Conference Venue", href: "/venue" },
       ]
     },
     { label: "Previous Years", href: "/years" },
@@ -62,13 +43,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-black text-white sticky top-0 z-50 shadow-md 
-     bg-opacity-30">
+    <nav className="bg-black text-white sticky top-0 z-50 shadow-md bg-opacity-30">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold tracking-wide hover:text-gray-300 transition-colors duration-300">
-        <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
-  CVIP 2025
-</h2>        </Link>
+          <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
+            CVIP 2025
+          </h2>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 lg:space-x-8">
@@ -77,24 +58,22 @@ const Navbar = () => {
               <Link
                 href={item.href || "#"}
                 className={`text-lg font-medium hover:text-purple-500 transition-colors duration-300 ${item.dropdown ? 'cursor-pointer' : ''}`}
-                onMouseEnter={item.dropdown ? () => handleMouseEnter(item.label) : null}
-                onMouseLeave={item.dropdown ? () => handleMouseLeave(item.label) : null}
-        
               >
                 {item.label}
               </Link>
-              {item.dropdown && dropdownOpen === item.label && (
-                <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg z-10 group-hover:block hidden">
-                  {item.dropdown.map((dropdownItem, index) => (
-                    <Link
-                      key={index}
-                      href={dropdownItem.href}
-                      className="block px-4 py-2 text-sm font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
-                    >
-                      {dropdownItem.label}
-                    </Link>
+              {item.dropdown && (
+                <ul className="absolute left-0 mt-2 w-56 bg-gray-900 rounded-lg shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
+                  {item.dropdown.map((dropdownItem, idx) => (
+                    <li key={idx}>
+                      <Link
+                        href={dropdownItem.href}
+                        className="block px-4 py-3 text-sm font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
+                      >
+                        {dropdownItem.label}
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               )}
             </div>
           ))}
@@ -114,19 +93,19 @@ const Navbar = () => {
               {menuItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <Link
-                    href={item.href}
-                    className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
+                    href={item.href || "#"} // Handle cases where there is no href
+                    className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
                     onClick={toggleMobileMenu}
                   >
                     {item.label}
                   </Link>
                   {item.dropdown && (
                     <div className="pl-6">
-                      {item.dropdown.map((dropdownItem, index) => (
+                      {item.dropdown.map((dropdownItem, idx) => (
                         <Link
-                          key={index}
+                          key={idx}
                           href={dropdownItem.href}
-                          className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300"
+                          className="block px-6 py-3 text-base font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
                           onClick={toggleMobileMenu}
                         >
                           {dropdownItem.label}
