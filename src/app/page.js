@@ -13,7 +13,7 @@ import Navbar from "./home/Navbar";
 
 const images = [
   "/images/iit-ropar-5.avif",
-  "/images/iit-ropar-5.jpeg",
+  "/images/iit-rpr.jpg",
   "/images/iit-ropar-5.jpg",
 ];
 
