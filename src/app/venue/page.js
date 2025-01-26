@@ -8,13 +8,12 @@ const VenuePage = () => {
     <div>
       <Navbar />
       <div className="bg-gray-50 min-h-screen font-sans">
-        {/* Hero Section */}
         <header
           className="relative h-[50vh] md:h-[70vh] bg-cover bg-center flex items-center justify-center"
           style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
         >
-          <div className="absolute inset-0 bg-black/40" /> {/* Darker overlay */}
-          <div className="relative z-10 text-center text-white"> {/* Content on top */}
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 text-center text-white">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
               Venue & Travel
             </h1>
@@ -24,14 +23,12 @@ const VenuePage = () => {
           </div>
         </header>
 
-        {/* Main Content */}
         <main className="container mx-auto py-16 px-6 md:px-12">
-          {/* About IIT Ropar */}
           <section className="bg-white rounded-lg shadow-md p-8 mb-16">
             <h2 className="text-3xl font-semibold mb-6 text-gray-800 border-b border-gray-200 pb-4">
               About IIT Ropar
             </h2>
-            <div className="prose lg:prose-xl text-gray-700"> {/* Use prose class */}
+            <div className="prose lg:prose-xl text-gray-700">
               <p>
                 IIT Ropar, established in 2008, is an Institute of National
                 Importance located in Rupnagar, Punjab. The institute is known
@@ -49,7 +46,6 @@ const VenuePage = () => {
             </div>
           </section>
 
-          {/* Nearby Places */}
           <section className="bg-white rounded-lg shadow-md p-8 mb-16">
             <h2 className="text-3xl font-semibold mb-6 text-gray-800 border-b border-gray-200 pb-4">
               Nearby Places to Visit
@@ -70,27 +66,22 @@ const VenuePage = () => {
                 rich history and culture of Sikhism, known for its stunning
                 architecture. (Approx. 45 km)
               </li>
-              {/* Add more places */}
             </ul>
           </section>
 
-          {/* How to Reach */}
           <section className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-3xl font-semibold mb-6 text-gray-800 border-b border-gray-200 pb-4">
               How to Reach IIT Ropar
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12"> {/* Increased gap */}
-              <div className="md:col-span-1">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.275485451963!2d76.5298822151123!3d30.97500358163538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905591963000001%3A0x28f725a381440751!2sIndian%20Institute%20of%20Technology%20Ropar!5e0!3m2!1sen!2sin!4v1686214358504!5m2!1sen!2sin"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="IIT Ropar Map" // Added title for accessibility
-                ></iframe>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              <div className="md:col-span-1 relative h-[300px] md:h-[450px]"> {/* Added relative wrapper for Image */}
+                <Image
+                  src="/Map.jpg"
+                  alt="IIT Ropar Map"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  priority
+                />
               </div>
               <div className="md:col-span-1 prose lg:prose-xl text-gray-700">
                 <ul className="list-disc pl-6 space-y-3">
@@ -104,8 +95,8 @@ const VenuePage = () => {
                     auto-rickshaw to IIT Ropar.
                   </li>
                   <li>
-                    <b>From Rupnagar Railway Station (RPAR):</b> Auto-rickshaws are
-                    available to reach IIT Ropar.
+                    <b>From Rupnagar Railway Station (RPAR):</b> Auto-rickshaws
+                    are available to reach IIT Ropar.
                   </li>
                 </ul>
               </div>
