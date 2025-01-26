@@ -80,27 +80,29 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
     <Navbar />
     <div className="flex-grow flex items-center justify-start z-10 relative px-6 md:px-28">
       <div className="max-w-2xl text-center md:text-left">
-        <h1 className="text-3xl lg:text-6xl font-bold text-purple-800 mb-4 md:mb-6 leading-tight">
-          9th International Conference on
-          <br className="hidden md:block" />
-          Computer Vision & Image Processing
+        <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight relative z-10">
+          <span >
+          {/* <span className="drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)] bg-gradient-to-r from-yellow-400 via-orange-300 to-orange-500  text-transparent bg-clip-text px-5 py-3 rounded-md"> More vibrant gradient text with drop shadow */}
+            9th International Conference on <br className="hidden md:block" />
+            Computer Vision & Image Processing
+          </span>
         </h1>
-        <p className="text-lg lg:text-2xl text-purple-300 mb-6 md:mb-8 font-medium">
+        <p className="text-lg lg:text-2xl text-white mb-6 md:mb-8 font-medium drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)] bg-gradient-to-r from-yellow-400 via-orange-300 to-orange-500 text-transparent bg-clip-text px-4 py-2 rounded-md"> {/* Consistent styling for paragraph with vibrant gradient */}
           04-06 December, 2025 | IIT Ropar, Punjab - 140001, INDIA
         </p>
         <div className="flex justify-center md:justify-start">
           <Link
             href="#about"
             scroll={true}
-            className="group relative overflow-hidden bg-black text-purple-900 text-lg font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+            className="group relative overflow-hidden bg-black text-yellow-400 text-lg font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
           >
             <span className="relative z-10">About</span>
-            <span className="absolute inset-0 bg-purple-950 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+            <span className="absolute inset-0 bg-yellow-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </Link>
         </div>
       </div>
     </div>
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50 z-0"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50 z-0"></div> {/* Darker gradient for better contrast */}
   </div>
 );
 

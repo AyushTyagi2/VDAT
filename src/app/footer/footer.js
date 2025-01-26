@@ -22,24 +22,24 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-2 text-purple-300">Useful Links</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="/" className="text-gray-300 hover:text-white transition duration-300 text-sm">
+              <Link href="/" className="white hover:text-white transition duration-300 text-sm">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/author-guidelines" className="text-gray-300 hover:text-white transition duration-300 text-sm">
+              <Link href="/author-guidelines" className="white hover:text-white transition duration-300 text-sm">
                 Author Guidelines
               </Link>
             </li>
             <li>
-              <Link href="/our-speakers" className="text-gray-300 hover:text-white transition duration-300 text-sm">
+              <Link href="/our-speakers" className="white hover:text-white transition duration-300 text-sm">
                 Our Speakers
               </Link>
             </li>
             <li>
               <Link
                 href="https://www.iitrpr.ac.in/"
-                className="text-gray-300 hover:text-white transition duration-300 text-sm"
+                className="white hover:text-white transition duration-300 text-sm"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -54,24 +54,24 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-2 text-purple-300">Important Links</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="/accommodation" className="text-gray-300 hover:text-white transition duration-300 text-sm">
+              <Link href="/accommodation" className="white hover:text-white transition duration-300 text-sm">
                 Accommodation
               </Link>
             </li>
             <li>
-              <Link href="/fellowship" className="text-gray-300 hover:text-white transition duration-300 text-sm">
+              <Link href="/fellowship" className="white hover:text-white transition duration-300 text-sm">
                 Fellowship
               </Link>
             </li>
             <li>
-              <Link href="/sponsor" className="text-gray-300 hover:text-white transition duration-300 text-sm">
+              <Link href="/sponsor" className="white hover:text-white transition duration-300 text-sm">
                 Sponsor
               </Link>
             </li>
             <li>
               <Link
                 href="/organising-committee"
-                className="text-gray-300 hover:text-white transition duration-300 text-sm"
+                className="white hover:text-white transition duration-300 text-sm"
               >
                 Organising Committee
               </Link>
@@ -83,16 +83,16 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-2 text-purple-300">Follow Us</h4>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-300 hover:text-white transition duration-300" aria-label="Facebook">
+            <a href="#" className="white hover:text-white transition duration-300" aria-label="Facebook">
               <FaFacebook size={20} />
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition duration-300" aria-label="Twitter">
+            <a href="#" className="white hover:text-white transition duration-300" aria-label="Twitter">
               <FaTwitter size={20} />
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition duration-300" aria-label="LinkedIn">
+            <a href="#" className="white hover:text-white transition duration-300" aria-label="LinkedIn">
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition duration-300" aria-label="YouTube">
+            <a href="#" className="white hover:text-white transition duration-300" aria-label="YouTube">
               <FaYoutube size={20} />
             </a>
           </div>
@@ -100,7 +100,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="max-w-7xl mx-auto mt-8 pt-4 border-t border-gray-700 text-center text-sm text-gray-300">
+      <div className="max-w-7xl mx-auto mt-8 pt-4 border-t border-gray-700 text-center text-sm white">
         <p>Designed & Developed by: MAFIAS (I3C, IIT Ropar Incubatee)</p>
         <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
       </div>

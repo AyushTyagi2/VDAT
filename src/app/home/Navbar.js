@@ -31,7 +31,7 @@ const Navbar = () => {
       ]
     },
     { 
-      label: "Venue & Travel", 
+      label: "Venue", 
       dropdown: [
         { label: "Accommodation", href: "/accomodation" },
         { label: "Conference Venue", href: "/venue" },
