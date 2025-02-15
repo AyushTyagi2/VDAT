@@ -47,7 +47,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold tracking-wide hover:text-gray-300 transition-colors duration-300">
           <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
-            CVIP 2025
+            VDAT 2025
           </h2>
         </Link>
 
