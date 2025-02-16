@@ -14,7 +14,7 @@ const committees = [
 ];
 
 const CommitteeCard = ({ title, members }) => (
-  <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/2 lg:w-1/3">
+  <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/2 lg:w-1/3 space-x-12">
     <h2 className="text-xl font-bold text-indigo-700">{title}</h2>
     <ul className="mt-2 space-y-1">
       {members.map((member, index) => (
@@ -28,52 +28,56 @@ const SpeakersSection = () => {
   return (
     <div>
       <Navbar />
+      <div className=''>
       <header
         className="text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-40 relative"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <div className="bg-black bg-opacity-50 py-16 px-4">
+        <div className="bg-black bg-opacity-50 py-16">
           <h1 className="text-5xl font-extrabold">Committees</h1>
         </div>
-      </header>
-      <div className="max-w-6xl mx-auto flex flex-col items-center space-y-12 bg-white">
+        <div className='h-36 pb-25'></div>
 
-          {/* Central Highlighted Section */}
+      </header>
+      </div>
+      <div className='py-5 bg-gray-100'></div>
+      <div className="w-full flex flex-col items-center space-y-12 px-12 bg-gray-100 ">
+
           <div className="w-full text-center space-y-8">
-            {/* Steering Committee */}
-            <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-3/4 mx-auto">
+            <div className="bg-white shadow-lg rounded-lg p-6 w-full  ">
               <h2 className="text-2xl font-bold text-indigo-700">Steering Committee Chair</h2>
               <p className="text-lg mt-2 text-black">Satya Gupta, VLSI Society of India</p>
             </div>
 
-            {/* General Chairs */}
-            <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-3/4 mx-auto">
+            <div className="bg-white shadow-lg rounded-lg p-6 w-full   mx-auto">
               <h2 className="text-2xl font-bold text-indigo-700">General Chairs</h2>
               <p className="text-lg mt-2 text-black">Rohit Y Sharma, IIT Ropar</p>
               <p className="text-lg text-black">Neeraj Goel, IIT Ropar</p>
             </div>
 
-            {/* Advisory Committee */}
-            <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-3/4 mx-auto">
-              <h2 className="text-2xl font-bold text-indigo-700">Advisory Committee</h2>
-              <p className="text-lg mt-2 text-black">Prof. Sudeb Das Gupta, IIT Roorkee</p>
-              <p className="text-lg text-black">Ms Chitra Hariharan, Renesas</p>
-              <p className="text-lg text-black">Prof. M Balakrishnan, IIT Delhi</p>
-            </div>
+            
           </div>
       </div>
-      {/* Committees Section */}
       <section className="py-16 px-6 bg-gray-100 text-gray-800 text-center ">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
           {committees.map((committee, index) => (
             <CommitteeCard key={index} {...committee} />
           ))}
         </div>
+        <div className='py-12'>
+        <div className="bg-white shadow-lg rounded-lg p-6 w-full mx-auto ">
+              <h2 className="text-2xl font-bold text-indigo-700">Advisory Committee</h2>
+              <p className="text-lg mt-2 text-black">Prof. Sudeb Das Gupta, IIT Roorkee</p>
+              <p className="text-lg text-black">Ms Chitra Hariharan, Renesas</p>
+              <p className="text-lg text-black">Prof. M Balakrishnan, IIT Delhi</p>
+            </div>
+            </div>
       </section>
-
+      
       <Footer />
     </div>
   );
 };
 
-export default SpeakersSection;
+export default SpeakersSection; 
+
