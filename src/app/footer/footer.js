@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="mt-4">
             <p className="text-sm">Indian Institute of Technology Ropar</p>
             <p className="text-sm">Ropar, Nangal Road, Rupnagar, Punjab, INDIA 140001</p>
-            <p className="text-sm">Email: cvip2023@iitrpr.ac.in</p>
+            <p className="text-sm">Email: vdat2025@iitrpr.ac.in</p>
           </div>
         </div>
 
