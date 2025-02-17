@@ -36,7 +36,7 @@ const SpeakersSection = () => {
           <h1 className="text-5xl font-extrabold">Committees</h1>
         </div>
       </header>
-      <div className="max-w-6xl mx-auto flex flex-col items-center space-y-12 bg-white">
+      <div className="mx-auto flex flex-col items-center space-y-12 bg-white">
 
           {/* Central Highlighted Section */}
           <div className="w-full text-center space-y-8">
