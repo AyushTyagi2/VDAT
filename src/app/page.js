@@ -14,7 +14,16 @@ import Navbar from "./home/Navbar";
 const images = [
   "/images/iit-ropar-5.avif",
   "/images/iit-rpr.jpg",
-  "/images/iit-ropar-5.jpg",
+  "/images/bits.jpg",
+  "/images/jammu.webp",
+  "/images/svit.avif",
+  "/images/bhubhaneshawar.jpg",
+  "/images/thiar.avif",
+  "/images/roorkee.jpg",
+  "/images/guhati.jpg",
+  "/images/nirma.jpg",
+  "/images/psg.jpg"
+
 ];
 
 const sponsors = [

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
+import Image from 'next/image';
 import React from 'react';
 
 const Navbar = () => {
@@ -40,11 +41,20 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white sticky top-0 z-50 shadow-md bg-opacity-30">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold tracking-wide hover:text-gray-300 transition-colors duration-300">
-          <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
-            VDAT 2025
-          </h2>
-        </Link>
+      <Link
+      href="/"
+      className="text-xl font-bold flex flex-row items-center space-x-4 tracking-wide hover:text-gray-300 transition-colors duration-300"
+    >
+      <Image
+        src="/vlsi.png"
+        alt="VLSI Society of India Logo"
+        width={70}
+        height={70}
+      />
+      <h2 className="text-5xl font-extrabold text-center  tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
+ VDAT 2025
+</h2>
+    </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 lg:space-x-8">
