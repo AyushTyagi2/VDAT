@@ -36,12 +36,17 @@ const SpeakersSection = () => {
         <div className="bg-black bg-opacity-50 py-16">
           <h1 className="text-5xl font-extrabold">Committees</h1>
         </div>
+<<<<<<< HEAD
         <div className='h-36 pb-25'></div>
 
       </header>
       </div>
       <div className='py-5 bg-gray-100'></div>
       <div className="w-full flex flex-col items-center space-y-12 px-12 bg-gray-100 ">
+=======
+      </header>
+      <div className="mx-auto flex flex-col items-center space-y-12 bg-white">
+>>>>>>> dcf5eff70fbcaca363bb010ea67e308fd3a8350d
 
           <div className="w-full text-center space-y-8">
             <div className="bg-white shadow-lg rounded-lg p-6 w-full  ">
