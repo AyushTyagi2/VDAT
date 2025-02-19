@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import React from 'react';
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -23,19 +24,13 @@ const Navbar = () => {
       ],
     },
     { label: "Speakers", href: "/Speakers" },
-    { 
-      label: "Committee", 
+    { label: "Committee", href: "/committees" },
+    {
+      label: "Venue",
       dropdown: [
-        { label: "Organizing Committee", href: "/organizing-committee" },
-        { label: "Advisory Committee", href: "/advisory-committee" },
-      ]
-    },
-    { 
-      label: "Venue", 
-      dropdown: [
-        { label: "Accommodation", href: "/accomodation" },
+        { label: "Accommodation", href: "/accommodation" },
         { label: "Conference Venue", href: "/venue" },
-      ]
+      ],
     },
     { label: "Previous Years", href: "/years" },
     { label: "Contact", href: "/contact" },
@@ -85,39 +80,41 @@ const Navbar = () => {
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Menu (collapsible) */}
-        {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-gray-900 text-white shadow-lg rounded-b-lg py-4">
-            <div className="flex flex-col">
-              {menuItems.map((item, index) => (
-                <React.Fragment key={index}>
-                  <Link
-                    href={item.href || "#"} // Handle cases where there is no href
-                    className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
-                    onClick={toggleMobileMenu}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.dropdown && (
-                    <div className="pl-6">
-                      {item.dropdown.map((dropdownItem, idx) => (
-                        <Link
-                          key={idx}
-                          href={dropdownItem.href}
-                          className="block px-6 py-3 text-base font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
-                          onClick={toggleMobileMenu}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-        )}
+      {/* Mobile Menu with Smooth Transition */}
+      <div
+        className={`absolute top-full left-0 right-0 bg-gray-900 text-white shadow-lg rounded-b-lg overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "max-h-screen opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-5 pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col py-4">
+          {menuItems.map((item, index) => (
+            <React.Fragment key={index}>
+              <Link
+                href={item.href || "#"} // Handle cases where there is no href
+                className="block px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
+                onClick={toggleMobileMenu}
+              >
+                {item.label}
+              </Link>
+              {item.dropdown && (
+                <div className="pl-6">
+                  {item.dropdown.map((dropdownItem, idx) => (
+                    <Link
+                      key={idx}
+                      href={dropdownItem.href}
+                      className="block px-6 py-3 text-base font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
+                      onClick={toggleMobileMenu}
+                    >
+                      {dropdownItem.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </nav>
   );

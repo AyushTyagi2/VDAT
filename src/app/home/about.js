@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const AboutSection = () => {
-  const eventDate = new Date("2025-12-04T00:00:00");
+  const eventDate = new Date("2025-08-07T00:00:00");
   const [remainingTime, setRemainingTime] = useState(null); // Initially null to avoid SSR mismatch.
 
   useEffect(() => {
@@ -38,9 +38,13 @@ const AboutSection = () => {
         <div className="md:w-1/2 mb-8 md:mb-0">
           <h2 className="text-3xl font-bold mb-4 text-purple-500">About VDAT 2025</h2>
           <p className="text-lg leading-7">
-            The Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP) is India’s premier
-            conference in these fields. Starting in 1998, it became an annual international event from 2022, providing a
-            platform for technological advancements and research findings.
+          VLSI Design & Test Symposium (VDAT) began as a workshop in 1998 and gained symposium status in 2005 due to growing participation from VLSI professionals and academia. Since then, it has been held annually, becoming a key event in the VLSI field.  
+
+The symposium provides a platform for academia, researchers, startups, and industry professionals to exchange ideas, experiences, and knowledge in VLSI Design and Testing.  
+
+Over 28 years, VDAT has introduced novel designs and technologies, contributing to global progress. High-quality technical presentations have guided participants toward advancements in VLSI technology.  
+
+Now in its 29th year, VDAT-2025 will be a three-day in-person event in Chandigarh, India, during the last week of July 2025. It is supported by the VLSI Society of India.
           </p>
         </div>
         <div className="md:w-1/3">
