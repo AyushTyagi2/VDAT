@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4 md:px-8">
+    <footer className=" text-white py-12 px-4 md:px-8" style={{ backgroundColor: "#6c21a8" }}>
       <div className="max-w-7xl mx-auto space-y-8">
         
         {/* Partner Institutes */}
