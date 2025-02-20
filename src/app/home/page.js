@@ -17,45 +17,45 @@ const images = [
   "/images/iit-ropar-5.jpg",
 ];
 
-const sponsors = [
-  { src: "/sponsors/sponsor-1.jpg", alt: "Sponsor 1" },
-  { src: "/sponsors/sponsor-8.svg", alt: "Sponsor 2" },
-  { src: "/sponsors/sponsor-7.svg", alt: "Sponsor 3" },
-  { src: "/sponsors/sponsor-6.svg", alt: "Sponsor 4" },
-  { src: "/sponsors/sponsor-5.webp", alt: "Sponsor 5" },
-];
+// const sponsors = [
+//   { src: "/sponsors/sponsor-1.jpg", alt: "Sponsor 1" },
+//   { src: "/sponsors/sponsor-8.svg", alt: "Sponsor 2" },
+//   { src: "/sponsors/sponsor-7.svg", alt: "Sponsor 3" },
+//   { src: "/sponsors/sponsor-6.svg", alt: "Sponsor 4" },
+//   { src: "/sponsors/sponsor-5.webp", alt: "Sponsor 5" },
+// ];
 
-const endorsedBy = [
-  { src: "/logos/logo-1.png", alt: "Endorsed Sponsor 1" },
-  { src: "/logos/logo-2.jpg", alt: "Endorsed Sponsor 2" },
-  { src: "/logos/logo-3.jpg", alt: "Endorsed Sponsor 3" },
-  { src: "/logos/logo-6.svg", alt: "Endorsed Sponsor 4" },
-  { src: "/logos/logo-5.jpg", alt: "Endorsed Sponsor 5" },
-];
+// const endorsedBy = [
+//   { src: "/logos/logo-1.png", alt: "Endorsed Sponsor 1" },
+//   { src: "/logos/logo-2.jpg", alt: "Endorsed Sponsor 2" },
+//   { src: "/logos/logo-3.jpg", alt: "Endorsed Sponsor 3" },
+//   { src: "/logos/logo-6.svg", alt: "Endorsed Sponsor 4" },
+//   { src: "/logos/logo-5.jpg", alt: "Endorsed Sponsor 5" },
+// ];
 
-const speakers = [
-  {
-    name: "Richard Szeliski",
-    title: "Distinguished Scientist and Affiliate Faculty",
-    affiliation: "Google Research and University of Washington",
-    website: "https://szeliski.org/",
-    image: "/images/speaker-1.jpg",
-  },
-  {
-    name: "R. Venkatesh Babu",
-    title: "Professor",
-    affiliation: "Dept. of Computational and Data Sciences, IISc",
-    website: "https://cds.iisc.ac.in/faculty/venky/",
-    image: "/images/speaker-2.jpg",
-  },
-  {
-    name: "Fei-Fei Li",
-    title: "Professor of Computer Science",
-    affiliation: "Stanford University",
-    website: "https://profiles.stanford.edu/fei-fei-li",
-    image: "/images/speaker-3.jpg",
-  },
-];
+// const speakers = [
+//   {
+//     name: "Richard Szeliski",
+//     title: "Distinguished Scientist and Affiliate Faculty",
+//     affiliation: "Google Research and University of Washington",
+//     website: "https://szeliski.org/",
+//     image: "/images/speaker-1.jpg",
+//   },
+//   {
+//     name: "R. Venkatesh Babu",
+//     title: "Professor",
+//     affiliation: "Dept. of Computational and Data Sciences, IISc",
+//     website: "https://cds.iisc.ac.in/faculty/venky/",
+//     image: "/images/speaker-2.jpg",
+//   },
+//   {
+//     name: "Fei-Fei Li",
+//     title: "Professor of Computer Science",
+//     affiliation: "Stanford University",
+//     website: "https://profiles.stanford.edu/fei-fei-li",
+//     image: "/images/speaker-3.jpg",
+//   },
+// ];
 
 const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
   <div className="min-h-screen bg-gray-100 flex flex-col relative overflow-hidden" {...swipeHandlers}>
