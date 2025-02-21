@@ -50,14 +50,15 @@ const Navbar = () => {
         alt="VLSI Society of India Logo"
         width={70}
         height={70}
+        className=''
       />
-      <h2 className="text-5xl font-extrabold text-center  tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
+      <h2 className="text-3xl font-extrabold text-center  tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
  VDAT 2025
 </h2>
     </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 lg:space-x-8">
+        <div className="hidden  space-x-6 lg:space-x-8 lg:hidden xl:flex">
           {menuItems.map((item, index) => (
             <div key={index} className="relative group">
               <Link
@@ -85,7 +86,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden">
+        <div className="lg:flex xl:hidden">
           <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
