@@ -26,45 +26,45 @@ const images = [
 
 ];
 
-// const sponsors = [
+const sponsors = [
 //   { src: "/sponsors/sponsor-1.jpg", alt: "Sponsor 1" },
 //   { src: "/sponsors/sponsor-8.svg", alt: "Sponsor 2" },
 //   { src: "/sponsors/sponsor-7.svg", alt: "Sponsor 3" },
 //   { src: "/sponsors/sponsor-6.svg", alt: "Sponsor 4" },
 //   { src: "/sponsors/sponsor-5.webp", alt: "Sponsor 5" },
-// ];
+];
 
-// const endorsedBy = [
+const endorsedBy = [
 //   { src: "/logos/logo-1.png", alt: "Endorsed Sponsor 1" },
 //   { src: "/logos/logo-2.jpg", alt: "Endorsed Sponsor 2" },
 //   { src: "/logos/logo-3.jpg", alt: "Endorsed Sponsor 3" },
 //   { src: "/logos/logo-6.svg", alt: "Endorsed Sponsor 4" },
 //   { src: "/logos/logo-5.jpg", alt: "Endorsed Sponsor 5" },
-// ];
+];
 
-// const speakers = [
-//   {
-//     name: "Richard Szeliski",
-//     title: "Distinguished Scientist and Affiliate Faculty",
-//     affiliation: "Google Research and University of Washington",
-//     website: "https://szeliski.org/",
-//     image: "/images/speaker-1.jpg",
-//   },
-//   {
-//     name: "R. Venkatesh Babu",
-//     title: "Professor",
-//     affiliation: "Dept. of Computational and Data Sciences, IISc",
-//     website: "https://cds.iisc.ac.in/faculty/venky/",
-//     image: "/images/speaker-2.jpg",
-//   },
-//   {
-//     name: "Fei-Fei Li",
-//     title: "Professor of Computer Science",
-//     affiliation: "Stanford University",
-//     website: "https://profiles.stanford.edu/fei-fei-li",
-//     image: "/images/speaker-3.jpg",
-//   },
-// ];
+const speakers = [
+  // {
+  //   name: "Richard Szeliski",
+  //   title: "Distinguished Scientist and Affiliate Faculty",
+  //   affiliation: "Google Research and University of Washington",
+  //   website: "https://szeliski.org/",
+  //   image: "/images/speaker-1.jpg",
+  // },
+  // {
+  //   name: "R. Venkatesh Babu",
+  //   title: "Professor",
+  //   affiliation: "Dept. of Computational and Data Sciences, IISc",
+  //   website: "https://cds.iisc.ac.in/faculty/venky/",
+  //   image: "/images/speaker-2.jpg",
+  // },
+  // {
+  //   name: "Fei-Fei Li",
+  //   title: "Professor of Computer Science",
+  //   affiliation: "Stanford University",
+  //   website: "https://profiles.stanford.edu/fei-fei-li",
+  //   image: "/images/speaker-3.jpg",
+  // },
+];
 
 const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
   <div
@@ -115,29 +115,29 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
   </div>
 );
 
-// const SponsorsSection = ({ title, items }) => (
-//   <section className="py-8 md:py-12 bg-gray-100">
-//     <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-6 md:mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
-//       {title}
-//     </h2>
-//     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-8 mx-auto max-w-7xl px-4">
-//       {items.map((item, index) => (
-//         <div
-//           key={index}
-//           className="w-full flex justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px] hover:shadow-lg"
-//         >
-//           <Image
-//             src={item.src}
-//             alt={item.alt}
-//             width={200}
-//             height={200}
-//             className="object-contain transition duration-300 ease-in-out"
-//           />
-//         </div>
-//       ))}
-//     </div>
-//   </section>
-// );
+const SponsorsSection = ({ title, items }) => (
+  <section className="py-8 md:py-12 bg-gray-100">
+    <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-6 md:mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
+      {title}
+    </h2>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-8 mx-auto max-w-7xl px-4">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="w-full flex justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px] hover:shadow-lg"
+        >
+          <Image
+            src={item.src}
+            alt={item.alt}
+            width={200}
+            height={200}
+            className="object-contain transition duration-300 ease-in-out"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+);
 
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -159,10 +159,10 @@ const HomePage = () => {
     <>
       <Carousel images={images} currentImageIndex={currentImageIndex} swipeHandlers={handlers} />
     
-      {/* <SponsorsSection title="Our Sponsors" items={sponsors} />
-      <SponsorsSection title="Endorsed By" items={endorsedBy} /> */}
+      <SponsorsSection title="Our Sponsors" items={sponsors} />
+      <SponsorsSection title="Endorsed By" items={endorsedBy} />
       <AboutSection />
-      {/* <SpeakersSection speakers={speakers} /> */}
+      <SpeakersSection speakers={speakers} />
       <ContactUs />
       <Footer />
     </>
