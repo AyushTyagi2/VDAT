@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOY_PATH=/home/yz7713srccas/public_html/
+    - export MY_NODE=/home/yz7713srccas/.nvm/versions/node/v22.14.0/bin/node
+    - export MY_NPM=/home/yz7713srccas/.nvm/versions/node/v22.14.0/bin/npm
+    - $MY_NPM install
+    - $MY_NPM build
+    - /bin/mv -r out/* $DEPLOY_PATH/
