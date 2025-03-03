@@ -16,6 +16,13 @@ const Navbar = () => {
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "Keynotes", href: "/keynotes" },
+    { label: "Previous Years", 
+      dropdown: [
+        { label: "VDAT 2024", href: "https://vit.ac.in/vdat2024/" },
+        { label: "VDAT 2023", href: "https://discovery.bits-pilani.ac.in/VDAT2023/" },
+        { label: "VDAT 2022", href: "https://iitjammu.ac.in/vdat2022/" },
+      ],
+     },
     {
       label: "Call for Papers",
       dropdown: [
@@ -33,7 +40,6 @@ const Navbar = () => {
         { label: "Conference Venue", href: "/venue" },
       ],
     },
-    { label: "Previous Years", href: "/years" },
     { label: "Contact", href: "/contact" },
     { label: "Register", href: "/register" },
   ];
