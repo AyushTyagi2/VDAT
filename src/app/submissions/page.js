@@ -51,13 +51,15 @@ const SpeakersSection = () => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   };
 
+
   const tracks = [
     {
       id: "Track 1",
-      title: "Track 1: Emerging Materials and Devices Technologies",
+      name: "Track 1",
+      title: "Emerging Materials and Devices Technologies:  Dr. Shubham Sahay (IITK)",
       content: [
         "Emerging materials",
-        "2-D Materials",
+        "2-D Material",
         "High-voltage MOSFET",
         "Si photonics and optoelectronics",
         "Spintronics and quantum materials",
@@ -68,43 +70,60 @@ const SpeakersSection = () => {
     },
     {
       id: "Track 2",
-      title: "Track 2: VLSI Circuit and System Design",
+      name: "Track 2",
+      title: "VLSI Circuit and SoC Design: Dr. Sarvana (IIT R)",
       content: [
         "Digital, Analog, Mixed signal, RF circuits",
         "RTL design",
         "Processor Architecture",
         "Hardware accelerators",
         "FPGA based design",
-        "Quantum",
+        "Quantum Circuits",
         "Neuromorphic",
         "Memory",
+        "Circuits, accelerators, SoC for ML/AI applications",
       ],
     },
     {
       id: "Track 3",
-      title: "Track 3: Electronics Design Automation, Testing and Verification",
+      name: "Track 3",
+      title: "Electronics Design Automation, Testing and Verification : Prof. Sneh Saurabh (IIIT-Delhi)",
       content: [
         "CAD Tools, software",
         "CAD for FPGA",
         "High-Level Synthesis",
         "System software",
         "Testing and Verification",
-        "Packaging (Signal and Power Integrity)",
       ],
     },
     {
       id: "Track 4",
-      title: "Track 4: Embedded Systems Design",
+      name: "Track 4",
+      title: "Embedded Systems Design: Dr Amit Kumar (Chitkara), Prof. Srikant Srinivasan (Palaksha University)",
       content: [
-        "Hardware/Software Co-design & Verification",
-        "Audio, Image & Video-Processing on Embedded Systems",
-        "Reconfigurable Systems",
-        "Microcontroller, ARM, IoT and FPGA-based Embedded Systems Design",
-        "Embedded Software",
-        "Real-Time Systems",
+        "Embedded AI and Machine Learning",
+        "Real-Time Systems and Applications",
+        "Embedded Software and Firmware Development",
+        "Hardware/Software Co-Design",
+        "IoT, Edge, and Wireless Embedded Systems",
+        "Embedded Vision and Multimedia Processing",
+        "Reconfigurable Systems and FPGAs",
+        "Automotive, Healthcare, and Industrial Applications",
+      ],
+    },
+    {
+      id: "Track 5",
+      name: "Track 5",
+      title: "Packaging and Manufacturing: Dr. Jay Narayan Tripathi (IIT J)",
+      content: [
+        "Manufacturing technologies",
+        "Packaging ",
+        "Signal and Power Integrity",
       ],
     },
   ];
+
+  
 
   return (
     <div>
@@ -126,6 +145,10 @@ const SpeakersSection = () => {
             <li><strong>Deadline for acceptance:</strong> June 15, 2025</li>
             <li><strong>Deadline for camera-ready:</strong> July 1, 2025</li>
           </ul>
+        <button className='bg-purple-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-600 transition duration-200 ease-in-out'
+          onClick={() => scrollToSection('submission')}>
+          Submission Guidelines
+        </button>
         </div>
       </section>
 
@@ -150,13 +173,13 @@ const SpeakersSection = () => {
           <div className="lg:w-1/3">
             <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center">Conference Tracks</h2>
             <div className="grid grid-cols-2 gap-4 text-center">
-              {tracks.map(({ id, title }) => (
+              {tracks.map(({ id, name }) => (
                 <button
                   key={id}
                   onClick={() => scrollToSection(id)}
                   className="w-full h-40 text-center text-lg font-bold border border-purple-500 rounded p-2 text-white hover:bg-purple-500 transition duration-200 ease-in-out"
                 >
-                  {title.split(':')[0]}
+                  {name.split(':')[0]}
                 </button>
               ))}
             </div>
@@ -174,6 +197,23 @@ const SpeakersSection = () => {
         />
       ))}
 
+      <section className="bg-gray-50 py-8 px-4" id ="submission">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl font-extrabold text-gray-800 mb-8">Submission Guidelines</h1>
+            <p className="text-lg text-gray-600 mb-6">
+            Authors are invited to submit original, unpublished research manuscripts adhering to the following guidelines:
+            </p>
+            <ol className="text-left text-lg text-gray-700 space-y-4 list-decimal list-inside">
+              <li>Papers should be in <span className="font-semibold">PDF format</span> following the <span className="font-semibold">IEEE Conference paper format</span>.</li>
+              <li>Submissions must not exceed <span className="font-semibold">six A4-sized pages</span> and should be uploaded via the official portal: <a href="https://softconf.com/vlsi/vdat2025" target="_blank" className="text-blue-600 underline">Submit Here</a>.</li>
+              <li>A <span className="font-semibold">double-blind review process</span> will be followed, so ensure no author names or identifying information is included in the manuscript.</li>
+              <li>Include an <span className="font-semibold">abstract of 250 words</span> with a maximum of <span className="font-semibold">five keywords</span>.</li>
+              <li>Authors will be notified via email regarding acceptance and required revisions.</li>
+              <li>Revised camera-ready copies must be submitted within the specified deadline following the final submission guidelines.</li>
+              <li>At least <span className="font-semibold">one author must register</span> for the conference to present and publish the paper. Separate registration is required for each paper presented by the same author.</li>
+            </ol>
+          </div>
+      </section>
       <Footer />
     </div>
   );
