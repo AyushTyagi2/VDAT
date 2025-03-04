@@ -23,3 +23,71 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #a855f7;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: white;
+  animation: moveDot 3s linear infinite alternate;
+}
+
+@keyframes moveDot {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 10px);
+  }
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center; /* Center the text */
+  flex: 0 0 100%;
+}
+
+.section-heading h2 {
+  margin: 10px auto; /* Equal margin top and bottom */
+  color: #a855f7;
+  flex: 0 0 100%; /* Make the heading take full width on mobile */
+}
+
+.section-heading::before,
+.section-heading::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: #a855f7;
+}
+
+@media (max-width: 768px) {
+  .section-heading h2 {
+    font-size: 1.5rem;
+    margin: 10px 10px;
+  }
+}
+
+@keyframes moveDot {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 10px); /* Move to the end, adjusting for the dot's width */
+  }
+}
