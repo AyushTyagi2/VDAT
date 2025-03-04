@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
+import {FaLinkedin} from 'react-icons/fa';
 
 const Footer = () => {
   const partnerLogos = {
-    "Chitkara University": "/logos/chitkara.png",
     "IIT Ropar": "/images/iitrpr.png",
     "IIT Mandi": "/logos/iit-mandi.png",
+    "Chitkara University": "/logos/chitkara.png",
     "Chandigarh University": "/logos/cu.png",
-    "PEC": "/logos/pec.png",
+    "PEC": "/logos/pec.jpg",
     "SCL": "/logos/scl.png",
   };
 
@@ -69,11 +69,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-2 text-gray-300">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="Facebook"><FaFacebook size={20} /></a>
-              <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="Twitter"><FaTwitter size={20} /></a>
               <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
-              <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="YouTube"><FaYoutube size={20} /></a>
-              <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="Instagram"><FaInstagram size={20} /></a>
             </div>
           </div>
         </div>

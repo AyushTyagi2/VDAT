@@ -97,7 +97,9 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
           </span>
         </h1>
         <p className="text-lg lg:text-2xl text-white mb-6 md:mb-8 font-medium drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)] bg-gradient-to-r from-yellow-400 via-orange-300 to-orange-500 text-transparent bg-clip-text px-4 py-2 rounded-md"> {/* Consistent styling for paragraph with vibrant gradient */}
-        Aug 7-9, 2025 | Chandigarh - India
+        Aug 7-9, 2025 
+        <br />
+        Venue :  Shivalik View, Sector 17, Chandigarh , India
         </p>
         <div className="flex justify-center md:justify-start">
           <Link
