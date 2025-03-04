@@ -44,7 +44,7 @@ The symposium provides a platform for academia, researchers, startups, and indus
 
 Over 28 years, VDAT has introduced novel designs and technologies, contributing to global progress. High-quality technical presentations have guided participants toward advancements in VLSI technology.  
 
-Now in its 29th year, VDAT-2025 will be a three-day in-person event in Chandigarh, India, during the last week of July 2025. It is supported by the VLSI Society of India.
+Now in its 29th year, VDAT-2025 will be a three-day in-person event in Chandigarh, India, during the first week of August 2025. It is supported by the VLSI Society of India.
           </p>
         </div>
         <div className="md:w-1/3">
