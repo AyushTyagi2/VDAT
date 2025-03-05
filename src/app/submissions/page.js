@@ -56,7 +56,7 @@ const SpeakersSection = () => {
     {
       id: "Track 1",
       name: "Track 1",
-      title: "Emerging Materials and Devices Technologies:  Dr. Shubham Sahay (IITK)",
+      title: "Emerging Materials and Devices Technologies",
       content: [
         "Emerging materials",
         "2-D Material",
@@ -71,7 +71,7 @@ const SpeakersSection = () => {
     {
       id: "Track 2",
       name: "Track 2",
-      title: "VLSI Circuit and SoC Design: Dr. Sarvana (IIT R)",
+      title: "VLSI Circuit and SoC Design",
       content: [
         "Digital, Analog, Mixed signal, RF circuits",
         "RTL design",
@@ -87,7 +87,7 @@ const SpeakersSection = () => {
     {
       id: "Track 3",
       name: "Track 3",
-      title: "Electronics Design Automation, Testing and Verification : Prof. Sneh Saurabh (IIIT-Delhi)",
+      title: "Electronics Design Automation, Testing and Verification",
       content: [
         "CAD Tools, software",
         "CAD for FPGA",
@@ -99,7 +99,7 @@ const SpeakersSection = () => {
     {
       id: "Track 4",
       name: "Track 4",
-      title: "Embedded Systems Design: Dr Amit Kumar (Chitkara), Prof. Srikant Srinivasan (Palaksha University)",
+      title: "Embedded Systems Design",
       content: [
         "Embedded AI and Machine Learning",
         "Real-Time Systems and Applications",
@@ -114,7 +114,7 @@ const SpeakersSection = () => {
     {
       id: "Track 5",
       name: "Track 5",
-      title: "Packaging and Manufacturing: Dr. Jay Narayan Tripathi (IIT J)",
+      title: "Packaging and Manufacturing",
       content: [
         "Manufacturing technologies",
         "Packaging ",
