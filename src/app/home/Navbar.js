@@ -10,11 +10,13 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPapersDropdownOpen, setIsPapersDropdownOpen] = useState(false);
   const [isVenueDropdownOpen, setIsVenueDropdownOpen] = useState(false);
-
+  const [isprevyeardropdownopen, setIsprevyeardropdownopen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
+  const toggleprevyear = ()=>{
+    setIsprevyeardropdownopen(!isprevyeardropdownopen);
+  }
   const togglePapersDropdown = () => {
     setIsPapersDropdownOpen(!isPapersDropdownOpen);
   };
@@ -139,6 +141,9 @@ const Navbar = () => {
                     } else if (item.label === "Venue") {
                       setIsVenueDropdownOpen(!isVenueDropdownOpen);
                     }
+                    else if(item.label === "Previous Years"){
+                      setIsprevyeardropdownopen(!isprevyeardropdownopen)
+                    }
                   } else {
                     if (item.href) {
                       window.location.href = item.href;
@@ -153,7 +158,8 @@ const Navbar = () => {
                 <div
                   className={`pl-6 ${
                     (item.label === "Call for Papers" && isPapersDropdownOpen) ||
-                    (item.label === "Venue" && isVenueDropdownOpen)
+                    (item.label === "Venue" && isVenueDropdownOpen)||
+                    (item.label === "Previous Years" && isprevyeardropdownopen)
                       ? "block"
                       : "hidden"
                   }`}
