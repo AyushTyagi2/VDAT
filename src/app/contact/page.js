@@ -12,6 +12,8 @@ const SpeakersSection = () => {
       >
         <div className="bg-black bg-opacity-50 py-20 px-4">
           <h1 className="text-5xl font-extrabold">Contact-Us</h1>
+          <br/>
+          <h2 className="text-3xl font-light">Coming Soon!</h2>
           <p className="text-xl mt-4 font-light"></p>
         </div>
       </header>

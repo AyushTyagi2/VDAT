@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {FaLinkedin} from 'react-icons/fa';
 
+
 const Footer = () => {
   const partnerLogos = {
     "IIT Ropar": "/images/iitrpr.png",
     "IIT Mandi": "/logos/iit-mandi.png",
     "Chitkara University": "/logos/chitkara.png",
     "Chandigarh University": "/logos/cu.png",
-    "PEC": "/logos/pec.jpg",
+    "PEC": "/logos/pec.png",
     "SCL": "/logos/scl.png",
   };
 
@@ -37,7 +38,7 @@ const Footer = () => {
         </div>
         
         {/* Sponsors Section */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <h4 className="text-lg font-semibold mb-2 text-gray-300">Our Sponsors</h4>
           <div className="flex justify-center space-x-4">
             {Object.entries(sponsorLogos).map(([name, src]) => (
@@ -49,7 +50,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Other Sections */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -66,12 +67,12 @@ const Footer = () => {
           </div>
 
           {/* Follow Us */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold mb-2 text-gray-300">Follow Us</h4>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
