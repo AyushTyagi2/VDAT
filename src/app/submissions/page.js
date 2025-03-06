@@ -123,6 +123,9 @@ const SpeakersSection = () => {
     window.open("https://softconf.com/vlsi/vdat2025", "_blank");
   };
 
+  const handlePDFClick = () => {
+    window.open("/pdfs/vdat2025.pdf", "_blank");
+  }
   return (
     <div>
       <Navbar />
@@ -167,6 +170,12 @@ const SpeakersSection = () => {
               onClick={handleLinkClick}
             >
               Submission Link
+            </button>
+            <button
+              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
+              onClick={handlePDFClick}
+            >
+              Submission Brochure
             </button>
           </div>
         </div>
