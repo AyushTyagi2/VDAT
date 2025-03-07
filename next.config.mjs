@@ -7,4 +7,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
-  here it is module.mjs
+  
