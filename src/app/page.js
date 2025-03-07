@@ -160,11 +160,13 @@ const HomePage = () => {
   return (
     <>
       <Carousel images={images} currentImageIndex={currentImageIndex} swipeHandlers={handlers} />
-    
       <SponsorsSection title="Our Sponsors" items={sponsors} />
+      <h1 className="text-center text-2xl font-bold bg-gray-100 text-purple-600">Coming Soon!</h1>
       <SponsorsSection title="Endorsed By" items={endorsedBy} />
+      <h1 className="text-center text-2xl font-bold bg-gray-100 text-purple-600">Coming Soon!<br/><br/></h1>
       <AboutSection />
       <SpeakersSection speakers={speakers} />
+      <h1 className="text-center text-2xl font-bold bg-gray-100 text-purple-600">Coming Soon!<br/><br/></h1>
       <ContactUs />
       <Footer />
     </>
