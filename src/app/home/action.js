@@ -21,7 +21,7 @@ export async function submitMessage(data) {
 
     const mailOptions = {
       from: email,
-      to: "VDAT2025@iitrpr.ac.in",
+      to: "2023csb1108@iitrpr.ac.in",
       subject: `Contact Form Submission: ${subject}`,
       html: `
         <h3>Contact Form Submission</h3>
