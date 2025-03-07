@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="flex justify-center space-x-4">
             {Object.entries(partnerLogos).map(([name, src]) => (
               <div key={name} className="relative group">
-                <Image src={src} alt={name} width={80} height={40} />
+                <Image src={src} alt={name} width={1600} height={2000} />
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100">
                   {name}
                 </span>
