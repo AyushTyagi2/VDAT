@@ -11,7 +11,7 @@ const committees = [
   { title: "Sponsorship Chair", members: ["Alpana Agarwal, Thapar Institute", "Shonal Chouksey, IIIT Una"] },
   { title: "Fellowship Chair", members: ["Ambika Shah, IIT Jammu", "Shruti Jain, JUIT, Solan, Himachal Pradesh", "Balwinder Singh, CDAC"] },
   { title: "Demo and Exhibit Chair", members: ["Rajendra Prasad, HCL Tech", "John Jose, IIT Guwahati", "Industry"] },
-  { title: "Website Chair", members: ["Kalyan, IIT Ropar"] },
+  { title: "Website Chair", members: ["Kalyan, IIT Ropar", "Ayush Tyagi, IIT Ropar", "Nishant Sahni, IIT Ropar", "Aryan Singh, IIT Ropar"] },
   { title: "Startup Chair", members: ["Gagandeep Kaur"] },
   { title: "PhD Forum Chair", members: ["Debiprasana Sahu, IIT Bhubaneswar"] },
   { title: "Publication Chair", members: ["Balwinder Raj, NIT Jalandhar", "Sivanantham, VIT Vellore"] },
