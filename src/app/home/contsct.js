@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { submitMessage } from "./action";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -53,20 +54,21 @@ const ContactUs = () => {
     }
 
     try {
-      const response = await fetch("/api/contact", {
+      // const response = await fetch("/api/contact", {
         
-        body: JSON.stringify(formData),
-      });
+      //   body: JSON.stringify(formData),
+      // });
+      const response = await submitMessage(formData);
 
-      if (response.ok) {
+      if (!response.error) {
         setFormData({ fullName: "", subject: "", email: "", phone: "", message: "" });
         setSubmissionMessage("Message sent successfully!");
-      } else {
-        const errorData = await response.json();
-        setSubmissionMessage(errorData?.message || "An error occurred. Please try again later.");
+      } else {;
+        setSubmissionMessage(response.message || "An error occurred. Please try again later.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
+      setFormErrors({errors: "An unexpected error occurred. Please try again later."});
       setSubmissionMessage("An unexpected error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);
