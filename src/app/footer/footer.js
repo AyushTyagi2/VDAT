@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {FaLinkedin} from 'react-icons/fa';
 
+
 const Footer = () => {
   const partnerLogos = {
     "IIT Ropar": "/images/iitrpr.png",
-    "IIT Mandi": "/logos/iit-mandi.png",
+    "IIT Mandi": "/logos/mandi__.png",
     "Chitkara University": "/logos/chitkara.png",
     "Chandigarh University": "/logos/cu.png",
-    "PEC": "/logos/pec.jpg",
+    "PEC": "/logos/pec.png",
     "SCL": "/logos/scl.png",
   };
 
@@ -27,7 +28,7 @@ const Footer = () => {
           <div className="flex justify-center space-x-4">
             {Object.entries(partnerLogos).map(([name, src]) => (
               <div key={name} className="relative group">
-                <Image src={src} alt={name} width={80} height={40} />
+                <Image src={src} alt={name} width={1600} height={2000} />
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100">
                   {name}
                 </span>
@@ -37,7 +38,7 @@ const Footer = () => {
         </div>
         
         {/* Sponsors Section */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <h4 className="text-lg font-semibold mb-2 text-gray-300">Our Sponsors</h4>
           <div className="flex justify-center space-x-4">
             {Object.entries(sponsorLogos).map(([name, src]) => (
@@ -49,7 +50,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Other Sections */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -66,12 +67,12 @@ const Footer = () => {
           </div>
 
           {/* Follow Us */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold mb-2 text-gray-300">Follow Us</h4>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
