@@ -6,7 +6,7 @@ import {FaLinkedin} from 'react-icons/fa';
 const Footer = () => {
   const partnerLogos = {
     "IIT Ropar": "/images/iitrpr.png",
-    "IIT Mandi": "/logos/mandi__.png",
+    "IIT Mandi": "/logos/iit-mandi.png",
     "Chitkara University": "/logos/chitkara.png",
     "Chandigarh University": "/logos/cu.png",
     "PEC": "/logos/pec.png",
