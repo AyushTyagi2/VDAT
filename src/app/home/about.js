@@ -56,7 +56,7 @@ const AboutSection = () => {
 
   return (
     <section className="bg-black bg-opacity-0 py-16 text-white" id="about">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start">
+      <div className="bg-black bg-opacity-0 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start">
         <div className="md:w-1/2 mb-8 md:mb-0">
           <h2 className="text-3xl font-bold mb-4 text-purple-500">About VDAT 2025</h2>
           <p className="text-lg leading-7">
