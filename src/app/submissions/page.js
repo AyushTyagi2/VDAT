@@ -124,7 +124,7 @@ const SpeakersSection = () => {
   };
 
   const handlePDFClick = () => {
-    window.open("/pdfs/vdat2025.pdf", "_blank");
+    window.open("/pdfs/VDAT - CFP2025.pdf", "_blank");
   }
   return (
     <div>
