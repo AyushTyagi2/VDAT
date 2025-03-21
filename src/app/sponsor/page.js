@@ -34,7 +34,7 @@ const SponsorshipPage = () => {
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="bg-black bg-opacity-60 py-20 px-4">
-          <h1 className="text-5xl font-extrabold tracking-wide uppercase">Sponsors</h1>
+          <h1 className=" sub text-5xl font-extrabold tracking-wide uppercase">Sponsors</h1>
         </div>
       </header>
 
@@ -63,7 +63,7 @@ const SponsorshipPage = () => {
             <tbody>
               {sponsorshipTiers.map((tier, index) => (
                 <tr key={index} className="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition-all">
-                  <td className="border p-4 font-bold text-purple-700">{tier.tier}</td>
+                  <td className=" fixed-column border p-4 font-bold text-purple-700">{tier.tier}</td>
                   <td className="border p-4 text-gray-700">{tier.amount}</td>
                   {tier.benefits.map((benefit, i) => (
                     <td key={i} className="border p-4 text-gray-700 text-center">
@@ -79,7 +79,7 @@ const SponsorshipPage = () => {
 
       {/* Additional Sponsorship Opportunities */}
       <section className="container mx-auto px-6 py-12 bg-gray-50">
-        <h2 className="text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Additional Opportunities</h2>
+        <h2 className=" sub text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Additional Opportunities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {additionalOpportunities.map((item, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-all">
@@ -91,7 +91,7 @@ const SponsorshipPage = () => {
 
       {/* Advertisement Rates */}
       <section className="bg-white container mx-auto px-6 py-12">
-        <h2 className="text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Advertisement Rates</h2>
+        <h2 className="sub text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Advertisement Rates</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {advertisements.map((ad, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-all">

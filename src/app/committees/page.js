@@ -136,38 +136,31 @@ const specialChairs = [
     ]
   }
 ];
+
 const CommitteeCard = ({ title, members }) => {
   return (
     <div className="bg-white shadow-xl rounded-xl p-6 w-full md:w-1/2 lg:w-1/3 transition-transform hover:scale-105 hover:shadow-2xl">
       <h2 className="text-2xl font-semibold text-indigo-800 mb-4 text-center border-b-2 border-indigo-500 pb-2">{title}</h2>
-      <ul className="space-y-3">
-        {members.map((member, index) => {
-          const isLast = index === members.length - 1;
-          return (
-            <li key={index} className="text-gray-900 text-lg text-center relative group cursor-pointer">
-              <div className="relative inline-block font-medium">
-                {member.name}, <span className="text-gray-600">{member.institute}</span>
-
-                <div
-                  className={`absolute ${
-                    isLast ? "left-1/2 transform -translate-x-1/2 mt-2" : "left-full ml-3 top-1/2 -translate-y-1/2"
-                  } bg-black text-white shadow-lg rounded-lg p-2 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                >
-                  {member.linkedin && (
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">
-                      LinkedIn
-                    </a>
-                  )}
-                  {member.website && (
-                    <a href={member.website} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">
-                      Website
-                    </a>
-                  )}
-                </div>
-              </div>
-            </li>
-          );
-        })}
+      <ul className="space-y-14">
+        {members.map((member, index) => (
+          <li key={index} className="text-gray-900 text-lg text-center relative group cursor-pointer">
+            <div className="mb-2 relative font-medium">
+              {member.name}, <span className="text-gray-600">{member.institute}</span>
+            </div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-1 w-full flex justify-center gap-4">
+              {member.linkedin && (
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition">
+                  LinkedIn
+                </a>
+              )}
+              {member.website && (
+                <a href={member.website} target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 transition">
+                  Website
+                </a>
+              )}
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );
@@ -180,29 +173,18 @@ const SpeakersSection = () => {
       <header className="text-center bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-40 relative"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="bg-black bg-opacity-50 py-16 rounded-lg">
-          <h1 className="text-5xl font-extrabold tracking-wide uppercase">Committees</h1>
+          <h1 className="sub text-5xl font-extrabold tracking-wide uppercase">Committees</h1>
         </div>
       </header>
       
       <div className="py-6 bg-gray-100"></div>
-      <section className="py-5 bg-gray-100 text-center">
+      <section className="sub py-5 bg-gray-100 text-center">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
-          {/* Special Chairs Section */}
-          {specialChairs?.map((committee, index) => (
-            <CommitteeCard key={index} {...committee} />
-          ))}
-        </div>
-      </section>  
-
-      <section className="py-5 bg-gray-100 text-center">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
-          {/* Main Committees Section */}
           {committees?.map((committee, index) => (
             <CommitteeCard key={index} {...committee} />
           ))}
         </div>
       </section>
-      
       <Footer />
     </div>
   );

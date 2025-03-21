@@ -138,7 +138,7 @@ const SpeakersSection = () => {
         }}
       >
         <div className="bg-black bg-opacity-50 py-20 px-4">
-          <h1 className="text-5xl font-extrabold">Submissions</h1>
+          <h1 className=" sub text-5xl font-extrabold">SUBMISSIONS</h1>
         </div>
       </header>
 

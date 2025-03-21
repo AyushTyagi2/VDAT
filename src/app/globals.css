@@ -104,3 +104,22 @@ html {
       flex-basis: 42%; /* 40% for smaller screens */
   }
 }
+
+@media (max-width: 370px){
+  .sub {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1665px){
+.nav{
+  font-size: 20px;
+}
+}
+
+.fixed-column {
+  position: sticky;
+  left: 0;
+  background-color: white; 
+  z-index: 10; 
+}
