@@ -6,11 +6,11 @@ import {FaLinkedin} from 'react-icons/fa';
 const Footer = () => {
   const partnerLogos = {
     "IIT Ropar": "/images/iitrpr.png",
-    "IIT Mandi": "/logos/iit-mandi.png",
-    "Chitkara University": "/logos/chitkara.png",
-    "Chandigarh University": "/logos/cu.png",
+    "IIT Mandi": "/logos/iit-mandi1.png",
+    "Chitkara University": "/logos/chitkara__.png",
+    "Chandigarh University": "/logos/cu__.jpeg",
     "PEC": "/logos/pec.png",
-    "SCL": "/logos/scl.png",
+    "SCL": "/logos/scl__.png",
   };
 
   const sponsorLogos = {
@@ -19,21 +19,34 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" text-white py-12 px-4 md:px-8" style={{ backgroundColor: "#6c21a8" }}>
-      <div className="max-w-7xl mx-auto space-y-8">
-        
-        {/* Partner Institutes */}
+    <footer className="text-white py-12 px-4 md:px-8" style={{ backgroundColor: "#6c21a8" }}>
+    <div className="max-w-7xl mx-auto space-y-8">
         <div>
-          <h4 className="text-lg font-semibold mb-2 text-gray-300 text-center">Partner Institutes</h4>
-          <div className="flex justify-center space-x-4">
-            {Object.entries(partnerLogos).map(([name, src]) => (
-              <div key={name} className="relative group">
-                <Image src={src} alt={name} width={1600} height={2000} />
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100">
-                  {name}
-                </span>
-              </div>
-            ))}
+            <h4 className="text-lg font-semibold mb-2 text-gray-300 text-center">Partner Institutes</h4>
+            <div className="flex justify-center space-x-4 flex-wrap logo-container">
+                {Object.entries(partnerLogos).map(([name, src]) => (
+                    <div
+                        key={name}
+                        className="relative group logo-item p-5"
+                        style={{
+                            flexShrink: 0,
+                            aspectRatio: '270 / 144', // Maintain ratio
+                            position: 'relative',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <Image
+                            src={src}
+                            alt={name}
+                            layout="fill"
+                            objectFit="contain"
+                            className='pb-5'
+                        />
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100">
+                            {name}
+                        </span>
+                    </div>
+                ))}
           </div>
         </div>
         

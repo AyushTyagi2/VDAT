@@ -22,7 +22,8 @@ const images = [
   "/images/roorkee.jpg",
   "/images/guhati.jpg",
   "/images/nirma.jpg",
-  "/images/psg.jpg"
+  "/images/psg.jpg",
+  "/images/mandi.jpg"
 
 ];
 
@@ -92,7 +93,7 @@ const Carousel = ({ images, currentImageIndex, swipeHandlers }) => (
         <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight relative z-10">
           <span >
           {/* <span className="drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)] bg-gradient-to-r from-yellow-400 via-orange-300 to-orange-500  text-transparent bg-clip-text px-5 py-3 rounded-md"> More vibrant gradient text with drop shadow */}
-          29th IEEE International Symposium on <br className="hidden md:block" />
+          29th International Symposium on <br className="hidden md:block" />
           VLSI Design and Test (VDAT-2025)
           </span>
         </h1>

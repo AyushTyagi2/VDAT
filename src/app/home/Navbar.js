@@ -29,7 +29,7 @@ const Navbar = () => {
     { label: "Home", href: "/" },
     
     {
-      label: "Call for Papers",
+      label: "Call for Submissions",
       onClick: togglePapersDropdown,
       dropdown: [
         { label: "Submissions", href: "/submissions" },
@@ -136,7 +136,7 @@ const Navbar = () => {
                 className="block w-full text-left px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
                 onClick={() => {
                   if (item.dropdown) {
-                    if (item.label === "Call for Papers") {
+                    if (item.label === "Call for Submissions") {
                       setIsPapersDropdownOpen(!isPapersDropdownOpen);
                     } else if (item.label === "Venue") {
                       setIsVenueDropdownOpen(!isVenueDropdownOpen);
@@ -157,7 +157,7 @@ const Navbar = () => {
               {item.dropdown && (
                 <div
                   className={`pl-6 ${
-                    (item.label === "Call for Papers" && isPapersDropdownOpen) ||
+                    (item.label === "Call for Submissions" && isPapersDropdownOpen) ||
                     (item.label === "Venue" && isVenueDropdownOpen)||
                     (item.label === "Previous Years" && isprevyeardropdownopen)
                       ? "block"

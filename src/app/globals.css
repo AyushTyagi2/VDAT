@@ -91,3 +91,16 @@ html {
     left: calc(100% - 10px); /* Move to the end, adjusting for the dot's width */
   }
 }
+.logo-container {
+  width: 100%;
+}
+
+.logo-item {
+  flex-basis: 25%; /* Default: 25% for larger screens */
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .logo-item {
+      flex-basis: 42%; /* 40% for smaller screens */
+  }
+}
