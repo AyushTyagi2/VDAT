@@ -25,7 +25,8 @@ const Navbar = () => {
       dropdown: [
         { label: "Submissions", href: "/submissions" },
         { label: "Awards", href: "/awards" },
-        { label: "Call for Tutorials", href: "/call" },
+        { label: "Call for Tutorials", href: "/callfortutorials" },
+        {label: "Circuitpreneur", href: "/circuitpreneur"},
       ],
     },
     { label: "Speakers", href: "/Speakers" },
@@ -38,7 +39,6 @@ const Navbar = () => {
         { label: "Conference Venue", href: "/venue" },
       ],
     },
-    { label: "Contact", href: "/contact" },
     { label: "Sponsors", href: "/sponsor" },
     {
       label: "Previous Years",

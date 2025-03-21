@@ -11,6 +11,23 @@ import SpeakersSection from "./home/speaker";
 import Footer from "./footer/footer";
 import Navbar from "./home/Navbar";
 
+// Creative Theme Banner Component
+const ThemeBanner = () => {
+  return (
+    <div className="relative bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16 px-6 md:px-12 overflow-hidden">
+      <div className="absolute inset-0 transform -skew-y-3 bg-black opacity-20"></div>
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+          Our Theme
+        </h2>
+        <p className="text-lg md:text-xl font-light">
+        VLSI Design and Semiconductor Technology for Next Gen Chips & AI Applications
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const images = [
   "/images/iit-ropar-5.avif",
   "/images/iit-rpr.jpg",
@@ -161,6 +178,7 @@ const HomePage = () => {
   return (
     <>
       <Carousel images={images} currentImageIndex={currentImageIndex} swipeHandlers={handlers} />
+      <ThemeBanner></ThemeBanner>
       <SponsorsSection title="Our Sponsors" items={sponsors} />
       <h1 className="text-center text-2xl font-bold bg-gray-100 text-purple-600">Coming Soon!</h1>
       <SponsorsSection title="Endorsed By" items={endorsedBy} />
