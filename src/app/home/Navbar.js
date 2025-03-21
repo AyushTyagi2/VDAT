@@ -54,12 +54,13 @@ const Navbar = () => {
   return (
     <nav className="px-3 bg-black text-white sticky top-0 z-50 shadow-md bg-opacity-30">
       <div className="container mx-auto py-4 flex justify-between items-center">
+        
         <Link href="/" className="flex items-center space-x-4">
           <Image src="/vlsi.png" alt="VLSI Society of India Logo" width={70} height={70} />
           <h2 className="text-4xl font-extrabold tracking-wide text-purple-600">VDAT 2025</h2>
         </Link>
 
-        <div className="hidden lg:flex space-x-6 lg:space-x-8">
+        <div className="hidden xl:flex space-x-6 lg:space-x-8">
           {menuItems.map((item, index) => (
             <div key={index} className=" nav relative group">
               <Link href={item.href || "#"} className="text-lg font-semibold tracking-wide hover:text-purple-500" onClick={item.onClick}>
@@ -80,14 +81,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
       </div>
 
-      <div className={`lg:hidden fixed top-0 right-0 h-full w-full bg-gray-900 shadow-lg transition-transform transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <div className={`xl:hidden fixed top-0 right-0 h-full w-full bg-gray-900 shadow-lg transition-transform transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col py-4 px-6 h-full">
           <button onClick={toggleMobileMenu} className="absolute top-4 right-4 text-white">
             <FaTimes size={24} />
