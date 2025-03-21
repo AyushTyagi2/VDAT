@@ -39,6 +39,7 @@ const Navbar = () => {
         { label: "Conference Venue", href: "/venue" },
       ],
     },
+    { label: "Fellowship", href: "/fellowship" },
     { label: "Sponsors", href: "/sponsor" },
     {
       label: "Previous Years",
@@ -60,7 +61,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex space-x-6 lg:space-x-8">
           {menuItems.map((item, index) => (
-            <div key={index} className="relative group">
+            <div key={index} className=" nav relative group">
               <Link href={item.href || "#"} className="text-lg font-semibold tracking-wide hover:text-purple-500" onClick={item.onClick}>
                 {item.label}
               </Link>
