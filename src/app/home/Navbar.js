@@ -26,7 +26,7 @@ const Navbar = () => {
         { label: "Submissions", href: "/submissions" },
         { label: "Awards", href: "/awards" },
         { label: "Call for Tutorials", href: "/callfortutorials" },
-        {label: "Circuitpreneur", href: "/circuitpreneur"},
+        {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},
       ],
     },
     { label: "Speakers", href: "/Speakers" },
