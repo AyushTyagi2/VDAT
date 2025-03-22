@@ -49,12 +49,13 @@ const Navbar = () => {
 
   return (
     <nav className="px-3 bg-black text-white sticky top-0 z-50 shadow-md bg-opacity-30">
-      <div className="container mx-auto py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-4">
+      
+        <div className="lg:block flex ">
+        <Link href="/" className="flex mx-5 items-center space-x-4">
           <Image src="/vlsi.png" alt="VLSI Society of India Logo" width={70} height={70} />
           <h2 className="text-4xl font-extrabold tracking-wide text-purple-600">VDAT 2025</h2>
         </Link>
-
+        <div className="container mx-5 py-4  justify-between items-center">
         <div className="hidden lg:flex space-x-6 lg:space-x-8">
           {menuItems.map((item, index) => (
             <div key={index} className=" nav relative group">
@@ -76,7 +77,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-end justify-end object-left">
           <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -132,6 +133,7 @@ const Navbar = () => {
             </React.Fragment>
           ))}
         </div>
+      </div>
       </div>
     </nav>
   );
