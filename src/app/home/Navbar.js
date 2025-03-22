@@ -33,11 +33,7 @@ const Navbar = () => {
     { label: "Committee", href: "/committees" },
     {
       label: "Venue",
-      onClick: toggleVenueDropdown,
-      dropdown: [
-        { label: "Accommodation", href: "/accommodation" },
-        { label: "Conference Venue", href: "/venue" },
-      ],
+      href: "/venue",
     },
     { label: "Fellowship", href: "/fellowship" },
     { label: "Sponsors", href: "/sponsor" },

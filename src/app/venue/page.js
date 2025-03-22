@@ -133,13 +133,12 @@ const VenuePage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <div className="relative h-[300px] md:h-[450px]">
                   <a
-                    href="https://www.google.com/maps/place/Hotel+Shivalikview,+Chandigarh"
+                    href="https://www.google.com/maps/place/Hotel+Shivalikview/@30.7400909,76.773977,17z/data=!3m1!4b1!4m9!3m8!1s0x390fed0baaaaaaab:0x41d504d60d98ab7f!5m2!4m1!1i2!8m2!3d30.7400863!4d76.7765519!16s%2Fg%2F1tkl1q77?entry=ttu&g_ep=EgoyMDI1MDMxOS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.230748229688!2d76.7796967150838!3d30.717235581884464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed79fa73f39f%3A0x7e41fae46f13aab5!2sHotel%20Shivalikview!5e0!3m2!1sen!2sin!4v1614838901234!5m2!1sen!2sin"
-                      width="100%"
+                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq6qqqgvtDzkRf6uYDdYE1UE&key=AIzaSyCeb_aqbbf8o4741BoBP7UFbywjrVqhrv0"                      width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen=""
