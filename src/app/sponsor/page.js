@@ -4,10 +4,10 @@ import Navbar from '../home/Navbar';
 import { CheckCircle } from "lucide-react";
 
 const sponsorshipTiers = [
-  { tier: "Platinum", amount: "5,00,000/-", benefits: [true, true, true, true, true, true, true, true, "Eight", true, true, true] },
-  { tier: "Gold", amount: "3,00,000/-", benefits: [true, true, true, true, true, true, true, true, "Six", true, true, true ] },
-  { tier: "Silver", amount: "2,00,000/-", benefits: [true, true, true, true, true, false, false, true, "Four", false, false, false] },
-  { tier: "Bronze", amount: "1,50,000/-", benefits: [true, true, true, false, false, false, false, false, "Two", false, false, false] }
+  { tier: "Platinum", amount: "5,00,000/-", benefits: [true, true, true, true, true, true, "Eight", true, true, true,true,true] },
+  { tier: "Gold", amount: "3,50,000/-", benefits: [true, true, true, true, true, true, "Six", true, true, true, false,false ] },
+  { tier: "Silver", amount: "2,00,000/-", benefits: [true, true, true, true, true, true, "Four", false, false, false, false,false] },
+  { tier: "Bronze", amount: "1,50,000/-", benefits: [true, true, true, true, true, true, "Two", false, false, false, false,false] }
 ];
 
 const additionalOpportunities = [
@@ -15,7 +15,7 @@ const additionalOpportunities = [
   "Technical Session Sponsorship (30,000/-) featuring company video clips before sessions",
   "Company Leaf (20,000/-) to be inserted in registration kit",
   "Delegate Sponsorship for attendance of specific delegates",
-  "Other conference materials such as refreshments, T-shirts, souvenirs, etc."
+  "Other conference materials such as refreshments, T-shirts, souvenirs, etc.  For these sponsorship items, the organisation’s name and logo will feature on the relevant items appropriate places."
 ];
 
 const advertisements = [
@@ -24,12 +24,14 @@ const advertisements = [
   { type: "Quarter Page", cost: "Rs. 5,000/-" }
 ];
 
-const headers = [
-  "Tier", "Sponsorship Amount", "Product Exhibition Booth", "Company’s Name and Logo on Website",
-  "Banner at Main Entrance", "Company’s Logo on Screens", "Standees at Venue",
-  "Company’s Logo on Kit", "Complimentary Registrations", "Banner at Dining Hall",
-  "Company Provided Leaf in Kit", "Slot for Invited Talk", "Keynote Speech", "Slot in Panel Discussion"
-]
+const headers = ["Sponsorship Benefits", "Platinum", "Gold", "Silver", "Bronze"];
+
+const benefitLabels = [
+  "Sponsorship Amount", "Product Exhibition Booth", "Company’s name and logo on the conference website",
+  "Banner at the main entrance of the hotel", "Company’s logo on screens at session halls", "Standees along the route to the conference venue ",
+  "Company’s logo on conference registration kit ", "Complimentary Registrations", "Banner at Dining Hall",
+  "Company provided leaf/ souvenir to be inserted in the registration kit", "Slot for Tutorial/Invited Talk", "Keynote Speech", "Slot in Panel Discussion"
+];
 
 const SponsorshipPage = () => {
   return (
@@ -68,13 +70,14 @@ const SponsorshipPage = () => {
               </tr>
             </thead>
             <tbody>
-              {sponsorshipTiers.map((tier, index) => (
-                <tr key={index} className="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition-all">
-                  <td className="border p-4 font-bold text-blue-700">{tier.tier}</td>
-                  <td className="border p-4 text-gray-700">{tier.amount}</td>
-                  {tier.benefits.map((benefit, i) => (
-                    <td key={i} className="border p-4 text-gray-700">
-                      {benefit === true ? <CheckCircle className="text-green-500 inline-block" size={20} /> : benefit === false ? "-" : benefit}
+              {benefitLabels.map((label, rowIndex) => (
+                <tr key={rowIndex} className="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition-all">
+                  <td className="border p-4 font-bold text-blue-700 text-left">{label}</td>
+                  {sponsorshipTiers.map((tier, colIndex) => (
+                    <td key={colIndex} className="border p-4 text-gray-700 text-center">
+                      {rowIndex === 0 ? tier.amount : tier.benefits[rowIndex - 1] === true ? (
+                        <CheckCircle className="text-green-500 inline-block" size={20} />
+                      ) : tier.benefits[rowIndex - 1] === false ? "-" : tier.benefits[rowIndex - 1]}
                     </td>
                   ))}
                 </tr>
@@ -98,7 +101,9 @@ const SponsorshipPage = () => {
 
       {/* Advertisement Rates */}
       <section className="bg-white container mx-auto px-6 py-12">
-        <h2 className="sub text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Advertisement Rates</h2>
+        <h2 className="sub text-4xl font-bold text-center mb-2 text-violet-800 uppercase">Advertisement Rates
+        </h2>
+        <h4 className="sub text-1xl font-bold text-center mb-8 text-violet-800 uppercase" >(In The Program Booklet)</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {advertisements.map((ad, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-all">
