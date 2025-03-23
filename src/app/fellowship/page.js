@@ -12,7 +12,7 @@ const FellowshipPage = () => {
           <h1 className=" sub text-5xl font-extrabold tracking-wide uppercase">VDAT 2025 Fellowship Program</h1>
         </div>
       </header>
-
+    <div className='bg-white'>
       <section className="container mx-auto px-6 py-12 bg-gray-50">
         <h2 className="text-4xl font-bold text-center mb-8 text-violet-800 uppercase">About the Fellowship</h2>
         <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-all text-center">
@@ -94,7 +94,7 @@ const FellowshipPage = () => {
           </tbody>
         </table>
       </section>
-
+      </div>
       <section className="text-center bg-white py-12">
         <h2 className="text-4xl font-bold text-violet-800 uppercase">For Queries</h2>
         <p className="text-lg text-gray-700">Email: <a href="mailto:vdat2025@iitrpr.ac.in" className="text-blue-600">vdat2025@iitrpr.ac.in</a></p>
