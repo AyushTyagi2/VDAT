@@ -4,7 +4,7 @@ import Footer from '../footer/footer';
 
 const FellowshipPage = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-black">
       <Navbar />
       
       <header className="text-center text-white py-60 relative bg-cover bg-center" style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}>

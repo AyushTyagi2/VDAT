@@ -3,8 +3,37 @@ import { useState } from 'react';
 import React from 'react';
 import Footer from '../footer/footer';
 import Navbar from '../home/Navbar';
+import { Images } from 'lucide-react';
 
 const committees = [
+  {
+    title: "Steering Committee Chair",
+    members: [
+      { 
+        name: "Dr.Satya Gupta", 
+        institute: "VLSI Society of India",
+        linkedin: "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", 
+        image: "./images/satya.jpg"
+      }
+    ]
+  },
+  {
+    title: "General Chairs",
+    members: [
+      { 
+        name: "Rohit Y Sharma", 
+        institute: "IIT Ropar", 
+        linkedin: "https://www.linkedin.com/in/rohit-sharma-9509b5197/?originalSubdomain=in", 
+        website: "https://www.iitrpr.ac.in/ee/profile.faculty.php?mail=rohit%40iitrpr.ac.in" 
+      },
+      { 
+        name: "Neeraj Goel", 
+        institute: "IIT Ropar", 
+        linkedin: "https://www.linkedin.com/in/neerajgoel/?originalSubdomain=in", 
+        website: "https://sites.google.com/view/neerajgoel" 
+      }
+    ]
+  },
   { 
     title: "Program Chair", 
     members: [
@@ -103,73 +132,74 @@ const committees = [
   { 
     title: "Registration Chair", 
     members: [{ name: "Somesh Kumar", institute: "IIITM Gwalior", linkedin: "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in", website: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh" }] 
-  }
-];
-
-
-const specialChairs = [
-  {
-    title: "Steering Committee Chair",
-    members: [
-      { 
-        name: "Satya Gupta", 
-        institute: "VLSI Society of India",
-        linkedin: "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", 
-      }
-    ]
   },
   {
-    title: "General Chairs",
+    title: "Advisory Committee",
     members: [
-      { 
-        name: "Rohit Y Sharma", 
-        institute: "IIT Ropar", 
-        linkedin: "https://www.linkedin.com/in/rohit-sharma-9509b5197/?originalSubdomain=in", 
-        website: "https://www.iitrpr.ac.in/ee/profile.faculty.php?mail=rohit%40iitrpr.ac.in" 
-      },
-      { 
-        name: "Neeraj Goel", 
-        institute: "IIT Ropar", 
-        linkedin: "https://www.linkedin.com/in/neerajgoel/?originalSubdomain=in", 
-        website: "https://sites.google.com/view/neerajgoel" 
-      }
+      { name: "Sudeb Das Gupta", institute: "IIT Roorkee", linkedin: "https://www.linkedin.com/in/sudeb-dasgupta-2b19b64/?originalSubdomain=in", website: "https://ece.iitr.ac.in/sudeb-dasgupta/", image: "./images/sudeb.jpg" },
+      {name: "M Balakrishnan", institute: "IIT Delhi", linkedin: "https://www.linkedin.com/in/m-balakrishnan-b3467924/?originalSubdomain=in", website: "https://www.cse.iitd.ernet.in/~mbala/", image: "./images/MBala.jpg"},
+      {name: "R.K Sharma", institute: "NIT Kururkshetra", linkedin: "https://www.linkedin.com/in/r-k-sharma-21b3792a/?originalSubdomain=in", website: "https://nitkkr.ac.in/author/r-k-sharma/", image: "./images/rk.jpg"},
+      {name: "Vineet Sahula", institute: "MNIT Jaipur", linkedin: "https://www.linkedin.com/in/vineet07/?originalSubdomain=in", website: "https://mnit.ac.in/dept_ece/profile?fid=Q6w=", image: "./images/vineet.jpg"},
+      {name: "Chitra Hariharan", institute: "Renesas", linkedin: "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in", image: "./images/chitra.jpg"},
     ]
   }
 ];
 
 const CommitteeCard = ({ title, members }) => {
   return (
-    <div className="bg-white shadow-xl rounded-xl p-6 w-full md:w-1/2 lg:w-1/3 transition-transform hover:scale-105 hover:shadow-2xl">
-      <h2 className="text-2xl font-semibold text-indigo-800 mb-4 text-center border-b-2 border-indigo-500 pb-2">{title}</h2>
-      <ul className="space-y-14">
+    <div className="w-full bg-white text-center my-8">
+      <h2 className="text-4xl font-extrabold text-purple-700 mb-8">{title}</h2>
+      <div className="flex flex-wrap justify-center gap-10">
         {members.map((member, index) => (
-          <li key={index} className="text-gray-900 text-lg text-center relative group cursor-pointer">
-            <div className="mb-2 relative font-medium">
-              {member.name}, <span className="text-gray-600">{member.institute}</span>
+          <div key={index} className="relative group w-48">
+            <div className="relative">
+              <img
+                src={member.image || "/default-avatar.png"} // Placeholder if no image
+                alt={member.name}
+                className="w-48 h-48 rounded-full border-4 border-purple-300 shadow-xl transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full">
+                <div className="flex gap-3">
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-purple-600 p-3 rounded-full text-white transition-all hover:bg-purple-800"
+                    >
+                      🔗
+                    </a>
+                  )}
+                  {member.website && (
+                    <a
+                      href={member.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-purple-600 p-3 rounded-full text-white transition-all hover:bg-purple-800"
+                    >
+                      🌐
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-1 w-full flex justify-center gap-4">
-              {member.linkedin && (
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition">
-                  LinkedIn
-                </a>
-              )}
-              {member.website && (
-                <a href={member.website} target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 transition">
-                  Website
-                </a>
-              )}
-            </div>
-          </li>
+            <h3 className="mt-3 text-lg font-semibold text-purple-900">{member.name}</h3>
+            <p className="text-sm text-blue-600 font-semibold">{member.institute}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
 
-const SpeakersSection = () => {
+export default function CommitteePage() {
+  const [activeTab, setActiveTab] = useState("Patrons");
+
   return (
-    <div>
+    <div className="bg-white min-h-screen">
+      <div className="bg-black">
       <Navbar />
+      </div>
       <header className="text-center bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-40 relative"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="bg-black bg-opacity-50 py-16 rounded-lg">
@@ -177,17 +207,31 @@ const SpeakersSection = () => {
         </div>
       </header>
       
-      <div className="py-6 bg-gray-100"></div>
-      <section className="sub py-5 bg-gray-100 text-center">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
-          {committees?.map((committee, index) => (
-            <CommitteeCard key={index} {...committee} />
-          ))}
-        </div>
-      </section>
+      <div className="flex flex-wrap justify-center gap-4 my-6">
+        {committees.map((committee) => (
+          <button
+            key={committee.title}
+            onClick={() => setActiveTab(committee.title)}
+            className={`px-4 py-2 border rounded-lg transition ${
+              activeTab === committee.title
+                ? "bg-purple-600 text-white"
+                : "bg-white text-purple-700 border-black hover:bg-purple-100"
+            }`}
+          >
+            {committee.title}
+          </button>
+        ))}
+      </div>
+
+      {committees
+        .filter((committee) => committee.title === activeTab)
+        .map((committee) => (
+          <CommitteeCard key={committee.title} {...committee} />
+        ))}
+        
       <Footer />
     </div>
   );
-};
+}
 
-export default SpeakersSection;
+
