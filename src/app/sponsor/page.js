@@ -24,6 +24,13 @@ const advertisements = [
   { type: "Quarter Page", cost: "Rs. 5,000/-" }
 ];
 
+const headers = [
+  "Tier", "Sponsorship Amount", "Product Exhibition Booth", "Company’s Name and Logo on Website",
+  "Banner at Main Entrance", "Company’s Logo on Screens", "Standees at Venue",
+  "Company’s Logo on Kit", "Complimentary Registrations", "Banner at Dining Hall",
+  "Company Provided Leaf in Kit", "Slot for Invited Talk", "Keynote Speech", "Slot in Panel Discussion"
+]
+
 const SponsorshipPage = () => {
   return (
     <div>
@@ -49,13 +56,13 @@ const SponsorshipPage = () => {
       </section>
 
       {/* Sponsorship Tiers */}
-      <section className="bg-white container mx-auto px-6 py-12">
+      <section className="container mx-auto px-6 py-12 bg-gray-50">
         <h2 className="text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Sponsorship Tiers</h2>
         <div className="overflow-x-auto shadow-lg rounded-lg">
-          <table className="w-full border-collapse bg-white shadow-lg rounded-lg">
-            <thead className="bg-purple-600 text-white sticky top-0">
+          <table className="w-full border-collapse bg-white shadow-lg rounded-lg text-center">
+            <thead className="bg-blue-600 text-white">
               <tr>
-                {["Tier", "Amount", "Booth", "Website Logo", "Entrance Banner", "Screens Logo", "Venue Standees", "Kit Logo", "Complimentary Passes", "Dining Banner", "Kit Leaflet", "Tutorial Slot", "Keynote Speech", "Panel Slot"].map((heading, index) => (
+                {headers.map((heading, index) => (
                   <th key={index} className="border p-4 uppercase text-sm tracking-wider">{heading}</th>
                 ))}
               </tr>
@@ -63,10 +70,10 @@ const SponsorshipPage = () => {
             <tbody>
               {sponsorshipTiers.map((tier, index) => (
                 <tr key={index} className="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition-all">
-                  <td className=" fixed-column border p-4 font-bold text-purple-700">{tier.tier}</td>
+                  <td className="border p-4 font-bold text-blue-700">{tier.tier}</td>
                   <td className="border p-4 text-gray-700">{tier.amount}</td>
                   {tier.benefits.map((benefit, i) => (
-                    <td key={i} className="border p-4 text-gray-700 text-center">
+                    <td key={i} className="border p-4 text-gray-700">
                       {benefit === true ? <CheckCircle className="text-green-500 inline-block" size={20} /> : benefit === false ? "-" : benefit}
                     </td>
                   ))}
