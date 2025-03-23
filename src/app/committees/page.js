@@ -1,148 +1,384 @@
 "use client";
-import { useState } from 'react';
-import React from 'react';
-import Footer from '../footer/footer';
-import Navbar from '../home/Navbar';
-import { Images } from 'lucide-react';
+import React, { useState } from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import Footer from "../footer/footer";
+import Navbar from "../home/Navbar";
 
 const committees = [
   {
     title: "Steering Committee Chair",
     members: [
-      { 
-        name: "Dr.Satya Gupta", 
+      {
+        name: "Dr.Satya Gupta",
         institute: "VLSI Society of India",
-        linkedin: "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", 
-        image: "./images/satya.jpg"
-      }
-    ]
+        linkedin:
+          "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
+        image: "./images/satya.jpg",
+      },
+    ],
   },
   {
     title: "General Chairs",
     members: [
-      { 
-        name: "Rohit Y Sharma", 
-        institute: "IIT Ropar", 
-        linkedin: "https://www.linkedin.com/in/rohit-sharma-9509b5197/?originalSubdomain=in", 
-        website: "https://www.iitrpr.ac.in/ee/profile.faculty.php?mail=rohit%40iitrpr.ac.in" 
+      {
+        name: "Rohit Y Sharma",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/rohit-sharma-9509b5197/?originalSubdomain=in",
+        website:
+          "https://www.iitrpr.ac.in/ee/profile.faculty.php?mail=rohit%40iitrpr.ac.in",
       },
-      { 
-        name: "Neeraj Goel", 
-        institute: "IIT Ropar", 
-        linkedin: "https://www.linkedin.com/in/neerajgoel/?originalSubdomain=in", 
-        website: "https://sites.google.com/view/neerajgoel" 
-      }
-    ]
+      {
+        name: "Neeraj Goel",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/neerajgoel/?originalSubdomain=in",
+        website: "https://sites.google.com/view/neerajgoel",
+      },
+    ],
   },
-  { 
-    title: "Program Chair", 
+  {
+    title: "Program Chair",
     members: [
-      { name: "Hitesh Shrimali", institute: "IIT Mandi", linkedin: "https://www.linkedin.com/in/hitesh-shrimali-56183b19/?originalSubdomain=in", website: "https://faculty.iitmandi.ac.in/~hitesh/" },
-      { name: "Brajesh Rawat", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/brajesh-rawat/?originalSubdomain=in", website: "https://www.iitrpr.ac.in/electrical/brajesh" },
-      { name: "Shivani Malhotra", institute: "Chitkara University", linkedin: "https://www.linkedin.com/in/shivani-malhotra-6349b659/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in" }
-    ] 
+      {
+        name: "Hitesh Shrimali",
+        institute: "IIT Mandi",
+        linkedin:
+          "https://www.linkedin.com/in/hitesh-shrimali-56183b19/?originalSubdomain=in",
+        website: "https://faculty.iitmandi.ac.in/~hitesh/",
+      },
+      {
+        name: "Brajesh Rawat",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/brajesh-rawat/?originalSubdomain=in",
+        website: "https://www.iitrpr.ac.in/electrical/brajesh",
+      },
+      {
+        name: "Shivani Malhotra",
+        institute: "Chitkara University",
+        linkedin:
+          "https://www.linkedin.com/in/shivani-malhotra-6349b659/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
+      },
+    ],
   },
-  { 
-    title: "Program Track Chair", 
+  {
+    title: "Program Track Chair",
     members: [
-      { name: "Shubham Sahay", institute: "IIT Kanpur (Track 1)", linkedin: "https://www.linkedin.com/in/shubham-sahay-b1580bb0/?originalSubdomain=in", website: "https://home.iitk.ac.in/~ssahay/" },
-      { name: "Saravanna", institute: "IIT Roorkee (Track 2)", linkedin: "https://www.linkedin.com/in/saravana-kumar-687a6875/?originalSubdomain=in", website: "https://ece.iitr.ac.in/webpages/saravana/" },
-      { name: "Sneh Saurabh", institute: "IIIT Delhi (Track 3)", linkedin: "https://www.linkedin.com/in/snehsaurabh/?originalSubdomain=in", website: "https://iiitd.ac.in/sneh" },
-      { name: "Amit Kumar", institute: "Chitkara University (Track 4)", linkedin: "https://www.linkedin.com/in/amit-kumar-34228b139/?originalSubdomain=in" },
-      { name: "Anupam Chattopadhyay", institute: "NTU Singapore (Track 4)", linkedin: "https://www.linkedin.com/in/anupamchattopadhyay/?originalSubdomain=sg", website: "https://dr.ntu.edu.sg/cris/rp/rp01076" },
-      { name: "Jai Narayan Tripathi", institute: "IIT Jodhpur (Track 5)", linkedin: "https://www.linkedin.com/in/jai-narayan-tripathi-b189a88/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", website: "http://home.iitj.ac.in/~jai/" }
-    ] 
+      {
+        name: "Shubham Sahay",
+        institute: "IIT Kanpur (Track 1)",
+        linkedin:
+          "https://www.linkedin.com/in/shubham-sahay-b1580bb0/?originalSubdomain=in",
+        website: "https://home.iitk.ac.in/~ssahay/",
+      },
+      {
+        name: "Saravanna",
+        institute: "IIT Roorkee (Track 2)",
+        linkedin:
+          "https://www.linkedin.com/in/saravana-kumar-687a6875/?originalSubdomain=in",
+        website: "https://ece.iitr.ac.in/webpages/saravana/",
+      },
+      {
+        name: "Sneh Saurabh",
+        institute: "IIIT Delhi (Track 3)",
+        linkedin:
+          "https://www.linkedin.com/in/snehsaurabh/?originalSubdomain=in",
+        website: "https://iiitd.ac.in/sneh",
+      },
+      {
+        name: "Amit Kumar",
+        institute: "Chitkara University (Track 4)",
+        linkedin:
+          "https://www.linkedin.com/in/amit-kumar-34228b139/?originalSubdomain=in",
+      },
+      {
+        name: "Anupam Chattopadhyay",
+        institute: "NTU Singapore (Track 4)",
+        linkedin:
+          "https://www.linkedin.com/in/anupamchattopadhyay/?originalSubdomain=sg",
+        website: "https://dr.ntu.edu.sg/cris/rp/rp01076",
+      },
+      {
+        name: "Jai Narayan Tripathi",
+        institute: "IIT Jodhpur (Track 5)",
+        linkedin:
+          "https://www.linkedin.com/in/jai-narayan-tripathi-b189a88/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
+        website: "http://home.iitj.ac.in/~jai/",
+      },
+    ],
   },
-  { 
-    title: "Tutorial Chair", 
+  {
+    title: "Tutorial Chair",
     members: [
-      { name: "TV Kalyan", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in", website: "https://sites.google.com/view/kalyantv" },
-      { name: "Namrta", institute: "Aritrak Technologies" }
-    ] 
+      {
+        name: "TV Kalyan",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in",
+        website: "https://sites.google.com/view/kalyantv",
+      },
+      { name: "Namrta", institute: "Aritrak Technologies" },
+    ],
   },
-  { 
-    title: "Local Organising Chair", 
+  {
+    title: "Local Organising Chair",
     members: [
-      { name: "Pradeep Duhan", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/pardeep-duhan-64262b74/?originalSubdomain=in", website: "https://www.iitrpr.ac.in/electrical/pardeepduhan" },
-      { name: "Ruchika Gupta", institute: "Chandigarh University", linkedin: "https://www.linkedin.com/in/ruchika-gupta-55bbb764/?originalSubdomain=in", website: "https://sites.google.com/view/ruchikagupta/" },
-      { name: "Arun Singh", institute: "PEC Chandigarh", linkedin: "https://www.linkedin.com/in/arun-kumar-singh-a5627742/?originalSubdomain=in", website: "https://pec.ac.in/ece/faculty/arun-kumar-singh" }
-    ] 
+      {
+        name: "Pradeep Duhan",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/pardeep-duhan-64262b74/?originalSubdomain=in",
+        website: "https://www.iitrpr.ac.in/electrical/pardeepduhan",
+      },
+      {
+        name: "Ruchika Gupta",
+        institute: "Chandigarh University",
+        linkedin:
+          "https://www.linkedin.com/in/ruchika-gupta-55bbb764/?originalSubdomain=in",
+        website: "https://sites.google.com/view/ruchikagupta/",
+      },
+      {
+        name: "Arun Singh",
+        institute: "PEC Chandigarh",
+        linkedin:
+          "https://www.linkedin.com/in/arun-kumar-singh-a5627742/?originalSubdomain=in",
+        website: "https://pec.ac.in/ece/faculty/arun-kumar-singh",
+      },
+    ],
   },
-  { 
-    title: "Finance Chair", 
-    members: [{ name: "Mahendra Sakre", institute: "IIT Ropar" }] 
+  {
+    title: "Finance Chair",
+    members: [{ name: "Mahendra Sakre", institute: "IIT Ropar" }],
   },
-  { 
-    title: "Sponsorship Chair", 
+  {
+    title: "Sponsorship Chair",
     members: [
-      { name: "Alpana Agarwal", institute: "Thapar Institute", linkedin: "https://www.linkedin.com/in/alpana-agarwal-1542b118/?originalSubdomain=in", website: "https://www.thapar.edu/faculties/view/Dr.-Alpana-Agarwal/MTI5/MTU=" },
-      { name: "Shonal Chouksey", institute: "IIIT Una", linkedin: "https://www.linkedin.com/in/shonal-chouksey-4a13568b/?originalSubdomain=in", website: "https://iiitu.ac.in/schools/soe/faculty/667b05e76914b0583f899e13" },
-      { name: "Preet Yadav", institute: "NXP", linkedin: "https://www.linkedin.com/in/preet-yadav/?originalSubdomain=in"}
-    ] 
+      {
+        name: "Alpana Agarwal",
+        institute: "Thapar Institute",
+        linkedin:
+          "https://www.linkedin.com/in/alpana-agarwal-1542b118/?originalSubdomain=in",
+        website:
+          "https://www.thapar.edu/faculties/view/Dr.-Alpana-Agarwal/MTI5/MTU=",
+      },
+      {
+        name: "Shonal Chouksey",
+        institute: "IIIT Una",
+        linkedin:
+          "https://www.linkedin.com/in/shonal-chouksey-4a13568b/?originalSubdomain=in",
+        website:
+          "https://iiitu.ac.in/schools/soe/faculty/667b05e76914b0583f899e13",
+      },
+      {
+        name: "Preet Yadav",
+        institute: "NXP",
+        linkedin:
+          "https://www.linkedin.com/in/preet-yadav/?originalSubdomain=in",
+      },
+    ],
   },
-  { 
-    title: "Fellowship Chair", 
+  {
+    title: "Fellowship Chair",
     members: [
-      { name: "Ambika Shah", institute: "IIT Jammu", linkedin: "https://www.linkedin.com/in/ambika-prasad-shah-ba978a22/?originalSubdomain=in", website: "https://www.iitjammu.ac.in/faculty/~ambikaprasadshah" },
-      { name: "Shruti Jain", institute: "JUIT, Solan, Himachal Pradesh", linkedin: "https://www.linkedin.com/in/dr-shruti-jain-92705b130/?originalSubdomain=in", website: "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=1&year1=2021" },
-      { name: "Balwinder Singh", institute: "CDAC", linkedin: "https://www.linkedin.com/in/dr-balwinder-singh-80a1b316/?originalSubdomain=in", website: "http://www.acsd.ac.in/Faculty_Balwinder.aspx" }
-    ] 
+      {
+        name: "Ambika Shah",
+        institute: "IIT Jammu",
+        linkedin:
+          "https://www.linkedin.com/in/ambika-prasad-shah-ba978a22/?originalSubdomain=in",
+        website: "https://www.iitjammu.ac.in/faculty/~ambikaprasadshah",
+      },
+      {
+        name: "Shruti Jain",
+        institute: "JUIT, Solan, Himachal Pradesh",
+        linkedin:
+          "https://www.linkedin.com/in/dr-shruti-jain-92705b130/?originalSubdomain=in",
+        website:
+          "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=1&year1=2021",
+      },
+      {
+        name: "Balwinder Singh",
+        institute: "CDAC",
+        linkedin:
+          "https://www.linkedin.com/in/dr-balwinder-singh-80a1b316/?originalSubdomain=in",
+        website: "http://www.acsd.ac.in/Faculty_Balwinder.aspx",
+      },
+    ],
   },
-  { 
-    title: "Demo and Exhibit Chair", 
+  {
+    title: "Demo and Exhibit Chair",
     members: [
-      { name: "Rajendra Prasad", institute: "HCL Tech", linkedin: "https://www.linkedin.com/in/rajendra-prasad-3a08389b/?originalSubdomain=in" },
-      { name: "John Jose", institute: "IIT Guwahati", linkedin: "https://www.linkedin.com/in/john-jose-bb8431106/?originalSubdomain=in", website: "https://www.iitg.ac.in/johnjose/" },
-      { name: "Mohd Asim Saeed", institute: "SCL, Mohali", linkedin: "https://www.linkedin.com/in/asim-saeed-49097579/?originalSubdomain=in" }
-    ] 
+      {
+        name: "Rajendra Prasad",
+        institute: "HCL Tech",
+        linkedin:
+          "https://www.linkedin.com/in/rajendra-prasad-3a08389b/?originalSubdomain=in",
+      },
+      {
+        name: "John Jose",
+        institute: "IIT Guwahati",
+        linkedin:
+          "https://www.linkedin.com/in/john-jose-bb8431106/?originalSubdomain=in",
+        website: "https://www.iitg.ac.in/johnjose/",
+      },
+      {
+        name: "Mohd Asim Saeed",
+        institute: "SCL, Mohali",
+        linkedin:
+          "https://www.linkedin.com/in/asim-saeed-49097579/?originalSubdomain=in",
+      },
+    ],
   },
-  { 
-    title: "Web Development Team", 
+  {
+    title: "Web Development Team",
     members: [
-      { name: "TV Kalyan", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in", website: "https://sites.google.com/view/kalyantv" },
-      { name: "Nishant Sahni", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/nishant-sahni-a7b01130a/?originalSubdomain=in" },
-      { name: "Aryan Singh", institute: "IIT Ropar", linkedin: "https://linkedin.com/in/aryan-singh" },
-      { name: "Ayush Tyagi", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/ayush-tyagi-37154b2a4/?originalSubdomain=in" }
-    ] 
+      {
+        name: "TV Kalyan",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in",
+        website: "https://sites.google.com/view/kalyantv",
+      },
+      {
+        name: "Nishant Sahni",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/nishant-sahni-a7b01130a/?originalSubdomain=in",
+      },
+      {
+        name: "Aryan Singh",
+        institute: "IIT Ropar",
+        linkedin: "https://linkedin.com/in/aryan-singh",
+      },
+      {
+        name: "Ayush Tyagi",
+        institute: "IIT Ropar",
+        linkedin:
+          "https://www.linkedin.com/in/ayush-tyagi-37154b2a4/?originalSubdomain=in",
+      },
+    ],
   },
-  { 
-    title: "Startup Chair", 
-    members: [{ name: "Gaganpreet Kaur" }] 
+  {
+    title: "Startup Chair",
+    members: [{ name: "Gaganpreet Kaur" }],
   },
-  { 
-    title: "PhD Forum Chair", 
-    members: [{ name: "Debiprasana Sahu", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/"}] 
-  },
-  { 
-    title: "Publication Chair", 
+  {
+    title: "PhD Forum Chair",
     members: [
-      { name: "Balwinder Raj", institute: "NIT Jalandhar", linkedin: "https://www.linkedin.com/in/balwinderraj/?originalSubdomain=in", website: "https://departments.nitj.ac.in/dept/ece/Faculty/6430445538bff038a7805bcd" },
-      { name: "Sivanantham", institute: "VIT Vellore", linkedin: "https://www.linkedin.com/in/vlsisiva/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in" }
-    ] 
+      {
+        name: "Debiprasana Sahu",
+        institute: "IIT Bhubaneswar",
+        linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/",
+      },
+    ],
   },
-  { 
-    title: "Publicity and Outreach Chair", 
+  {
+    title: "Publication Chair",
     members: [
-      { name: "Sagar Juneja", institute: "Chitkara University", linkedin: "https://www.linkedin.com/in/sagar-juneja/", website: "https://curin.chitkara.edu.in/profile/sagar-juneja/" },
-      { name: "Gaurav Saini", institute: "NIT Kurukshetra", linkedin: "https://www.linkedin.com/in/dr-gaurav-saini-8a09ab18/?originalSubdomain=in", website: "https://nitkkr.ac.in/author/gaurav-saini/" },
-      { name: "Gargi Khana", institute: "NIT Hamirpur", linkedin: "https://www.linkedin.com/in/gargi-khanna-9605078/?originalSubdomain=in" },
-      { name: "Navneet Sehgal", institute: "Chandigarh University", linkedin: "https://www.linkedin.com/in/dr-navneet-sehgal-b090389b/?originalSubdomain=in" }
-    ] 
+      {
+        name: "Balwinder Raj",
+        institute: "NIT Jalandhar",
+        linkedin:
+          "https://www.linkedin.com/in/balwinderraj/?originalSubdomain=in",
+        website:
+          "https://departments.nitj.ac.in/dept/ece/Faculty/6430445538bff038a7805bcd",
+      },
+      {
+        name: "Sivanantham",
+        institute: "VIT Vellore",
+        linkedin:
+          "https://www.linkedin.com/in/vlsisiva/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
+      },
+    ],
   },
-  { 
-    title: "Registration Chair", 
-    members: [{ name: "Somesh Kumar", institute: "IIITM Gwalior", linkedin: "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in", website: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh" }] 
+  {
+    title: "Publicity and Outreach Chair",
+    members: [
+      {
+        name: "Sagar Juneja",
+        institute: "Chitkara University",
+        linkedin: "https://www.linkedin.com/in/sagar-juneja/",
+        website: "https://curin.chitkara.edu.in/profile/sagar-juneja/",
+      },
+      {
+        name: "Gaurav Saini",
+        institute: "NIT Kurukshetra",
+        linkedin:
+          "https://www.linkedin.com/in/dr-gaurav-saini-8a09ab18/?originalSubdomain=in",
+        website: "https://nitkkr.ac.in/author/gaurav-saini/",
+      },
+      {
+        name: "Gargi Khana",
+        institute: "NIT Hamirpur",
+        linkedin:
+          "https://www.linkedin.com/in/gargi-khanna-9605078/?originalSubdomain=in",
+      },
+      {
+        name: "Navneet Sehgal",
+        institute: "Chandigarh University",
+        linkedin:
+          "https://www.linkedin.com/in/dr-navneet-sehgal-b090389b/?originalSubdomain=in",
+      },
+    ],
+  },
+  {
+    title: "Registration Chair",
+    members: [
+      {
+        name: "Somesh Kumar",
+        institute: "IIITM Gwalior",
+        linkedin:
+          "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in",
+        website:
+          "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh",
+      },
+    ],
   },
   {
     title: "Advisory Committee",
     members: [
-      { name: "Sudeb Das Gupta", institute: "IIT Roorkee", linkedin: "https://www.linkedin.com/in/sudeb-dasgupta-2b19b64/?originalSubdomain=in", website: "https://ece.iitr.ac.in/sudeb-dasgupta/", image: "./images/sudeb.jpg" },
-      {name: "M Balakrishnan", institute: "IIT Delhi", linkedin: "https://www.linkedin.com/in/m-balakrishnan-b3467924/?originalSubdomain=in", website: "https://www.cse.iitd.ernet.in/~mbala/", image: "./images/MBala.jpg"},
-      {name: "R.K Sharma", institute: "NIT Kururkshetra", linkedin: "https://www.linkedin.com/in/r-k-sharma-21b3792a/?originalSubdomain=in", website: "https://nitkkr.ac.in/author/r-k-sharma/", image: "./images/rk.jpg"},
-      {name: "Vineet Sahula", institute: "MNIT Jaipur", linkedin: "https://www.linkedin.com/in/vineet07/?originalSubdomain=in", website: "https://mnit.ac.in/dept_ece/profile?fid=Q6w=", image: "./images/vineet.jpg"},
-      {name: "Chitra Hariharan", institute: "Renesas", linkedin: "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in", image: "./images/chitra.jpg"},
-    ]
-  }
+      {
+        name: "Sudeb Das Gupta",
+        institute: "IIT Roorkee",
+        linkedin:
+          "https://www.linkedin.com/in/sudeb-dasgupta-2b19b64/?originalSubdomain=in",
+        website: "https://ece.iitr.ac.in/sudeb-das-gupta/",
+        image: "./images/sudeb.jpg",
+      },
+      {
+        name: "M Balakrishnan",
+        institute: "IIT Delhi",
+        linkedin:
+          "https://www.linkedin.com/in/m-balakrishnan-b3467924/?originalSubdomain=in",
+        website: "https://www.cse.iitd.ernet.in/~mbala/",
+        image: "./images/MBala.jpg",
+      },
+      {
+        name: "R.K Sharma",
+        institute: "NIT Kururkshetra",
+        linkedin:
+          "https://www.linkedin.com/in/r-k-sharma-21b3792a/?originalSubdomain=in",
+        website: "https://nitkkr.ac.in/author/r-k-sharma/",
+        image: "./images/rk.jpg",
+      },
+      {
+        name: "Vineet Sahula",
+        institute: "MNIT Jaipur",
+        linkedin: "https://www.linkedin.com/in/vineet07/?originalSubdomain=in",
+        website: "https://mnit.ac.in/dept_ece/profile?fid=Q6w=",
+        image: "./images/vineet.jpg",
+      },
+      {
+        name: "Chitra Hariharan",
+        institute: "Renesas",
+        linkedin:
+          "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in",
+        image: "./images/chitra.jpg",
+      },
+    ],
+  },
 ];
 
 const CommitteeCard = ({ title, members }) => {
@@ -154,7 +390,7 @@ const CommitteeCard = ({ title, members }) => {
           <div key={index} className="relative group w-48">
             <div className="relative">
               <img
-                src={member.image || "/default-avatar.png"} // Placeholder if no image
+                src={member.image || "/default-avatar.png"}
                 alt={member.name}
                 className="w-48 h-48 rounded-full border-4 border-purple-300 shadow-xl transition-transform duration-300 transform group-hover:scale-110"
               />
@@ -183,8 +419,12 @@ const CommitteeCard = ({ title, members }) => {
                 </div>
               </div>
             </div>
-            <h3 className="mt-3 text-lg font-semibold text-purple-900">{member.name}</h3>
-            <p className="text-sm text-blue-600 font-semibold">{member.institute}</p>
+            <h3 className="mt-3 text-lg font-semibold text-purple-900">
+              {member.name}
+            </h3>
+            <p className="text-sm text-blue-600 font-semibold">
+              {member.institute}
+            </p>
           </div>
         ))}
       </div>
@@ -193,45 +433,73 @@ const CommitteeCard = ({ title, members }) => {
 };
 
 export default function CommitteePage() {
-  const [activeTab, setActiveTab] = useState("Patrons");
+  // Using the index as the active tab state
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <div className="bg-white min-h-screen">
       <div className="bg-black">
-      <Navbar />
+        <Navbar />
       </div>
-      <header className="text-center bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-40 relative"
-        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <header
+        className="text-center bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-40 relative"
+        style={{
+          backgroundImage: "url('/images/iit-ropar-5.avif')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="bg-black bg-opacity-50 py-16 rounded-lg">
-          <h1 className="sub text-5xl font-extrabold tracking-wide uppercase">Committees</h1>
+          <h1 className="sub text-5xl font-extrabold tracking-wide uppercase">
+            Committees
+          </h1>
         </div>
       </header>
-      
-      <div className="flex flex-wrap justify-center gap-4 my-6">
-        {committees.map((committee) => (
-          <button
-            key={committee.title}
-            onClick={() => setActiveTab(committee.title)}
-            className={`px-4 py-2 border rounded-lg transition ${
-              activeTab === committee.title
-                ? "bg-purple-600 text-white"
-                : "bg-white text-purple-700 border-black hover:bg-purple-100"
-            }`}
-          >
-            {committee.title}
-          </button>
-        ))}
-      </div>
 
+      {/* MUI Scrollable Tabs */}
+      <Box sx={{ bgcolor: "background.paper", margin: "auto" }}>
+        <Tabs
+          value={value}
+          sx={{
+            "& .MuiTabs-indicator": {
+              backgroundColor: "#8024cc", // your desired color
+            },
+            "& .MuiTabScrollButton-root": {
+              color: "black", // set arrow color here
+            },
+          }}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs for committees"
+        >
+          {committees.map((committee, index) => (
+            <Tab
+              sx={{
+                color: "grey",
+                "&.Mui-selected": {
+                  color: "#8024cc",
+                },
+              }}
+              key={committee.title}
+              label={committee.title}
+            />
+          ))}
+        </Tabs>
+      </Box>
+
+      {/* Render the selected committee */}
       {committees
-        .filter((committee) => committee.title === activeTab)
+        .filter((_, index) => index === value)
         .map((committee) => (
           <CommitteeCard key={committee.title} {...committee} />
         ))}
-        
+
       <Footer />
     </div>
   );
 }
-
-
