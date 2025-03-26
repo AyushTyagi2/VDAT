@@ -5,7 +5,7 @@ import Navbar from '../home/Navbar';
 
 
 const handleLinkClick = () => {
-  window.open("https://softconf.com/vlsi/vdat2025", "_blank");
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSf1uVsPhajRPqSo7Oodi_y2XllweQmoskxxYMvZENGymHVeqA/viewform?usp=sharing", "_blank");
 };
 const handlePDFClick = () => {
   window.open("/pdfs/VDAT2025_Call_for_Tutorial.pdf", "_blank");
