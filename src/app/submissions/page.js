@@ -120,7 +120,7 @@ const SpeakersSection = () => {
   ];
 
   const handleLinkClick = () => {
-    window.open("https://softconf.com/vlsi/vdat2025", "_blank");
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSf1uVsPhajRPqSo7Oodi_y2XllweQmoskxxYMvZENGymHVeqA/viewform?usp=sharing", "_blank");
   };
 
   const handlePDFClick = () => {
@@ -268,14 +268,15 @@ const SpeakersSection = () => {
             <li>
               Submissions must not exceed{" "}
               <span className="font-semibold">six A4-sized pages</span> and
-              should be uploaded via the official portal:{" "}
-              <a
-                href="https://softconf.com/vlsi/vdat2025"
-                target="_blank"
-                className="text-blue-600 underline"
-              >
-                Submit Here
-              </a>
+              should be uploaded via the link:{" "}
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf1uVsPhajRPqSo7Oodi_y2XllweQmoskxxYMvZENGymHVeqA/viewform?usp=sharing "
+                  target="_blank"
+                  className="text-blue-600 underline"
+                  style={{ backgroundColor: 'white' }}
+                >
+                  Submit Here
+                </a>
               .
             </li>
             <li>
