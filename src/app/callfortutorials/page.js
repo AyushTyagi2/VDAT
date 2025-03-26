@@ -74,14 +74,20 @@ Tutorials are a cornerstone of the VDAT Conference, providing a unique opportuni
       <ListSection
         title="Submission Guidelines"
         items={[
-          "Title: Title of the tutorial, limited to 20 words",
-          "Duration: 1.5 hours / 3 hours",
-          "Format: Presentation / Workshop / Demo / Discussion / Other",
-          "Abstract: Clearly outline the intent of the tutorial (600-1000 words)",
-          "Target Audience: Specific attendees like students or corporate professionals",
-          "Speaker’s Biography: Qualification, experience, publications, and past presentations",
-          "Structure: Topics and time allocation per presenter",
-          "Any IT or other requirement for conducting the tutorial",
+          "Submit a single PDF containing all the information listed below.",
+"1. Title : Title of the tutorial, limited to 20 words",
+"2. Duration: 1.5 hours/ 3 hours",
+"3. Name of the Speaker(s)",
+"4. Format of the Tutorial: Presentation/Workshop/Demo/Discussion/Other",
+"5. Abstract: Clearly outlining the intent of the tutorial (Between 600 and 1000 words)",
+"6. Domain of the Tutorial: Does it align with any track in the conference. Please note that the tutorial need not be limited by the tracks listed.",
+"7. Keywords: Provide at least 5 keywords",
+"8. Learning Outcomes: Please list at least 3 major learnings for attendees.",
+"9. Target audience: Does it cater to any particular group of attendees like students, or corporates with certain Experience level.",
+"10. Prerequisite knowledge of the audience (If any): Does the attendee need to have any prior knowledge to understand this tutorial?",
+"11. Speaker’s Biography: Qualification, experience, other conference presentations or publications in similar domains showcasing speaker’s expertise. Please provide a biography of each speaker (limiting to 300 words each).1.5 Hour format tutorial can have a maximum of 4 speakers.",
+"12. Basic Structure of the Tutorial: Topics and Subtopics with time allocated to each topic, also indicating the portions covered by each presenter.",
+"13. Any IT or other requirement for conducting the tutorial.",
         ]}
         isAlternate={true}
       />
