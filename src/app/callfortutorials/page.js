@@ -12,46 +12,22 @@ const handlePDFClick = () => {
 }
 const Tutorials = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
+      <div className="bg-black">
       <Navbar />
+      </div>
       <header
-        className="text-center text-white py-24 md:py-72 relative" // Adjusted padding for responsiveness
+        className="relative text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60"
         style={{
           backgroundImage: "url('/images/iit-ropar-5.avif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
         }}
       >
-        <div className="bg-black bg-opacity-50 py-12 md:py-20 px-4"> {/* Adjusted padding for responsiveness */}
-          <h1 className="text-4xl md:text-5xl font-extrabold">Call for Tutorial:</h1> {/* Adjusted font size for responsiveness */}
-          <h2 className="text-xl md:text-2xl mt-4 pb-4 font-light">
-            International Symposium on VLSI Design and Test 2025 (VDAT 2025)
-          </h2>
-          <div className="text-lg md:text-xl"> {/* Adjusted font size for responsiveness */}
-            <h3>Important Dates</h3>
-            <p>March 3, 2025: Submissions Open</p>
-            <p>April 24, 2025: Submission Deadline</p>
-            <p>June 15, 2025: Acceptance Notification</p>
-            <p>July 5, 2025: Camera Ready Deadline</p>
-            <div className="inline-flex flex-col max-w-max">
-            <button
-              className="bg-purple-600 text-white px-4 py-2  mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-              onClick={handleLinkClick}
-            >
-              Submission Link
-            </button>
-            <button
-              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-              onClick={handlePDFClick}
-            >
-              Tutorial Brochure
-            </button>
-            </div>
-          </div>
+        <div className="bg-black bg-opacity-50 py-20 px-4">
+          <h1 className=" sub text-5xl font-extrabold">CALL FOR TUTORIALS</h1>
         </div>
       </header>
-
       <main className="container mx-auto px-4 py-12">
         <ContentSection />
       </main>
@@ -64,6 +40,11 @@ const Tutorials = () => {
 const ContentSection = () => {
   return (
     <>
+    <ImportantDatesSection
+      title="Important Dates"
+      isAlternate={false}
+    />
+
       <ParagraphSection
         title="VDAT 2025 Tutorial Proposals"
         content={`The Organizing Committee of the VDAT 2025 invites proposals for tutorials to be presented at the conference, scheduled for 7-Aug-2025 in Chandigarh.
@@ -88,6 +69,54 @@ Tutorials are a cornerstone of the VDAT Conference, providing a unique opportuni
     </>
   );
 };
+
+const ImportantDatesSection = ({ title, content, isAlternate }) => (
+  <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
+    <div className="max-w-6xl mx-auto">
+      <div className="section-heading">
+        <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+          {title}
+        </h2>
+        
+      </div>
+      <div className="underline">
+        <div className="dot"></div>
+      </div>
+      <div className="h-6 py-5"></div>
+      <div className="max-w-4xl mx-auto text-center">
+
+          <ul className="text-lg text-gray-700 space-y-2">
+          <li>
+              <strong> Submissions Open:</strong> March 3, 2025
+            </li>
+            <li>
+              <strong>Deadline for submission:</strong> April 24, 2025
+            </li>
+            <li>
+              <strong>Deadline for acceptance:</strong> June 15, 2025
+            </li>
+            <li>
+              <strong>Deadline for camera-ready:</strong> July 5, 2025
+            </li>
+          </ul>
+          <div className="inline-flex flex-col max-w-max">
+            <button
+              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
+              onClick={handleLinkClick}
+            >
+              Submission Link
+            </button>
+            <button
+              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
+              onClick={handlePDFClick}
+            >
+              Submission Brochure
+            </button>
+          </div>
+        </div>
+    </div>
+  </section>
+);
 
 const ParagraphSection = ({ title, content, isAlternate }) => (
   <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
