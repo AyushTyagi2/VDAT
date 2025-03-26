@@ -256,8 +256,10 @@ const SpeakersSection = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100">
+      <div className="bg-black">
       <Navbar />
+      </div>
       <header
         className="relative text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60"
         style={{
@@ -271,7 +273,7 @@ const SpeakersSection = () => {
         </div>
       </header>
       <Dates />
-
+      <div className="bg-black">
       <section
         className="bg-black bg-opacity-0 py-16 text-white"
         id="conference"
@@ -327,6 +329,7 @@ const SpeakersSection = () => {
           </div>
         </div>
       </section>
+      </div>
 
       {tracks.map(({ id, title, content }, index) => (
         <TrackSection
