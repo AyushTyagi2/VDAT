@@ -2,6 +2,7 @@
 import React from 'react';
 import Footer from '../footer/footer';
 import Navbar from '../home/Navbar';
+import { Bold } from 'lucide-react';
 
 
 const handleLinkClick = () => {
@@ -42,7 +43,7 @@ const ContentSection = () => {
     <>
     <ImportantDatesSection
       title="Important Dates"
-      isAlternate={false}
+      isAlternate={true}
     />
 
       <ParagraphSection
@@ -56,19 +57,19 @@ Tutorials are a cornerstone of the VDAT Conference, providing a unique opportuni
         title="Submission Guidelines"
         items={[
           "Submit a single PDF containing all the information listed below.",
-"1. Title : Title of the tutorial, limited to 20 words",
-"2. Duration: 1.5 hours/ 3 hours",
-"3. Name of the Speaker(s)",
-"4. Format of the Tutorial: Presentation/Workshop/Demo/Discussion/Other",
-"5. Abstract: Clearly outlining the intent of the tutorial (Between 600 and 1000 words)",
-"6. Domain of the Tutorial: Does it align with any track in the conference. Please note that the tutorial need not be limited by the tracks listed.",
-"7. Keywords: Provide at least 5 keywords",
-"8. Learning Outcomes: Please list at least 3 major learnings for attendees.",
-"9. Target audience: Does it cater to any particular group of attendees like students, or corporates with certain Experience level.",
-"10. Prerequisite knowledge of the audience (If any): Does the attendee need to have any prior knowledge to understand this tutorial?",
-"11. Speaker’s Biography: Qualification, experience, other conference presentations or publications in similar domains showcasing speaker’s expertise. Please provide a biography of each speaker (limiting to 300 words each).1.5 Hour format tutorial can have a maximum of 4 speakers.",
-"12. Basic Structure of the Tutorial: Topics and Subtopics with time allocated to each topic, also indicating the portions covered by each presenter.",
-"13. Any IT or other requirement for conducting the tutorial.",
+          "Title : Title of the tutorial, limited to 20 words",
+          "Duration: 1.5 hours/ 3 hours",
+          "Name of the Speaker(s)",
+          "Format of the Tutorial: Presentation/Workshop/Demo/Discussion/Other",
+          "Abstract: Clearly outlining the intent of the tutorial (Between 600 and 1000 words)",
+          "Domain of the Tutorial: Does it align with any track in the conference. Please note that the tutorial need not be limited by the tracks listed.",
+          "Keywords: Provide at least 5 keywords",
+          "Learning Outcomes: Please list at least 3 major learnings for attendees.",
+          "Target audience: Does it cater to any particular group of attendees like students, or corporates with certain Experience level.",
+          " Prerequisite knowledge of the audience (If any): Does the attendee need to have any prior knowledge to understand this tutorial?",
+          " Speaker’s Biography: Qualification, experience, other conference presentations or publications in similar domains showcasing speaker’s expertise. Please provide a biography of each speaker (limiting to 300 words each).1.5 Hour format tutorial can have a maximum of 4 speakers.",
+          " Basic Structure of the Tutorial: Topics and Subtopics with time allocated to each topic, also indicating the portions covered by each presenter.",
+          " Any IT or other requirement for conducting the tutorial.",
         ]}
         isAlternate={true}
       />
@@ -76,7 +77,7 @@ Tutorials are a cornerstone of the VDAT Conference, providing a unique opportuni
   );
 };
 
-const ImportantDatesSection = ({ title, content, isAlternate }) => (
+const ImportantDatesSection = ({ title, isAlternate }) => (
   <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
     <div className="max-w-6xl mx-auto">
       <div className="section-heading">

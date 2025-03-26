@@ -11,9 +11,16 @@ const TrackSection = ({ id, title, content, isAlternate }) => (
     } shadow-md rounded-xl`}
   >
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-6">
-        {title}
-      </h2>
+      <div className="section-heading">
+        <h2 className="md:text-4xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+          {title}
+        </h2>
+        
+      </div>
+      <div className="underline">
+        <div className="dot"></div>
+      </div>
+      <div className="h-6 py-5"></div>
       <div className="text-lg text-gray-700 max-w-4xl mx-auto flex flex-col items-center leading-loose">
         {content.map((item, idx) => (
           <div key={idx} className="flex items-start gap-4 mb-4 w-full">
@@ -126,6 +133,128 @@ const SpeakersSection = () => {
   const handlePDFClick = () => {
     window.open("/pdfs/VDAT - CFP2025.pdf", "_blank");
   }
+
+  const ListSection = ({ title, items, isAlternate }) => (
+    <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
+      <div className="max-w-6xl mx-auto">
+        <div className="section-heading">
+          <h2 className="text-4xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+            {title}
+          </h2>
+        </div>
+        <div className="underline">
+          <div className="dot"></div>
+        </div>
+        <div className="h-6 py-5"></div>
+        <ul className="list-none text-lg text-gray-700 max-w-4xl mx-auto">
+          {items.map((item, index) => (
+            <li key={index} className="mb-2 flex items-start">
+              <span className="mr-2 text-purple-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 4.75l-2.719 5.513L3.5 11.12l4.439 4.329-.785 6.563L12 18.29l5.846 3.722-.785-6.563 4.439-4.33-5.781-.857L12 4.75z"
+                  />
+                </svg>
+              </span> {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+
+  const ImportantDatesSection = ({ title, isAlternate }) => (
+    <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
+      <div className="max-w-6xl mx-auto">
+        <div className="section-heading">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+            {title}
+          </h2>
+          
+        </div>
+        <div className="underline">
+          <div className="dot"></div>
+        </div>
+        <div className="h-6 py-5"></div>
+        <div className="max-w-4xl mx-auto text-center">
+
+        <ul className="text-lg text-gray-700 space-y-2">
+            <li>
+              <strong>Paper Submission Deadline:</strong> April 15, 2025
+            </li>
+            <li>
+              <strong>Acceptance Notification:</strong> June 15, 2025
+            </li>
+            <li>
+              <strong>Early Bird Registration & Payment:</strong> June 20, 2025
+            </li>
+            <li>
+              <strong>Regular Registration & Payment:</strong> July 1, 2025
+            </li>
+            <li>
+            <strong>Deadline for camera-ready:</strong> July 1, 2025
+            </li>
+        </ul>
+
+            <div className="inline-flex flex-col max-w-max">
+              <button
+                className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
+                onClick={handleLinkClick}
+              >
+                Submission Link
+              </button>
+              <button
+                className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
+                onClick={handlePDFClick}
+              >
+                Submission Brochure
+              </button>
+            </div>
+          </div>
+      </div>
+    </section>
+  );
+  
+  const Dates = () => {
+    return (
+      <ImportantDatesSection
+        title="Important Dates"
+        isAlternate={true}
+      />
+    );
+  };
+
+  const ContentSection = () => {
+    return (
+      <>
+        <ListSection
+          title="Submission Guidelines"
+          items={[
+            "Submit a single PDF containing all the information listed below.",
+            "Paper Format: Papers should be in PDF format following the IEEE Conference paper format.",
+            "Page Limit: Submissions must not exceed six A4-sized pages.",
+            "Submission Link: Upload your manuscript via the following link: Submit Here.",
+            "Review Process: A double-blind review process will be followed, so ensure no author names or identifying information is included in the manuscript.",
+            "Abstract: Include an abstract of 250 words with a maximum of five keywords.",
+            "Notification: Authors will be notified via email regarding acceptance and required revisions.",
+            "Final Submission: Revised camera-ready copies must be submitted within the specified deadline following the final submission guidelines.",
+            "Registration Requirement: At least one author must register for the conference to present and publish the paper. Separate registration is required for each paper presented by the same author."
+          ]}          
+          isAlternate={true}
+        />
+      </>
+    );
+  };
+
   return (
     <div>
       <Navbar />
@@ -141,45 +270,7 @@ const SpeakersSection = () => {
           <h1 className=" sub text-5xl font-extrabold">SUBMISSIONS</h1>
         </div>
       </header>
-
-      <section className="bg-gray-100 py-10 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
-            Important Deadlines
-          </h2>
-          <ul className="text-lg text-gray-700 space-y-2">
-            <li>
-              <strong>Deadline for paper submission:</strong> April 15, 2025
-            </li>
-            <li>
-              <strong>Deadline for acceptance:</strong> June 15, 2025
-            </li>
-            <li>
-              <strong>Deadline for camera-ready:</strong> July 1, 2025
-            </li>
-          </ul>
-          <div className="inline-flex flex-col max-w-max">
-            <button
-              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-              onClick={() => scrollToSection("submission")}
-            >
-              Submission Guidelines
-            </button>
-            <button
-              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-              onClick={handleLinkClick}
-            >
-              Submission Link
-            </button>
-            <button
-              className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-              onClick={handlePDFClick}
-            >
-              Submission Brochure
-            </button>
-          </div>
-        </div>
-      </section>
+      <Dates />
 
       <section
         className="bg-black bg-opacity-0 py-16 text-white"
@@ -246,68 +337,11 @@ const SpeakersSection = () => {
           isAlternate={index % 2 !== 0}
         />
       ))}
-
-      <section className="bg-gray-50 py-8 px-4" id="submission">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-extrabold text-gray-800 mb-8">
-            Submission Guidelines
-          </h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Authors are invited to submit original, unpublished research
-            manuscripts adhering to the following guidelines:
-          </p>
-          <ol className="text-left text-lg text-gray-700 space-y-4 list-decimal list-inside">
-            <li>
-              Papers should be in{" "}
-              <span className="font-semibold">PDF format</span> following the{" "}
-              <span className="font-semibold">
-                IEEE Conference paper format
-              </span>
-              .
-            </li>
-            <li>
-              Submissions must not exceed{" "}
-              <span className="font-semibold">six A4-sized pages</span> and
-              should be uploaded via the link:{" "}
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf1uVsPhajRPqSo7Oodi_y2XllweQmoskxxYMvZENGymHVeqA/viewform?usp=sharing "
-                  target="_blank"
-                  className="text-blue-600 underline"
-                  style={{ backgroundColor: 'white' }}
-                >
-                  Submit Here
-                </a>
-              .
-            </li>
-            <li>
-              A{" "}
-              <span className="font-semibold">double-blind review process</span>{" "}
-              will be followed, so ensure no author names or identifying
-              information is included in the manuscript.
-            </li>
-            <li>
-              Include an{" "}
-              <span className="font-semibold">abstract of 250 words</span> with
-              a maximum of <span className="font-semibold">five keywords</span>.
-            </li>
-            <li>
-              Authors will be notified via email regarding acceptance and
-              required revisions.
-            </li>
-            <li>
-              Revised camera-ready copies must be submitted within the specified
-              deadline following the final submission guidelines.
-            </li>
-            <li>
-              At least{" "}
-              <span className="font-semibold">one author must register</span>{" "}
-              for the conference to present and publish the paper. Separate
-              registration is required for each paper presented by the same
-              author.
-            </li>
-          </ol>
-        </div>
-      </section>
+      <ContentSection
+        id="submission"
+        title="Submission Guidelines"
+        isAlternate={true}
+        ></ContentSection>
       <Footer />
     </div>
   );
