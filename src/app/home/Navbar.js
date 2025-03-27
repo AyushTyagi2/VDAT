@@ -23,7 +23,7 @@ const Navbar = () => {
       label: "Call for Submissions",
       onClick: togglePapersDropdown,
       dropdown: [
-        { label: "Submissions", href: "/submissions" },
+        { label: "Call For Papers", href: "/submissions" },
         { label: "Awards", href: "/awards" },
         { label: "Call for Tutorials", href: "/callfortutorials" },
         {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},

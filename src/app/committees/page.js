@@ -20,6 +20,44 @@ const committees = [
     ],
   },
   {
+    title: "Patrons",
+    members: [
+      {
+        name: "Prof. Rajeev Ahuja",
+        institute: "Director, IIT Ropar",
+        linkedin: "https://www.linkedin.com/in/prof-rajeev-ahuja-6436b3335/?originalSubdomain=in",
+        website: "https://www.iitrpr.ac.in/director",
+        image: "./images/rajeev.jpeg",
+      },
+      {
+        name: "Prof Laxmidhar Behera",
+        institute: "Director, IIT Mandi",
+        website: "https://iitmandi.ac.in/institute/director",
+        image: "./images/laxmi.png",
+      },
+      {
+        name: "Prof Rajesh Bhatia",
+        institute: "Director, PEC Chandigarh",
+        linkedin: "https://www.linkedin.com/in/rajesh-bhatia-ab5aa235/?originalSubdomain=in",
+        website: "https://pec.ac.in/director",
+        image: "./images/rajesh.jpg",
+      },
+      {
+        name: "Dr Madhu Chitkara",
+        institute: "Pro-Chancellor, Chitkara University",
+        linkedin: "https://www.linkedin.com/in/dr-madhu-chitkara-97713b185/?originalSubdomain=in",
+        website: "https://www.chitkara.edu.in/dr-madhu-chitkara/",
+        image: "./images/madhu.jpg",
+      },
+      {
+        name: "Prof. Manpreet Singh Manna",
+        institute: "Vice Chancellor, Chandigarh University",
+        linkedin: "https://www.linkedin.com/in/drmanna/",
+        image: "./images/manpreet.jpg",
+      },
+    ],
+  },
+  {
     title: "General Chairs",
     members: [
       { 
@@ -95,9 +133,9 @@ const committees = [
   {
     title: "Demo and Exhibit Chair",
     members: [
-      { name: "Rajendra Prasad", institute: "HCL Tech", linkedin: "https://www.linkedin.com/in/rajendra-prasad-3a08389b/?originalSubdomain=in", image: "./images/rajendra.jpg" },
+      { name: "Rajendra Pratap", institute: "HCL Tech", linkedin: "https://www.linkedin.com/in/rajendrapratap/", image: "./images/rajendra.jpg" },
       { name: "John Jose", institute: "IIT Guwahati", linkedin: "https://www.linkedin.com/in/john-jose-bb8431106/?originalSubdomain=in", website: "https://www.iitg.ac.in/johnjose/", image: "./images/john.jpg" },
-      { name: "Mohd Asim Saeed", institute: "SCL, Mohali", linkedin: "https://www.linkedin.com/in/asim-saeed-49097579/?originalSubdomain=in", image: "./images/asim.jpg" },
+      { name: "Mohd Asim Saeed", institute: "SCL, Mohali", linkedin: "https://www.linkedin.com/in/asim-saeed-49097579/?originalSubdomain=in", image: "./images/Asim.jpeg" },
     ] 
   },
   {
@@ -111,11 +149,11 @@ const committees = [
   },
   {
     title: "Startup Chair",
-    members: [{ name: "Gaganpreet Kaur" }],
+    members: [{ name: "Gaganpreet Kaur", institute: "Thapar University", image: "./images/gaganpreet.jpg" }],
   },
   { 
     title: "PhD Forum Chair", 
-    members: [{ name: "Debiprasanna Sahu", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/", image: "./images/debiprasanna.jpg" }] 
+    members: [{ name: "Debiprasanna Sahu", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/", image: "./images/debiprasanna.png" }] 
   },
   {
     title: "Publication Chair",
@@ -135,7 +173,9 @@ const committees = [
   },
   { 
     title: "Registration Chair", 
-    members: [{ name: "Somesh Kumar", institute: "IIITM Gwalior", linkedin: "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in", website: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh", image: "./images/somesh.jpg " }] 
+    members: [{ name: "Somesh Kumar", institute: "IIITM Gwalior", linkedin: "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in", website: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh", image: "./images/somesh.jpg " },
+      { name: "Sharda Vashisth", institute: "The NorthCap University, Gurugoan", linkedin: "https://www.linkedin.com/in/dr-sharda-vashisth-23a25021/", image: "./images/sharda.jpg" }
+    ] 
   },
   {
     title: "Advisory Committee",
@@ -177,6 +217,18 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in",
         image: "./images/chitra.jpg",
+      },
+      {
+        name: "RAJNISH SHARMA",
+        institute: "Chitkara University",
+        linkedin: "https://www.linkedin.com/in/rajnish-sharma-39948719/",
+        image: "./images/rajnish.jpg",
+      },
+      {
+        name: "Yajvender Pal Verma",
+        institute: " UIET Panjab University Chandigarh",
+        linkedin: "https://www.linkedin.com/in/yajvender-pal-verma-042a5193/?originalSubdomain=in",
+        image: "./images/pal.jpg",
       },
     ],
   },

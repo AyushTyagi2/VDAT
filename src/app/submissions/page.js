@@ -127,7 +127,7 @@ const SpeakersSection = () => {
   ];
 
   const handleLinkClick = () => {
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSf1uVsPhajRPqSo7Oodi_y2XllweQmoskxxYMvZENGymHVeqA/viewform?usp=sharing", "_blank");
+    window.open("https://softconf.com/vlsi/vdat2025/", "_blank");
   };
 
   const handlePDFClick = () => {
