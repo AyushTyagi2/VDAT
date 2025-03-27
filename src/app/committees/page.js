@@ -58,6 +58,61 @@ const committees = [
     ],
   },
   {
+    title: "Advisory Committee",
+    members: [
+      {
+        name: "Sudeb Das Gupta",
+        institute: "IIT Roorkee",
+        linkedin:
+          "https://www.linkedin.com/in/sudeb-dasgupta-2b19b64/?originalSubdomain=in",
+        website: "https://ece.iitr.ac.in/sudeb-das-gupta/",
+        image: "./images/sudeb.jpg",
+      },
+      {
+        name: "M Balakrishnan",
+        institute: "IIT Delhi",
+        linkedin:
+          "https://www.linkedin.com/in/m-balakrishnan-b3467924/?originalSubdomain=in",
+        website: "https://www.cse.iitd.ernet.in/~mbala/",
+        image: "./images/MBala.jpg",
+      },
+      {
+        name: "R.K Sharma",
+        institute: "NIT Kururkshetra",
+        linkedin:
+          "https://www.linkedin.com/in/r-k-sharma-21b3792a/?originalSubdomain=in",
+        website: "https://nitkkr.ac.in/author/r-k-sharma/",
+        image: "./images/rk.jpg",
+      },
+      {
+        name: "Vineet Sahula",
+        institute: "MNIT Jaipur",
+        linkedin: "https://www.linkedin.com/in/vineet07/?originalSubdomain=in",
+        website: "https://mnit.ac.in/dept_ece/profile?fid=Q6w=",
+        image: "./images/vineet.jpg",
+      },
+      {
+        name: "Chitra Hariharan",
+        institute: "Renesas",
+        linkedin:
+          "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in",
+        image: "./images/chitra.jpg",
+      },
+      {
+        name: "RAJNISH SHARMA",
+        institute: "Chitkara University",
+        linkedin: "https://www.linkedin.com/in/rajnish-sharma-39948719/",
+        image: "./images/rajnish.jpg",
+      },
+      {
+        name: "Yajvender Pal Verma",
+        institute: " UIET Panjab University Chandigarh",
+        linkedin: "https://www.linkedin.com/in/yajvender-pal-verma-042a5193/?originalSubdomain=in",
+        image: "./images/pal.jpg",
+      },
+    ],
+  },
+  {
     title: "General Chairs",
     members: [
       { 
@@ -177,61 +232,7 @@ const committees = [
       { name: "Sharda Vashisth", institute: "The NorthCap University, Gurugoan", linkedin: "https://www.linkedin.com/in/dr-sharda-vashisth-23a25021/", image: "./images/sharda.jpg" }
     ] 
   },
-  {
-    title: "Advisory Committee",
-    members: [
-      {
-        name: "Sudeb Das Gupta",
-        institute: "IIT Roorkee",
-        linkedin:
-          "https://www.linkedin.com/in/sudeb-dasgupta-2b19b64/?originalSubdomain=in",
-        website: "https://ece.iitr.ac.in/sudeb-das-gupta/",
-        image: "./images/sudeb.jpg",
-      },
-      {
-        name: "M Balakrishnan",
-        institute: "IIT Delhi",
-        linkedin:
-          "https://www.linkedin.com/in/m-balakrishnan-b3467924/?originalSubdomain=in",
-        website: "https://www.cse.iitd.ernet.in/~mbala/",
-        image: "./images/MBala.jpg",
-      },
-      {
-        name: "R.K Sharma",
-        institute: "NIT Kururkshetra",
-        linkedin:
-          "https://www.linkedin.com/in/r-k-sharma-21b3792a/?originalSubdomain=in",
-        website: "https://nitkkr.ac.in/author/r-k-sharma/",
-        image: "./images/rk.jpg",
-      },
-      {
-        name: "Vineet Sahula",
-        institute: "MNIT Jaipur",
-        linkedin: "https://www.linkedin.com/in/vineet07/?originalSubdomain=in",
-        website: "https://mnit.ac.in/dept_ece/profile?fid=Q6w=",
-        image: "./images/vineet.jpg",
-      },
-      {
-        name: "Chitra Hariharan",
-        institute: "Renesas",
-        linkedin:
-          "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in",
-        image: "./images/chitra.jpg",
-      },
-      {
-        name: "RAJNISH SHARMA",
-        institute: "Chitkara University",
-        linkedin: "https://www.linkedin.com/in/rajnish-sharma-39948719/",
-        image: "./images/rajnish.jpg",
-      },
-      {
-        name: "Yajvender Pal Verma",
-        institute: " UIET Panjab University Chandigarh",
-        linkedin: "https://www.linkedin.com/in/yajvender-pal-verma-042a5193/?originalSubdomain=in",
-        image: "./images/pal.jpg",
-      },
-    ],
-  },
+  
 ];
 
 const CommitteeCard = ({ title, members }) => {

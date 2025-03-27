@@ -24,7 +24,6 @@ const Navbar = () => {
       onClick: togglePapersDropdown,
       dropdown: [
         { label: "Call For Papers", href: "/submissions" },
-        { label: "Awards", href: "/awards" },
         { label: "Call for Tutorials", href: "/callfortutorials" },
         {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},
       ],
