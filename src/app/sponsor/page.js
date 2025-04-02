@@ -46,7 +46,7 @@ const SponsorshipPage = () => {
           <h1 className=" sub text-5xl font-extrabold tracking-wide uppercase">Sponsors</h1>
         </div>
       </header>
-
+    <div className='bg-white'>
       {/* Call for Sponsors Section */}
       <section className="container mx-auto px-6 py-12 bg-gray-50">
         <h2 className="text-4xl font-bold text-center mb-8 text-violet-800 uppercase">Call for Sponsors</h2>
@@ -113,7 +113,7 @@ const SponsorshipPage = () => {
           ))}
         </div>
       </section>
-
+          </div>
       <Footer />
     </div>
   );
