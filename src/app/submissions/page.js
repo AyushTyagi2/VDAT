@@ -189,19 +189,22 @@ const SpeakersSection = () => {
 
         <ul className="text-lg text-gray-700 space-y-2">
             <li>
-              <strong>Paper Submission Deadline:</strong> April 15, 2025
+              <strong>Paper Submission Deadline:</strong> <strike>April 15, 2025</strike> May 15, 2025 (Firm deadline, no further extension)
+
             </li>
             <li>
-              <strong>Acceptance Notification:</strong> June 15, 2025
+              <strong>Acceptance Notification:</strong><strike>June 15, 2025</strike> July 1, 2025
+
             </li>
             <li>
-              <strong>Early Bird Registration & Payment:</strong> June 20, 2025
+              <strong>Early Bird Registration & Payment:</strong><strike>June 20, 2025</strike> July 10, 2025
+
             </li>
             <li>
               <strong>Regular Registration & Payment:</strong> July 1, 2025
             </li>
             <li>
-            <strong>Deadline for camera-ready:</strong> July 1, 2025
+            <strong>Deadline for camera-ready:</strong> <strike>July 1, 2025</strike> July 15, 2025.
             </li>
         </ul>
 

@@ -46,7 +46,7 @@ const Circuitpreneur = () => {
       >
         <div className="bg-black bg-opacity-50 py-6 md:py-20 px-4"> {/* Adjusted padding for responsiveness */}
           <h1 className="text-4xl md:text-5xl font-extrabold">
-          CIRCUITPRENEUR - CALL FOR IDEA PICHING</h1> {/* Adjusted font size for responsiveness */}
+          CIRCUITPRENEUR - CALL FOR IDEA PITCHING</h1> {/* Adjusted font size for responsiveness */}
           <h2 className="text-xl md:text-2xl mt-4 pb-4 font-light">
           Calling all the Innovators, Tech enthusiasts, and Future Entrepreneurs.
           </h2>          
