@@ -200,9 +200,9 @@ const SpeakersSection = () => {
               <strong>Early Bird Registration & Payment:</strong><strike>June 20, 2025</strike> July 10, 2025
 
             </li>
-            <li>
+            {/* <li>
               <strong>Regular Registration & Payment:</strong> July 1, 2025
-            </li>
+            </li> */}
             <li>
             <strong>Deadline for camera-ready:</strong> <strike>July 1, 2025</strike> July 15, 2025.
             </li>
