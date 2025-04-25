@@ -2,47 +2,34 @@
 import React, { useState } from "react";
 import Footer from "../footer/footer";
 import Navbar from "../home/Navbar";
+import { Calendar, ChevronRight, FileText, ExternalLink, Check, Star } from 'lucide-react';
 
 const TrackSection = ({ id, title, content, isAlternate }) => (
   <section
     id={id}
-    className={`py-20 px-4 ${
-      isAlternate ? "bg-gray-100" : "bg-white"
-    } shadow-md rounded-xl`}
+    className={`py-16 px-4 ${
+      isAlternate ? "bg-gray-50" : "bg-white"
+    } shadow-lg rounded-xl mb-8`}
   >
     <div className="max-w-6xl mx-auto">
       <div className="section-heading">
-        <h2 className="md:text-4xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
           {title}
         </h2>
-        
+        <div className="w-16 h-1 bg-purple-600 mx-auto mb-8"></div>
       </div>
-      <div className="underline">
-        <div className="dot"></div>
-      </div>
-      <div className="h-6 py-5"></div>
-      <div className="text-lg text-gray-700 max-w-4xl mx-auto flex flex-col items-center leading-loose">
-        {content.map((item, idx) => (
-          <div key={idx} className="flex items-start gap-4 mb-4 w-full">
-            <span className="text-purple-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.75l-2.719 5.513L3.5 11.12l4.439 4.329-.785 6.563L12 18.29l5.846 3.722-.785-6.563 4.439-4.33-5.781-.857L12 4.75z"
-                />
-              </svg>
-            </span>
-            <p className="text-gray-800 text-left">{item}</p>
-          </div>
-        ))}
+
+      <div className="text-lg text-gray-700 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+          {content.map((item, idx) => (
+            <div key={idx} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-100 transition-colors">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                <Star size={14} />
+              </span>
+              <p className="text-gray-800">{item}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -135,94 +122,110 @@ const SpeakersSection = () => {
   }
 
   const ListSection = ({ title, items, isAlternate }) => (
-    <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
+    <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-50' : 'bg-white'} shadow-lg rounded-xl mb-8`}>
       <div className="max-w-6xl mx-auto">
         <div className="section-heading">
-          <h2 className="text-4xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
             {title}
           </h2>
+          <div className="w-16 h-1 bg-purple-600 mx-auto mb-8"></div>
         </div>
-        <div className="underline">
-          <div className="dot"></div>
+        
+        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+          <ul className="space-y-4">
+            {items.map((item, index) => (
+              <li key={index} className="flex items-start group">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3 mt-1 group-hover:bg-purple-200 transition-colors">
+                  <span className="text-purple-600 font-semibold">{index + 1}</span>
+                </div>
+                <span className="text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="h-6 py-5"></div>
-        <ul className="list-none text-lg text-gray-700 max-w-4xl mx-auto">
-          {items.map((item, index) => (
-            <li key={index} className="mb-2 flex items-start">
-              <span className="mr-2 text-purple-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4.75l-2.719 5.513L3.5 11.12l4.439 4.329-.785 6.563L12 18.29l5.846 3.722-.785-6.563 4.439-4.33-5.781-.857L12 4.75z"
-                  />
-                </svg>
-              </span> {item}
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
 
   const ImportantDatesSection = ({ title, isAlternate }) => (
-    <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-100' : 'bg-white'} shadow-md rounded-xl mb-8`}>
+    <section className={`py-12 px-4 ${isAlternate ? 'bg-gray-50' : 'bg-white'} shadow-lg rounded-xl mb-8`} id="important-dates">
       <div className="max-w-6xl mx-auto">
         <div className="section-heading">
-          <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 text-center mb-6 underline-animation">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
             {title}
           </h2>
-          
+          <div className="w-16 h-1 bg-purple-600 mx-auto mb-8"></div>
         </div>
-        <div className="underline">
-          <div className="dot"></div>
-        </div>
-        <div className="h-6 py-5"></div>
-        <div className="max-w-4xl mx-auto text-center">
-
-        <ul className="text-lg text-gray-700 space-y-2">
-            <li>
-              <strong>Paper Submission Deadline:</strong> <strike>April 15, 2025</strike> May 15, 2025 (Firm deadline, no further extension)
-
-            </li>
-            <li>
-              <strong>Acceptance Notification:</strong><strike>June 15, 2025</strike> July 1, 2025
-
-            </li>
-            <li>
-              <strong>Early Bird Registration & Payment:</strong><strike>June 20, 2025</strike> July 10, 2025
-
-            </li>
-            {/* <li>
-              <strong>Regular Registration & Payment:</strong> July 1, 2025
-            </li> */}
-            <li>
-            <strong>Deadline for camera-ready:</strong> <strike>July 1, 2025</strike> July 15, 2025.
-            </li>
-        </ul>
-
-            <div className="inline-flex flex-col max-w-max">
-              <button
-                className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-                onClick={handleLinkClick}
-              >
-                Submission Link
-              </button>
-              <button
-                className="bg-purple-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out w-full"
-                onClick={handlePDFClick}
-              >
-                Submission Brochure
-              </button>
+        
+        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+          <div className="flex flex-col space-y-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-500 flex-1">
+                <div className="flex items-center mb-3">
+                  <Calendar className="text-purple-600 w-5 h-5 mr-2" />
+                  <h3 className="font-semibold text-gray-800">Paper Submission</h3>
+                </div>
+                <p className="text-gray-700 flex items-baseline gap-2">
+                  <strong>Deadline:</strong> 
+                  <span><strike className="text-red-500">April 15, 2025</strike> May 15, 2025</span>
+                </p>
+                <p className="text-sm text-gray-500 mt-1">(Firm deadline, no further extension)</p>
+              </div>
+              
+              <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 flex-1">
+                <div className="flex items-center mb-3">
+                  <Calendar className="text-indigo-600 w-5 h-5 mr-2" />
+                  <h3 className="font-semibold text-gray-800">Acceptance Notification</h3>
+                </div>
+                <p className="text-gray-700 flex items-baseline gap-2">
+                  <strong>Date:</strong>
+                  <span><strike className="text-red-500">June 15, 2025</strike> July 1, 2025</span>
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500 flex-1">
+                <div className="flex items-center mb-3">
+                  <Calendar className="text-blue-600 w-5 h-5 mr-2" />
+                  <h3 className="font-semibold text-gray-800">Early Bird Registration</h3>
+                </div>
+                <p className="text-gray-700 flex items-baseline gap-2">
+                  <strong>Deadline:</strong>
+                  <span><strike className="text-red-500">June 20, 2025</strike> July 10, 2025</span>
+                </p>
+              </div>
+              
+              <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-500 flex-1">
+                <div className="flex items-center mb-3">
+                  <Calendar className="text-green-600 w-5 h-5 mr-2" />
+                  <h3 className="font-semibold text-gray-800">Camera-ready Submission</h3>
+                </div>
+                <p className="text-gray-700 flex items-baseline gap-2">
+                  <strong>Deadline:</strong>
+                  <span><strike className="text-red-500">July 1, 2025</strike> July 15, 2025</span>
+                </p>
+              </div>
             </div>
           </div>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <button
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out flex items-center justify-center"
+              onClick={handleLinkClick}
+            >
+              <ExternalLink className="w-5 h-5 mr-2" />
+              Submit Paper
+            </button>
+            <button
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-200 ease-in-out flex items-center justify-center"
+              onClick={handlePDFClick}
+            >
+              <FileText className="w-5 h-5 mr-2" />
+              Download Brochure
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -259,80 +262,97 @@ const SpeakersSection = () => {
   };
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 min-h-screen flex flex-col">
       <div className="bg-black">
-      <Navbar />
+        <Navbar />
       </div>
+      
       <header
-        className="relative text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60"
-        style={{
-          backgroundImage: "url('/images/iit-ropar-5.avif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
-        <div className="bg-black bg-opacity-50 py-20 px-4">
-          <h1 className=" sub text-5xl font-extrabold">SUBMISSIONS</h1>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>
+        <div className="relative z-10 px-4 py-16">
+          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">Submissions</h1>
         </div>
       </header>
+      
       <Dates />
-      <div className="bg-black">
-      <section
-        className="bg-black bg-opacity-0 py-16 text-white"
-        id="conference"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-8">
-          <div className="lg:w-2/3 bg-gray-900 text-white p-6 lg:p-10 rounded-2xl shadow-lg">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold text-purple-500 mb-4">
+      
+      <section className="bg-gray-900 py-16 text-white px-4" id="conference">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
+          <div className="lg:w-2/3 bg-gray-800 p-6 lg:p-10 rounded-2xl shadow-lg relative overflow-hidden">
+            {/* Decorative accent element */}
+            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-purple-500 to-indigo-500"></div>
+            
+            <div className="max-w-3xl ml-4">
+              <h2 className="text-3xl font-bold text-purple-400 mb-6 flex items-center">
                 VDAT 2025 Conference
+                <div className="h-1 flex-grow ml-4 bg-gradient-to-r from-purple-500 to-transparent"></div>
               </h2>
-              <p className="text-lg leading-7 mb-6">
+              
+              <p className="text-lg leading-7 mb-6 text-gray-200">
                 The VDAT 2025 conference provides a platform for researchers and
                 practitioners to explore how VLSI and Embedded Systems can drive
                 disruptive advancements for the next generation. Original
                 contributions are solicited on topics covered under broad areas
                 such as (but not limited to) the ones below.
               </p>
-              <p className="text-lg leading-7 mb-6">
-                <b>Paper Submission:</b> Authors are invited to submit
-                full-length (6 pages maximum), original, unpublished papers
-                along with an abstract of at most 200 words. To enable blind
-                review, the author list should be omitted from the main
-                document. Previously published papers or papers currently under
-                review for other conferences/journals should NOT be submitted
-                and will not be considered. Electronic submission in PDF format
-                is required. Author and contact information (name, affiliation,
-                mailing address, telephone, fax, e-mail) must be entered during
-                the submission process.
-              </p>
-              <p className="text-lg leading-7">
-                <b>Paper Format:</b> Submissions should be in camera-ready IEEE
-                two-column format, following the IEEE proceedings
-                specifications.
-              </p>
+              
+              <div className="mb-6 p-4 border-l-4 border-purple-500 bg-gray-700 bg-opacity-50 rounded">
+                <h3 className="font-semibold text-purple-300 mb-2">Paper Submission</h3>
+                <p className="text-gray-300">
+                  Authors are invited to submit full-length (6 pages maximum), original, unpublished papers
+                  along with an abstract of at most 200 words. To enable blind
+                  review, the author list should be omitted from the main
+                  document. Previously published papers or papers currently under
+                  review for other conferences/journals should NOT be submitted
+                  and will not be considered. Electronic submission in PDF format
+                  is required. Author and contact information (name, affiliation,
+                  mailing address, telephone, fax, e-mail) must be entered during
+                  the submission process.
+                </p>
+              </div>
+              
+              <div className="p-4 border-l-4 border-indigo-500 bg-gray-700 bg-opacity-50 rounded">
+                <h3 className="font-semibold text-indigo-300 mb-2">Paper Format</h3>
+                <p className="text-gray-300">
+                  Submissions should be in camera-ready IEEE
+                  two-column format, following the IEEE proceedings
+                  specifications.
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="lg:w-1/3">
-            <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center">
-              Conference Tracks
-            </h2>
-            <div className="grid grid-cols-2 gap-4 text-center">
-              {tracks.map(({ id, name }) => (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className="w-full h-40 text-center text-lg font-bold border border-purple-500 rounded p-2 text-white hover:bg-purple-500 transition duration-200 ease-in-out"
-                >
-                  {name.split(":")[0]}
-                </button>
-              ))}
+            <div className="bg-gray-800 rounded-2xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold mb-6 text-purple-400 text-center">
+                Conference Tracks
+              </h2>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                {tracks.map(({ id, name }, index) => (
+                  <button
+                    key={id}
+                    onClick={() => scrollToSection(id)}
+                    className="w-full p-4 text-center font-medium border border-gray-700 rounded-lg text-white hover:bg-purple-700 transition duration-300 ease-in-out flex flex-col items-center justify-center gap-2"
+                    style={{
+                      background: "linear-gradient(45deg, #2d3748, #1a202c)",
+                      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+                    }}
+                  >
+                    <div className="w-8 h-8 rounded-full bg-purple-900 flex items-center justify-center mb-2">
+                      <span className="text-purple-300 font-bold">{index + 1}</span>
+                    </div>
+                    {name.split(":")[0]}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
-      </div>
 
       {tracks.map(({ id, title, content }, index) => (
         <TrackSection
@@ -343,11 +363,13 @@ const SpeakersSection = () => {
           isAlternate={index % 2 !== 0}
         />
       ))}
+      
       <ContentSection
         id="submission"
         title="Submission Guidelines"
         isAlternate={true}
-        ></ContentSection>
+      />
+      
       <Footer />
     </div>
   );

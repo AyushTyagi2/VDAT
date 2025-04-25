@@ -2,191 +2,275 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "../home/Navbar";
 import Footer from "../footer/footer";
+import { MapPin, Plane, Train, Bus, Navigation, ExternalLink, Map, Hotel, Globe } from "lucide-react";
 
 const VenuePage = () => {
+  const attractions = [
+    {
+      name: "City Centre",
+      image: "/images/chandigarh-city.jpg",
+      description: "Experience the buzz of Chandigarh's vibrant shopping and dining scene.",
+      link: "https://en.wikipedia.org/wiki/Chandigarh"
+    },
+    {
+      name: "Rose Garden",
+      image: "/images/rose-garden.jpg",
+      description: "Take a leisurely walk through one of Asia's largest rose gardens.",
+      link: "https://www.chandigarhtourism.gov.in"
+    },
+    {
+      name: "Rock Garden",
+      image: "/images/rock-garden.jpg",
+      description: "Explore the unique sculptures and artistic flair of this famed garden.",
+      link: "https://en.wikipedia.org/wiki/Rock_Garden_(Chandigarh)"
+    }
+  ];
+
+  const transportOptions = [
+    {
+      mode: "By Air",
+      icon: <Plane className="text-white" size={24} />,
+      color: "bg-blue-500",
+      description: "The nearest airport is Chandigarh International Airport (about 12 km away). Taxis and ride-sharing services are readily available."
+    },
+    {
+      mode: "By Train",
+      icon: <Train className="text-white" size={24} />,
+      color: "bg-green-500",
+      description: "Chandigarh Railway Station is approximately 8 km from the hotel. Taxis or auto-rickshaws can make the transfer comfortable and quick."
+    },
+    {
+      mode: "By Bus",
+      icon: <Bus className="text-white" size={24} />,
+      color: "bg-purple-500",
+      description: "The hotel is well-connected via local and intercity bus services with nearby stops in Sector 17."
+    }
+  ];
+
   return (
-    <div>
+    <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans">
+      <div className="bg-black"  > 
       <Navbar />
-      <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen font-sans">
-        {/* Header Section */}
-        <header
-        className="text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60 relative"
-        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}
+      </div>
+      
+      {/* Hero Section with Parallax Effect */}
+      <header
+        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
-        <div className="bg-black bg-opacity-50 py-20 px-4">
-          <h1 className="text-5xl font-extrabold">Venue</h1>
-          <br/>
-          <h2 className="text-3xl font-light">Hotel Shivalik View, Chandigarh</h2>
-          <p className="text-xl mt-4 font-light"></p>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-indigo-900/80"></div>
+        <div className="relative z-10 px-4 py-16">
+          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">Conference Venue</h1>
+          <div className="flex items-center justify-center mt-6">
+            <MapPin className="text-white mr-2" size={24} />
+            <h2 className="text-3xl font-light">Hotel Shivalik View, Chandigarh</h2>
+          </div>
         </div>
       </header>
 
-        {/* Main Content */}
-        <main className="container mx-auto py-16 px-6 md:px-12">
-          {/* About Section */}
-          <section className="mb-16">
-            <div className="bg-white rounded-xl shadow-xl p-8 md:p-12">
-              <h2 className="text-3xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-                About Hotel Shivalikview
-              </h2>
-              <div className="space-y-4 text-gray-700 text-lg">
-                <p>
-                  Hotel Shivalikview is a contemporary 4-star hotel nestled in Sector 17E of Chandigarh.
-                  It boasts stylish, modern rooms with scenic views of a vibrant rose garden and the majestic
-                  Shivalik mountain range.
-                </p>
-                <p>
-                  Designed with the modern traveler in mind, the hotel offers all the amenities required for
-                  both business and leisure stays. Its prime location ensures easy access to the city’s key attractions.
-                </p>
-                <p>
-                  For more details, visit the hotel's page on{" "}
-                  <a
-                    href="https://www.makemytrip.com/hotels/hotel_shivalikview-details-chandigarh.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    MakeMyTrip
-                  </a>.
-                </p>
+      {/* Main Content */}
+      <main className="container mx-auto py-16 px-6 md:px-12">
+        {/* Hotel Info Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+              About the Venue
+              <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            </h2>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div className="md:flex">
+              <div className="md:w-1/3 relative h-64 md:h-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center">
+                  <Hotel size={80} className="text-white opacity-90" />
+                </div>
+              </div>
+              <div className="md:w-2/3 p-8">
+                <div className="flex items-center mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">4-Star Hotel</span>
+                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded ml-2">City Center</span>
+                </div>
+                <h3 className="text-3xl font-semibold text-gray-800 mb-4">Hotel Shivalik View</h3>
+                <div className="space-y-4 text-gray-700 text-lg">
+                  <p>
+                    Hotel Shivalikview is a contemporary 4-star hotel nestled in Sector 17E of Chandigarh.
+                    It boasts stylish, modern rooms with scenic views of a vibrant rose garden and the majestic
+                    Shivalik mountain range.
+                  </p>
+                  <p>
+                    Designed with the modern traveler in mind, the hotel offers all the amenities required for
+                    both business and leisure stays. Its prime location ensures easy access to the city's key attractions.
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="https://www.makemytrip.com/hotels/hotel_shivalikview-details-chandigarh.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 transition-colors"
+                    >
+                      View Hotel Details
+                      <ExternalLink size={16} className="ml-2" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Discover Chandigarh Section */}
-          <section className="mb-16">
-            <div className="bg-white rounded-xl shadow-xl p-8 md:p-12">
-              <h2 className="text-3xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-                Discover Chandigarh
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* City Centre Card */}
+        {/* Map and Directions */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+              How to Reach
+              <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            </h2>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div className="md:flex flex-row-reverse">
+              <div className="md:w-1/2 relative h-80 md:h-auto">
                 <a
-                  href="https://en.wikipedia.org/wiki/Chandigarh"
+                  href="https://www.google.com/maps/place/Hotel+Shivalikview/@30.7400909,76.773977,17z"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center hover:shadow-2xl transition-shadow"
+                  className="absolute inset-0"
                 >
-                  <Image
-                    src="/images/chandigarh-city.jpg"
-                    alt="Chandigarh City Centre"
-                    width={300}
-                    height={200}
-                    className="rounded-lg"
-                  />
-                  <h3 className="mt-4 text-xl font-medium text-gray-800">City Centre</h3>
-                  <p className="text-gray-600 text-center">
-                    Experience the buzz of Chandigarh's vibrant shopping and dining scene.
-                  </p>
-                </a>
-
-                {/* Rose Garden Card */}
-                <a
-                  href="https://www.chandigarhtourism.gov.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center hover:shadow-2xl transition-shadow"
-                >
-                  <Image
-                    src="/images/rose-garden.jpg"
-                    alt="Rose Garden, Chandigarh"
-                    width={300}
-                    height={200}
-                    className="rounded-lg"
-                  />
-                  <h3 className="mt-4 text-xl font-medium text-gray-800">Rose Garden</h3>
-                  <p className="text-gray-600 text-center">
-                    Take a leisurely walk through one of Asia's largest rose gardens.
-                  </p>
-                </a>
-
-                {/* Rock Garden Card */}
-                <a
-                  href="https://en.wikipedia.org/wiki/Rock_Garden_(Chandigarh)"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center hover:shadow-2xl transition-shadow"
-                >
-                  <Image
-                    src="/images/rock-garden.jpg"
-                    alt="Rock Garden, Chandigarh"
-                    width={300}
-                    height={200}
-                    className="rounded-lg"
-                  />
-                  <h3 className="mt-4 text-xl font-medium text-gray-800">Rock Garden</h3>
-                  <p className="text-gray-600 text-center">
-                    Explore the unique sculptures and artistic flair of this famed garden.
-                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq6qqqgvtDzkRf6uYDdYE1UE&key=AIzaSyCeb_aqbbf8o4741BoBP7UFbywjrVqhrv0"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    title="Hotel Shivalikview Map"
+                  ></iframe>
                 </a>
               </div>
+              <div className="md:w-1/2 p-8">
+                <div className="flex items-center mb-6">
+                  <Map size={24} className="text-indigo-600 mr-2" />
+                  <h3 className="text-2xl font-semibold text-gray-800">Transportation Options</h3>
+                </div>
+                <div className="space-y-6">
+                  {transportOptions.map((option, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <span className={`flex-shrink-0 p-2 ${option.color} rounded-full`}>
+                        {option.icon}
+                      </span>
+                      <div>
+                        <h3 className="font-medium text-xl text-gray-800">{option.mode}</h3>
+                        <p className="text-gray-600">{option.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                  <div className="mt-6">
+                    <a
+                      href="https://www.google.com/maps/place/Hotel+Shivalikview/@30.7400909,76.773977,17z"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 transition-colors"
+                    >
+                      Get Directions
+                      <Navigation size={16} className="ml-2" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* How to Reach Section */}
-          <section className="mb-16">
-            <div className="bg-white rounded-xl shadow-xl p-8 md:p-12">
-              <h2 className="text-3xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-                How to Get to Hotel Shivalikview
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div className="relative h-[300px] md:h-[450px]">
+        {/* Discover Chandigarh Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+              Discover Chandigarh
+              <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            </h2>
+          </div>
+          
+          <div className="flex items-center justify-center mb-8">
+            <div className="p-4 bg-purple-100 rounded-full">
+              <Globe size={36} className="text-purple-700" />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {attractions.map((attraction, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="relative h-48">
+                  <Image
+                    src={attraction.image}
+                    alt={attraction.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{attraction.name}</h3>
+                  <p className="text-gray-600 mb-4">{attraction.description}</p>
                   <a
-                    href="https://www.google.com/maps/place/Hotel+Shivalikview/@30.7400909,76.773977,17z/data=!3m1!4b1!4m9!3m8!1s0x390fed0baaaaaaab:0x41d504d60d98ab7f!5m2!4m1!1i2!8m2!3d30.7400863!4d76.7765519!16s%2Fg%2F1tkl1q77?entry=ttu&g_ep=EgoyMDI1MDMxOS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                    href={attraction.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors"
                   >
-                    <iframe
-                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq6qqqgvtDzkRf6uYDdYE1UE&key=AIzaSyCeb_aqbbf8o4741BoBP7UFbywjrVqhrv0"                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen=""
-                      loading="lazy"
-                      title="Hotel Shivalikview Map"
-                    ></iframe>
+                    Learn more
+                    <ExternalLink size={16} className="ml-1" />
                   </a>
                 </div>
-                <div className="space-y-6 text-gray-700 text-lg">
-                  <div className="flex items-start space-x-4">
-                    <span className="flex-shrink-0 p-2 bg-blue-500 text-white rounded-full">
-                      <i className="fas fa-plane"></i>
-                    </span>
-                    <div>
-                      <h3 className="font-medium text-xl text-gray-800">By Air</h3>
-                      <p>
-                        The nearest airport is Chandigarh International Airport (about 12 km away). Taxis and ride-sharing services are readily available.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <span className="flex-shrink-0 p-2 bg-green-500 text-white rounded-full">
-                      <i className="fas fa-train"></i>
-                    </span>
-                    <div>
-                      <h3 className="font-medium text-xl text-gray-800">By Train</h3>
-                      <p>
-                        Chandigarh Railway Station is approximately 8 km from the hotel. Taxis or auto-rickshaws can make the transfer comfortable and quick.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <span className="flex-shrink-0 p-2 bg-purple-500 text-white rounded-full">
-                      <i className="fas fa-bus"></i>
-                    </span>
-                    <div>
-                      <h3 className="font-medium text-xl text-gray-800">By Bus</h3>
-                      <p>
-                        The hotel is well-connected via local and intercity bus services with nearby stops in Sector 17.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <a
+              href="https://www.chandigarhtourism.gov.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors shadow-md"
+            >
+              Explore More of Chandigarh
+              <ExternalLink size={18} className="ml-2" />
+            </a>
+          </div>
+        </section>
+        
+        {/* Conference Facilities */}
+        <section>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+              Conference Facilities
+              <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            </h2>
+          </div>
+          
+          <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-lg p-8 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <div className="p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
+                <h3 className="text-xl font-semibold mb-2">Modern Conference Halls</h3>
+                <p>State-of-the-art facilities equipped with the latest audiovisual technology</p>
+              </div>
+              <div className="p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
+                <h3 className="text-xl font-semibold mb-2">Exhibition Space</h3>
+                <p>Dedicated areas for sponsors and exhibitors to showcase their products</p>
+              </div>
+              <div className="p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
+                <h3 className="text-xl font-semibold mb-2">Networking Lounges</h3>
+                <p>Comfortable spaces designed to facilitate meaningful connections</p>
+              </div>
+              <div className="p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
+                <h3 className="text-xl font-semibold mb-2">High-Speed WiFi</h3>
+                <p>Complimentary high-speed internet access throughout the venue</p>
               </div>
             </div>
-          </section>
-        </main>
-      </div>
+          </div>
+        </section>
+      </main>
+      
       <Footer />
     </div>
   );

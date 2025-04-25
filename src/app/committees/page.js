@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Footer from "../footer/footer";
 import Navbar from "../home/Navbar";
@@ -235,50 +233,66 @@ const committees = [
   
 ];
 
+
 const CommitteeCard = ({ title, members }) => {
   return (
-    <div className="w-full bg-white text-center my-8">
-      <h2 className="text-4xl font-extrabold text-purple-700 mb-8">{title}</h2>
-      <div className="flex flex-wrap justify-center gap-10">
+    <div className="w-full max-w-7xl mx-auto bg-white text-center my-12 px-4">
+      <h2 className="text-4xl font-extrabold text-purple-700 mb-10 relative">
+        <span className="relative z-10">{title}</span>
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-24 bg-purple-500 rounded"></span>
+      </h2>
+      <div className="flex flex-wrap justify-center gap-8">
         {members.map((member, index) => (
-          <div key={index} className="relative group w-48">
-            <div className="relative">
-              <img
-                src={member.image || "/default-avatar.png"}
-                alt={member.name}
-                className="w-48 h-48 rounded-full border-4 border-purple-300 shadow-xl transition-transform duration-300 transform group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full">
-                <div className="flex gap-3">
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-purple-600 p-3 rounded-full text-white transition-all hover:bg-purple-800"
-                    >
-                      🔗
-                    </a>
-                  )}
-                  {member.website && (
-                    <a
-                      href={member.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-purple-600 p-3 rounded-full text-white transition-all hover:bg-purple-800"
-                    >
-                      🌐
-                    </a>
-                  )}
+          <div key={index} className="relative group w-52 mb-6 transition-all duration-300 hover:-translate-y-2">
+            <div className="relative overflow-hidden rounded-lg shadow-lg">
+              <div className="bg-gradient-to-b from-purple-100 to-purple-50 p-3 rounded-t-lg">
+                <div className="relative mx-auto w-36 h-36 overflow-hidden rounded-full border-4 border-purple-400 shadow-md">
+                  <img
+                    src={member.image || "/default-avatar.png"}
+                    alt={member.name}
+                    className="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-purple-900 bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex gap-3">
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white p-2 rounded-full text-purple-700 transition-all hover:bg-purple-200"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                          </svg>
+                        </a>
+                      )}
+                      {member.website && (
+                        <a
+                          href={member.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white p-2 rounded-full text-purple-700 transition-all hover:bg-purple-200"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div className="p-4 bg-white rounded-b-lg border-t border-purple-100">
+                <h3 className="text-lg font-bold text-purple-900 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-blue-600 font-medium">
+                  {member.institute}
+                </p>
+              </div>
             </div>
-            <h3 className="mt-3 text-lg font-semibold text-purple-900">
-              {member.name}
-            </h3>
-            <p className="text-sm text-blue-600 font-semibold">
-              {member.institute}
-            </p>
           </div>
         ))}
       </div>
@@ -287,71 +301,55 @@ const CommitteeCard = ({ title, members }) => {
 };
 
 export default function CommitteePage() {
-  // Using the index as the active tab state
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const [activeCommittee, setActiveCommittee] = useState(0);
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-gray-50 min-h-screen">
       <div className="bg-black">
         <Navbar />
       </div>
       <header
-        className="text-center bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-40 relative"
-        style={{
-          backgroundImage: "url('/images/iit-ropar-5.avif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
-        <div className="bg-black bg-opacity-50 py-16 rounded-lg">
-          <h1 className="sub text-5xl font-extrabold tracking-wide uppercase">
-            Committees
-          </h1>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>
+        <div className="relative z-10 px-4 py-16">
+          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">Committees</h1>
+          <p className="text-xl max-w-2xl mx-auto font-light">Meet the talented professionals organizing this event</p>
         </div>
       </header>
 
-      {/* MUI Scrollable Tabs */}
-      <Box sx={{ bgcolor: "background.paper", margin: "auto" }}>
-        <Tabs
-          value={value}
-          sx={{
-            "& .MuiTabs-indicator": {
-              backgroundColor: "#8024cc", // your desired color
-            },
-            "& .MuiTabScrollButton-root": {
-              color: "black", // set arrow color here
-            },
-          }}
-          onChange={handleChange}
-          variant="scrollable"
-          scrollButtons="auto"
-          aria-label="scrollable auto tabs for committees"
-        >
-          {committees.map((committee, index) => (
-            <Tab
-              sx={{
-                color: "grey",
-                "&.Mui-selected": {
-                  color: "#8024cc",
-                },
-              }}
-              key={committee.title}
-              label={committee.title}
-            />
-          ))}
-        </Tabs>
-      </Box>
+      {/* Custom Tab Navigation */}
+      <div className="sticky top-0 z-20 bg-white shadow-md">
+        <div className="max-w-7xl mx-auto px-4 py-2 overflow-x-auto">
+          <div className="flex gap-1 md:gap-2 whitespace-nowrap pb-1">
+            {committees.map((committee, index) => (
+              <button
+                key={committee.title}
+                onClick={() => setActiveCommittee(index)}
+                className={`px-3 py-2 text-sm md:text-base rounded-md transition-all duration-200 ${
+                  activeCommittee === index
+                    ? "bg-purple-600 text-white font-medium shadow-md"
+                    : "bg-gray-100 text-gray-700 hover:bg-purple-100"
+                }`}
+              >
+                {committee.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
 
-      {/* Render the selected committee */}
-      {committees
-        .filter((_, index) => index === value)
-        .map((committee) => (
-          <CommitteeCard key={committee.title} {...committee} />
-        ))}
+      {/* Content Area */}
+      <div className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4">
+          {committees
+            .filter((_, index) => index === activeCommittee)
+            .map((committee) => (
+              <CommitteeCard key={committee.title} {...committee} />
+            ))}
+        </div>
+      </div>
 
       <Footer />
     </div>
