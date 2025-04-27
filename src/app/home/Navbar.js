@@ -5,7 +5,13 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import Image from 'next/image';
 import React from 'react';
+import { Inter } from 'next/font/google';
 
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400','700','900'],  // <-- include 900 here
+  display: 'swap',
+});
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPapersDropdownOpen, setIsPapersDropdownOpen] = useState(false);
@@ -53,7 +59,7 @@ const Navbar = () => {
         <div className="lg:block flex ">
         <Link href="/" className="flex mx-5 mt-3 items-center space-x-4">
           <Image src="/vlsi.png" alt="VLSI Society of India Logo" width={70} height={70} />
-          <h2 className="text-4xl font-extrabold tracking-wide text-purple-600">VDAT 2025</h2>
+          <h2 className="text-4xl font-bold tracking-wide text-purple-600"><strong>VDAT 2025</strong>  </h2>
         </Link>
         <div className="container mx-5 py-4  justify-between items-center">
         <div className="hidden lg:flex space-x-6 lg:space-x-8">
