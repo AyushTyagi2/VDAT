@@ -206,7 +206,9 @@ const committees = [
   },
   { 
     title: "PhD Forum Chair", 
-    members: [{ name: "Debiprasanna Sahu", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/", image: "./images/debiprasanna.png" }] 
+    members: [{ name: "Debiprasanna Sahu", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/", image: "./images/debiprasanna.png" },
+              {name: "Ganesh C. Patil", institute: "NIT Nagpur", linkedin: "https://www.linkedin.com/in/ganesh-c-patil-79b6306/?originalSubdomain=in", website: "https://vnit.ac.in/engineering/cvlsi/dr-ganesh-c-patil/", image: "./images/ganesh.jpg" },
+    ] 
   },
   {
     title: "Publication Chair",
