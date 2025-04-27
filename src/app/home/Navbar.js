@@ -26,6 +26,7 @@ const Navbar = () => {
         { label: "Call For Papers", href: "/submissions" },
         { label: "Call for Tutorials", href: "/callfortutorials" },
         {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},
+        {label: "PHD-FORUM", href: "/phdforum"},
       ],
     },
     { label: "Speakers", href: "/Speakers" },
