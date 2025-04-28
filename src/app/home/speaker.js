@@ -1,29 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const speakers = [
-  {
-    name: "Richard Szeliski",
-    title: "Distinguished Scientist and Affiliate Faculty",
-    affiliation: "Google Research and University of Washington",
-    website: "https://szeliski.org/",
-    image: "/images/speaker-1.jpg", // Replace with your image paths
-  },
-  {
-    name: "R. Venkatesh Babu",
-    title: "Professor",
-    affiliation: "Dept. of Computational and Data Sciences, IISc",
-    website: "https://cds.iisc.ac.in/faculty/venky/",
-    image: "/images/speaker-2.jpg", // Replace with your image paths
-  },
-  {
-    name: "Another Speaker",
-    title: "Their Title",
-    affiliation: "Their Affiliation",
-    website: "#",
-    image: "/images/speaker-3.jpg", // Replace with your image paths
-  },
-];
+
 
 const SpeakersSection = ({ speakers: propSpeakers = speakers }) => { // Default to the imported speakers
   const [isLoading, setIsLoading] = React.useState(true);
@@ -57,6 +35,20 @@ const SpeakersSection = ({ speakers: propSpeakers = speakers }) => { // Default 
         <h2 className="text-5xl font-extrabold text-center mb-8 tracking-tight text-purple-600 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-[3px] after:bg-purple-400 rounded-full">
           Keynote Speakers
         </h2>
+        {/* add a check that if speakers is empty , display coming soon */}
+        {speakerData.length === 0 && (
+          <div className="text-center">
+          <div className="inline-block bg-purple-100 rounded-xl p-8 shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <h3 className="text-2xl font-semibold text-purple-600 mb-2">
+              Coming Soon!
+            </h3>
+            <p className="text-gray-600">
+              We're finalizing our Speakers. Check back later for
+              updates.
+            </p>
+          </div>
+        </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {speakerData.map((speaker, index) => (
             <motion.div
