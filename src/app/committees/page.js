@@ -140,12 +140,12 @@ const committees = [
   {
     title: "Program Track Chair",
     members: [
-      { name: "Shubham Sahay", institute: "IIT Kanpur (Track 1)", linkedin: "https://www.linkedin.com/in/shubham-sahay-b1580bb0/?originalSubdomain=in", website: "https://home.iitk.ac.in/~ssahay/", image: "./images/shubham.jpg" },
-      { name: "Saravana", institute: "IIT Roorkee (Track 2)", linkedin: "https://www.linkedin.com/in/saravana-kumar-687a6875/?originalSubdomain=in", website: "https://ece.iitr.ac.in/webpages/saravana/", image: "./images/saravana.jpg" },
-      { name: "Sneh Saurabh", institute: "IIIT Delhi (Track 3)", linkedin: "https://www.linkedin.com/in/snehsaurabh/?originalSubdomain=in", website: "https://iiitd.ac.in/sneh", image: "./images/sneh.jpg" },
-      { name: "Amit Kumar", institute: "Chitkara University (Track 4)", linkedin: "https://www.linkedin.com/in/amit-kumar-34228b139/?originalSubdomain=in", image: "./images/amit.jpg" },
-      { name: "Anupam Chattopadhyay", institute: "NTU Singapore (Track 4)", linkedin: "https://www.linkedin.com/in/anupamchattopadhyay/?originalSubdomain=sg", website: "https://dr.ntu.edu.sg/cris/rp/rp01076", image: "./images/anupam.jpg" },
-      { name: "Jai Narayan Tripathi", institute: "IIT Jodhpur (Track 5)", linkedin: "https://www.linkedin.com/in/jai-narayan-tripathi-b189a88/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", website: "http://home.iitj.ac.in/~jai/", image: "./images/jai.jpg" },
+      { name: "Shubham Sahay", institute: "IIT Kanpur", linkedin: "https://www.linkedin.com/in/shubham-sahay-b1580bb0/?originalSubdomain=in", website: "https://home.iitk.ac.in/~ssahay/", image: "./images/shubham.jpg" },
+      { name: "Saravana", institute: "IIT Roorkee", linkedin: "https://www.linkedin.com/in/saravana-kumar-687a6875/?originalSubdomain=in", website: "https://ece.iitr.ac.in/webpages/saravana/", image: "./images/saravana.jpg" },
+      { name: "Sneh Saurabh", institute: "IIIT Delhi", linkedin: "https://www.linkedin.com/in/snehsaurabh/?originalSubdomain=in", website: "https://iiitd.ac.in/sneh", image: "./images/sneh.jpg" },
+      { name: "Amit Kumar", institute: "Chitkara University", linkedin: "https://www.linkedin.com/in/amit-kumar-34228b139/?originalSubdomain=in", image: "./images/amit.jpg" },
+      { name: "Anupam Chattopadhyay", institute: "NTU Singapore", linkedin: "https://www.linkedin.com/in/anupamchattopadhyay/?originalSubdomain=sg", website: "https://dr.ntu.edu.sg/cris/rp/rp01076", image: "./images/anupam.jpg" },
+      { name: "Jai Narayan Tripathi", institute: "IIT Jodhpur", linkedin: "https://www.linkedin.com/in/jai-narayan-tripathi-b189a88/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", website: "http://home.iitj.ac.in/~jai/", image: "./images/jai.jpg" },
       {name: "Aparna Akula",institute:"CSIO Chandigarh",linkedin:"https://www.linkedin.com/in/anvaparna/",website:"https://icsio.csio.res.in/csio.ems/emp_profile.aspx?id=1021",image:"./images/aparna.jpeg"},
       
     ] 
@@ -154,7 +154,7 @@ const committees = [
     title: "Tutorial Chair",
     members: [
       { name: "TV Kalyan", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in", website: "https://sites.google.com/view/kalyantv", image: "./images/tv.jpg" },
-      { name: "Namrta", institute: "Aritrak Technologies", image: "./images/namrta.jpg" },
+      { name: "Namrta", institute: "Aritrak Technologies", linkedin: "https://www.linkedin.com/in/namrta-sharma-blr/" ,  image: "./images/namrta.jpeg" },
     ] 
   },
   {
@@ -208,8 +208,8 @@ const committees = [
   },
   { 
     title: "PhD Forum Chair", 
-    members: [{ name: "Debiprasanna Sahu", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/", image: "./images/debiprasanna.png" },
-              {name: "Ganesh C. Patil", institute: "NIT Nagpur", linkedin: "https://www.linkedin.com/in/ganesh-c-patil-79b6306/?originalSubdomain=in", website: "https://vnit.ac.in/engineering/cvlsi/dr-ganesh-c-patil/", image: "./images/ganesh.jpg" },
+    members: [{ name: "Debiprasanna Sahoo", institute: "IIT Bhubaneswar", linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/", image: "./images/debiprasanna.png" },
+              {name: "Ganesh C. Patil", institute: "VNIT Nagpur", linkedin: "https://www.linkedin.com/in/ganesh-c-patil-79b6306/?originalSubdomain=in", website: "https://vnit.ac.in/engineering/cvlsi/dr-ganesh-c-patil/", image: "./images/ganesh.jpg" },
     ] 
   },
   {

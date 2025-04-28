@@ -2,14 +2,14 @@
 import React from 'react';
 import Footer from '../footer/footer';
 import Navbar from '../home/Navbar';
-import { ChevronRight, Calendar, FileText, ExternalLink } from 'lucide-react';
+import { ChevronRight, Calendar, FileText, ExternalLink, Strikethrough } from 'lucide-react';
 
 const handleLinkClick = () => {
   window.open("https://docs.google.com/forms/d/e/1FAIpQLSf1uVsPhajRPqSo7Oodi_y2XllweQmoskxxYMvZENGymHVeqA/viewform", "_blank");
 };
 
 const handlePDFClick = () => {
-  window.open("/pdfs/VDAT2025_Call_for_Tutorial.pdf", "_blank");
+  window.open("../pdfs/VDAT2025- Call for Tutorial.pdf", "_blank");
 }
 
 const Tutorials = () => {
@@ -102,7 +102,7 @@ const ImportantDatesSection = ({ title, isAlternate }) => (
               </li>
               <li className="flex items-baseline">
                 <ChevronRight className="text-purple-500 w-4 h-4 mr-2 flex-shrink-0" />
-                <span><strong>Deadline for submission:</strong> April 24, 2025</span>
+                <span><strong>Deadline for submission:</strong> <strike>April 24, 2025</strike> May 15, 2025 (Hard) </span>
               </li>
             </ul>
           </div>

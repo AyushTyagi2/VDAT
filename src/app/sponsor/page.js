@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../footer/footer';
 import Navbar from '../home/Navbar';
-import { CheckCircle, Mail, X, Star, Award, Shield } from "lucide-react";
+import { CheckCircle, Mail, X, Star, Award, Shield, FileDown } from "lucide-react";
 
 const sponsorshipTiers = [
   { 
@@ -60,13 +60,14 @@ const SponsorshipPage = () => {
       </div>
       {/* Hero Section with Parallax Effect */}
       <header
-        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        className="text-center text-white py-20 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>
         <div className="relative z-10 px-4 py-16">
           <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">Sponsors</h1>
           <p className="text-xl max-w-2xl mx-auto font-light">Join leading companies supporting innovation in VLSI design</p>
+          
         </div>
       </header>
 
@@ -103,6 +104,18 @@ const SponsorshipPage = () => {
               <span>Network with potential clients, partners, and talent</span>
             </li>
           </ul>
+          
+          {/* PDF Download Link in the sponsor section */}
+          <div className="mt-6 text-center">
+            <a 
+              href="..\pdfs\VDAT2025 - sponsorship.pdf" 
+              download
+              className="inline-flex items-center text-violet-700 hover:text-violet-900 font-medium"
+            >
+              <FileDown className="mr-1" size={18} />
+              Download detailed sponsorship information
+            </a>
+          </div>
         </div>
       </section>
 

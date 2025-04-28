@@ -70,7 +70,9 @@ const PhDForumBanner = () => {
             <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            Submit Abstract
+            <a href="..\pdfs\VDAT2025- PhDforum.pdf" download className="text-white font-semibold">
+            Download Information
+            </a>
           </button>
           <a href="#eligibility" className="px-8 py-3 bg-transparent border-2 border-purple-600 text-purple-300 font-semibold rounded-lg hover:bg-purple-900 hover:bg-opacity-30 transition duration-300 flex items-center">
             <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +100,7 @@ const Icon = ({ name, className = "w-5 h-5 flex-shrink-0" }) => {
     research: "text-indigo-400",
     format: "text-purple-400",
   };
-  
+
   const combinedClassName = `${className} ${iconStyles[name] || ""}`;
   
   switch(name) {
@@ -546,20 +548,6 @@ const ContactInfo = () => {
                     <p className="text-gray-300 break-words">dpsahoo@iitbbs.ac.in</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  {/* Location/Website icon */}
-                  <div className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-purple-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-white font-medium">Website:</p>
-                    <a href="https://softconf.com/vlsi/vdat2025" className="text-purple-300 hover:text-purple-200 underline break-words" target="_blank" rel="noopener noreferrer">
-                      https://softconf.com/vlsi/vdat2025
-                    </a>
-                  </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -696,7 +684,9 @@ const CallToAction = () => {
             <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
+            <a onClick={() => window.open("https://forms.gle/s8Wdr7nPuYpuhyUE7", "_blank")}>
             Submit Your Abstract Now
+            </a>
           </button>
           <a href="#" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300 flex items-center text-lg">
             <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
