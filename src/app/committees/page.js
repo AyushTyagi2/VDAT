@@ -146,7 +146,7 @@ const committees = [
       { name: "Amit Kumar", institute: "Chitkara University", linkedin: "https://www.linkedin.com/in/amit-kumar-34228b139/?originalSubdomain=in", image: "./images/amit.jpg" },
       { name: "Anupam Chattopadhyay", institute: "NTU Singapore", linkedin: "https://www.linkedin.com/in/anupamchattopadhyay/?originalSubdomain=sg", website: "https://dr.ntu.edu.sg/cris/rp/rp01076", image: "./images/anupam.jpg" },
       { name: "Jai Narayan Tripathi", institute: "IIT Jodhpur", linkedin: "https://www.linkedin.com/in/jai-narayan-tripathi-b189a88/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", website: "http://home.iitj.ac.in/~jai/", image: "./images/jai.jpg" },
-      {name: "Aparna Akula",institute:"CSIO Chandigarh",linkedin:"https://www.linkedin.com/in/anvaparna/",website:"https://icsio.csio.res.in/csio.ems/emp_profile.aspx?id=1021",image:"./images/aparna.jpeg"},
+      {name: "Aparna Akula",institute:"IEEE Chandigarh Subsection & CSIO Chandigarh",linkedin:"https://www.linkedin.com/in/anvaparna/",website:"https://icsio.csio.res.in/csio.ems/emp_profile.aspx?id=1021",image:"./images/aparna.jpeg"},
       
     ] 
   },
@@ -232,7 +232,7 @@ const committees = [
     title: "Registration Chair", 
     members: [{ name: "Somesh Kumar", institute: "IIITM Gwalior", linkedin: "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in", website: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh", image: "./images/somesh.jpg " },
       { name: "Sharda Vashisth", institute: "The NorthCap University, Gurugoan", linkedin: "https://www.linkedin.com/in/dr-sharda-vashisth-23a25021/", image: "./images/sharda.jpg" }
-    ,{name:"Simranjit Singh", institute:"PEC Chandigarh", linkedin:"https://www.linkedin.com/in/simranjitsingh87/",website:"https://pec.ac.in/ece/faculty/simranjit-singh",image:"./images/simranjit.jpg"},
+    ,{name:"Simranjit Singh", institute:"IEEE Chandigarh Subsection & PEC Chandigarh", linkedin:"https://www.linkedin.com/in/simranjitsingh87/",website:"https://pec.ac.in/ece/faculty/simranjit-singh",image:"./images/simranjit.jpg"},
     ] 
   },
   

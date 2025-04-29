@@ -25,6 +25,7 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "/" },
+    {label:"Registration", href:"/registration"},
     {
       label: "Call for Submissions",
       onClick: togglePapersDropdown,
