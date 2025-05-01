@@ -276,13 +276,13 @@ const Timeline = () => {
         "Deadline for all paper submissions. No extensions will be granted.",
     },
     {
-      date: "June 10, 2025",
+      date: "July 1, 2025",
       event: "Notification of Acceptance",
       description:
         "Authors will be notified about the status of their submissions.",
     },
     {
-      date: "July 1, 2025",
+      date: "July 15, 2025",
       event: "Camera-ready Submission",
       description: "Final papers must be submitted in the required format.",
     },
