@@ -287,7 +287,7 @@ const Timeline = () => {
       description: "Final papers must be submitted in the required format.",
     },
     {
-      date: "July 15, 2025",
+      date: "July 10, 2025",
       event: "Early Registration Deadline",
       description: "Last day to register at the discounted early bird rate.",
     },

@@ -123,7 +123,7 @@ const RegistrationPage = () => {
                     <p className="font-medium text-gray-800">
                       Early Registration Deadline:
                     </p>
-                    <p className="text-gray-600">July 15, 2025</p>
+                    <p className="text-gray-600">July 10, 2025</p>
                   </div>
                 </li>
                 <li className="flex items-start">
