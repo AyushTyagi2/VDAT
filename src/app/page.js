@@ -72,7 +72,7 @@ const Carousel = ({
         {images.map((src, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full transition-opacity duration-5000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           >
