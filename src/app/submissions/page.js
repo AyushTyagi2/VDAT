@@ -243,7 +243,7 @@ const SpeakersSection = () => {
     return (
       <>
         <ListSection
-          title="Submission Guidelines"
+          title="Submission Guidelines and review process"
           items={[
             "Submit a single PDF containing all the information listed below.",
             "Paper Format: Papers should be in PDF format following the IEEE Conference paper format.",
@@ -273,7 +273,7 @@ const SpeakersSection = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>
         <div className="relative z-10 px-4 py-16">
-          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">Submissions</h1>
+          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">Call for paper</h1>
         </div>
       </header>
       

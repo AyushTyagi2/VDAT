@@ -71,6 +71,42 @@ const SponsorshipPage = () => {
         </div>
       </header>
 
+      {/* Current Partners Section */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+            Our Partners
+            <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+          </h2>
+        </div>
+        
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center text-violet-700 mb-8">Platinum Partner</h3>
+          <div className="flex justify-center items-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+              <img 
+                src="./logos/mandi__.png" 
+                alt="IIT Mandi Logo" 
+                className="max-w-full max-h-full"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 className="text-2xl font-bold text-center text-violet-700 mb-8">Gold Partner</h3>
+          <div className="flex justify-center items-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+              <img 
+                src="./images/Agmatel_Keyisght Logo HD.png" 
+                alt="Agmetal-Keysight Logo" 
+                className="max-w-full max-h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call for Sponsors Section */}
       <section className="container mx-auto px-6 py-16">
         <div className="text-center mb-12">

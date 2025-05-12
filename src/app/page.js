@@ -228,15 +228,14 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
 
       {comingSoon ? (
         <div className="text-center">
-          <div className="inline-block bg-purple-100 rounded-xl p-8 shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <h3 className="text-2xl font-semibold text-purple-600 mb-2">
-              Coming Soon!
-            </h3>
-            <p className="text-gray-600">
-              We're finalizing our {title.toLowerCase()}. Check back later for
-              updates.
-            </p>
-          </div>
+          <div className="flex flex-row justify-center items-center gap-6">
+      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+        <img src="./logos/mandi__.png" alt="Agmetal-Keysight Logo" className="max-w-full max-h-full" />
+      </div>
+      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+        <img src="./images/Agmatel_Keyisght Logo HD.png" alt="Agmetal-Keysight Logo" className="max-w-full max-h-full" />
+      </div>
+    </div>
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mx-auto max-w-7xl">
@@ -496,11 +495,11 @@ const HomePage = () => {
         comingSoon={true}
       />
 
-      <SponsorsSection
+      {/* <SponsorsSection
         title="Endorsed By"
         items={endorsedBy}
         comingSoon={true}
-      />
+      /> */}
 
       <Timeline />
 

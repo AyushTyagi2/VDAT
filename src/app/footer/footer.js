@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="text-white py-12 px-4 md:px-8" style={{ backgroundColor: "#6c21a8" }}>
     <div className="max-w-7xl mx-auto space-y-8">
         <div>
-            <h4 className="text-lg font-semibold mb-2 text-gray-300 text-center">Partner Institutes</h4>
+            <h4 className="text-lg font-semibold mb-2 text-gray-300 text-center">Organising Partner Institutes</h4>
             <div className="flex justify-center space-x-4 flex-wrap logo-container">
                 {Object.entries(partnerLogos).map(([name, src]) => (
                     <div
