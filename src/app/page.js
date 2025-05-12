@@ -52,7 +52,23 @@ const endorsedBy = [
 ];
 
 const speakers = [
-  // Keeping commented speakers for future use
+  {
+      name: "Tapas Nandy",
+      title: "Sr. Director, Microsoft / Sr. Member, IEEE",
+      affiliation: "IEEE",
+      image: "/images/tapasnandy.jpg", 
+      linkedin: "https://www.linkedin.com/in/tapas-nandy-35133518/?originalSubdomain=in",
+      website: ""
+    },
+    {
+      name: "Dipan Sahu",
+      title: "Assistant Innovation Director",
+      affiliation: "Ministry of Education's Innovation Cell",
+      image: "/images/dipansahu.jpg", 
+      linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
+      website: ""
+    }
+
 ];
 
 // Improved carousel with better transitions and controls

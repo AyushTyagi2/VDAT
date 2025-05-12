@@ -71,7 +71,7 @@ const SpeakersSection = ({ speakers: propSpeakers = speakers }) => { // Default 
                 <p className="text-gray-200 text-sm">{speaker.title}</p>
                 <p className="text-gray-400 text-sm mb-4">{speaker.affiliation}</p>
                 <a
-                  href={speaker.website}
+                  href={speaker.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 underline"
