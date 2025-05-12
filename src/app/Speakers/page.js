@@ -1,97 +1,140 @@
-
-
-
-// "use client";
-
-// import React, { memo } from "react";
-// import Image from "next/image";
-// import Navbar from "../home/Navbar";
-// import Footer from "../footer/footer";
-// const speakers = [
-//   { name: "Petia Radeva", affiliation: "University of Barcelona, Spain", img: "/images/Petia Radeva.jpg" },
-//   { name: "Bharat Biswal", affiliation: "NJIT, USA", img: "/images/bharat.jpg" },
-//   { name: "Fabio Dell'Acqua", affiliation: "University of Pavia, Italy", img: "/images/fabio.jpg" },
-//   { name: "Padma Shri Ajoy Kumar Ray", affiliation: "IIT Kharagpur", img: "/images/ajoy.jpg" },
-//   { name: "Ramesh Jain", affiliation: "University of California, USA", img: "/images/ramesh.jpg" },
-//   { name: "Venkatesh Babu", affiliation: "IISc Bangalore", img: "/images/venkatesh.jpg" },
-//   { name: "Richa Singh", affiliation: "IIT Jodhpur", img: "/images/richa.jpg" },
-//   { name: "Daniel P. Lopresti", affiliation: "Lehigh University, USA", img: "/images/daniel.jpg" },
-// ];
-
-// // Memoized SpeakerCard to prevent unnecessary re-renders
-// const SpeakerCard = memo(({ name, affiliation, img }) => {
-//   return (
-//     <div className="bg-white rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-//       <div className="w-32 h-32 mx-auto mb-4 relative">
-//         <Image
-//           src={img}
-//           alt={`Photo of ${name}`}
-//           layout="fill"
-//           objectFit="cover"
-//           className="rounded-full border-4 border-gray-200"
-//           loading="lazy"
-//           priority={false}
-//         />
-//       </div>
-//       <h3 className="text-xl font-bold text-gray-800 mb-2">{name}</h3>
-//       <p className="text-sm text-gray-500">{affiliation}</p>
-//     </div>
-//   );
-// });
-
-// const SpeakersSection= () => {
-//   return (
-//     <div>
-//       <div>
-//       <Navbar />
-//       <header
-//         className="text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60 relative"
-//         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}
-//       >
-      
-//         <div className="bg-black bg-opacity-50 py-20 px-4">
-//           <h1 className="text-5xl font-extrabold">Speakers</h1>
-//           <p className="text-xl mt-4 font-light">Meet our distinguished speakers</p>
-//         </div>
-//       </header>
-//       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 bg-gray-50 py-36">
-//         {speakers.map((speaker) => (
-//           <SpeakerCard
-//             key={speaker.name}
-//             name={speaker.name}
-//             affiliation={speaker.affiliation}
-//             img={speaker.img}
-//           />
-//         ))}
-//       </section>
-//       <Footer/>
-//     </div>
-//     </div>
-//   );
-// };
-
-// export default SpeakersSection;
 import React from 'react';
 import Footer from '../footer/footer';
 import Navbar from '../home/Navbar';
 
-const SpeakersSection = () => {
+// Speaker Title Card Component
+const SpeakerCard = ({ name, title, organization, photo, linkedin, website }) => {
   return (
-    <div>
-    <Navbar />
+    <div className="relative group">
+      {/* Card with hover effect */}
+      <div className="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 group-hover:shadow-2xl transform group-hover:-translate-y-2">
+        {/* Background gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10"></div>
+        
+        {/* Image container */}
+        <div className="relative h-80 overflow-hidden bg-gradient-to-r from-purple-100 to-indigo-100">
+          {photo ? (
+            <img 
+              src={photo} 
+              alt={`${name}`} 
+              className="w-full h-full object-contain object-center transform transition-transform duration-700 group-hover:scale-110"
+            />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-indigo-200">
+              <svg className="w-24 h-24 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+              </svg>
+            </div>
+          )}
+          
+          {/* Social links that appear on hover */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-20">
+            {linkedin && (
+              <a 
+                href={linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white p-3 rounded-full shadow-lg text-purple-600 hover:text-purple-800 hover:bg-purple-50 transition-all duration-300"
+                aria-label="LinkedIn Profile"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            )}
+            {website && (
+              <a 
+                href={website} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white p-3 rounded-full shadow-lg text-purple-600 hover:text-purple-800 hover:bg-purple-50 transition-all duration-300"
+                aria-label="Personal Website"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </a>
+            )}
+          </div>
+
+          {/* Color accent line */}
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-600"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="p-6">
+          {/* Decorative element */}
+          <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-indigo-600 mb-4 rounded-full"></div>
+          
+          <h3 className="text-2xl font-bold text-gray-800 mb-1">{name}</h3>
+          <p className="text-md font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-1">{title}</p>
+          <p className="text-gray-600">{organization}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SpeakersSection = () => {
+  // Speaker data
+  const speakers = [
+    {
+      name: "Tapas Nandy",
+      title: "Sr. Director, Microsoft / Sr. Member, IEEE",
+      organization: "IEEE",
+      photo: "/images/tapasnandy.jpg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/tapas-nandy-35133518/?originalSubdomain=in",
+      website: ""
+    },
+    {
+      name: "Dipan Sahu",
+      title: "Assistant Innovation Director",
+      organization: "Ministry of Education's Innovation Cell",
+      photo: "/images/dipansahu.jpg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
+      website: ""
+    }
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      {/* Hero Section */}
+      {/* Hero Section with Parallax Effect */}
       <header
-        className="text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-60 relative"
-        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')", backgroundSize: "cover", backgroundPosition: "center" }}
+        className="text-center text-white py-20 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
-        <div className="bg-black bg-opacity-50 py-20 px-4">
-          <h1 className="text-5xl font-extrabold">Speakers</h1>
-          <br/>
-          <h2 className="text-3xl font-light">Coming Soon!</h2>
-          <p className="text-xl mt-4 font-light"></p>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>
+        <div className="relative z-10 px-4 py-16">
+          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">
+            Featured Speakers
+          </h1>
+          <p className="text-xl max-w-2xl mx-auto font-light">
+            Learn from industry experts and thought leaders at the forefront of innovation and technology. 
+          </p>
         </div>
       </header>
-      <Footer/>
-   </div>
-  )
+      
+      {/* Main Content */}
+      <main className="flex-grow py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Meet Our Distinguished Speakers</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {speakers.map((speaker, index) => (
+              <SpeakerCard key={index} {...speaker} />
+            ))}
+          </div>
+          
+          
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
+  );
 };
+
 export default SpeakersSection;

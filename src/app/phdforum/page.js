@@ -74,12 +74,7 @@ const PhDForumBanner = () => {
             Download Information
             </a>
           </button>
-          <a href="#eligibility" className="px-8 py-3 bg-transparent border-2 border-purple-600 text-purple-300 font-semibold rounded-lg hover:bg-purple-900 hover:bg-opacity-30 transition duration-300 flex items-center">
-            <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Learn More
-          </a>
+          
         </div>
       </div>
     </section>
@@ -685,15 +680,10 @@ const CallToAction = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             <a onClick={() => window.open("https://forms.gle/s8Wdr7nPuYpuhyUE7", "_blank")}>
-            Submit Your Abstract Now
+            Submit Extended Abstract
             </a>
           </button>
-          <a href="#" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300 flex items-center text-lg">
-            <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Download Guidelines
-          </a>
+          
           
         </div>
       </div>
@@ -710,6 +700,7 @@ const PhDForum = () => {
       <main className="container mx-auto px-4 py-10">
         <PhDForumBanner />
         
+        <CallToAction />
         <div className="mt-16 space-y-12">
           {CONTENT_SECTIONS.map((section) => (
             <ContentSection
@@ -729,7 +720,6 @@ const PhDForum = () => {
           <SubmissionFormat />
           <ContactInfo />
           <FAQ />
-          <CallToAction />
         </div>
       </main>
       

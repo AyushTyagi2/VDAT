@@ -72,7 +72,7 @@ const Carousel = ({
         {images.map((src, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full transition-opacity duration-5000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -103,14 +103,18 @@ const Carousel = ({
       <div className="flex-grow flex items-center justify-start  z-10 relative px-6 md:px-28">
         <div className="max-w-4xl text-center md:text-left">
           <div className="mb-6 inline-block">
-            <span style={{height:"50px", alignContent:"center"}} className="px-4 py-1 bg-yellow-400 text-black font-medium text-lg  rounded-full inline-block mb-3 animate-[pulse_1s_linear_infinite]">
+            <span
+              style={{ height: "50px", alignContent: "center" }}
+              className="px-4 py-1 bg-yellow-400 text-black font-medium text-lg  rounded-full inline-block mb-3 animate-[pulse_1s_linear_infinite]"
+            >
               August 7-9, 2025
             </span>
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-tight drop-shadow-xl">
             <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 text-transparent bg-clip-text">
-              29th International Symposium on <br className="hidden md:block" />
+              29th International <br className="hidden md:block" />
+              Symposium on <br className="hidden md:block" />
               VLSI Design and Test
             </span>
           </h1>
@@ -271,18 +275,18 @@ const Timeline = () => {
         "Deadline for all paper submissions. No extensions will be granted.",
     },
     {
-      date: "June 10, 2025",
+      date: "July 1, 2025",
       event: "Notification of Acceptance",
       description:
         "Authors will be notified about the status of their submissions.",
     },
     {
-      date: "July 1, 2025",
+      date: "July 15, 2025",
       event: "Camera-ready Submission",
       description: "Final papers must be submitted in the required format.",
     },
     {
-      date: "July 15, 2025",
+      date: "July 10, 2025",
       event: "Early Registration Deadline",
       description: "Last day to register at the discounted early bird rate.",
     },
