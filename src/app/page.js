@@ -53,23 +53,25 @@ const endorsedBy = [
 
 const speakers = [
   {
-      name: "Tapas Nandy",
-      title: "Sr. Director, Microsoft / Sr. Member, IEEE",
-      affiliation: "IEEE",
-      image: "/images/tapasnandy.jpg", 
-      linkedin: "https://www.linkedin.com/in/tapas-nandy-35133518/?originalSubdomain=in",
-      website: ""
-    },
-    {
-      name: "Dipan Sahu",
-      title: "Assistant Innovation Director",
-      affiliation: "Ministry of Education's Innovation Cell",
-      image: "/images/dipansahu.jpg", 
-      linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
-      website: ""
-    }
-
+    name: "Tapas Nandy",
+    title: "Sr. Director, Microsoft / Sr. Member, IEEE",
+    affiliation: "IEEE",
+    image: "/images/tapasnandy.jpg",
+    linkedin:
+      "https://www.linkedin.com/in/tapas-nandy-35133518/?originalSubdomain=in",
+    website: "",
+  },
+  {
+    name: "Dipan Sahu",
+    title: "Assistant Innovation Director",
+    affiliation: "Ministry of Education's Innovation Cell",
+    image: "/images/dipansahu.jpg",
+    linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
+    website: "",
+  },
 ];
+//the carousel should automatically slide every 3 seconds , and if clicked to go to next or prev the timer should reset
+//make the additions
 
 // Improved carousel with better transitions and controls
 const Carousel = ({
@@ -78,6 +80,13 @@ const Carousel = ({
   setCurrentImageIndex,
   swipeHandlers,
 }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [currentImageIndex, images.length, setCurrentImageIndex]);
+
   return (
     <div
       className="min-h-screen bg-gray-100 flex flex-col relative overflow-hidden"
@@ -249,13 +258,21 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
       {comingSoon ? (
         <div className="text-center">
           <div className="flex flex-row justify-center items-center gap-6">
-      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
-        <img src="./logos/mandi__.png" alt="Agmetal-Keysight Logo" className="max-w-full max-h-full" />
-      </div>
-      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
-        <img src="./images/Agmatel_Keyisght Logo HD.png" alt="Agmetal-Keysight Logo" className="max-w-full max-h-full" />
-      </div>
-    </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+              <img
+                src="./logos/mandi__.png"
+                alt="Agmetal-Keysight Logo"
+                className="max-w-full max-h-full"
+              />
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+              <img
+                src="./images/Agmatel_Keyisght Logo HD.png"
+                alt="Agmetal-Keysight Logo"
+                className="max-w-full max-h-full"
+              />
+            </div>
+          </div>
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mx-auto max-w-7xl">
