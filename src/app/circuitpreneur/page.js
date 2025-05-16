@@ -226,7 +226,7 @@ const CONTENT_SECTIONS = [
   },
   {
     title: "Who Can Participate?",
-    content: "Startups, researchers and entrepreneurs with innovative solutions in VLSI Design, EDA, Embedded systems, or any Electronics related field. This contest is open to individuals and teams at all levels of expertise. Irrespective of whether you are a passionate novice or an experienced professional, come share your perspective in innovating, the circuit/product design industry. The submissions are welcome for Ideation Design stage to Higher TRL (prototyping). Registered on the link on or before 15th April, 2025",
+    content: "Startups, researchers and entrepreneurs with innovative solutions in VLSI Design, EDA, Embedded systems, or any Electronics related field. This contest is open to individuals and teams at all levels of expertise. Irrespective of whether you are a passionate novice or an experienced professional, come share your perspective in innovating, the circuit/product design industry. The submissions are welcome for Ideation Design stage to Higher TRL (prototyping). Registered on the link on or before 15th June, 2025",
     type: "paragraph",
     bgColor: "bg-gray-900 text-white"
   }
