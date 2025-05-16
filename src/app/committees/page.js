@@ -114,7 +114,7 @@ const committees = [
     title: "General Chairs",
     members: [
       { 
-        name: "Rohit Y Sharma", 
+        name: "Rohit Sharma", 
         institute: "IIT Ropar", 
         linkedin: "https://www.linkedin.com/in/rohit-sharma-9509b5197/?originalSubdomain=in", 
         website: "https://www.iitrpr.ac.in/ee/profile.faculty.php?mail=rohit%40iitrpr.ac.in",

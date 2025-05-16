@@ -250,10 +250,12 @@ const ContentSection = ({ id, title, content, items, type, icon, bgColor, accent
 const EnhancedTimeline = () => {
   const dates = [
     {
-      date: "15th May 2025",
+       date: "31st May 2025",
+      previousDate: "15th May 2025",
       title: "Submission Deadline",
       description: "Last date to submit your PhD Forum abstract",
-      icon: "calendar"
+      icon: "calendar",
+      warning: "Firm deadline, no further extension",
     },
     {
       date: "15th June 2025",
@@ -306,7 +308,15 @@ const EnhancedTimeline = () => {
                 )}
               </div>
               <div className="bg-gradient-to-r from-black to-gray-900 bg-opacity-50 p-5 rounded-lg border-l-4 border-indigo-600 flex-grow hover:shadow-lg transition-all transform hover:-translate-y-1">
-                <h3 className="text-indigo-300 font-bold text-xl">{item.date}</h3>
+                <h3 className="text-indigo-300 font-bold text-xl">
+                  {item.previousDate && (
+                    <span className="line-through text-gray-500 mr-2">{item.previousDate}</span>
+                  )}
+                  {item.date}
+                  {item.warning && (
+                    <span className="ml-2 text-yellow-400 font-semibold">({item.warning})</span>
+                  )}
+                </h3>
                 <h4 className="text-white font-medium text-lg mt-1">{item.title}</h4>
                 <p className="text-gray-300 mt-2">{item.description}</p>
               </div>
