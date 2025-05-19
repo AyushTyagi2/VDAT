@@ -250,7 +250,7 @@ const ContentSection = ({ id, title, content, items, type, icon, bgColor, accent
 const EnhancedTimeline = () => {
   const dates = [
     {
-       date: "31st May 2025",
+       date: "1st June 2025 AoE",
       previousDate: "15th May 2025",
       title: "Submission Deadline",
       description: "Last date to submit your PhD Forum abstract",
