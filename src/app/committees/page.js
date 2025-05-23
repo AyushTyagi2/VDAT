@@ -173,7 +173,7 @@ const committees = [
     title: "Sponsorship Chair",
     members: [
       { name: "Alpana Agarwal", institute: "Thapar Institute", linkedin: "https://www.linkedin.com/in/alpana-agarwal-1542b118/?originalSubdomain=in", website: "https://www.thapar.edu/faculties/view/Dr.-Alpana-Agarwal/MTI5/MTU=", image: "./images/alpana.jpg" },
-      { name: "Shonal Chouksey", institute: "IIIT Una", linkedin: "https://www.linkedin.com/in/shonal-chouksey-4a13568b/?originalSubdomain=in", website: "https://iiitu.ac.in/schools/soe/faculty/667b05e76914b0583f899e13", image: "./images/shonal.jpg" },
+      { name: "Shonal Chouksey", institute: "IIIT Una", linkedin: "https://www.linkedin.com/in/shonal-chouksey-4a13568b/?originalSubdomain=in", website: "https://iiitu.ac.in/schools/soe/faculty/667b05e76914b0583f899e13", image: "./images/shonal.webp" },
       { name: "Preet Yadav", institute: "NXP", linkedin: "https://www.linkedin.com/in/preet-yadav/?originalSubdomain=in", image: "./images/preet.jpg" }
     ] 
   },
