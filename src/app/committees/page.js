@@ -167,7 +167,7 @@ const committees = [
   },
   {
     title: "Finance Chair",
-    members: [{ name: "Mahendra Sakre", institute: "IIT Ropar" }],
+    members: [{ name: "Mahendra Sakare", institute: "IIT Ropar",linkedin:"https://www.linkedin.com/in/mahendra-sakare-238134b/",website:"https://sites.google.com/a/iitrpr.ac.in/mahendra/home",image: "./images/mahendra.jpg" },],
   },
   {
     title: "Sponsorship Chair",
