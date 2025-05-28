@@ -160,7 +160,7 @@ const committees = [
   {
     title: "Local Organising Chair",
     members: [
-      { name: "Pradeep Duhan", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/pardeep-duhan-64262b74/?originalSubdomain=in", website: "https://www.iitrpr.ac.in/electrical/pardeepduhan", image: "./images/pradeep.jpg" },
+      { name: "Pardeep Duhan", institute: "IIT Ropar", linkedin: "https://www.linkedin.com/in/pardeep-duhan-64262b74/?originalSubdomain=in", website: "https://www.iitrpr.ac.in/electrical/pardeepduhan", image: "./images/pradeep.jpg" },
       { name: "Ruchika Gupta", institute: "Chandigarh University", linkedin: "https://www.linkedin.com/in/ruchika-gupta-55bbb764/?originalSubdomain=in", website: "https://sites.google.com/view/ruchikagupta/", image: "./images/ruchika.jpg" },
       { name: "Arun Singh", institute: "PEC Chandigarh", linkedin: "https://www.linkedin.com/in/arun-kumar-singh-a5627742/?originalSubdomain=in", website: "https://pec.ac.in/ece/faculty/arun-kumar-singh", image: "./images/arun.jpg" },
     ] 
