@@ -98,9 +98,7 @@ const FellowshipPage = () => {
               "Fellows need to attend for the entire 3-day conference. A record of attendance would be maintained for the same.",
               "All the selected fellow will be provided accommodation inside the campus.",
               "Selected candidate may get the complimentary partial/full registration support and/or travel allowance to attend the conference.",
-              "The student and faculty fellow ratio will be 60:40.",
               "Maximum travel support of Rs 5000/- or actual expenditure, whichever is less.",
-              "50% fellowship will be awarded to states/UT: Punjab, HP, Haryana, Chandigarh.",
               "Be ready with the LOR (for student category) and the institute ID card in PDF/JPG/PNG format before filling out the form.",
               "Please visit the conference website for detailed updates on time to time.",
               "In case an applicant is both a faculty member of some institute and a student of another (e.g., a faculty member pursuing part-time higher studies), only one application should be submitted. More information can be provided in the relevant text box while filling up the form.",
@@ -206,48 +204,40 @@ const FellowshipPage = () => {
               <p>Fellowship is open to Indian students and faculty members actively working in VLSI design and related fields. Applicants must be full-time students or regular faculty at the time of the conference.</p>
             </div>
             
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">2. Fellowship Types and Distribution</h3>
-              <p>Fellowships are awarded in three categories based on need and geographical location. The distribution ratio between students and faculty is maintained at 60:40 respectively.</p>
-            </div>
+            
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">3. Attendance Requirements</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">2. Attendance Requirements</h3>
               <p>All fellowship recipients must attend the complete 3-day conference. Attendance will be monitored and recorded. Partial attendance may result in fellowship cancellation and recovery of benefits.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">4. Travel Support</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">3. Travel Support</h3>
               <p>Travel support, where applicable, is limited to a maximum of Rs 5,000/- or actual expenditure, whichever is less. Original receipts must be submitted for reimbursement.</p>
             </div>
-            
+                      
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">5. Geographical Priority</h3>
-              <p>50% of fellowships are reserved for applicants from Punjab, Himachal Pradesh, Haryana, and Chandigarh to encourage regional participation.</p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">6. Documentation Requirements</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">4. Documentation Requirements</h3>
               <p>Students must submit a Letter of Recommendation (LOR) from their supervisor/guide. All applicants must carry valid institute ID cards during registration. Documents must be in PDF/JPG/PNG format.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">7. Paper Presentation and Registration</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">5. Paper Presentation and Registration</h3>
               <p>If your paper is accepted for presentation, at least one author must register with full payment. Other co-authors may apply for fellowship separately.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">8. Cancellation Policy</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">6. Cancellation Policy</h3>
               <p>Fellowships may be cancelled if any terms and conditions are violated, if the recipient fails to attend the complete conference, or if false information is provided in the application.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">9. Communication</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">7. Communication</h3>
               <p>All official communication will be sent to the email address provided in the application form. It is the applicant's responsibility to monitor their email regularly.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">10. Final Authority</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">8. Final Authority</h3>
               <p>The VDAT 2025 organizing committee reserves the right to make final decisions on fellowship awards. Their decision will be final and binding.</p>
             </div>
           </div>
