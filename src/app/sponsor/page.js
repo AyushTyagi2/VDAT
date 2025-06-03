@@ -94,13 +94,20 @@ const SponsorshipPage = () => {
         </div>
         
         <div>
-          <h3 className="text-2xl font-bold text-center text-violet-700 mb-8">Gold Partner</h3>
+          <h3 className="text-2xl font-bold text-center text-violet-700 mb-8">Gold Partners</h3>
           <div className="flex justify-center items-center">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
                 src="./images/Agmatel_Keyisght Logo HD.png" 
                 alt="Agmetal-Keysight Logo" 
                 className="max-w-full max-h-full"
+                style = {{paddingRight: "30px"}}
+              />
+              <img 
+                src="./images/yourpedia.png"
+                alt="Yourpedia Logo"
+                className="max-w-full max-h-full ml-4"
+                style = {{paddingRight: "30px"}}
               />
             </div>
           </div>

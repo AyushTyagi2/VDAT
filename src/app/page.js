@@ -272,6 +272,13 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
                 className="max-w-full max-h-full"
               />
             </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+              <img
+                src="./images/yourpedia.png"
+                alt="YourPedia Logo"
+                className="max-w-full max-h-full"
+              />
+            </div>
           </div>
         </div>
       ) : (
