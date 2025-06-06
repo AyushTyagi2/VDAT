@@ -72,11 +72,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-2 text-gray-300">Important Links</h4>
             <ul className="space-y-1">
               <li><Link href="/" className="hover:text-gray-400 transition duration-300 text-sm">Home</Link></li>
-              <li><Link href="/accommodation" className="hover:text-gray-400 transition duration-300 text-sm">Accommodation</Link></li>
               <li><Link href="/schedule" className="hover:text-gray-400 transition duration-300 text-sm">Schedule</Link></li>
               <li><Link href="/registration" className="hover:text-gray-400 transition duration-300 text-sm">Registration</Link></li>
-              <li><Link href="/contact" className="hover:text-gray-400 transition duration-300 text-sm">Contact Us</Link></li>
-              <p style={{fontSize:"14px"}}>Email : vdat2025[at]iitrpr[dot]ac[dot]in</p>
+              
             </ul>
           </div>
 

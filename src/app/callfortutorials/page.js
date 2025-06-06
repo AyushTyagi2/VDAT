@@ -131,7 +131,7 @@ const ImportantDatesSection = ({ title, isAlternate }) => (
             onClick={handleLinkClick}
           >
             <ExternalLink className="w-5 h-5 mr-2" />
-            Submit Proposal
+            <strike>Submit Proposal</strike>
           </button>
           <button
             className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-200 ease-in-out flex items-center justify-center"

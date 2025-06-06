@@ -315,7 +315,7 @@ const Circuitpreneur = () => {
                 onClick={handleRegistrationClick}
                 aria-label="Register for CIRCUITPRENEUR Contest"
               >
-                Register Now
+                Submit your Idea
               </button>
             </div>
           </div>

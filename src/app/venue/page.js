@@ -82,8 +82,8 @@ const VenuePage = () => {
           <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div className="md:flex">
               <div className="md:w-1/3 relative h-64 md:h-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center">
-                  <Hotel size={80} className="text-white opacity-90" />
+                <div className="absolute inset-0 flex items-center justify-center object-fill">
+                  <Image src = "/image.png" width = {810} height = {810} alt = {"Hotel.Img"} className="object-fit"/>
                 </div>
               </div>
               <div className="md:w-2/3 p-8">

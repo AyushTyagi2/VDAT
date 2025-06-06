@@ -304,160 +304,93 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
 );
 
 const Timeline = () => {
-  const [highlightedIndex, setHighlightedIndex] = useState(null);
   const [currentDate] = useState(new Date());
 
-  const dates = [
+  const timelineData = [
     {
-      date: "May 15, 2025",
-      event: "Paper Submission Deadline",
-      description:
-        "Deadline for all paper submissions. No extensions will be granted.",
+      title: "Paper Submission",
+      borderColor: "border-l-purple-500",
+      bgColor: "bg-purple-50",
+      icon: "📄",
+      oldDate: "April 15, 2025",
+      newDate: "May 15, 2025",
+      note: "(Firm deadline, no further extension)"
     },
     {
-      date: "July 1, 2025",
-      event: "Notification of Acceptance",
-      description:
-        "Authors will be notified about the status of their submissions.",
+      title: "Acceptance Notification", 
+      borderColor: "border-l-blue-500",
+      bgColor: "bg-blue-50",
+      icon: "📩",
+      oldDate: "June 15, 2025",
+      newDate: "July 1, 2025",
+      note: ""
     },
     {
-      date: "July 15, 2025",
-      event: "Camera-ready Submission",
-      description: "Final papers must be submitted in the required format.",
+      title: "Early Bird Registration",
+      borderColor: "border-l-blue-600", 
+      bgColor: "bg-blue-50",
+      icon: "📅",
+      oldDate: "June 20, 2025",
+      newDate: "July 10, 2025",
+      note: ""
     },
     {
-      date: "July 10, 2025",
-      event: "Early Registration Deadline",
-      description: "Last day to register at the discounted early bird rate.",
-    },
-    {
-      date: "August 7-9, 2025",
-      event: "Conference Dates",
-      description: "Main conference events and presentations.",
-    },
+      title: "Camera-ready Submission",
+      borderColor: "border-l-green-500",
+      bgColor: "bg-green-50", 
+      icon: "📸",
+      oldDate: "July 1, 2025",
+      newDate: "July 15, 2025",
+      note: ""
+    }
   ];
-
-  // Find the next upcoming event
-  useEffect(() => {
-    const findNextEvent = () => {
-      for (let i = 0; i < dates.length; i++) {
-        const eventDate = new Date(
-          dates[i].date.replace("August 7-9, 2025", "August 7, 2025")
-        );
-        if (eventDate > currentDate) {
-          setHighlightedIndex(i);
-          return;
-        }
-      }
-      // If all events have passed
-      setHighlightedIndex(null);
-    };
-
-    findNextEvent();
-  }, [currentDate]);
-
-  // Calculate if a date is in the past
-  const isPastDate = (dateString) => {
-    const eventDate = new Date(
-      dateString.replace("August 7-9, 2025", "August 7, 2025")
-    );
-    return eventDate < currentDate;
-  };
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
           Important Dates
         </h2>
-        <div className="h-1 w-24 bg-yellow-400 mx-auto mb-12 rounded-full"></div>
 
-        <div className="max-w-4xl mx-auto">
-          {dates.map((item, index) => {
-            const isPast = isPastDate(item.date);
-            const isHighlighted = index === highlightedIndex;
-
-            return (
-              <div
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
+            {timelineData.map((item, index) => (
+              <div 
                 key={index}
-                className={`flex relative pb-16 transition-all duration-300 ${
-                  isHighlighted ? "scale-105" : ""
-                }`}
-                onMouseEnter={() => setHighlightedIndex(index)}
-                onMouseLeave={() => setHighlightedIndex(highlightedIndex)}
+                className={`${item.bgColor} p-6 rounded-xl shadow-lg border-l-4 ${item.borderColor} hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
               >
-                {/* Line */}
-                {index !== dates.length - 1 && (
-                  <div className="absolute inset-0 flex items-center justify-center h-full w-10">
-                    <div
-                      className={`h-full w-1 ${
-                        isPast ? "bg-green-400" : "bg-yellow-400"
-                      } opacity-30 pointer-events-none`}
-                    ></div>
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">{item.icon}</span>
+                  <h3 className="font-bold text-gray-800 text-lg">{item.title}</h3>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center flex-wrap">
+                    <span className="font-semibold text-gray-700 mr-2">
+                      {item.title === "Acceptance Notification" ? "Date:" : "Deadline:"}
+                    </span>
+                    <span className="line-through text-red-500 mr-2 text-sm">
+                      {item.oldDate}
+                    </span>
+                    <span className="font-bold text-gray-800">
+                      {item.newDate}
+                    </span>
                   </div>
-                )}
-
-                {/* Circle */}
-                <div
-                  className={`flex-shrink-0 w-10 h-10 rounded-full ${
-                    isPast
-                      ? "bg-green-500"
-                      : isHighlighted
-                      ? "bg-yellow-300"
-                      : "bg-yellow-400"
-                  } 
-                    inline-flex items-center justify-center text-white relative z-10 shadow-lg
-                    transition-all duration-300 ${
-                      isHighlighted ? "scale-125" : ""
-                    }`}
-                  aria-label={`Event: ${item.event}`}
-                >
-                  {isPast ? (
-                    <CheckCircle className="h-5 w-5" />
-                  ) : (
-                    <Calendar className="h-5 w-5" />
+                  
+                  {item.note && (
+                    <p className="text-gray-600 text-sm italic">
+                      {item.note}
+                    </p>
                   )}
                 </div>
-
-                {/* Content */}
-                <div
-                  className={`flex-grow pl-6 ${
-                    isHighlighted
-                      ? "bg-purple-800 bg-opacity-40 p-4 rounded-lg"
-                      : ""
-                  }`}
-                >
-                  <div className="flex items-center mb-1">
-                    <h3 className="text-xl md:text-2xl font-semibold">
-                      {item.event}
-                    </h3>
-                    {isHighlighted && (
-                      <span className="ml-2 px-2 py-1 bg-yellow-500 text-xs font-bold rounded-full">
-                        NEXT
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex items-center text-purple-200 mb-2">
-                    <Clock className="h-4 w-4 mr-2" />
-                    <p>{item.date}</p>
-                  </div>
-                  <p
-                    className={`text-sm md:text-base ${
-                      isHighlighted ? "text-purple-100" : "text-purple-200"
-                    } transition-colors duration-300`}
-                  >
-                    {item.description}
-                  </p>
-                </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
-
 // Stats component
 const Stats = () => {
   return (
@@ -530,6 +463,8 @@ const HomePage = () => {
       />
 
       <ThemeBanner />
+      <SpeakersSection speakers={speakers} />
+      <AboutSection />
 
       <Stats />
 
@@ -546,12 +481,6 @@ const HomePage = () => {
       /> */}
 
       <Timeline />
-
-      <AboutSection />
-
-      <SpeakersSection speakers={speakers} />
-
-      <ContactUs />
 
       <Footer />
     </div>

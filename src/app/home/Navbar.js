@@ -52,6 +52,8 @@ const Navbar = () => {
         { label: "VDAT 2022", href: "https://iitjammu.ac.in/vdat2022/" },
       ],
     },
+
+    {label: "ContactUs", href:"/Contactus"}
   ];
 
   return (
