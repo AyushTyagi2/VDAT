@@ -71,6 +71,7 @@ const Icon = ({ name, className = "w-5 h-5 flex-shrink-0" }) => {
     check: "text-purple-400",
     trophy: "text-purple-400",
     email: "text-purple-400",
+    calendar: "text-purple-400",
   };
   
   const combinedClassName = `${className} ${iconStyles[name] || ""}`;
@@ -98,6 +99,12 @@ const Icon = ({ name, className = "w-5 h-5 flex-shrink-0" }) => {
       return (
         <svg xmlns="http://www.w3.org/2000/svg" className={combinedClassName} fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      );
+    case 'calendar':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className={combinedClassName} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       );
     default:
@@ -273,8 +280,21 @@ const Circuitpreneur = () => {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
         
         <div className="relative z-10 px-4 py-16">
-          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-200">CIRCUITPRENEUR</h1>
-          <p className="text-xl max-w-2xl mx-auto font-light text-purple-100">CALL FOR IDEA PITCHING</p>
+          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-6 drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-200">CIRCUITPRENEUR</h1>
+          <p className="text-xl max-w-2xl mx-auto font-light text-purple-100 mb-8">CALL FOR IDEA PITCHING</p>
+          
+          {/* Subtle Date Banner positioned below heading */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-r from-purple-800/40 to-indigo-800/40 backdrop-blur-sm border border-purple-600/30 rounded-lg py-4 px-6 shadow-lg">
+              <div className="flex items-center justify-center text-purple-200">
+                <Icon name="calendar" className="h-5 w-5 mr-3" />
+                <div className="text-center">
+                  <p className="text-sm font-medium text-purple-300">Registration Deadline</p>
+                  <p className="text-lg font-semibold text-white">15th June, 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 

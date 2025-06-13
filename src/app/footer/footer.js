@@ -66,26 +66,27 @@ const Footer = () => {
         </div> */}
 
         {/* Other Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Important Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-2 text-gray-300">Important Links</h4>
-            <ul className="space-y-1">
-              <li><Link href="/" className="hover:text-gray-400 transition duration-300 text-sm">Home</Link></li>
-              <li><Link href="/schedule" className="hover:text-gray-400 transition duration-300 text-sm">Schedule</Link></li>
-              <li><Link href="/registration" className="hover:text-gray-400 transition duration-300 text-sm">Registration</Link></li>
-              
-            </ul>
-          </div>
+        <div className="flex flex-wrap justify-between items-start gap-12">
+ {/* Important Links */}
+ <div>
+   <h4 className="text-xl font-bold mb-4 text-white">Important Links</h4>
+   <div className="flex flex-wrap gap-x-8 gap-y-3">
+     <Link href="/" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Home</Link>
+     <Link href="/schedule" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Schedule</Link>
+     <Link href="/registration" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Registration</Link>
+   </div>
+ </div>
 
-          {/* Follow Us */}
-          {/* <div>
-            <h4 className="text-lg font-semibold mb-2 text-gray-300">Follow Us</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-400 transition duration-300" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
-            </div>
-          </div> */}
-        </div>
+ {/* Follow Us */}
+ <div>
+   <h4 className="text-xl font-bold mb-4 text-white">Follow Us</h4>
+   <div className="flex space-x-6">
+     <a href="https://www.linkedin.com/company/vdat2025/" className="hover:text-blue-400 hover:scale-110 transition-all duration-300 p-2 rounded-lg hover:bg-gray-800" aria-label="LinkedIn">
+       <FaLinkedin size={24} />
+     </a>
+   </div>
+ </div>
+</div>
 
         {/* Copyright */}
         <div className="text-center text-sm text-gray-400">
