@@ -20,33 +20,33 @@ const FellowshipPage = () => {
       
       {/* Hero Section */}
       <header 
-        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        className="text-center text-white py-32 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-violet-900/80"></div>
-        <div className="relative z-10 px-4 py-16">
-          <h1 className="text-6xl font-extrabold tracking-tight uppercase mb-4 drop-shadow-lg">VDAT 2025 Fellowship Program</h1>
-          <p className="text-xl max-w-2xl mx-auto font-light">Supporting students and faculty in the field of VLSI design</p>
+        <div className="relative z-10 px-2 py-8">
+          <h1 className="text-5xl font-extrabold tracking-tight uppercase mb-2 drop-shadow-lg">VDAT 2025 Fellowship Program</h1>
+          <p className="text-lg max-w-xl mx-auto font-light">Supporting students and faculty in the field of VLSI design</p>
         </div>
       </header>
 
       {/* About the Fellowship */}
-      <section className="container mx-auto px-6 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+      <section className="container mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold mb-2 text-violet-800 uppercase relative inline-block">
             About the Fellowship
-            <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            <div className="h-1 w-16 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-1"></div>
           </h2>
         </div>
         
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-violet-100 rounded-full">
-              <BookOpen size={40} className="text-violet-700" />
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-3xl mx-auto">
+          <div className="flex justify-center mb-4">
+            <div className="p-3 bg-violet-100 rounded-full">
+              <BookOpen size={32} className="text-violet-700" />
             </div>
           </div>
           
-          <div className="space-y-4 text-gray-700">
+          <div className="space-y-3 text-gray-700 text-base">
             <p className="text-lg leading-relaxed">
               VDAT 2025 invites students and faculty members working in the scope of VDAT to apply for the fellowship program. Over the decades, VDAT has been offering generous fellowships to students and teachers of various Indian academic institutions. This trend continues for VDAT 2025 as well. The fellowship provides complimentary registration to attend the conference.
             </p>
@@ -59,11 +59,11 @@ const FellowshipPage = () => {
               Fellowship entitles you to a lower registration fee/complete registration exemption. The students/Faculty who apply for fellowship must be full time students/regular faculty at the time of the symposium. Identity card will be asked at the registration desk. Fellowships are open to all irrespective of them presenting a paper in VDAT or not. Acceptance of paper is not the eligibility for getting fellowship. However, if your paper is accepted, then the presenter/one author has to register by paying the full amount whereas rest of the authors may apply for Fellowships.
             </p>
             
-            <div className="bg-violet-50 p-6 rounded-lg border-l-4 border-violet-400 mt-6">
+            <div className="bg-violet-50 p-4 rounded-lg border-l-4 border-violet-400">
               <div className="flex items-start">
-                <DollarSign className="h-6 w-6 text-violet-600 mr-3 mt-1 flex-shrink-0" />
+                <DollarSign className="h-5 w-5 text-violet-600 mr-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-violet-800 mb-2">Fellowship Types</h3>
+                  <h3 className="text-base font-semibold text-violet-800 mb-1">Fellowship Types</h3>
                   <p className="text-violet-700">There are three types of fellowships available based on need and location:</p>
                   <ul className="mt-2 space-y-1 text-violet-700">
                     <li>• <strong>Type A:</strong> Free Registration + Free Stay + Travel Cost</li>
@@ -78,22 +78,22 @@ const FellowshipPage = () => {
       </section>
 
       {/* Fellowship Guidelines */}
-      <section className="container mx-auto px-6 py-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+      <section className="container mx-auto px-4 py-12 bg-gradient-to-b from-white to-gray-50">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-violet-800 uppercase relative inline-block">
             Fellowship Guidelines
-            <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            <div className="h-1 w-16 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-1"></div>
           </h2>
         </div>
         
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-blue-100 rounded-full">
-              <AlertCircle size={40} className="text-blue-700" />
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-3xl mx-auto">
+          <div className="flex justify-center mb-4">
+            <div className="p-3 bg-blue-100 rounded-full">
+              <AlertCircle size={32} className="text-blue-700" />
             </div>
           </div>
           
-          <ul className="space-y-3 text-gray-700">
+          <ul className="space-y-2 text-gray-700">
             {[
               "Fellows need to attend for the entire 3-day conference. A record of attendance would be maintained for the same.",
               "All the selected fellow will be provided accommodation inside the campus.",
@@ -108,7 +108,7 @@ const FellowshipPage = () => {
               "If you are the sole registrant for your paper then you will have to register as a full delegate and Fellowship will stand cancelled."
             ].map((item, index) => (
               <li key={index} className="flex items-start">
-                <CheckCircle size={20} className="text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <CheckCircle size={16} className="text-green-500 mr-2 flex-shrink-0" />
                 <span className="text-lg">{item}</span>
               </li>
             ))}
@@ -117,22 +117,22 @@ const FellowshipPage = () => {
       </section>
 
       {/* Application Process */}
-      <section className="container mx-auto px-6 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+      <section className="container mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-violet-800 uppercase relative inline-block">
             Application Process
-            <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            <div className="h-1 w-16 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-1"></div>
           </h2>
         </div>
         
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-indigo-100 rounded-full">
-              <Users size={40} className="text-indigo-700" />
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-3xl mx-auto">
+          <div className="flex justify-center mb-4">
+            <div className="p-3 bg-indigo-100 rounded-full">
+              <Users size={32} className="text-indigo-700" />
             </div>
           </div>
           
-          <ul className="space-y-3 text-gray-700">
+          <ul className="space-y-2 text-gray-700 text-base">
             {[
               "We will be using an entirely online application process with each applicant filling up the online form and providing relevant details online.",
               "Though some of the questions are optional, applicants are requested to respond to as many questions as relevant.",
@@ -141,8 +141,8 @@ const FellowshipPage = () => {
               "Please submit only one form per applicant. Multiple entries may lead to reject the application."
             ].map((item, index) => (
               <li key={index} className="flex items-start">
-                <div className="bg-indigo-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-                  <span className="flex items-center justify-center bg-indigo-600 text-white rounded-full w-5 h-5 text-xs font-bold">
+                <div className="bg-indigo-100 rounded-full p-1 mr-2 flex-shrink-0">
+                  <span className="flex items-center justify-center bg-indigo-600 text-white rounded-full w-4 h-4 text-xs font-bold">
                     {index + 1}
                   </span>
                 </div>
@@ -152,14 +152,14 @@ const FellowshipPage = () => {
           </ul>
           
           {/* Application Form and LOR Template */}
-          <div className="mt-8 p-6 bg-gradient-to-r from-indigo-50 to-violet-50 rounded-lg border border-indigo-200">
-            <h3 className="text-xl font-semibold text-indigo-800 mb-4 text-center">Ready to Apply?</h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="mt-6 p-4 bg-gradient-to-r from-indigo-50 to-violet-50 rounded-lg border border-indigo-200">
+            <h3 className="text-lg font-semibold text-indigo-800 mb-2 text-center">Ready to Apply?</h3>
+            <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
               <a 
                 href="https://forms.gle/jXQoFTGT1aCuBWWA6" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md"
+                className="inline-flex items-center bg-indigo-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md"
               >
                 <ExternalLink size={20} className="mr-2" />
                 Apply for Fellowship
@@ -183,22 +183,22 @@ const FellowshipPage = () => {
       </section>
 
       {/* Terms and Conditions */}
-      <section className="container mx-auto px-6 py-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+      <section className="container mx-auto px-4 py-12 bg-gradient-to-b from-white to-gray-50">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-violet-800 uppercase relative inline-block">
             Terms and Conditions
-            <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            <div className="h-1 w-20 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-1"></div>
           </h2>
         </div>
         
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-red-100 rounded-full">
-              <FileText size={40} className="text-red-700" />
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 max-w-3xl mx-auto">
+          <div className="flex justify-center mb-4">
+            <div className="p-2 bg-red-100 rounded-full">
+              <FileText size={32} className="text-red-700" />
             </div>
           </div>
           
-          <div className="space-y-4 text-gray-700">
+          <div className="space-y-2 text-gray-700">
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">1. Eligibility and Application</h3>
               <p>Fellowship is open to Indian students and faculty members actively working in VLSI design and related fields. Applicants must be full-time students or regular faculty at the time of the conference.</p>
@@ -207,37 +207,37 @@ const FellowshipPage = () => {
             
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">2. Attendance Requirements</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">2. Attendance Requirements</h3>
               <p>All fellowship recipients must attend the complete 3-day conference. Attendance will be monitored and recorded. Partial attendance may result in fellowship cancellation and recovery of benefits.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">3. Travel Support</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">3. Travel Support</h3>
               <p>Travel support, where applicable, is limited to a maximum of Rs 5,000/- or actual expenditure, whichever is less. Original receipts must be submitted for reimbursement.</p>
             </div>
                       
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">4. Documentation Requirements</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">4. Documentation Requirements</h3>
               <p>Students must submit a Letter of Recommendation (LOR) from their supervisor/guide. All applicants must carry valid institute ID cards during registration. Documents must be in PDF/JPG/PNG format.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">5. Paper Presentation and Registration</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">5. Paper Presentation and Registration</h3>
               <p>If your paper is accepted for presentation, at least one author must register with full payment. Other co-authors may apply for fellowship separately.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">6. Cancellation Policy</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">6. Cancellation Policy</h3>
               <p>Fellowships may be cancelled if any terms and conditions are violated, if the recipient fails to attend the complete conference, or if false information is provided in the application.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">7. Communication</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">7. Communication</h3>
               <p>All official communication will be sent to the email address provided in the application form. It is the applicant's responsibility to monitor their email regularly.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">8. Final Authority</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">8. Final Authority</h3>
               <p>The VDAT 2025 organizing committee reserves the right to make final decisions on fellowship awards. Their decision will be final and binding.</p>
             </div>
           </div>
@@ -245,21 +245,21 @@ const FellowshipPage = () => {
       </section>
 
       {/* Important Dates */}
-      <section className="container mx-auto px-6 py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-violet-800 uppercase relative inline-block">
+      <section className="container mx-auto px-4 py-12 bg-gradient-to-b from-gray-50 to-white">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-violet-800 uppercase relative inline-block">
             Important Dates
-            <div className="h-1 w-24 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2"></div>
+            <div className="h-1 w-20 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-1"></div>
           </h2>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {importantDates.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <div key={index} className="bg-white p-4 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start">
-                  <div className="mr-4">
-                    <div className="p-3 bg-purple-100 rounded-lg">
+                  <div className="mr-2">
+                    <div className="p-2 bg-purple-100 rounded-lg">
                       <Calendar size={24} className="text-purple-700" />
                     </div>
                   </div>
@@ -272,12 +272,12 @@ const FellowshipPage = () => {
             ))}
           </div>
           
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mt-8 rounded-lg shadow-md">
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mt-4 rounded-lg shadow-md">
             <div className="flex">
               <div className="flex-shrink-0">
-                <AlertCircle className="h-6 w-6 text-yellow-600" />
+                <AlertCircle className="h-3 w-3 text-yellow-600" />
               </div>
-              <div className="ml-3">
+              <div className="ml-2">
                 <p className="text-lg text-yellow-700">
                   Please note all fellowship applications must be submitted before the deadline. Late applications will not be considered.
                 </p>
@@ -288,13 +288,13 @@ const FellowshipPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="container mx-auto px-6 py-16 text-center">
+      <section className="container mx-auto px-4 py-12 text-center">
         <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl shadow-lg p-8 max-w-3xl mx-auto text-white">
-          <h2 className="text-3xl font-bold mb-6">Have Questions?</h2>
-          <p className="text-xl mb-6">Contact us for more information about the fellowship program</p>
+          <h2 className="text-2xl font-bold mb-3">Have Questions?</h2>
+          <p className="text-xl mb-3">Contact us for more information about the fellowship program</p>
           
-          <div className="inline-flex items-center justify-center bg-white text-indigo-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-            <Mail size={20} className="mr-2" />
+          <div className="inline-flex items-center justify-center bg-white text-indigo-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            <Mail size={16} className="mr-1" />
             <a href="mailto:fellowship.vdat2025@gmail.com">fellowship.vdat2025@gmail.com</a>
           </div>
         </div>

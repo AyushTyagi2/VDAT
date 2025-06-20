@@ -9,9 +9,10 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400','700','900'],  // <-- include 900 here
+  weight: ['400','700','900'], 
   display: 'swap',
 });
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPapersDropdownOpen, setIsPapersDropdownOpen] = useState(false);

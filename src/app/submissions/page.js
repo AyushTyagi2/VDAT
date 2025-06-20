@@ -14,20 +14,20 @@ import {
 const TrackSection = ({ id, title, content, isAlternate }) => (
   <section
     id={id}
-    className={`py-16 px-4 ${
+    className={`py-8 px-4 ${
       isAlternate ? "bg-gray-50" : "bg-white"
-    } shadow-lg rounded-xl mb-8`}
+    } shadow-lg rounded-xl mb-4`}
   >
     <div className="max-w-6xl mx-auto">
       <div className="section-heading">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-4">
           {title}
         </h2>
-        <div className="w-16 h-1 bg-purple-600 mx-auto mb-8"></div>
+        <div className="w-16 h-1 bg-purple-600 mx-auto mb-4"></div>
       </div>
 
       <div className="text-lg text-gray-700 max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
           {content.map((item, idx) => (
             <div
               key={idx}
@@ -123,7 +123,7 @@ const SpeakersSection = () => {
     },
   ];
 
-  const handleLinkClick = () => {
+ const handleLinkClick = () => {
     window.open("https://softconf.com/vlsi/vdat2025/", "_blank");
   };
 
@@ -133,20 +133,20 @@ const SpeakersSection = () => {
 
   const ListSection = ({ title, items, isAlternate }) => (
     <section
-      className={`py-12 px-4 ${
+      className={`py-6 px-4 ${
         isAlternate ? "bg-gray-50" : "bg-white"
-      } shadow-lg rounded-xl mb-8`}
+      } shadow-lg rounded-xl mb-4`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="section-heading">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-4">
             {title}
           </h2>
-          <div className="w-16 h-1 bg-purple-600 mx-auto mb-8"></div>
+          <div className="w-16 h-1 bg-purple-600 mx-auto mb-4"></div>
         </div>
 
         <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
-          <ul className="space-y-4">
+          <ul className="space-y-2">
             {items.map((item, index) => (
               <li key={index} className="flex items-start group">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3 mt-1 group-hover:bg-purple-200 transition-colors">
@@ -163,11 +163,12 @@ const SpeakersSection = () => {
     </section>
   );
 
+
   const ImportantDatesSection = ({ title, isAlternate }) => (
     <section
-      className={`py-12 px-4 ${
+      className={`py-6 px-4 ${
         isAlternate ? "bg-gray-50" : "bg-white"
-      } shadow-lg rounded-xl mb-8`}
+      } shadow-lg rounded-xl mb-4`}
       id="important-dates"
     >
       <div className="max-w-6xl mx-auto">
@@ -306,7 +307,7 @@ const SpeakersSection = () => {
       </div>
 
       <header
-        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        className="text-center text-white py-20 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>

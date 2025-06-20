@@ -609,7 +609,7 @@ export default function CommitteePage() {
         <Navbar />
       </div>
       <header
-        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        className="text-center text-white py-20 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>

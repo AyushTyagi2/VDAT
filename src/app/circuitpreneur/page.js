@@ -6,7 +6,7 @@ import Navbar from '../home/Navbar';
 const CircuitpreneurBanner = () => {
   return (
     <section
-      className="relative flex items-center justify-center text-center py-20 md:py-28"
+      className="relative flex items-center justify-center text-center py-16 md:py-20"
       style={{
         background: "linear-gradient(135deg, #000000 0%, #1a0033 100%)",
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
@@ -47,7 +47,7 @@ const CircuitpreneurBanner = () => {
         
         <div className="bg-black bg-opacity-30 p-6 rounded-lg border border-purple-800">
           <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
-            Showcase your groundbreaking ideas and become a trailblazer in the semiconductor industry.
+            Showcase your groundbreaking ideas in the semiconductor industry.
           </p>
           <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
             Participate in the <span className="font-bold text-purple-300">CIRCUITPRENEUR</span> Contest at VDAT-2025 and pitch your startup to industry leaders and investors!
@@ -138,7 +138,7 @@ const CircuitPattern = () => {
 // Improved ContentSection component with better styling to match banner
 const ContentSection = ({ title, content, items, type, icon, bgColor }) => {
   return (
-    <section className={`relative py-12 px-6 ${bgColor} rounded-xl shadow-md mb-8 overflow-hidden`}>
+    <section className={`relative py-8 px-4 ${bgColor} rounded-xl shadow-md mb-4 overflow-hidden`}>
       {/* Add circuit pattern overlay to match banner */}
       <CircuitPattern />
       
@@ -146,8 +146,8 @@ const ContentSection = ({ title, content, items, type, icon, bgColor }) => {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
       
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-10">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="text-center mb-5">
           <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-400 mb-4">
             {title}
           </h2>
@@ -156,14 +156,14 @@ const ContentSection = ({ title, content, items, type, icon, bgColor }) => {
         
         {type === 'paragraph' && (
           <div>
-            <p className="text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
               {content}
             </p>
           </div>
         )}
         
         {type === 'list' && (
-          <ul className="grid md:grid-cols-2 gap-x-6 gap-y-3 text-lg text-gray-200 max-w-4xl mx-auto">
+          <ul className="grid md:grid-cols-2 gap-x-4 gap-y-1 text-lg text-gray-200 max-w-2xl mx-auto">
             {items.map((item, index) => (
               <li key={index} className="flex items-start mb-2 p-2 hover:bg-black hover:bg-opacity-30 rounded transition-all border border-transparent hover:border-purple-800">
                 <span className="mr-3 mt-1">
@@ -253,7 +253,7 @@ const Circuitpreneur = () => {
 
       {/* Improved Hero Section */}
       <header
-        className="text-center text-white py-40 relative bg-cover bg-center bg-fixed"
+        className="text-center text-white py-20 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-purple-900/80"></div>
@@ -301,7 +301,7 @@ const Circuitpreneur = () => {
       {/* Banner Section */}
       <CircuitpreneurBanner />
 
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-10">
         <div className="max-w-6xl mx-auto">
           {/* Map through content sections for cleaner rendering */}
           {CONTENT_SECTIONS.map((section, index) => (
@@ -317,7 +317,7 @@ const Circuitpreneur = () => {
           ))}
           
           {/* Call to Action */}
-          <div className="mt-16 text-center relative bg-gradient-to-r from-purple-900 to-indigo-900 py-12 px-4 rounded-xl shadow-xl overflow-hidden">
+          <div className="mt-4 text-center relative bg-gradient-to-r from-purple-900 to-indigo-900 py-8 px-4 rounded-xl shadow-xl overflow-hidden">
             {/* Circuit pattern overlay */}
             <CircuitPattern />
             
@@ -342,7 +342,7 @@ const Circuitpreneur = () => {
         </div>
         
         {/* Contact Section */}
-        <section className="max-w-4xl mx-auto text-center relative bg-gray-900 py-12 mt-16 rounded-xl shadow-md overflow-hidden">
+        <section className="max-w-4xl mx-auto text-center relative bg-gray-900 py-8 mt-4 rounded-xl shadow-md overflow-hidden">
           {/* Circuit pattern overlay */}
           <CircuitPattern />
           

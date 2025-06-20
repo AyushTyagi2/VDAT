@@ -54,59 +54,56 @@ const AboutSection = () => {
     };
   }, []);
 
-  return (
-    <section className="bg-black bg-opacity-0 py-16 text-white" id="about">
-      <div className="bg-black bg-opacity-0 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start">
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <h2 className="text-3xl font-bold mb-4 text-purple-500">
-            About VDAT 2025
-          </h2>
-          <p className="text-lg leading-7">
-            VLSI Design & Test Symposium (VDAT) began as a workshop in 1998 and
-            gained symposium status in 2005 due to growing participation from
-            VLSI professionals and academia. Since then, it has been held
-            annually, becoming a key event in the VLSI field. The symposium
-            provides a platform for academia, researchers, startups, and
-            industry professionals to exchange ideas, experiences, and knowledge
-            in VLSI Design and Testing. Over 28 years, VDAT has introduced novel
-            designs and technologies, contributing to global progress.
-            High-quality technical presentations have guided participants toward
-            advancements in VLSI technology. Now in its 29th year, VDAT-2025
-            will be a three-day in-person event in Chandigarh, India, during the
-            first week of August 2025. It is supported by the VLSI Society of
-            India.
-          </p>
-        </div>
-        <div
-          className="
-    w-full              /* full width on mobile */
-    md:w-1/3            /* 1/3 width on md+ */
-    mx-auto             /* center the box itself horizontally */
-    flex flex-col       /* stack <h2> and timer vertically */
-    items-center        /* center children horizontally */
-    justify-center      /* center children vertically (if you give it a height) */
-    space-y-4           /* optional: vertical gap between items */
-  "
-        >
-          <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center">
-            Countdown
-          </h2>
-          <div className="flex justify-center space-x-4">
-            {Object.entries(remainingTime).map(([unit, value]) => (
-              <div className="text-center" key={unit}>
-                <div className="text-4xl font-bold border border-purple-500 rounded p-2">
-                  {String(value).padStart(2, "0")}
-                </div>
-                <div className="text-sm">
-                  {unit.charAt(0).toUpperCase() + unit.slice(1)}
-                </div>
+return (
+  <section
+    id="about"
+    aria-label="About VDAT 2025"
+    className="py-16 text-white bg-black bg-opacity-70"
+    style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+  >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start">
+      {/* Left Text Section */}
+      <div className="md:w-1/2 mb-8 md:mb-0">
+        <h1 className="text-3xl font-bold mb-4 text-purple-500">
+          About VDAT 2025
+        </h1>
+        <p className="text-lg leading-7">
+          VLSI Design & Test Symposium (VDAT) began as a workshop in 1998 and
+          gained symposium status in 2005 due to growing participation from
+          VLSI professionals and academia. Since then, it has been held
+          annually, becoming a key event in the VLSI field. The symposium
+          provides a platform for academia, researchers, startups, and
+          industry professionals to exchange ideas, experiences, and knowledge
+          in VLSI Design and Testing. Over 28 years, VDAT has introduced novel
+          designs and technologies, contributing to global progress.
+          High-quality technical presentations have guided participants toward
+          advancements in VLSI technology. Now in its 29th year, VDAT-2025
+          will be a three-day in-person event in Chandigarh, India, during the
+          first week of August 2025. It is supported by the VLSI Society of
+          India.
+        </p>
+      </div>
+
+      {/* Right Countdown Section */}
+      <div className="w-full md:w-1/3 mx-auto flex flex-col items-center justify-center space-y-4">
+        <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center">
+          Countdown
+        </h2>
+        <div className="flex justify-center space-x-4">
+          {Object.entries(remainingTime).map(([unit, value]) => (
+            <div className="text-center" key={unit}>
+              <div className="text-4xl font-bold border border-purple-500 bg-black bg-opacity-30 rounded p-2">
+                {String(value).padStart(2, "0")}
               </div>
-            ))}
-          </div>
+              <div className="text-sm mt-1 capitalize">{unit}</div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+
 };
 
 export default AboutSection;
