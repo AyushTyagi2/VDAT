@@ -14,22 +14,17 @@ import {
 
 const registrationFees = [
   {
-    type: "IEEE/VSI member",
+    type: "VSI member",
     earlyFee: "Rs 7500/ $150",
     lateFee: "Rs 9000/ $200",
   },
   {
-    type: "Non-member",
+    type: "Working Professionals/Academicians",
     earlyFee: "Rs 8500/ $175",
     lateFee: "Rs 10000/ $225",
   },
   {
-    type: "IEEE/VSI student member",
-    earlyFee: "Rs 4000/ $100",
-    lateFee: "Rs 5000/ $125",
-  },
-  {
-    type: "Student Non-member",
+    type: "Students(Research Scholars/UG/PG)",
     earlyFee: "Rs 5000/ $125",
     lateFee: "Rs 6000/ $150",
   },

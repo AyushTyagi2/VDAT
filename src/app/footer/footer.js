@@ -72,7 +72,7 @@ const Footer = () => {
    <h4 className="text-xl font-bold mb-4 text-white">Important Links</h4>
    <div className="flex flex-wrap gap-x-8 gap-y-3">
      <Link href="/" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Home</Link>
-     <Link href="/schedule" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Schedule</Link>
+     {/* <Link href="/schedule" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Schedule</Link> */}
      <Link href="/registration" className="hover:text-blue-400 transition-all duration-300 text-base text-gray-100 hover:underline hover:underline-offset-4 font-medium">Registration</Link>
    </div>
  </div>

@@ -93,6 +93,35 @@ const SpeakersSection = () => {
       photo: "/images/dipansahu.jpg", // Update with correct path
       linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
       website: ""
+    },
+//     Following two people need to be added as speaker: Prof Santhi Pawan, IIT Madras
+//     Speaker:  Ganesan Narayanasamy
+// Designation: President, OpenPOWER Foundation,USA
+// Affiliation: CEO at Object Automation Inc. – USA & India
+// https://www.linkedin.com/in/ganesannarayanasamy/
+    {
+      name: "Ganesan Narayanasamy",
+      title: "President, OpenPOWER Foundation",
+      organization: "CEO at Object Automation Inc. – USA & India",
+      photo: "/images/ganesan.jpeg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/ganesannarayanasamy/",
+      website: ""
+    },
+    {
+      name: "Shanthi Pavan",
+      title: "Professor",
+      organization: "IIT Madras",
+      photo: "/images/shanthi.jpeg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/shanthi-pavan-39715a137/",
+      website: "https://www.ee.iitm.ac.in/faculty/profile/shanthi.pavan"
+    },
+    {
+      name:"Gaurav Goel",
+      title:"Senior Principal Engineer",
+      organization:"Renesas Electronics",
+      photo: "/images/gauravgoel.jpeg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/gaurav-goel-01185a5/",
+      website :""
     }
   ];
 

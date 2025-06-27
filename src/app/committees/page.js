@@ -511,6 +511,14 @@ const committees = [
         website: "https://pec.ac.in/ece/faculty/simranjit-singh",
         image: "./images/simranjit.jpg",
       },
+      {
+        name: "Ganesh C. Patil",
+        institute: "VNIT Nagpur",
+        linkedin:
+          "https://www.linkedin.com/in/ganesh-c-patil-79b6306/?originalSubdomain=in",
+        website: "https://vnit.ac.in/engineering/cvlsi/dr-ganesh-c-patil/",
+        image: "./images/ganesh.jpg",
+      },
     ],
   },
 ];

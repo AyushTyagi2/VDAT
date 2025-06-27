@@ -69,6 +69,30 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
     website: "",
   },
+  {
+      name: "Ganesan Narayanasamy",
+      title: "President, OpenPOWER Foundation",
+      affiliation: "CEO at Object Automation Inc. – USA & India",
+      image: "/images/ganesan.jpeg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/ganesannarayanasamy/",
+      website: ""
+    },
+    {
+      name: "Shanthi Pavan",
+      title: "Professor",
+      affiliation: "IIT Madras",
+      image: "/images/shanthi.jpeg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/shanthi-pavan-39715a137/",
+      website: "https://www.ee.iitm.ac.in/faculty/profile/shanthi.pavan"
+    },
+    {
+      name:"Gaurav Goel",
+      title:"Senior Principal Engineer",
+      affiliation:"Renesas Electronics",
+      image: "/images/gauravgoel.jpeg", // Update with correct path
+      linkedin: "https://www.linkedin.com/in/gaurav-goel-01185a5/",
+      website :""
+    }
 ];
 //the carousel should automatically slide every 3 seconds , and if clicked to go to next or prev the timer should reset
 //make the additions
@@ -276,6 +300,13 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
               <img
                 src="./images/yourpedia.png"
                 alt="YourPedia Logo"
+                className="max-w-full max-h-full"
+              />
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
+              <img
+                src="./images/springer.png"
+                alt="Springer Logo"
                 className="max-w-full max-h-full"
               />
             </div>
