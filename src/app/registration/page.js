@@ -2,6 +2,13 @@ import React from "react";
 import Navbar from "../home/Navbar";
 import Footer from "../footer/footer";
 import {
+  CheckCircle,
+  Building,
+  Hash,
+  MapPin,
+  Smartphone,
+} from "lucide-react";
+import {
   Calendar,
   Clock,
   FileDown,
@@ -92,15 +99,111 @@ const vlsiHighlights = [
   },
 ];
 
+const RegistrationDetails = () => (
+  <section className="bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 py-16 relative overflow-hidden">
+    <div className="absolute inset-0 bg-black opacity-20"></div>
+    {/* Floating Icons */}
+    <div className="absolute inset-0 overflow-hidden opacity-10">
+      <div className="absolute top-10 left-10 animate-float">
+        <CreditCard size={120} className="text-white" />
+      </div>
+      <div className="absolute bottom-10 right-10 animate-float delay-1000">
+        <Hash size={100} className="text-white" />
+      </div>
+    </div>
+
+    <div className="container mx-auto px-6 relative z-10">
+      {/* Registration Process */}
+      <div className="text-center mb-12">
+        <div className="flex items-center justify-center mb-6">
+          <CheckCircle
+            className="text-yellow-300 mr-4 animate-pulse"
+            size={48}
+          />
+          <h2 className="text-5xl font-extrabold text-white uppercase tracking-wide">
+            Registration Process
+          </h2>
+        </div>
+        <ol  style={{color: "black"}} className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl space-y-6">
+          <li className="flex items-start">
+            <span className="text-yellow-500 mr-3 mt-1 font-bold text-xl">
+              1.
+            </span>
+            <p>Choose the right registration as per your category.</p>
+          </li>
+          <li className="flex items-start">
+            <span className="text-yellow-500 mr-3 mt-1 font-bold text-xl">
+              2.
+            </span>
+            <p>Make an online transfer of money to the bank given below. You can
+              also do a UPI transfer using the bank QR code.
+            </p>
+          </li>
+          <li className="flex items-start">
+            <span className="text-yellow-500 mr-3 mt-1 font-bold text-xl">
+              3.
+            </span>
+            <p>
+              Once you complete the payment, please register using the following
+              link (you need to upload the payment proof to complete the
+              registration):{" "}
+              <span className="font-bold text-red-600">
+                &lt;TBA Payment Link&gt;
+              </span>
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      {/* Bank Details */}
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20">
+        <div className="flex items-center mb-6">
+          <Building className="text-blue-600 mr-3" size={32} />
+          <h3 className="text-2xl font-bold text-gray-800">Bank Details</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
+          <div className="space-y-4">
+            <p>
+              <strong>Account Name:</strong> VLSI SOCIETY OF INDIA
+            </p>
+            <p>
+              <strong>Account No.:</strong> 166605000613
+            </p>
+            <p>
+              <strong>IFSC Code:</strong> ICIC0001666
+            </p>
+            <p>
+              <strong>Branch Name:</strong> ICICI Bank, Jayanagar
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p>
+              <strong>Branch Code:</strong> 001666
+            </p>
+            <p>
+              <strong>Swift Code:</strong> ICICINBBNRI
+            </p>
+            <p>
+              <strong>MICR Code:</strong> 560229045
+            </p>
+            <div className="flex items-center">
+              <Smartphone className="text-green-600 mr-2" size={20} />
+              <span>UPI payments accepted via bank QR code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const RegistrationPage = () => {
   // Replace this with your actual Google Form link
   const GOOGLE_FORM_LINK = "https://forms.google.com/your-form-link-here";
 
   return (
-    
     <div className="bg-black to-white min-h-screen">
-      <Navbar/>
-     
+      <Navbar />
 
       {/* Hero Section with VLSI Circuit Animation */}
       <header
@@ -108,7 +211,7 @@ const RegistrationPage = () => {
         style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 to-violet-900/85"></div>
-        
+
         {/* Animated Circuit Pattern Overlay */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 animate-pulse">
@@ -128,18 +231,23 @@ const RegistrationPage = () => {
             <h1 className="text-6xl font-extrabold tracking-tight uppercase drop-shadow-lg">
               VDAT-2025
             </h1>
-            <CircuitBoard className="text-green-300 ml-4 animate-pulse" size={48} />
+            <CircuitBoard
+              className="text-green-300 ml-4 animate-pulse"
+              size={48}
+            />
           </div>
-          
+
           <h2 className="text-4xl font-bold mb-4 text-cyan-300 uppercase tracking-wide">
             Registration Portal
           </h2>
-          
+
           <p className="text-xl max-w-3xl mx-auto font-light mb-8 leading-relaxed">
-            Join the premier VLSI Design & Test conference - Where Silicon Dreams Meet Reality. 
-            Connect with industry pioneers, explore breakthrough technologies, and shape the future of semiconductor innovation.
+            Join the premier VLSI Design & Test conference - Where Silicon
+            Dreams Meet Reality. Connect with industry pioneers, explore
+            breakthrough technologies, and shape the future of semiconductor
+            innovation.
           </p>
-          
+
           {/* Highlighted Registration Button */}
           <div className="mt-8">
             <a
@@ -148,15 +256,20 @@ const RegistrationPage = () => {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center px-12 py-5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white font-bold text-xl rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 uppercase tracking-wider animate-pulse hover:animate-none"
             >
-              <Star className="mr-3 animate-spin group-hover:animate-none" size={28} />
+              <Star
+                className="mr-3 animate-spin group-hover:animate-none"
+                size={28}
+              />
               Register for VDAT-2025
-              <ExternalLink className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
-              
+              <ExternalLink
+                className="ml-3 group-hover:translate-x-1 transition-transform"
+                size={24}
+              />
               {/* Animated ring effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full opacity-30 blur group-hover:opacity-50 animate-pulse"></div>
             </a>
           </div>
-          
+
           {/* VLSI-themed attention text */}
           <div className="mt-8 space-y-2">
             <div className="animate-bounce">
@@ -183,7 +296,10 @@ const RegistrationPage = () => {
         >
           <Cpu className="mr-2 animate-spin" size={18} />
           <span>Join VDAT</span>
-          <ExternalLink size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+          <ExternalLink
+            size={16}
+            className="ml-1 group-hover:translate-x-1 transition-transform"
+          />
         </a>
       </div>
 
@@ -192,10 +308,11 @@ const RegistrationPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {vlsiHighlights.map((highlight, index) => (
-              <div key={index} className="text-center text-white transform hover:scale-105 transition-all duration-300">
-                <div className="mb-4 flex justify-center">
-                  {highlight.icon}
-                </div>
+              <div
+                key={index}
+                className="text-center text-white transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="mb-4 flex justify-center">{highlight.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
                 <p className="text-white/80">{highlight.description}</p>
               </div>
@@ -204,10 +321,12 @@ const RegistrationPage = () => {
         </div>
       </section>
 
+      {/* --- ADD REGISTRATION PROCESS & BANK DETAILS HERE --- */}
+      <RegistrationDetails />
       {/* Prominent VLSI Registration Call-to-Action Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden opacity-10">
           <div className="absolute top-10 left-10 animate-float">
@@ -230,15 +349,17 @@ const RegistrationPage = () => {
               </h2>
               <Target className="text-yellow-300 ml-4" size={48} />
             </div>
-            
+
             <p className="text-xl text-white/95 mb-4 leading-relaxed">
-              Don't miss VDAT-2025 - India's premier VLSI Design & Test conference! 
+              Don't miss VDAT-2025 - India's premier VLSI Design & Test
+              conference!
             </p>
             <p className="text-lg text-cyan-200 mb-8 leading-relaxed">
-              Join 500+ VLSI professionals, researchers, and industry leaders. Experience cutting-edge 
-              semiconductor innovations, advanced testing methodologies, and next-generation design tools.
+              Join 500+ VLSI professionals, researchers, and industry leaders.
+              Experience cutting-edge semiconductor innovations, advanced
+              testing methodologies, and next-generation design tools.
             </p>
-            
+
             <div className="flex flex-col lg:flex-row gap-8 justify-center items-center">
               <a
                 href={GOOGLE_FORM_LINK}
@@ -248,19 +369,31 @@ const RegistrationPage = () => {
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-50 blur-sm group-hover:opacity-75 animate-pulse"></div>
                 <div className="relative flex items-center">
-                  <CircuitBoard className="mr-3 text-cyan-600 animate-pulse group-hover:animate-spin" size={32} />
+                  <CircuitBoard
+                    className="mr-3 text-cyan-600 animate-pulse group-hover:animate-spin"
+                    size={32}
+                  />
                   REGISTER FOR VDAT
-                  <ExternalLink className="ml-3 group-hover:translate-x-2 transition-transform" size={28} />
+                  <ExternalLink
+                    className="ml-3 group-hover:translate-x-2 transition-transform"
+                    size={28}
+                  />
                 </div>
               </a>
-              
+
               <div className="text-white text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start mb-2">
                   <Clock className="mr-2 text-yellow-300" size={24} />
-                  <p className="text-lg font-semibold">⏰ Early Bird Deadline:</p>
+                  <p className="text-lg font-semibold">
+                    ⏰ Early Bird Deadline:
+                  </p>
                 </div>
-                <p className="text-3xl font-bold text-yellow-300">July 10, 2025</p>
-                <p className="text-sm text-cyan-200 mt-1">Save up to Rs 2000!</p>
+                <p className="text-3xl font-bold text-yellow-300">
+                  July 10, 2025
+                </p>
+                <p className="text-sm text-cyan-200 mt-1">
+                  Save up to Rs 2000!
+                </p>
               </div>
             </div>
           </div>
@@ -283,13 +416,17 @@ const RegistrationPage = () => {
         <div className="bg-white p-10 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 max-w-5xl mx-auto">
           <div className="flex items-center mb-6">
             <Microscope className="text-blue-600 mr-3" size={32} />
-            <h3 className="text-2xl font-bold text-gray-800">Welcome to VDAT-2025</h3>
+            <h3 className="text-2xl font-bold text-gray-800">
+              Welcome to VDAT-2025
+            </h3>
           </div>
-          
+
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            VDAT-2025 is India's flagship conference on VLSI Design and Test, bringing together the brightest minds 
-            in semiconductor technology. Whether you're advancing nanometer designs, developing next-gen testing methodologies, 
-            or exploring AI-driven EDA tools, VDAT is your gateway to the future of silicon innovation.
+            VDAT-2025 is India's flagship conference on VLSI Design and Test,
+            bringing together the brightest minds in semiconductor technology.
+            Whether you're advancing nanometer designs, developing next-gen
+            testing methodologies, or exploring AI-driven EDA tools, VDAT is
+            your gateway to the future of silicon innovation.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -307,7 +444,9 @@ const RegistrationPage = () => {
                     <p className="font-bold text-gray-800">
                       Early Bird Registration:
                     </p>
-                    <p className="text-violet-700 font-semibold">Ends July 10, 2025</p>
+                    <p className="text-violet-700 font-semibold">
+                      Ends July 10, 2025
+                    </p>
                     <p className="text-sm text-gray-600">Save up to Rs 2000!</p>
                   </div>
                 </li>
@@ -317,8 +456,12 @@ const RegistrationPage = () => {
                     <p className="font-bold text-gray-800">
                       VDAT-2025 Conference:
                     </p>
-                    <p className="text-blue-700 font-semibold">August 7-9, 2025</p>
-                    <p className="text-sm text-gray-600">3 days of VLSI excellence</p>
+                    <p className="text-blue-700 font-semibold">
+                      August 7-9, 2025
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      3 days of VLSI excellence
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -335,7 +478,9 @@ const RegistrationPage = () => {
                 {registrationIncludes.map((item, index) => (
                   <li key={index} className="flex items-start">
                     {item.icon}
-                    <span className="text-gray-700 text-sm leading-relaxed">{item.item}</span>
+                    <span className="text-gray-700 text-sm leading-relaxed">
+                      {item.item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -356,7 +501,8 @@ const RegistrationPage = () => {
           </div>
           <div className="h-1 w-32 bg-gradient-to-r from-violet-600 to-cyan-500 mx-auto"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Invest in your VLSI future with competitive registration rates designed for all professionals
+            Invest in your VLSI future with competitive registration rates
+            designed for all professionals
           </p>
         </div>
 
@@ -402,17 +548,25 @@ const RegistrationPage = () => {
                       <div>
                         <div className="font-bold">{fee.type}</div>
                         {fee.type.includes("Student") && (
-                          <div className="text-xs text-green-600 font-medium">Special Student Rate</div>
+                          <div className="text-xs text-green-600 font-medium">
+                            Special Student Rate
+                          </div>
                         )}
                       </div>
                     </div>
                   </td>
                   <td className="p-6 text-center border-r border-gray-200">
-                    <div className="font-bold text-xl text-green-600">{fee.earlyFee}</div>
-                    <div className="text-xs text-green-500 font-medium">SAVE BIG!</div>
+                    <div className="font-bold text-xl text-green-600">
+                      {fee.earlyFee}
+                    </div>
+                    <div className="text-xs text-green-500 font-medium">
+                      SAVE BIG!
+                    </div>
                   </td>
                   <td className="p-6 text-center">
-                    <div className="font-bold text-xl text-blue-600">{fee.lateFee}</div>
+                    <div className="font-bold text-xl text-blue-600">
+                      {fee.lateFee}
+                    </div>
                     <div className="text-xs text-gray-500">Standard Rate</div>
                   </td>
                 </tr>
@@ -462,7 +616,10 @@ const RegistrationPage = () => {
               rel="noopener noreferrer"
               className="flex items-center px-10 py-5 bg-white text-purple-700 font-bold text-xl rounded-3xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105"
             >
-              <CircuitBoard className="mr-3 text-cyan-600 animate-spin" size={28} />
+              <CircuitBoard
+                className="mr-3 text-cyan-600 animate-spin"
+                size={28}
+              />
               Complete Your VDAT Registration
               <ExternalLink className="ml-3" size={24} />
             </a>
@@ -474,7 +631,7 @@ const RegistrationPage = () => {
       </section>
 
       {/* Footer would go here */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
