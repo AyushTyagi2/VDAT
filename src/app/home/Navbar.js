@@ -27,6 +27,7 @@ const Navbar = () => {
   const menuItems = [
     { label: "Home", href: "/" },
     {label:"Registration", href:"/registration"},
+    {label:"Camera Ready Submission Guidelines", href:"/camera_ready"},
     {
       label: "Call for Submissions",
       onClick: togglePapersDropdown,
@@ -64,10 +65,10 @@ const Navbar = () => {
       
         <div className="lg:block flex ">
         <Link href="/" className="flex mx-5 mt-3 items-center space-x-4">
-          <Image src="/vlsi.png" alt="VLSI Society of India Logo" width={70} height={70} />
+          <Image src="/vlsi.png" alt="VLSI Society of India Logo" width={60} height={60} />
           <h2 className="text-4xl font-bold tracking-wide text-purple-600"><strong>VDAT 2025</strong>  </h2>
         </Link>
-        <div className="container mx-5 py-4  justify-between items-center">
+        <div className="container mx-1 py-2  justify-between items-center">
         <div className="hidden lg:flex space-x-6 lg:space-x-8">
           {menuItems.map((item, index) => (
             <div key={index} className=" nav relative group">
