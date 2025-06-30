@@ -27,15 +27,25 @@ const Navbar = () => {
   const menuItems = [
     { label: "Home", href: "/" },
     {label:"Registration", href:"/registration"},
-    {label:"Camera Ready Submission Guidelines", href:"/camera_ready"},
+    
     {
       label: "Call for Submissions",
       onClick: togglePapersDropdown,
       dropdown: [
+        {label:"Camera Ready Submission Guidelines", href:"/camera_ready"},
         { label: "Call For Papers", href: "/submissions" },
         { label: "Call for Tutorials", href: "/callfortutorials" },
         {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},
         {label: "PHD-FORUM", href: "/phdforum"},
+      ],
+    },
+     {
+      label: "Programs",
+      onClick: togglePapersDropdown,
+      dropdown: [
+        { label: "Main Programs", href: "/mpro" },
+        { label: "Tutorials", href: "/tut" },
+
       ],
     },
     { label: "Speakers", href: "/Speakers" },
