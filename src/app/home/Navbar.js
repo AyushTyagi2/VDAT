@@ -37,7 +37,6 @@ const Navbar = () => {
         { label: "Call for Tutorials", href: "/callfortutorials" },
         {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},
         {label: "PHD-FORUM", href: "/phdforum"},
-        {label: "Camera Ready Submissions", href: "/camera"},
 
       ],
     },
