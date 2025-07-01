@@ -81,7 +81,7 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 lg:space-x-8">
           {menuItems.map((item, index) => (
             <div key={index} className=" nav relative group">
-              <Link href={item.href || "#"} className="text-lg font-semibold tracking-wide hover:text-purple-500" onClick={item.onClick}>
+              <Link href={item.href || "#"} className="text-lg lg:text-[1.4vw] font-semibold tracking-wide hover:text-purple-500" onClick={item.onClick}>
                 {item.label}
               </Link>
               {item.dropdown && (
