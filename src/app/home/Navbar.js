@@ -29,7 +29,7 @@ const Navbar = () => {
     {label:"Registration", href:"/registration"},
     
     {
-      label: "Call for Submissions",
+      label: "Authors",
       onClick: togglePapersDropdown,
       dropdown: [
         {label:"Camera Ready Submission Guidelines", href:"/camera_ready"},
