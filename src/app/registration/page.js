@@ -150,10 +150,7 @@ const RegistrationDetails = () => (
             <p>
               Once you complete the payment, please register using the following
               link (you need to upload the payment proof to complete the
-              registration):{" "}
-              <span className="font-bold text-red-600">
-                &lt;TBA Payment Link&gt;
-              </span>
+              registration)
             </p>
           </li>
         </ol>
