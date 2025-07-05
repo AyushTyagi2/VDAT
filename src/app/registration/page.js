@@ -38,7 +38,7 @@ const registrationFees = [
     lateFee: "Rs 9000/ $200",
   },
   {
-    type: "Working Professionals/Academicians",
+    type: "Working Professionals/Academicians & Authors Full Registration for accepted papers",
     earlyFee: "Rs 8500/ $175",
     lateFee: "Rs 10000/ $225",
   },
