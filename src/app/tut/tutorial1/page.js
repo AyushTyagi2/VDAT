@@ -7,149 +7,156 @@ import TutorialComponent from "../tutcomponent.js";
 const TutorialPage = () => {
   const tutorialData = {
     title:
-      "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
+      "Building RISC-V based System on Chips (SoC) – Embedded to AI Enabled SoCs",
     duration: "180 minutes",
-    speakers: ["Venkata Reddy Kolagatla", "Vivian Desalphine"],
+    speakers: [
+      "Mr. Aneesh Raveendran",
+      "Vivian Desalphine",
+      "Dr. Pranose J Edavoor",
+      "Dr. Raja Sekar K",
+    ],
     format: "Presentation",
     //autofill from above, TAKE THE TEXT EXACTLY AS IT IS
     // from the above text, do not change the text, just copy paste it
-    abstract:
-      "ChipIN Centre under Chips to Startup (C2S) Programme was set up at C-DAC Bangalore by Ministry of Electronics and Information Technology (MeitY), Government of India, to catalyze chip designing in India by catering to fabless chip design ecosystem in the country. The facility provides Multi-Project Wafer (MPW) support to Academic Institutions, Startups and MSMEs by enabling access to SCL foundry and overseas foundries. It provides centralized EDA Design Tools (Synopsys, Cadence, and Siemens-EDA, Xilinx, Ansys, Keysight, Silvaco) for IC design flow. The facility also provides design services like Fab compliance checks, validation, integration of designs, coordinating with identified firm for packaging of fabricated chips and enabling characterization and prototyping in a centralized manner. A significant component of this effort is exposing Academia, Govt. R&D organizations, and Startups/MSMEs to the entire VLSI Design flow necessary to have their designs ready for fabrication at SCL Foundry.",
-    domain:
-      "Electronics Design Automation, Testing and Verification, Packaging and Manufacturing",
-    keywords:
-      "SCL 180nm CMOS process, Digital and Analog/Mixed-Signal ASIC designs, Design for Manufacturability (DFM), Reliability and Integrity, Physical Verification and Validation, Tape-out, Packaging",
+    abstract: `The open-source RISC-V Instruction Set Architecture (ISA) is revolutionizing system-on-chip (SoC) design by enabling scalable, customizable, and cost-effective solutions for a wide range of applications, from low-power embedded systems to high-performance AI edge processors.
+
+Unlike proprietary ISAs, RISC-V’s open ecosystem fosters innovation, allowing designers to tailor hardware to specific workloads without licensing barriers.
+
+This full-day, hands-on tutorial offers a comprehensive, step-by-step guide to designing, verifying, and prototyping RISC-V-based SoCs. It equips attendees with a systematic methodology to build application-specific SoCs, covering core selection, ISA customization, peripheral integration, AI accelerator interfacing, and FPGA prototyping.
+
+The session is designed for VLSI designers, embedded system engineers, and AI hardware developers seeking practical skills to leverage RISC-V in real-world projects.
+
+---
+
+The tutorial begins with an in-depth overview of the RISC-V ISA, highlighting its modularity and extensibility. Participants will explore how RISC-V supports diverse applications, from resource-constrained embedded systems to compute-intensive tasks like AI inference and cryptographic processing.
+
+The session will guide attendees through the process of selecting appropriate RISC-V cores (e.g., RV32I, RV64G) based on performance, power, and area constraints. It will also cover techniques for customizing or extending the ISA to meet domain-specific requirements, such as adding custom instructions for signal processing or machine learning workloads.
+
+Practical examples will demonstrate how to balance design trade-offs while ensuring compatibility with the RISC-V ecosystem.
+
+---
+
+Next, the tutorial delves into SoC architecture design, focusing on the integration of RISC-V cores with on-chip components.
+
+Attendees will learn to implement efficient interconnects using industry-standard bus protocols like AXI4 and AHB, ensuring seamless communication between processor cores, memory subsystems, and peripherals.
+
+The session will cover memory mapping strategies to optimize data flow and minimize latency, alongside the integration of standard peripherals such as UART, SPI, I2C, and GPIO.
+
+Real-world design considerations, such as power management and clock domain crossing, will be addressed to provide a holistic view of SoC development.
+
+---
+
+A key focus of the tutorial is enabling AI functionality in RISC-V-based SoCs. Participants will learn how to interface RISC-V cores with custom hardware blocks, such as multiply-accumulate (MAC) arrays, vector processing units, and dedicated AI accelerators.
+
+The session will explore the use of standard bus interfaces for integrating these components, alongside techniques like direct memory access (DMA) for efficient data transfers.
+
+Topics such as co-simulation for hardware-software validation, real-time task scheduling for AI workloads, and optimization of compute pipelines will be discussed.
+
+Practical examples will illustrate how to achieve high throughput and low latency for AI applications at the edge.
+
+---
+
+The final segment of the tutorial focuses on verification, simulation, and prototyping of RISC-V-based SoCs.
+
+Attendees will gain hands-on experience with ASIC design tools for simulation and synthesis, learning how to verify SoC functionality and performance.
+
+The session will cover FPGA prototyping on platforms like Xilinx or Intel boards, enabling participants to test their designs in hardware.
+
+Techniques for benchmarking and profiling SoCs at the hardware level will be demonstrated, with a focus on metrics like power consumption, throughput, and latency.
+
+Applications ranging from embedded control systems to AI inference will be showcased to highlight the versatility of RISC-V SoCs.
+
+---
+
+This tutorial is highly practical, supported by example projects, simulation outputs, and reusable scripts that attendees can adapt for their own designs post-symposium.
+
+Hands-on exercises will reinforce key concepts, allowing participants to experiment with RISC-V core configurations, peripheral integration, and AI accelerator interfacing.
+
+By the end of the session, attendees will be equipped to design, verify, and prototype their own RISC-V-based SoCs, bridging the gap between theoretical concepts and real-world implementation.
+
+This tutorial is ideal for professionals and researchers aiming to harness the power of RISC-V for next-generation SoC development.
+`,
+    domain: "CPU Design, Digital VLSI, System on Chip Design, AI based System",
+    keywords: `RISC-V, System-on-Chip (SoC), Instruction Set Architecture
+(ISA), AI accelerators, AI enabled SoCs, AXI4, Interconnects,
+Peripherals (UART, SPI, I2C, GPIO), Hardware Prototyping`,
     learningOutcomes: [
-      "Provides a detailed overview of the essential tapeout checks required for successfully designing and tape-out of Digital, Analog, and Mixed-Signal VLSI circuit designs using SCL 180nm technology.",
-      "It serves as a comprehensive guide for designers, offering critical insights and necessary inputs for preparing and submitting designs to SCL foundry.",
-      "This resource aims to ensure clarity and facilitate the seamless execution of tapeout processes, thereby enhancing the overall quality and reliability of integrated circuit fabrication for SCL 180nm Process Design Kit (PDK).",
-      "Vital resource for designers preparing to submit their designs to SCL, offering invaluable guidance and clarity.",
-      "Students and professionals working in the fields of ASIC design and verification, electronics product development, and related fields have a great opportunity to learn about Digital, Analog/Mixed-Signal design verification and validation flow targeting SCL 180nm technology node.",
+      "Understand the RISC-V ISA and Extensions",
+      "Select and Customize RISC-V Cores",
+      "Design RISC-V-Based SoC Architectures",
+      "Integrate Peripherals and Interfaces",
+      "Develop Embedded SoCs",
+      "Develop AI-Enabled SoCs",
+      "Implement Real-Time AI Workload Optimization",
+      "Verify and Simulate SoC Designs",
+      "Prototype SoCs on FPGA Platforms",
+      "Validate SoCs using applications",
     ],
-    targetAudience:
-      "The tutorial caters to a diverse audience, including VLSI professionals, experts, researchers, physical designers, custom layout developers, tech enthusiasts, students and lecturers.",
-    prerequisites:
-      "Should be familiar with basics of VLSI, Foundry Process and Technology, Digital and Analog Systems, basic knowledge of Digital VLSI ASIC design, and custom CMOS Analog/Mixed-Signal circuit design.",
+    prerequisites: "Knowledge of computer architecture",
     speakerBiographies: [
-      `Venkata Reddy Kolagatla is a Scientist-D working at C-DAC Bangalore for the past seven years.
-Earlier, he worked with Synopsys India Pvt. Ltd. for one year as Senior Analog Design Engineer
-and prior to that, for three years at Sandisk India Pvt Ltd as Design Engineer II. He is Gold
-Medalist from the prestigious NIT Tiruchirappalli in his masters in the VLSI Systems
-specialization. He completed his B.Tech from Vignan’s Engineering College affiliated to JNTU
-Kakinada in Electronics and Communication Engineering (ECE).
-During his professional career at Synopsys and Sandisk, he worked on SDR/DDR1/DDR2/DDR3
-industry standard Signal/Power Integrity aware IO Designs (Input receivers and Output
-transmitters) with Electrostatic discharge (ESD) and Latch-up considerations. His contributions
-involve design & development of peripherals (include Analog mixers, Duty Cycle Correctors,
-Frequency Dividers, Signal Drivers, On-Die Termination (ODT) Circuits, Calibration Circuits for
-Process Voltage & Temperature variations) for Single Data Rate (SDR), Double Data Rate
-(DDR), DDR2 and DDR3 speeds of 2D/3D NAND flash memories.
-Currently at C-DAC Bangalore, Mr. Venkat has worked in the areas of Cryptography, tamper
-resistant Crypto IP Cores Design, Development and Validation, System-On-Chip (SoC) Design
-and Development, SoC Peripherals such as Serial Peripheral Interface (SPI), Quad SPI (QSPI),
-Pulse Width Modulator (PWM), General Purpose Input Output Circuits (GPIOs), Timers,
-Watchdog Timer (WDT) Design and Implementation, Digital ASIC Physical Design and Physical
-Verification, etc.
-He played a key role in earlier SMDP C2SD project where he was instrumental in establishing
-RTL to GDS II IC Design flow using SCL 180nm PDK with the Cadence and Siemens EDA Tools.
-The experience gained was tremendously valuable in the physical verification of the various
-designs from academic institutes across the country. As part of Chip Centre, he led a team
+      `Mr. Aneesh Raveendran, working as a Scientist-D in CDAC Bangalore. He is actively involved
+architecture design, verification, Validation and prototyping of Digital IP cores targeted for
+FPGA and ASIC. His contributions are in the areas are RISC-V CPU Design, RISC-V based
+System on Chip, Level-1 Cache Architecture, Arithmetic Circuits, Cryptographic Accelerators,
+Floating-Point Unit and Posit arithmetic Unit. He holds a Masters degree in VLSI Design and
+Published his research work in many reputed VLSI Conferences/journals.`,
+`Mr. Vivian Desalphine working as a Scientist-F/Group Head at ChipIN Centre at Centre for
+Development of Advanced Computing (C-DAC), Bangalore, India. His areas of interest are
+Microprocessor Architectures, Caches, Secure cache architectures, RISC-V based SoC
+designs, Gigabit Networking and Digital system design based on FPGA platform. He has
+several paper publications in international conferences/journals and patents.`,
+`Dr. Pranose J Edavoor a Knowledge Associate at ChipIN Centre at Centre for Development of
+Advanced Computing (C-DAC), Bangalore, India. His areas of interest are Microprocessor
+Architectures, GPU Architecture, AI Accelerators, Cache memories, RISC-V based SoC
+designs for FPGA and ASIC. He holds a Doctorate degree in from NIT Goa and He has several
+paper publications in reputed international conferences and journals.`,
+`Dr. Raja sekar K is working as a Senior Project Engineer at ChipIN Centre at Centre for
+Development of Advanced Computing (C-DAC), Bangalore, India. His areas of interest are
+Secure Microprocessor Architectures, Crypto Accelerator, Post Quantaum, RISC-V based SoC
+designs for FPGA and ASIC. He holds a Doctorate degree in from NIT Trichy and He has
+several paper publications in reputed international conferences and journals.`],
+    basicStructure: `1. Introduction to RISC-V ISA & Extensions (10 mins, Mr. Vivian Dealphine)
+ RISC-V philosophy and ecosystem
+ Key features and modular ISA structure
+ Various RISC-V ISA Extensions
+2. Selecting and Customizing RISC-V Cores (10 mins, Mr. Vivian Dealphine)
+ Overview of open-source cores (e.g., Rocket, CVA6, PicoRV32, etc.)
+ RISC-V Core selection criteria based on application
+ Custom instruction set extensions (e.g., for AI or crypto)
+3. SoC Architecture Design Principles (20mins, Mr. Aneesh Raveendran )
+ SoC-level component planning: processor, memory, peripherals
+ Integration of tightly- and loosely-coupled hardware blocks
+4. Interconnects and Bus Protocols (15 mins, Mr. Aneesh Raveendran)
+ Overview of standard protocols: AXI4, AHB, APB
+ Designing efficient memory maps
 
-that carried out the physical design of SPI enabled AES Encryptor and IEEE 754 FPU (Single-
-Precision) Digital ASICs from RTL design to GDS-II generation using SCL 180nm foundry PDK
-
-and successfully completed the tapeout for both the designs to SCL Foundry. As part of ChipIN
-Centre activities under Chips to Start-up (C2S) Programme, he is involved in design and
-
-development activities targeting ASIC and technically supporting various academic institutes
-across the country.
-His technical strengths and interests include FPGA and ASIC based design and development,
-Analog and Mixed-Signal Design, IP core development of algorithms for Cryptanalysis/
-Cryptography, Post Quantum Cryptography, Signal Integrity, and Power Integrity aware IO
-design, SoC design and development. He has numerous publications in reputed international
-journals and conferences, and he has presented at various seminars, workshops, and
-international conferences; he is widely recognized for his impactful research contributions.`,
-      `Vivian Desalphine is Scientist-F at Centre for Development of Advanced Computing (C-DAC),
-Bangalore with 20 years of experience. He is currently involved in Chips-to-Startup
-Programme, Design Linked Incentive and RISC-V based GPU development. He has been
-involved in various projects and programmes of national importance, viz. Microprocessor
-Development Programme, Chip-Centre for SMDP Chips-to-Systems Design, Cryptographic
-Module Validation Technologies, Enhanced Decryption Tool on Heterogeneous Platform,
-
-Design and Development of a Cooperative High Performance Traffic Generator for Time-
-Sensitive Network Analysis, Advanced Research in Ubiquitous Computing, Cryptanalysis:
-
-Novel Approaches and Intelligent techniques. His research interests include Computer
-Architecture, VLSI design and implementation, embedded processor subsystem design,
-caches, secure microprocessor architectures, SoC design, memory controllers, wired and
-wireless network media access controller design, hardware acceleration of domain-specific
-applications, ASIC & FPGA-based digital designs, etc.
-His professional experience includes Digital VLSI design and development, IP core design and
-development of hardware modules for RISC-V based microprocessor and GPU, FIPS 140-2
-security compliant IP core design and development, IP integration and tapeout activities for
-Digital Design tapeout as part of Chip-Centre, IP core design and development of algorithms
-for Cryptanalysis/Cryptography, IP Core design and development for next-generation Gigabit
-(10GbE/40GbE) Ethernet MACs and IEEE 802.15.4 MAC hardware primitives, etc.
-He holds a B.Tech in Electronics and Communications Engineering from the University of
-Kerala, and has completed his Masters in Digital Signal Processing from the Department of
-Electronic & Electrical Engineering, University of Strathclyde, United Kingdom. His research
-has been published in several international conferences, and he has presented at various
-seminars, workshops, and international conferences. In addition, he has filed a patent and
-also been involved in numerous efforts towards industry transfer of technology.`,
-    ],
-    basicStructure: `The tutorial titled:
-“Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed‑Signal IC Designs for SCL 180nm CMOS Technology Node”
-will be highly relevant to students, researchers and professionals working in the area of ASIC design.
-
-1. Introduction and Overview of Physical Validation (30 Mins)
-   - Introduction to ChipIN Centre and Physical verification & validation of designs for SCL 180nm PDK
-   - Digital and Analog/Mixed‑Signal ASICs fabricated at SCL 180nm foundry
-
-2. Procedures Prior To Physical Verification for the Digital & Analog/Mixed‑Signal Designs Using SCL 180nm PDK (60 Mins)
-   - Insertion of Silicon Number
-   - Seal‑ring Placement
-   - Die Protection requirements
-   - Pad pitch Requirements
-   - Crystal Oscillator Pads and their placement
-   - Power pads and Filler Cells requirements
-   - Clock Pads (Clock buffers) requirements and placement
-   - Output pads drive strength requirements to drive the load
-   - Input pads termination circuitry requirements to avoid signal reflections
-   - Dummy Cells Placement
-   - Powering the Full‑Chip for SCL 180nm technology
-   - IO Pad Ring Establishment with Cut‑cells (pvcf)
-   - IO Pad Ring Establishment with Cut‑cells (pvce)
-
-3. Physical Verification of the Digital & Analog/Mixed‑Signal Designs Using SCL 180nm Technology PDK (50 Mins)
-   - Design Rule Checks
-   - Electrical Rule Checks
-   - Antenna Checks
-   - Layout versus Schematic
-   - PEX Extraction
-   - Spice Simulations (for all PVT variations)
-   - Design for Manufacturability
-   - Design for Reliability
-   - Design for Integrity
-   - Design for Assembly
-   - Timing Sign‑off
-   - Tape‑out Sign‑off
-   - Tapeout submission form checklist
-   - Reticle Definitions
-   - MPW Shuttles for Fabrication
-
-4. Packaging Requirements (30 Mins)
-   - QFN Packaging Definitions
-   - Bond Pad Rules
-   - Rules for Bond wire
-   - Bonding Diagram
-   - Labelling
-   - Segmentation
-
-5. Critical Checklist for Tape‑out and Packaging (10 Mins)
-   - For Analog Designs
-   - For Digital Designs
-   - For Mixed‑Signal Designs
-   - For Packaging`,
+5. Peripheral Integration (15 mins, Dr. Raja Sekar K)
+ Adding and interfacing UART, SPI, I2C, GPIO
+ Timer and interrupt controller integration
+ Custom peripheral block interfacing
+6. System-Level Verification & Co-Simulation (15 mins, Mr. Aneesh Raveendran)
+ Setting up testbenches for SoC validation
+ Using Verilator, cocotb, or commercial tools
+ Hardware-software co-simulation flows
+7. DMA and Memory Subsystem Design (15 mins, Mr. Raja Sekar K)
+ Role of DMA in high-throughput SoCs
+ Shared memory access and buffering
+ Low-latency communication strategies
+8. AI Accelerators (20 mins, Dr. Pranose J Edavoor)
+ Introduction of AI system
+ AI Accelerator architecture
+9. RISC-V based AI SOCs (20 mins, Dr. Pranose J Edavoor)
+ Memory map definition for AI accelerator
+ Overview of AI accelerators and vector units
+ Interfacing MAC arrays or custom compute blocks
+ ISA extensions for AI workloads (e.g., RISC-V Vector, DSP, Zk\* extensions)
+10. Real-Time Scheduling & Software Stack (15 mins, Mr. Aneesh Raveendran)
+ Task scheduling in AI/embedded SoCs
+ RTOS or bare-metal software support
+ Bootloader, drivers, and runtime initialization
+11. Case Study / Examples (20 mins, Mr. Aneesh Raveendran)
+ Building a minimal RISC-V SoC with peripherals
+ Example integration of an AI accelerator`,
 
     youtubeVideoId: "", // Replace with actual video ID
   };

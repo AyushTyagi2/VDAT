@@ -22,12 +22,12 @@ const ConferenceScheduleTable = () => {
       analogDesign: {
         title: "Testing & characterization of data converters",
         code: "IITR/IITD– 180",
-        path: ""
+        path: "tutorial2"
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
         code: "microchip -180",
-        path: ""
+        path: "tutorial3"
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
@@ -51,12 +51,12 @@ const ConferenceScheduleTable = () => {
       analogDesign: {
         title: "Testing & characterization of data converters",
         code: "IITR/IITD– 180",
-        path: ""
+        path: "tutorial2"
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
         code: "microchip– 180",
-        path: ""
+        path: "tutorial3"
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
