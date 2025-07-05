@@ -419,7 +419,7 @@ will be highly relevant to students, researchers and professionals working in th
    - For Mixed‑Signal Designs
    - For Packaging`,
 
-    youtubeVideoId: "dQw4w9WgXcQ", // Replace with actual video ID
+    youtubeVideoId: "", // Replace with actual video ID
   };
 
   return (

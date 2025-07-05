@@ -59,14 +59,12 @@ export default function EnhancedTutorialComponent({
   abstract = "",
   domain = "",
   keywords = "",
-  learningOutcomes = [],
   targetAudience = "",
   prerequisites = "",
   speakerBiographies = [],
   speakerLinkedIns = [],
   speakerWebsites = [],
   basicStructure = "",
-  keyLearningOutcomes = [],
   youtubeVideoId = "",
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -98,12 +96,6 @@ export default function EnhancedTutorialComponent({
     .split(",")
     .map((k) => k.trim())
     .filter((k) => k);
-  const outcomesList = Array.isArray(learningOutcomes)
-    ? learningOutcomes
-    : learningOutcomes
-        .split("•")
-        .map((o) => o.trim())
-        .filter((o) => o);
 
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-900 transition-colors duration-700 min-h-screen">
@@ -205,9 +197,8 @@ export default function EnhancedTutorialComponent({
           <div className="flex overflow-x-auto scrollbar-hide">
             {[
               { id: "overview", label: "Overview", icon: Target },
-              { id: "speakers", label: "Speakers", icon: User },
               { id: "content", label: "Content", icon: Layers },
-              { id: "outcomes", label: "Outcomes", icon: Star },
+              { id: "speakers", label: "Speakers", icon: User }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -251,12 +242,6 @@ export default function EnhancedTutorialComponent({
                     label: "Domain",
                     value: domain,
                     gradient: "from-purple-500 to-pink-500",
-                  },
-                  {
-                    icon: Users,
-                    label: "Target Audience",
-                    value: targetAudience,
-                    gradient: "from-blue-500 to-cyan-500",
                   },
                   {
                     icon: Award,
