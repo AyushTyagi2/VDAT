@@ -15,19 +15,19 @@ const ConferenceScheduleTable = () => {
       timeSlot: "9 to 10:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: ""
+        path: "ts2"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
-        path: ""
+        path: "ts2"
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        path: ""
+        path: "ts2"
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: ""
+        path: "ts2"
       }
     },
     {
@@ -40,24 +40,24 @@ const ConferenceScheduleTable = () => {
       timeSlot: "11 to 12:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: ""
+        path: "ts2"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
-        path: ""
+        path: "ts2"
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        path: ""
+        path: "ts2"
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: ""
+        path: "ts2"
       }
     },
     {
       time: "Lunch Break",
-      timeSlot: "",
+      timeSlot: "ts2",
       isBreak: true
     },
     {
@@ -90,19 +90,19 @@ const ConferenceScheduleTable = () => {
       timeSlot: "4 to 5:30",
       system: {
         title: "Design of a Battery-less Wireless Sensor Node Powered by RF Energy Harvester",
-        path: ""
+        path: "ts2"
       },
       analogDesign: {
         title: "Neuromorphic Sensors: Architectures, IC Design Techniques, and Emerging Applications",
-        path: ""
+        path: "ts2"
       },
       digitalDesign: {
         title: "Workshop on Accelerating System Design: HDL Code Generation and Verification Techniques",
-        path: ""
+        path: "ts2"
       },
       deviceLevel: {
         title: "Reliability-Aware Journey from FinFET to Stacked transistor",
-        path: ""
+        path: "ts2"
       }
     }
   ];
