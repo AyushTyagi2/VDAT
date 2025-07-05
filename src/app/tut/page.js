@@ -90,38 +90,36 @@ const ConferenceScheduleTable = () => {
       timeSlot: "4 to 5:30",
       system: {
         title: "Design of a Battery-less Wireless Sensor Node Powered by RF Energy Harvester",
-        path: ""
+        path: "tut9"
       },
       analogDesign: {
         title: "Neuromorphic Sensors: Architectures, IC Design Techniques, and Emerging Applications",
-        path: ""
+        path: "tut10"
       },
       digitalDesign: {
         title: "Workshop on Accelerating System Design: HDL Code Generation and Verification Techniques",
-        path: ""
+        path: "tut11"
       },
       deviceLevel: {
         title: "Reliability-Aware Journey from FinFET to Stacked transistor",
-        path: ""
+        path: "tut12"
       }
     }
   ];
 
   const SessionLink = ({ session }) => (
-    <div className="p-3 h-full">
+    <div className="p-1 sm:p-3 h-full">
       <Link 
         href={`tut/${session.path}`}
-        className="block text-sm leading-relaxed hover:text-blue-600 transition-colors duration-200 group"
+        className="block text-xs sm:text-sm leading-tight sm:leading-relaxed hover:text-blue-600 transition-colors duration-200 group"
       >
-        <span className="font-medium group-hover:underline text-black">{session.title}</span>
+        <span className="font-medium group-hover:underline text-black line-clamp-3 sm:line-clamp-none">{session.title}</span>
         <ExternalLink className="inline-block w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
       </Link>
     </div>
   );
 
-
-
- return (
+  return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans">
       <div className="bg-black">
         <Navbar />
@@ -159,41 +157,40 @@ const ConferenceScheduleTable = () => {
         </div>
       </header>
 
-      <div className="max-w-full mx-auto p-6 bg-gray-50 min-h-screen">
+      <div className="max-w-full mx-auto p-2 sm:p-6 bg-gray-50 min-h-screen">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
-            <h2 className="text-2xl font-bold text-center">Conference Schedule</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-center">Conference Schedule</h2>
           </div>
           
-          {/* Removed overflow-x-auto to prevent horizontal scrolling */}
           <div className="w-full">
             <table className="w-full border-collapse table-fixed">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="border border-gray-300 p-3 text-left font-bold text-gray-700 w-20">Time</th>
-                  <th className="border border-gray-300 p-3 text-center font-bold text-gray-700 bg-pink-100 w-1/4">System</th>
-                  <th className="border border-gray-300 p-3 text-center font-bold text-gray-700 bg-yellow-100 w-1/4">Analog Design</th>
-                  <th className="border border-gray-300 p-3 text-center font-bold text-gray-700 bg-blue-100 w-1/4">Digital Design</th>
-                  <th className="border border-gray-300 p-3 text-center font-bold text-gray-700 bg-green-100 w-1/4">Device level/fabrication</th>
+                  <th className="border border-gray-300 p-1 sm:p-3 text-left font-bold text-gray-700 text-xs sm:text-sm w-16 sm:w-20">Time</th>
+                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-pink-100 text-xs sm:text-sm">System</th>
+                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-yellow-100 text-xs sm:text-sm">Analog</th>
+                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-blue-100 text-xs sm:text-sm">Digital</th>
+                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-green-100 text-xs sm:text-sm">Device</th>
                 </tr>
               </thead>
               <tbody>
                 {scheduleData.map((row, index) => (
                   <tr key={index} className={row.isBreak ? "bg-gray-100" : "hover:bg-gray-50 transition-colors"}>
-                    <td className="border border-gray-300 p-3 text-sm font-medium text-gray-700 bg-gray-50 text-center">
+                    <td className="border border-gray-300 p-1 sm:p-3 text-xs sm:text-sm font-medium text-gray-700 bg-gray-50 text-center">
                       {!row.isBreak && (
                         <>
-                          <div>{row.time}</div>
-                          <div className="text-xs text-gray-500 mt-1">{row.timeSlot}</div>
+                          <div className="hidden sm:block">{row.time}</div>
+                          <div className="text-xs text-gray-500">{row.timeSlot}</div>
                         </>
                       )}
                     </td>
                     {row.isBreak ? (
-                      <td className="border border-gray-300 bg-gray-100 text-center p-8" colSpan={4}>
-                        <div className="text-red-600 font-medium text-lg">
+                      <td className="border border-gray-300 bg-gray-100 text-center p-4 sm:p-8" colSpan={4}>
+                        <div className="text-red-600 font-medium text-sm sm:text-lg">
                           {row.time}
                         </div>
-                        <div className="text-gray-500 text-sm mt-1">
+                        <div className="text-gray-500 text-xs sm:text-sm mt-1">
                           {row.timeSlot}
                         </div>
                       </td>
