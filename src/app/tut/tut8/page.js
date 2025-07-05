@@ -123,7 +123,7 @@ c. FinFET/Nanosheet modeling for high-frequency applications
 d. Influence of Radiation on the electrical characteristics of the device 
 e. Machine Learning Augmented TCAD Optimization  `,
 
-    youtubeVideoId: "1qtrfUlwZ2h7vQqiODmSRWxy-wK6V6QB6", 
+    youtubeVideoId: "", 
   };
 
   return (
