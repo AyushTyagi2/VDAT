@@ -577,7 +577,7 @@ export default function EnhancedTutorialComponent({
 
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
               <iframe
-                src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                src={`https://drive.google.com/file/d/${youtubeVideoId}/preview`}
                 title="Tutorial Preview"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

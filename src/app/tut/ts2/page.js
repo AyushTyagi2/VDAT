@@ -90,7 +90,7 @@ will be highly relevant to students, researchers, and professionals working in t
 – Improvements in architecture, scalability, and AI support
 – Use cases and design motivations across versions`,
 
-    youtubeVideoId: "https://youtu.be/mXtnx1_rmWU?si=IV1-HvfK13wCKFus", // Replace with actual video ID
+    youtubeVideoId: "1Ur7ozXrS2Sw5DsSufq4lY_xhHX4uMarq", // Replace with actual video ID
   };
 
   return (

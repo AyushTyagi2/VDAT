@@ -15,7 +15,7 @@ const ConferenceScheduleTable = () => {
       timeSlot: "9 to 10:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "ts2"
+        path: "tutorial1"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
@@ -29,7 +29,7 @@ const ConferenceScheduleTable = () => {
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "ts2"
+        path: "tutorial4"
       }
     },
     {
@@ -42,7 +42,7 @@ const ConferenceScheduleTable = () => {
       timeSlot: "11 to 12:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "ts2"
+        path: "tutorial1"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
@@ -56,7 +56,7 @@ const ConferenceScheduleTable = () => {
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "ts2"
+        path: "tutorial4"
       }
     },
     {
