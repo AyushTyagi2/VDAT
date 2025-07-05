@@ -15,19 +15,19 @@ const ConferenceScheduleTable = () => {
       timeSlot: "9 to 10:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "ts1"
+        path: ""
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
-        path: "ta1"
+        path: ""
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        path: "td1"
+        path: ""
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "tf1"
+        path: ""
       }
     },
     {
@@ -40,19 +40,19 @@ const ConferenceScheduleTable = () => {
       timeSlot: "11 to 12:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "ts1"
+        path: ""
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
-        path: "ta1"
+        path: ""
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        path: "td1"
+        path: ""
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "tf1"
+        path: ""
       }
     },
     {
@@ -77,7 +77,7 @@ const ConferenceScheduleTable = () => {
       },
       deviceLevel: {
         title: "NQS High-frequency Modeling of the Non-planar devices",
-        path: ""
+        path: "tf2"
       }
     },
     {
