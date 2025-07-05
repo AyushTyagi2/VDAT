@@ -17,7 +17,7 @@ const ConferenceScheduleTable = () => {
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
         code: "CDAC -180",
-        path: ""
+        path: "tutorial1"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
@@ -46,7 +46,7 @@ const ConferenceScheduleTable = () => {
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
         code: "CDAC -180",
-        path: ""
+        path: "tutorial1"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
