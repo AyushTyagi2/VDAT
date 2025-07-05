@@ -15,19 +15,19 @@ const ConferenceScheduleTable = () => {
       timeSlot: "9 to 10:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "tutorial1"
+        path: "ts1"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
-        path: ""
+        path: "ta1"
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        path: ""
+        path: "td1"
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "tutorial4"
+        path: "tf1"
       }
     },
     {
@@ -40,19 +40,19 @@ const ConferenceScheduleTable = () => {
       timeSlot: "11 to 12:30",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "tutorial1"
+        path: "ts1"
       },
       analogDesign: {
         title: "Testing & characterization of data converters",
-        path: ""
+        path: "ta1"
       },
       digitalDesign: {
         title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        path: ""
+        path: "td1"
       },
       deviceLevel: {
         title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "tutorial4"
+        path: "tf1"
       }
     },
     {
@@ -65,15 +65,15 @@ const ConferenceScheduleTable = () => {
       timeSlot: "2 to 3:30",
       system: {
         title: "Google's Tensor Processing Unit: Understanding State-of-the-art AI Accelerator",
-        path: ""
+        path: "ts2"
       },
       analogDesign: {
         title: "Design techniques for dc-dc boost converters with a high voltage conversion ratio",
-        path: ""
+        path: "ta2"
       },
       digitalDesign: {
         title: "Metric Driven Verification of a typical Low Power Mixed Signal (LPMS) SoC",
-        path: ""
+        path: "td2"
       },
       deviceLevel: {
         title: "NQS High-frequency Modeling of the Non-planar devices",
