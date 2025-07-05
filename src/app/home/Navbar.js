@@ -29,7 +29,7 @@ const Navbar = () => {
     {label:"Registration", href:"/registration"},
     
     {
-      label: "Call for Submissions",
+      label: "Authors",
       onClick: togglePapersDropdown,
       dropdown: [
         {label:"Camera Ready Submission Guidelines", href:"/camera_ready"},
@@ -37,6 +37,7 @@ const Navbar = () => {
         { label: "Call for Tutorials", href: "/callfortutorials" },
         {label: "CIRCUITPRENEUR", href: "/circuitpreneur"},
         {label: "PHD-FORUM", href: "/phdforum"},
+
       ],
     },
      {
@@ -80,7 +81,7 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 lg:space-x-8">
           {menuItems.map((item, index) => (
             <div key={index} className=" nav relative group">
-              <Link href={item.href || "#"} className="text-lg font-semibold tracking-wide hover:text-purple-500" onClick={item.onClick}>
+              <Link href={item.href || "#"} className="text-lg lg:text-[1.4vw] font-semibold tracking-wide hover:text-purple-500" onClick={item.onClick}>
                 {item.label}
               </Link>
               {item.dropdown && (

@@ -29,6 +29,8 @@ import {
   Target,
 } from "lucide-react";
 
+
+
 const registrationFees = [
   {
     type: "VSI member",
@@ -100,6 +102,8 @@ const vlsiHighlights = [
 ];
 
 const RegistrationDetails = () => (
+
+
   <section className="bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 py-16 relative overflow-hidden">
     <div className="absolute inset-0 bg-black opacity-20"></div>
     {/* Floating Icons */}
@@ -146,10 +150,7 @@ const RegistrationDetails = () => (
             <p>
               Once you complete the payment, please register using the following
               link (you need to upload the payment proof to complete the
-              registration):{" "}
-              <span className="font-bold text-red-600">
-                &lt;TBA Payment Link&gt;
-              </span>
+              registration)
             </p>
           </li>
         </ol>
@@ -199,7 +200,7 @@ const RegistrationDetails = () => (
 
 const RegistrationPage = () => {
   // Replace this with your actual Google Form link
-  const GOOGLE_FORM_LINK = "https://forms.google.com/your-form-link-here";
+  const GOOGLE_FORM_LINK = "https://forms.gle/5EDPziJ8CRHtourk8";
 
   return (
     <div className="bg-black to-white min-h-screen">
@@ -212,7 +213,7 @@ const RegistrationPage = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 to-violet-900/85"></div>
 
-        {/* Animated Circuit Pattern Overlay */}
+         
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 animate-pulse">
             <CircuitBoard size={64} className="text-cyan-300" />
@@ -248,7 +249,7 @@ const RegistrationPage = () => {
             innovation.
           </p>
 
-          {/* Highlighted Registration Button */}
+         
           <div className="mt-8">
             <a
               href={GOOGLE_FORM_LINK}
@@ -265,12 +266,12 @@ const RegistrationPage = () => {
                 className="ml-3 group-hover:translate-x-1 transition-transform"
                 size={24}
               />
-              {/* Animated ring effect */}
+               
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full opacity-30 blur group-hover:opacity-50 animate-pulse"></div>
             </a>
           </div>
 
-          {/* VLSI-themed attention text */}
+        
           <div className="mt-8 space-y-2">
             <div className="animate-bounce">
               <p className="text-cyan-300 font-bold text-lg flex items-center justify-center">
@@ -286,8 +287,13 @@ const RegistrationPage = () => {
         </div>
       </header>
 
+      {/*--------------REMOVE THE COMMENTED PART JUST BELOW AND JUST ABOVE AFTER UPDATING THE GOOGLE FORM LINK
+                                                              -By YOURS TRUELY
+                                                              AYUSH TYAGI*/}
+
       {/* Floating Registration Button - VLSI themed */}
       <div className="fixed bottom-6 right-6 z-50">
+      
         <a
           href={GOOGLE_FORM_LINK}
           target="_blank"
@@ -302,7 +308,6 @@ const RegistrationPage = () => {
           />
         </a>
       </div>
-
       {/* VLSI Highlights Section */}
       <section className="bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-900 py-12">
         <div className="container mx-auto px-6">
@@ -327,7 +332,7 @@ const RegistrationPage = () => {
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
 
-        {/* Animated Background Elements */}
+         Animated Background Elements 
         <div className="absolute inset-0 overflow-hidden opacity-10">
           <div className="absolute top-10 left-10 animate-float">
             <CircuitBoard size={120} className="text-white" />
