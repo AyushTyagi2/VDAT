@@ -274,57 +274,40 @@ const Carousel = ({
 const SponsorsSection = ({ title, items, comingSoon = false }) => (
   <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-gray-100">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 tracking-tight text-purple-700">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 tracking-tight text-purple-700">
         {title}
       </h2>
       <div className="h-1 w-24 bg-purple-500 mx-auto mb-12 rounded-full"></div>
 
       {comingSoon ? (
-        <div className="text-center">
-          <div className="flex flex-row justify-center items-center gap-6">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
-              <img
-                src="./logos/mandi__.png"
-                alt="Agmetal-Keysight Logo"
-                className="max-w-full max-h-full"
-              />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mx-auto max-w-7xl">
+          {[
+            { src: './logos/mandi__.png', alt: 'Mandi Logo' },
+            { src: './images/Agmatel_Keyisght Logo HD.png', alt: 'Agmatel-Keysight Logo' },
+            { src: './images/yourpedia.png', alt: 'YourPedia Logo' },
+            { src: './images/springer.png', alt: 'Springer Logo' },
+          ].map((logo, i) => (
+            <div
+              key={i}
+              className="w-full bg-white p-6 rounded-xl shadow-lg flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105"
+            >
+              <img src={logo.src} alt={logo.alt} className="object-contain w-full h-auto max-h-28" />
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
-              <img
-                src="./images/Agmatel_Keyisght Logo HD.png"
-                alt="Agmetal-Keysight Logo"
-                className="max-w-full max-h-full"
-              />
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
-              <img
-                src="./images/yourpedia.png"
-                alt="YourPedia Logo"
-                className="max-w-full max-h-full"
-              />
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
-              <img
-                src="./images/springer.png"
-                alt="Springer Logo"
-                className="max-w-full max-h-full"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mx-auto max-w-7xl">
           {items.map((item, index) => (
             <div
               key={index}
-              className="w-full flex justify-center items-center bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+              className="w-full bg-white p-6 rounded-xl shadow-md flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105"
             >
               <Image
                 src={item.src}
                 alt={item.alt}
                 width={150}
                 height={150}
-                className="object-contain transition duration-300 ease-in-out"
+                className="object-contain w-full h-auto max-h-28"
               />
             </div>
           ))}
