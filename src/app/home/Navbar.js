@@ -41,10 +41,10 @@ const Navbar = () => {
       ],
     },
      {
-      label: "Programs",
+      label: "Program",
       onClick: togglePapersDropdown,
       dropdown: [
-        { label: "Main Programs", href: "/mpro" },
+        { label: "Main Program", href: "/mpro" },
         { label: "Tutorials", href: "/tut" },
 
       ],

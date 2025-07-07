@@ -283,7 +283,7 @@ export default function EnhancedTutorialComponent({
                     <Lightbulb className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-                    Key Topics
+                    Key Words
                   </h2>
                 </div>
                 <div className="flex flex-wrap gap-3">

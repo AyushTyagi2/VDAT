@@ -11,8 +11,8 @@ import { Cpu, CircuitBoard, Layers, ExternalLink } from "lucide-react";
 const ConferenceScheduleTable = () => {
   const scheduleData = [
     {
-      time: "90min",
-      timeSlot: "9 to 10:30",
+      time: "9AM to 10:30AM",
+      timeSlot: "",
       system: {
         title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
         path: "tutorial1"
@@ -61,7 +61,7 @@ const ConferenceScheduleTable = () => {
     },
     {
       time: "Lunch Break",
-      timeSlot: "ts2",
+      timeSlot: "12:30PM to 2PM",
       isBreak: true
     },
     {
@@ -164,7 +164,7 @@ const ConferenceScheduleTable = () => {
       <div className="max-w-full mx-auto p-2 sm:p-6 bg-gray-50 min-h-screen">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-center">Conference Schedule</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-center">7th August 2025</h2>
           </div>
           
           <div className="w-full">
