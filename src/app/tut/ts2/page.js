@@ -18,12 +18,14 @@ const TutorialPage = () => {
 algorithms have inevitably gone hand-in-hand with the improvements in the hardware
 accelerators. Our ability to train increasingly complex AI models and achieve low-power,
 real-time inference depends on the capabilities of computing systems.
+
 In recent years, the metrics used for optimizing and evaluating AI algorithms are diversifying:
 along with accuracy, there is increasing emphasis on the metrics such as energy efficiency
 and model size. Given this, researchers working on AI can no longer afford to ignore the
 computing system. Instead, the knowledge of the potential and limitations of computing
 systems can provide invaluable guidance to them in designing the most efficient and
 accurate algorithms.
+
 This tutorial seeks to arouse curiosity and even an interest in the AI accelerators, with the
 example of one of the most popular commercial accelerator, viz., Google's TPU. We first
 present the basics, viz., systolic array architecture for matrix multiplication. Then, we dive
@@ -31,6 +33,7 @@ into the architecture of TPU, its salient features, comparison with CPU and GPU 
 and evaluation results on AI workloads. We finally provide a view of evolution of Google's
 TPU over 6 versions to learn how TPU has transformed to address the needs of changing AI
 workloads.
+
 This tutorial is at the intersection of deep learning algorithms, computer architecture, and
 chip design, and thus, is expected to be beneficial for a broad range of learners.`,
 
@@ -44,7 +47,7 @@ chip design, and thus, is expected to be beneficial for a broad range of learner
     targetAudience:
       "This tutorial will be relevant to engineering students, industry professionals working in the area of computer architecture, electronics and AI.",
     prerequisites:
-      "Nil",
+      "No Prerequisites. Open to all.",
     speakerBiographies: [
       `
 Dr. Sparsh Mittal is currently working as an associate professor in the ECE department at IIT

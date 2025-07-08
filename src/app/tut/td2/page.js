@@ -16,19 +16,20 @@ const TutorialPage = () => {
     abstract:
       `The complexity of Low Power Mixed Signal Systems-on-Chip (SoCs) demands
 a verification strategy that integrates expertise from multiple domains, including
-
 analog, digital, verification methodology, and low power design. To meet time-
-to-market challenges, a well-planned verification architecture is crucial. This
+to-market challenges, a well-planned verification architecture is crucial.
 
-tutorial presents a comprehensive methodology for verification of Low Power
+This tutorial presents a comprehensive methodology for verification of Low Power
 Mixed Signal SoCs, focusing on achieving complete coverage with minimal
 simulation and debug time. The approach to be covered in thistutorial emphasizes
 automation, parallel development cycles, and optimized simulation performance,
-ensuring faster identification and closure of critical design issues. By providing
-clear debug guidelines and streamlining the verification process, the methodology
+ensuring faster identification and closure of critical design issues.
+
+By providing clear debug guidelines and streamlining the verification process, the methodology
 reduces the number of iterations required for block and sub-block verification,
 ultimately accelerating the overall verification efficiency and time-to-market for
 Low Power Mixed Signal SoCs.
+
 A sample Low Power Mixed Signal Systems-on-Chip will be used to describe
 an efficient metric driven. In this tutorial, I will discuss the real time challenges
 and possible solutions during LPMS SoC verification. The tutorial will cover
@@ -38,9 +39,7 @@ different aspects mainly categorized as:
 • Define domain conversion elements to cater Multi Supply.
 • Integrating Analog IP in SoC Design
 • Setting Up the UVM Testbench with different Power Modes of SoC
-• Handling multiple issues during verification including incorrect supply,
-unwanted X-State, Low Power Boundary issues, Analog solver
-convergence issues, performance and integration challenge.
+• Handling multiple issues during verification including incorrect supply, unwanted X-State, Low Power Boundary issues, Analog solver convergence issues, performance and integration challenge.
 
 The LPMS SoC used in tutorial will be like modern time SoCs like micro-
 controllers and other SoC used in automotive and industrial applications. After

@@ -25,6 +25,7 @@ advantages, below the sub-22nm node, FinFETs possess challenges, such as parasit
 capacitance and resistance, fin depopulation, and variability in fin height and width. 
 Additionally, the fixed height of fins constrains area scaling, creating a need for further 
 innovations in transistor design.  
+
     These limitations have prompted the development of new transistor architectures, 
 such as stacked transistors, including Nanosheet FET, Forksheet FET, and CFET 
 (Complementary FET), with improved power, performance, area, and cost (PPAC). 
@@ -33,6 +34,7 @@ device's overall footprint while maintaining or improving performance. Stacked
 devices offer enhanced flexibility in gate control and channel width optimization and 
 improve power efficiency since multiple channels are integrated without increasing the 
 device's lateral area, enabling more transistors to be packed into a smaller space.  
+
            The integrity of the device (e.g., stacked transistor) raises several call-up 
 challenges related to the electrical and thermal reliability. The vertical stacking of 
 channels in these devices creates complex electrostatic interactions between sheets, 

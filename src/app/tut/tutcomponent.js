@@ -142,14 +142,14 @@ export default function EnhancedTutorialComponent({
         />
 
         <div className="relative z-10 px-8 py-24 text-center">
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="inline-block p-4 bg-white/10 backdrop-blur-lg rounded-2xl mb-6"
           >
             <Code className="w-12 h-12 text-white" />
-          </motion.div>
+          </motion.div> */}
 
           <motion.h1
             initial={{ scale: 0.8, opacity: 0 }}

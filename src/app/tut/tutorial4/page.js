@@ -370,54 +370,54 @@ also been involved in numerous efforts towards industry transfer of technology.`
 will be highly relevant to students, researchers and professionals working in the area of ASIC design.
 
 1. Introduction and Overview of Physical Validation (30 Mins)
-   - Introduction to ChipIN Centre and Physical verification & validation of designs for SCL 180nm PDK
-   - Digital and Analog/Mixed‑Signal ASICs fabricated at SCL 180nm foundry
+   a. Introduction to ChipIN Centre and Physical verification & validation of designs for SCL 180nm PDK
+   b. Digital and Analog/Mixed‑Signal ASICs fabricated at SCL 180nm foundry
 
 2. Procedures Prior To Physical Verification for the Digital & Analog/Mixed‑Signal Designs Using SCL 180nm PDK (60 Mins)
-   - Insertion of Silicon Number
-   - Seal‑ring Placement
-   - Die Protection requirements
-   - Pad pitch Requirements
-   - Crystal Oscillator Pads and their placement
-   - Power pads and Filler Cells requirements
-   - Clock Pads (Clock buffers) requirements and placement
-   - Output pads drive strength requirements to drive the load
-   - Input pads termination circuitry requirements to avoid signal reflections
-   - Dummy Cells Placement
-   - Powering the Full‑Chip for SCL 180nm technology
-   - IO Pad Ring Establishment with Cut‑cells (pvcf)
-   - IO Pad Ring Establishment with Cut‑cells (pvce)
+   a. Insertion of Silicon Number
+   b. Seal‑ring Placement
+   c. Die Protection requirements
+   d. Pad pitch Requirements
+   e. Crystal Oscillator Pads and their placement
+   f. Power pads and Filler Cells requirements
+   g. Clock Pads (Clock buffers) requirements and placement
+   h. Output pads drive strength requirements to drive the load
+   i. Input pads termination circuitry requirements to avoid signal reflections
+   j. Dummy Cells Placement
+   k. Powering the Full‑Chip for SCL 180nm technology
+   l. IO Pad Ring Establishment with Cut‑cells (pvcf)
+   m. IO Pad Ring Establishment with Cut‑cells (pvce)
 
 3. Physical Verification of the Digital & Analog/Mixed‑Signal Designs Using SCL 180nm Technology PDK (50 Mins)
-   - Design Rule Checks
-   - Electrical Rule Checks
-   - Antenna Checks
-   - Layout versus Schematic
-   - PEX Extraction
-   - Spice Simulations (for all PVT variations)
-   - Design for Manufacturability
-   - Design for Reliability
-   - Design for Integrity
-   - Design for Assembly
-   - Timing Sign‑off
-   - Tape‑out Sign‑off
-   - Tapeout submission form checklist
-   - Reticle Definitions
-   - MPW Shuttles for Fabrication
+   a. Design Rule Checks
+   b. Electrical Rule Checks
+   c. Antenna Checks
+   d. Layout versus Schematic
+   e. PEX Extraction
+   f. Spice Simulations (for all PVT variations)
+   g. Design for Manufacturability
+   h. Design for Reliability
+   i. Design for Integrity
+   j. Design for Assembly
+   k. Timing Sign‑off
+   l. Tape‑out Sign‑off
+   m. Tapeout submission form checklist
+   n. Reticle Definitions
+   o. MPW Shuttles for Fabrication
 
 4. Packaging Requirements (30 Mins)
-   - QFN Packaging Definitions
-   - Bond Pad Rules
-   - Rules for Bond wire
-   - Bonding Diagram
-   - Labelling
-   - Segmentation
+   a. QFN Packaging Definitions
+   b. Bond Pad Rules
+   c. Rules for Bond wire
+   d. Bonding Diagram
+   e. Labelling
+   f. Segmentation
 
 5. Critical Checklist for Tape‑out and Packaging (10 Mins)
-   - For Analog Designs
-   - For Digital Designs
-   - For Mixed‑Signal Designs
-   - For Packaging`,
+   a. For Analog Designs
+   b. For Digital Designs
+   c. For Mixed‑Signal Designs
+   d. For Packaging`,
 
     youtubeVideoId: "", // Replace with actual video ID
   };

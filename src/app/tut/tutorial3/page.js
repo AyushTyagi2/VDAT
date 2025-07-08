@@ -18,35 +18,27 @@ const TutorialPage = () => {
     //autofill from above, TAKE THE TEXT EXACTLY AS IT IS
     // from the above text, do not change the text, just copy paste it
     abstract: `Complex integrated circuits (ICs) are required for higher performance and efficiency due to the increased demand in a variety of electronics-based businesses, particularly in the fields of medical sciences and automotive electronic components.
-
 Furthermore, the yield requirement is now expressed in DPPB (Defective Parts Per Billion) rather than DPPM (Defective Parts Per Million), as safety and reliability are of the utmost significance.
-
 Reliability and yield are impossible to attain without sophisticated "DFT techniques".
 
 ---
 
 Beginning with the fundamentals of the DFT, the course covers fault modeling, SCAN and compression techniques.
-
 We will also talk about DFT approaches at the Chiplet level such as BSDL and other architectural techniques.
-
 The workshop seeks to cover BIST methodologies for testing RAMs and ROMs.
 
 ---
 
 Advanced fault modeling techniques, such as the Cell Aware Test, Timing Aware Test, Path Delay Fault Modelling, and Automatic Fault Grading Procedures, will be presented in addition to traditional fault modeling techniques.
-
 Emerging 3D IC solutions and testing concepts will also be explained.
 
 ---
 
 Best practices for improving yield and reducing test escapes will be covered in detail.
-
 Following this, a comprehensive demonstration will be provided, starting with a comparison of designs at the RTL and GLS level.
-
 The GLS design will be used to perform ATPG, fault modeling, fault classification, and test coverage analysis.
 
 The generated test patterns will then be simulated, and the resulting simulation waveforms and schematics will be thoroughly explained.
-
 Additionally, ATPG log files and simulation waveforms will be examined in detail towards the conclusion of the session.
 `,
     domain: "DFT – Design for Testability",

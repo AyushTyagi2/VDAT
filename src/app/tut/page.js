@@ -11,108 +11,116 @@ import { Cpu, CircuitBoard, Layers, ExternalLink } from "lucide-react";
 const ConferenceScheduleTable = () => {
   const scheduleData = [
     {
-      time: "9AM to 10:30AM",
-      timeSlot: "",
-      system: {
-        title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "tutorial1"
-      },
-      analogDesign: {
-        title: "Testing & characterization of data converters",
-        code: "IITR/IITD– 180",
-        path: "tutorial2"
-      },
-      digitalDesign: {
-        title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        code: "microchip -180",
-        path: "tutorial3"
-      },
-      deviceLevel: {
-        title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "tutorial4"
+      time: "9:00 AM - 10:30 AM",
+      isBreak: false,
+      sessions: {
+        system: {
+          title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
+          path: "tutorial1"
+        },
+        analogDesign: {
+          title: "Testing & characterization of data converters",
+          code: "IITR/IITD– 180",
+          path: "tutorial2"
+        },
+        digitalDesign: {
+          title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
+          code: "microchip -180",
+          path: "tutorial3"
+        },
+        deviceLevel: {
+          title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
+          path: "tutorial4"
+        }
       }
     },
     {
-      time: "Tea Break",
-      timeSlot: "10:30 to 11:00",
-      isBreak: true
+      time: "10:30 AM - 11:00 AM",
+      isBreak: true,
+      breakTitle: "Tea Break"
     },
     {
-      time: "90min",
-      timeSlot: "11 to 12:30",
-      system: {
-        title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
-        path: "tutorial1"
-      },
-      analogDesign: {
-        title: "Testing & characterization of data converters",
-        code: "IITR/IITD– 180",
-        path: "tutorial2"
-      },
-      digitalDesign: {
-        title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
-        code: "microchip– 180",
-        path: "tutorial3"
-      },
-      deviceLevel: {
-        title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
-        path: "tutorial4"
+      time: "11:00 AM - 12:30 PM",
+      isBreak: false,
+      sessions: {
+        system: {
+          title: "Building RISC-V based System on Chips – Embedded to AI Enabled SoCs",
+          path: "tutorial1"
+        },
+        analogDesign: {
+          title: "Testing & characterization of data converters",
+          code: "IITR/IITD– 180",
+          path: "tutorial2"
+        },
+        digitalDesign: {
+          title: "An Overview of DFT fundamentals and Advanced Fault Modeling with Best Practices for Minimizing Test Escapes",
+          code: "microchip– 180",
+          path: "tutorial3"
+        },
+        deviceLevel: {
+          title: "Foundry Compliance and Tapeout Qualification of Analog, Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS Technology Node",
+          path: "tutorial4"
+        }
       }
     },
     {
-      time: "Lunch Break",
-      timeSlot: "12:30PM to 2PM",
-      isBreak: true
+      time: "12:30 PM - 2:00 PM",
+      isBreak: true,
+      breakTitle: "Lunch Break"
     },
     {
-      time: "90min",
-      timeSlot: "2 to 3:30",
-      system: {
-        title: "Google's Tensor Processing Unit: Understanding State-of-the-art AI Accelerator",
-        path: "ts2"
-      },
-      analogDesign: {
-        title: "Design techniques for dc-dc boost converters with a high voltage conversion ratio",
-        path: "ta2"
-      },
-      digitalDesign: {
-        title: "Metric Driven Verification of a typical Low Power Mixed Signal (LPMS) SoC",
-        path: "td2"
-      },
-      deviceLevel: {
-        title: "NQS High-frequency Modeling of the Non-planar devices",
-        path: "tut8"
+      time: "2:00 PM - 3:30 PM",
+      isBreak: false,
+      sessions: {
+        system: {
+          title: "Google's Tensor Processing Unit: Understanding State-of-the-art AI Accelerator",
+          path: "ts2"
+        },
+        analogDesign: {
+          title: "Design techniques for dc-dc boost converters with a high voltage conversion ratio",
+          path: "ta2"
+        },
+        digitalDesign: {
+          title: "Metric Driven Verification of a typical Low Power Mixed Signal (LPMS) SoC",
+          path: "td2"
+        },
+        deviceLevel: {
+          title: "NQS High-frequency Modeling of the Non-planar devices",
+          path: "tut8"
+        }
       }
     },
     {
-      time: "Tea Break",
-      timeSlot: "3:30 to 4:00",
-      isBreak: true
+      time: "3:30 PM - 4:00 PM",
+      isBreak: true,
+      breakTitle: "Tea Break"
     },
     {
-      time: "90min",
-      timeSlot: "4 to 5:30",
-      system: {
-        title: "Design of a Battery-less Wireless Sensor Node Powered by RF Energy Harvester",
-        path: "tut9"
-      },
-      analogDesign: {
-        title: "Neuromorphic Sensors: Architectures, IC Design Techniques, and Emerging Applications",
-        path: "tut10"
-      },
-      digitalDesign: {
-        title: "Workshop on Accelerating System Design: HDL Code Generation and Verification Techniques",
-        path: "tut11"
-      },
-      deviceLevel: {
-        title: "Reliability-Aware Journey from FinFET to Stacked transistor",
-        path: "tut12"
+      time: "4:00 PM - 5:30 PM",
+      isBreak: false,
+      sessions: {
+        system: {
+          title: "Design of a Battery-less Wireless Sensor Node Powered by RF Energy Harvester",
+          path: "tut9"
+        },
+        analogDesign: {
+          title: "Neuromorphic Sensors: Architectures, IC Design Techniques, and Emerging Applications",
+          path: "tut10"
+        },
+        digitalDesign: {
+          title: "Workshop on Accelerating System Design: HDL Code Generation and Verification Techniques",
+          path: "tut11"
+        },
+        deviceLevel: {
+          title: "Reliability-Aware Journey from FinFET to Stacked transistor",
+          path: "tut12"
+        }
       }
     }
   ];
 
   const SessionLink = ({ session }) => (
-    <div className="p-1 sm:p-3 h-full">
+    <div className="p-2 sm:p-3 h-full">
       <Link 
         href={`tut/${session.path}`}
         className="block text-xs sm:text-sm leading-tight sm:leading-relaxed hover:text-blue-600 transition-colors duration-200 group"
@@ -125,11 +133,10 @@ const ConferenceScheduleTable = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans">
-      <div className="bg-black">
+       <div className="bg-black">
         <Navbar />
       </div>
-      
-      {/* Reduced header size */}
+      {/* Header */}
       <header className="text-center text-white py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 to-violet-900/85"></div>
         
@@ -167,50 +174,47 @@ const ConferenceScheduleTable = () => {
             <h2 className="text-xl sm:text-2xl font-bold text-center">7th August 2025</h2>
           </div>
           
-          <div className="w-full">
-            <table className="w-full border-collapse table-fixed">
+          <div className="w-full overflow-x-auto">
+            <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="border border-gray-300 p-1 sm:p-3 text-left font-bold text-gray-700 text-xs sm:text-sm w-16 sm:w-20">Time</th>
-                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-pink-100 text-xs sm:text-sm">System</th>
-                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-yellow-100 text-xs sm:text-sm">Analog</th>
-                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-blue-100 text-xs sm:text-sm">Digital</th>
-                  <th className="border border-gray-300 p-1 sm:p-3 text-center font-bold text-gray-700 bg-green-100 text-xs sm:text-sm">Device</th>
+                  <th className="border border-gray-300 p-2 sm:p-3 text-center font-bold text-gray-700 text-xs sm:text-sm bg-gray-200 min-w-[120px]">
+                    <div className="flex flex-col items-center">
+                      <span>Track</span>
+                      <span className="text-xs text-gray-500 mt-1">Time</span>
+                    </div>
+                  </th>
+                  <th className="border border-gray-300 p-2 sm:p-3 text-center font-bold text-gray-700 bg-pink-100 text-xs sm:text-sm min-w-[200px]">System</th>
+                  <th className="border border-gray-300 p-2 sm:p-3 text-center font-bold text-gray-700 bg-yellow-100 text-xs sm:text-sm min-w-[200px]">Analog</th>
+                  <th className="border border-gray-300 p-2 sm:p-3 text-center font-bold text-gray-700 bg-blue-100 text-xs sm:text-sm min-w-[200px]">Digital</th>
+                  <th className="border border-gray-300 p-2 sm:p-3 text-center font-bold text-gray-700 bg-green-100 text-xs sm:text-sm min-w-[200px]">Device</th>
                 </tr>
               </thead>
               <tbody>
                 {scheduleData.map((row, index) => (
                   <tr key={index} className={row.isBreak ? "bg-gray-100" : "hover:bg-gray-50 transition-colors"}>
-                    <td className="border border-gray-300 p-1 sm:p-3 text-xs sm:text-sm font-medium text-gray-700 bg-gray-50 text-center">
-                      {!row.isBreak && (
-                        <>
-                          <div className="hidden sm:block">{row.time}</div>
-                          <div className="text-xs text-gray-500">{row.timeSlot}</div>
-                        </>
-                      )}
+                    <td className="border border-gray-300 p-2 sm:p-3 text-xs sm:text-sm font-medium text-gray-700 bg-gray-50 text-center min-w-[120px]">
+                      <div className="whitespace-nowrap">{row.time}</div>
                     </td>
                     {row.isBreak ? (
-                      <td className="border border-gray-300 bg-gray-100 text-center p-4 sm:p-8" colSpan={4}>
-                        <div className="text-red-600 font-medium text-sm sm:text-lg">
-                          {row.time}
-                        </div>
-                        <div className="text-gray-500 text-xs sm:text-sm mt-1">
-                          {row.timeSlot}
+                      <td className="border border-gray-300 bg-gray-100 text-center py-2 px-4" colSpan={4}>
+                        <div className="text-red-600 font-medium text-sm sm:text-base">
+                          {row.breakTitle}
                         </div>
                       </td>
                     ) : (
                       <>
                         <td className="border border-gray-300 bg-pink-50 align-top">
-                          <SessionLink session={row.system} />
+                          <SessionLink session={row.sessions.system} />
                         </td>
                         <td className="border border-gray-300 bg-yellow-50 align-top">
-                          <SessionLink session={row.analogDesign} />
+                          <SessionLink session={row.sessions.analogDesign} />
                         </td>
                         <td className="border border-gray-300 bg-blue-50 align-top">
-                          <SessionLink session={row.digitalDesign} />
+                          <SessionLink session={row.sessions.digitalDesign} />
                         </td>
                         <td className="border border-gray-300 bg-green-50 align-top">
-                          <SessionLink session={row.deviceLevel} />
+                          <SessionLink session={row.sessions.deviceLevel} />
                         </td>
                       </>
                     )}

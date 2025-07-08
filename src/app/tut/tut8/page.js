@@ -19,19 +19,24 @@ As technology nodes have miniaturized, traditional planar transistors have strug
 with short-channel effects, leakage currents, and power consumption issues. FinFETs 
 emerged as a revolutionary solution to address these challenges. The FinFET structure, 
 with its three-dimensional design, offers superior electrostatic control by wrapping the 
-gate around a vertical fin. FinFETs have significantly enhanced transistor performance 
+gate around a vertical fin. 
+
+FinFETs have significantly enhanced transistor performance 
 by improving electrostatic control and enabling continued scaling. Despite its 
 advantages, below the sub-22nm node, FinFETs possess challenges, such as parasitic 
 capacitance and resistance, fin depopulation, and variability in fin height and width. 
 Additionally, the fixed height of fins constrains area scaling, creating a need for further 
 innovations in transistor design.  
+
      In particular, as transistor architectures become more complex, accurate 
 capacitive and resistive behavior modeling becomes critical for device circuit co
 design. For FinFETs, modeling the gate capacitance and resistive paths is relatively 
 straightforward. However, stacked transistor architectures introduce new complexities 
 due to the vertical arrangement of channels and gates. These vertical stacks create 
 capacitive coupling between the layers, which impacts device performance, particularly 
-in high-frequency applications. Nanosheet transistors offer improved high-frequency 
+in high-frequency applications. 
+
+Nanosheet transistors offer improved high-frequency 
 performance due to reduced parasitic capacitance and improved electrostatic control. 
 Accurate modeling of Nanosheet transistors in high-frequency and their circuit 
 implications are critical for leveraging their potential in modern technology nodes to 
@@ -42,12 +47,15 @@ addition, the radiation effects, particularly in advanced nodes where devices ar
 sensitive to external perturbations, also impact the resistive paths within the transistor. 
 High-energy particles can induce transient faults or cause permanent resistance 
 changes, necessitating robust radiation-aware resistance models for mission-critical 
-applications. To navigate these complexities, modern Technology Computer-Aided 
+applications. 
+
+To navigate these complexities, modern Technology Computer-Aided 
 Design (TCAD) tools are increasingly being augmented with Machine Learning (ML) 
 techniques. ML-driven TCAD can accelerate device simulation, optimize fabrication 
 parameters, and predict degradation pathways with greater accuracy. These data-driven 
 approaches enable the exploration of large design spaces and support more robust 
 modeling of electrical behavior and reliability concerns. 
+
   This tutorial session will provide a detailed overview of the evolution from FinFETs 
 to advanced stacked architectures, emphasizing their implications for high-frequency 
 performance, modeling complexity, and reliability challenges. Through the lens of both 
@@ -86,8 +94,7 @@ as the Head of the Department during the period 2019-2022. He has
 authored/co-authored more than 300 research papers in peer reviewed 
 international journals and conferences. He is a member of IEEE, EDS, ISTE 
 and associate member of Institute of Nanotechnology, UK. 
-TT2
- TT1
+
  He has been a technical committee member International Conference on Micro
 to-Nano, 2006; he has been acting as an expert member of The Global Open 
 University, The Netherlands. He was awarded with Erasmus Mundus 
@@ -105,7 +112,9 @@ Innovation Hub (TIH) Divyasampark as the Project Director. His areas of
 interest are Nanoelectronics, Nanoscale MOSFET modeling and simulation, 
 Design and Development of low power novel devices, FinFET based Memory 
 Design, Emerging Devices in Analog Design and Design and development of 
-reconfigurable logic. He has guided 18 Ph.D scholars. Currently he is 
+reconfigurable logic. 
+
+He has guided 18 Ph.D scholars. Currently he is 
 supervising around 6 candidates leading to their Ph.D degree. He has been 
 nominated for INAE, Young Engineer Award. Dr. Dasgupta acted as a reviewer 
 for IEEE Transactions on Electron Devices, IEEE Electron Device Letters, 
