@@ -13,10 +13,11 @@ const Footer = () => {
   };
 
   const sponsorLogos = {
+    "Platinum Partner": "/logos/iit-mandi1.png",
+    "Gold Partner": "/images/Agmatel_Keyisght Logo HD.png",
     "Gold Partner, Media Partner": "/images/yourpedia.png",
     "Publication Sponsor": "/images/springer.png",
-    "Platinum Partner": "/logos/iit-mandi1.png",
-    "Gold Partner": "/images/Agmatel_Keyisght Logo HD.png"
+    
   };
 
   return (
