@@ -92,27 +92,75 @@ const FellowshipPage = () => {
               <AlertCircle size={32} className="text-blue-700" />
             </div>
           </div>
-          
-          <ul className="space-y-2 text-gray-700">
-            {[
-              "Fellows need to attend for the entire 3-day conference. A record of attendance would be maintained for the same.",
-              "All the selected fellow will be provided accommodation inside the campus.",
-              "Selected candidate may get the complimentary partial/full registration support and/or travel allowance to attend the conference.",
-              "Maximum travel support of Rs 5000/- or actual expenditure, whichever is less.",
-              "Be ready with the LOR (for student category) and the institute ID card in PDF/JPG/PNG format before filling out the form.",
-              "Please visit the conference website for detailed updates on time to time.",
-              "In case an applicant is both a faculty member of some institute and a student of another (e.g., a faculty member pursuing part-time higher studies), only one application should be submitted. More information can be provided in the relevant text box while filling up the form.",
-              "The award of these fellowships is governed by rules and regulations of VDAT.",
-              "Please see that this fellowship stands cancelled if any of the rules are violated.",
-              "The fellowship is conditional.",
-              "If you are the sole registrant for your paper then you will have to register as a full delegate and Fellowship will stand cancelled."
-            ].map((item, index) => (
-              <li key={index} className="flex items-start">
-                <CheckCircle size={16} className="text-green-500 mr-2 flex-shrink-0" />
-                <span className="text-lg">{item}</span>
-              </li>
-            ))}
-          </ul>
+         <div className="space-y-4">
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">1. Mandatory Attendance</h3>
+            <p className="text-gray-700">Fellows must attend the full 3-day conference. Attendance will be recorded throughout the event.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">2. Fellowship Type</h3>
+            <p className="text-gray-700">The type of fellowship awarded is indicated next to your name.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">3. Documents Required</h3>
+            <p className="text-gray-700">Please bring the original copy of your Letter of Recommendation (for student category) and your valid institute ID card (for both student and faculty).</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">4. Security Deposit</h3>
+            <ul className="text-gray-700 space-y-2 ml-4">
+              <li>• Submit a scanned copy of a Demand Draft (DD) of ₹2500 in favour of <strong>VLSI Society of India</strong> to secure your seat.</li>
+              <li>• The hard copy of the DD must be submitted at the registration desk on the first day of the conference.</li>
+              <li>• The DD will be returned on the last day of the conference along with any applicable reimbursement.</li>
+              <li>• Fellows may be assigned volunteer work during the conference.</li>
+            </ul>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">5. Mandatory Submission</h3>
+            <p className="text-gray-700">Failure to submit the acceptance form and scanned copy of the DD will lead to cancellation of the fellowship, and the opportunity will be passed on to waitlisted candidates.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">6. Accommodation</h3>
+            <p className="text-gray-700">All the selected fellows will be provided accommodation inside the campus. The organizing team intends to arrange accommodation (either double occupancy or dormitory style) close to the event venue.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">7. Travel Support</h3>
+            <p className="text-gray-700">Selected candidates may get complimentary partial/full registration support and/or travel allowance to attend the conference. Travel expenses will be reimbursed based on the shortest route of travel upon producing the tickets. Reimbursement will be provided for AC 3-tier train fare or bus fare, up to a maximum of ₹4,000, or the actual cost of travel via the shortest route, whichever is lower. The organizing team will calculate the travel reimbursement amount based on the details provided by the Fellow in the initial fellowship application Google Form.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">8. Additional Information</h3>
+            <ul className="text-gray-700 space-y-2 ml-4">
+              <li>• In case an applicant is both a faculty member of some institute and a student of another (e.g., a faculty member pursuing part-time higher studies), only one application should be submitted.</li>
+              <li>• Please visit the conference website for detailed updates from time to time.</li>
+            </ul>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">9. Regulations</h3>
+            <p className="text-gray-700">Fellowship awards are subject to the rules and regulations of VDAT.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">10. Cancellation Clause</h3>
+            <p className="text-gray-700">Any violation of the stated guidelines will result in cancellation of the fellowship.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">11. Conditional Offer</h3>
+            <p className="text-gray-700">The fellowship is provisional and subject to compliance with all terms.</p>
+          </div>
+
+          <div className=" border-gray-300 pl-4">
+            <h3 className="font-semibold text-gray-800 mb-2">12. Paper Registration Policy</h3>
+            <p className="text-gray-700">If you are the sole author registering for your paper, you must register as a full delegate. In such cases, the fellowship will be cancelled.</p>
+          </div>
+        </div>
         </div>
       </section>
 
@@ -152,18 +200,16 @@ const FellowshipPage = () => {
           </ul>
           
           {/* Application Form and LOR Template */}
-          <div className="mt-6 p-4 bg-gradient-to-r from-indigo-50 to-violet-50 rounded-lg border border-indigo-200">
-            <h3 className="text-lg font-semibold text-indigo-800 mb-2 text-center">Ready to Apply?</h3>
+          <div className="mt-6 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-lg border border-red-200">
+            <h3 className="text-lg font-semibold text-red-800 mb-2 text-center">Fellowship Application Status</h3>
             <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
-              <a 
-                href="https://forms.gle/jXQoFTGT1aCuBWWA6" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-indigo-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md"
+              <button 
+                disabled
+                className="inline-flex items-center bg-gray-400 text-gray-700 px-3 py-2 rounded-lg font-medium cursor-not-allowed opacity-60"
               >
                 <ExternalLink size={20} className="mr-2" />
                 Apply for Fellowship
-              </a>
+              </button>
               
               <a 
                 href="/lor-template.docx" 
@@ -175,9 +221,80 @@ const FellowshipPage = () => {
                 Download LOR Template
               </a>
             </div>
-            <p className="text-sm text-gray-600 text-center mt-3">
-              <strong>Note:</strong> Students must submit LOR along with the application form
+            <p className="text-sm text-red-600 text-center mt-3 font-medium">
+              <strong>Fellowship Application deadline has ended.</strong>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fellowship Lists Section */}
+      <section className="container mx-auto px-4 py-12 bg-gradient-to-b from-gray-50 to-white">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-violet-800 uppercase relative inline-block">
+            Fellowship Lists
+            <div className="h-1 w-20 bg-violet-600 absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-1"></div>
+          </h2>
+        </div>
+        
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Faculty Fellowship List */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex justify-center mb-4">
+                <div className="p-3 bg-blue-100 rounded-full">
+                  <Users size={32} className="text-blue-700" />
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-semibold text-gray-800 mb-3 text-center">Faculty Fellowship List</h3>
+              <p className="text-gray-600 text-center mb-4">List of faculty members awarded fellowship for VDAT 2025</p>
+              
+              <div className="text-center">
+                <a 
+                  href="/VDAT2025_Fellowship_list_of_Faculty.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md"
+                >
+                  <Download size={20} className="mr-2" />
+                  Download Faculty List
+                </a>
+              </div>
+            </div>
+
+            {/* Student Fellowship List */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex justify-center mb-4">
+                <div className="p-3 bg-purple-100 rounded-full">
+                  <BookOpen size={32} className="text-purple-700" />
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-semibold text-gray-800 mb-3 text-center">Student Fellowship List</h3>
+              <p className="text-gray-600 text-center mb-4">List of students awarded fellowship for VDAT 2025</p>
+              
+              <div className="text-center">
+                <a 
+                  href="/VDAT2025_Fellowship_list_of_Students.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors shadow-md"
+                >
+                  <Download size={20} className="mr-2" />
+                  Download Student List
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200 mt-6">
+            <div className="flex items-center justify-center">
+              <AlertCircle className="h-5 w-5 text-indigo-600 mr-2" />
+              <p className="text-indigo-700 text-center">
+                <strong>Note:</strong> These lists contain the names of selected fellowship recipients. Please verify your name in the appropriate list.
+              </p>
+            </div>
           </div>
         </div>
       </section>
