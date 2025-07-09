@@ -330,7 +330,7 @@ const FellowshipPage = () => {
             
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-1">3. Travel Support</h3>
-              <p>Travel support, where applicable, is limited to a maximum of Rs 5,000/- or actual expenditure, whichever is less. Original receipts must be submitted for reimbursement.</p>
+              <p>Travel support, where applicable, is limited to a maximum of Rs 4,000/- or actual expenditure, whichever is less. Original receipts must be submitted for reimbursement.</p>
             </div>
                       
             <div>
