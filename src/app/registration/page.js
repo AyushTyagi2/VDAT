@@ -394,10 +394,13 @@ const RegistrationPage = () => {
                   </p>
                 </div>
                 <p className="text-3xl font-bold text-yellow-300">
-                  July 10, 2025
+                  14 July 2025, 23:59 PM
                 </p>
                 <p className="text-sm text-cyan-200 mt-1">
                   Save up to Rs 2000!
+                </p>
+                <p className="text-sm text-cyan-200 mt-1">
+                  No further extensions!
                 </p>
               </div>
             </div>
@@ -450,9 +453,10 @@ const RegistrationPage = () => {
                       Early Bird Registration:
                     </p>
                     <p className="text-violet-700 font-semibold">
-                      Ends July 10, 2025
+                      Ends 14 July 2025, 23:59 PM
                     </p>
                     <p className="text-sm text-gray-600">Save up to Rs 2000!</p>
+                    <p className="text-sm text-gray-600">No further extensions!</p>
                   </div>
                 </li>
                 <li className="flex items-start">
