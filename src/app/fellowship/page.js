@@ -252,7 +252,7 @@ const FellowshipPage = () => {
               
               <div className="text-center">
                 <a 
-                  href="/VDAT2025_Fellowship_list_of_Faculty.pdf" 
+                  href="/pdfs/VDAT2025_Fellowship_list_of_Faculty.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md"
@@ -276,7 +276,7 @@ const FellowshipPage = () => {
               
               <div className="text-center">
                 <a 
-                  href="/VDAT2025_Fellowship_list_of_Students.pdf" 
+                  href="/pdfs/VDAT2025_Fellowship_list_of_Students.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors shadow-md"
@@ -330,7 +330,7 @@ const FellowshipPage = () => {
             
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-1">3. Travel Support</h3>
-              <p>Travel support, where applicable, is limited to a maximum of Rs 5,000/- or actual expenditure, whichever is less. Original receipts must be submitted for reimbursement.</p>
+              <p>Travel support, where applicable, is limited to a maximum of Rs 4,000/- or actual expenditure, whichever is less. Original receipts must be submitted for reimbursement.</p>
             </div>
                       
             <div>
