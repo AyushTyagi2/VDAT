@@ -582,7 +582,7 @@ return (
       </div>
 
       {/* Evaluator Images Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {evaluators.map((evaluator) => (
           <div
             key={evaluator.id}
