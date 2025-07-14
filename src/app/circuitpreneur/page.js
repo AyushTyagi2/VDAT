@@ -528,6 +528,130 @@ const EvaluationProcess = () => {
   );
 };
 
+
+const EvaluatorImages = () => {
+  const evaluators = [
+    {
+      id: 1,
+      name: "Ranjan Verma ",
+      company: "Qualcomm",
+      position: "Senior Program Management",
+      image: "/images/c.jpg" // Replace with actual image path
+    },
+    {
+      id: 2,
+      name: "Ekta Taneja",
+      company: "Cadence Design Systems",
+      position: "Sr. Principal Program Manager",
+      image: "/images/cir.jpg" // Replace with actual image path
+    },
+    {
+      id: 3,
+      name: "Prateek Sikka",
+      company: "ST Microelectronics",
+      position: "Sr. Group Manager",
+      image: "/images/ci.jpg" // Replace with actual image path
+    },
+  ];
+
+return (
+  <section className="relative py-12 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-xl shadow-xl mb-4 overflow-hidden">
+    {/* Circuit pattern overlay */}
+    <CircuitPattern />
+
+    {/* Accent lines */}
+    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
+    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
+
+    <div className="max-w-6xl mx-auto relative z-10">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <div className="flex items-center justify-center mb-6">
+          <Icon
+            name="users"
+            className="h-12 w-12 text-purple-300 mr-4"
+          />
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-200">
+            Our Expert Evaluators
+          </h2>
+        </div>
+        <div className="h-1 w-32 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mb-6"></div>
+        <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          Meet the industry leaders who will evaluate your innovative ideas
+        </p>
+      </div>
+
+      {/* Evaluator Images Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {evaluators.map((evaluator) => (
+          <div
+            key={evaluator.id}
+            className="flex flex-col items-center group"
+          >
+            {/* Image Container */}
+            <div className="relative mb-4 group-hover:transform group-hover:scale-105 transition-all duration-300">
+              <div className="w-full h-40 md:h-48 lg:h-56 rounded-lg overflow-hidden border-4 border-purple-600/30 group-hover:border-purple-500/60 transition-all duration-300 shadow-lg cursor-pointer">
+                <a 
+                  href={evaluator.image} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  <img
+                    src={evaluator.image}
+                    alt={evaluator.name}
+                    className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-300"
+                    onError={(e) => {
+                      // Fallback to avatar with initials if image fails to load
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                </a>
+                {/* Fallback avatar */}
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center text-white font-bold text-xl hidden">
+                  {evaluator.name.split(' ').map(n => n[0]).join('')}
+                </div>
+              </div>
+              
+              {/* Company logo overlay */}
+              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-purple-600/30">
+                <span className="text-xs font-bold text-purple-700">
+                  {evaluator.company.substring(0, 2)}
+                </span>
+              </div>
+            </div>
+
+            {/* Name and Details */}
+            <div className="text-center">
+              <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-purple-300 transition-colors duration-300">
+                {evaluator.name}
+              </h3>
+              <p className="text-xs md:text-sm text-purple-300 mb-1">
+                {evaluator.position}
+              </p>
+              <p className="text-xs text-gray-400">
+                {evaluator.company}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom message */}
+      <div className="text-center mt-12">
+        <div className="bg-black bg-opacity-30 backdrop-blur-sm border border-purple-600/30 rounded-xl p-6">
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            These industry veterans bring decades of experience in VLSI design, 
+            semiconductor innovation, and startup mentorship to evaluate your groundbreaking ideas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+};
+
 // Updated content sections with appropriate backgrounds
 const CONTENT_SECTIONS = [
   {
@@ -675,13 +799,12 @@ const Circuitpreneur = () => {
       </header>
 
       {/* New Evaluation Process Section */}
-      <EvaluationProcess />
-
-      {/* Banner Section */}
-      <CircuitpreneurBanner />
-
+  
       <main className="container mx-auto px-4 py-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-10xl mx-auto">
+          <EvaluationProcess />
+          <EvaluatorImages />
+          <CircuitpreneurBanner />
           {/* Map through content sections for cleaner rendering */}
           {CONTENT_SECTIONS.map((section, index) => (
             <ContentSection
@@ -754,6 +877,7 @@ const Circuitpreneur = () => {
 
       <Footer />
     </div>
+    
   );
 };
 
