@@ -74,12 +74,12 @@ const CircuitpreneurBanner = () => {
           </p>
         </div>
 
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <button className="px-8 py-3 bg-gradient-to-r from-purple-700 to-indigo-700 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-600 transition duration-300 shadow-lg">
             Submit Your Idea
           </button>
-        </div>
-      </div>
+        </div> */}
+      </div> 
     </section>
   );
 };
@@ -818,12 +818,11 @@ const Circuitpreneur = () => {
             />
           ))}
 
-          {/* Call to Action */}
+          {/* Call to Action
           <div className="mt-4 text-center relative bg-gradient-to-r from-purple-900 to-indigo-900 py-8 px-4 rounded-xl shadow-xl overflow-hidden">
-            {/* Circuit pattern overlay */}
+            {/* Circuit pattern overlay 
             <CircuitPattern />
 
-            {/* Accent lines */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
 
@@ -835,7 +834,7 @@ const Circuitpreneur = () => {
                 Submit your innovative idea and be part of shaping the future of
                 VLSI design!
               </p>
-              <button
+               <button
                 className="bg-white text-purple-700 px-10 py-4 text-lg rounded-lg font-medium hover:bg-purple-100 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
                 onClick={handleRegistrationClick}
                 aria-label="Register for CIRCUITPRENEUR Contest"
@@ -843,7 +842,7 @@ const Circuitpreneur = () => {
                 Submit your Idea
               </button>
             </div>
-          </div>
+          </div>  */}
         </div>
 
         {/* Contact Section */}
