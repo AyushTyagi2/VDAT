@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "../../footer/footer.js";
 import Navbar from "../../home/Navbar.js";
 import TutorialComponent from "../tutcomponent.js";
+import { Video } from "lucide-react";
 
 // 1. Title of the Tutorial Foundry Compliance and Tapeout Qualification of Analog,
 // Digital, and Mixed-Signal IC Designs for SCL 180nm CMOS
@@ -419,8 +420,10 @@ will be highly relevant to students, researchers and professionals working in th
    c. For Mixed‑Signal Designs
    d. For Packaging`,
 
-    youtubeVideoId: "", // Replace with actual video ID
-  };
+    youtubeVideoId: "GLBVMeprEbY",
+    videoId:"GLBVMeprEbY",
+    videoType:"youtube"
+    };
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">

@@ -74,8 +74,9 @@ Presenter- Dr. Anand Mukhopadhyay & Dr. Kala S (15 minutes)
 7. Resources and Interactive Q&A
    - Access to project templates and learning resources
    - Discussion of design challenges and expert feedback`,
-
-    youtubeVideoId: "1qtrfUlwZ2h7vQqiODmSRWxy-wK6V6QB6", // Replace with actual video ID
+    youtubeVideoId:"1qtrfUlwZ2h7vQqiODmSRWxy-wK6V6QB6",
+    videoId: "1qtrfUlwZ2h7vQqiODmSRWxy-wK6V6QB6", // Replace with actual video ID
+    videoType:"gdrive"
   };
 
   return (
