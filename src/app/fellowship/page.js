@@ -237,62 +237,120 @@ const FellowshipPage = () => {
           </h2>
         </div>
         
-        <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Faculty Fellowship List */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-blue-100 rounded-full">
-                  <Users size={32} className="text-blue-700" />
+        <div className="max-w-5xl mx-auto">
+          {/* Round 1 Fellowship Lists */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Round 1 Fellowship Lists</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Faculty Fellowship List - Round 1 */}
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-blue-100 rounded-full">
+                    <Users size={32} className="text-blue-700" />
+                  </div>
+                </div>
+                
+                <h4 className="text-xl font-semibold text-gray-800 mb-3 text-center">Faculty Fellowship List</h4>
+                <p className="text-gray-600 text-center mb-4">List of faculty members awarded fellowship for VDAT 2025 - Round 1</p>
+                
+                <div className="text-center">
+                  <a 
+                    href="/pdfs/VDAT2025_Fellowship_list_of_Faculty.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md"
+                  >
+                    <Download size={20} className="mr-2" />
+                    Download Faculty List
+                  </a>
                 </div>
               </div>
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-3 text-center">Faculty Fellowship List</h3>
-              <p className="text-gray-600 text-center mb-4">List of faculty members awarded fellowship for VDAT 2025</p>
-              
-              <div className="text-center">
-                <a 
-                  href="/pdfs/VDAT2025_Fellowship_list_of_Faculty.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md"
-                >
-                  <Download size={20} className="mr-2" />
-                  Download Faculty List
-                </a>
+
+              {/* Student Fellowship List - Round 1 */}
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-purple-100 rounded-full">
+                    <BookOpen size={32} className="text-purple-700" />
+                  </div>
+                </div>
+                
+                <h4 className="text-xl font-semibold text-gray-800 mb-3 text-center">Student Fellowship List</h4>
+                <p className="text-gray-600 text-center mb-4">List of students awarded fellowship for VDAT 2025 - Round 1</p>
+                
+                <div className="text-center">
+                  <a 
+                    href="/pdfs/VDAT2025_Fellowship_list_of_Students.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors shadow-md"
+                  >
+                    <Download size={20} className="mr-2" />
+                    Download Student List
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
 
-            {/* Student Fellowship List */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-purple-100 rounded-full">
-                  <BookOpen size={32} className="text-purple-700" />
+          {/* Round 2 Fellowship Lists */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Round 2 Fellowship Lists</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Faculty Fellowship List - Round 2 */}
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-emerald-100 rounded-full">
+                    <Users size={32} className="text-emerald-700" />
+                  </div>
+                </div>
+                
+                <h4 className="text-xl font-semibold text-gray-800 mb-3 text-center">Faculty Fellowship List</h4>
+                <p className="text-gray-600 text-center mb-4">List of faculty members awarded fellowship for VDAT 2025 - Round 2</p>
+                
+                <div className="text-center">
+                  <a 
+                    href="/pdfs/VDAT2025_Fellowship_list_of_Faculty_Round2.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors shadow-md"
+                  >
+                    <Download size={20} className="mr-2" />
+                    Download Faculty List
+                  </a>
                 </div>
               </div>
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-3 text-center">Student Fellowship List</h3>
-              <p className="text-gray-600 text-center mb-4">List of students awarded fellowship for VDAT 2025</p>
-              
-              <div className="text-center">
-                <a 
-                  href="/pdfs/VDAT2025_Fellowship_list_of_Students.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors shadow-md"
-                >
-                  <Download size={20} className="mr-2" />
-                  Download Student List
-                </a>
+
+              {/* Student Fellowship List - Round 2 */}
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-teal-100 rounded-full">
+                    <BookOpen size={32} className="text-teal-700" />
+                  </div>
+                </div>
+                
+                <h4 className="text-xl font-semibold text-gray-800 mb-3 text-center">Student Fellowship List</h4>
+                <p className="text-gray-600 text-center mb-4">List of students awarded fellowship for VDAT 2025 - Round 2</p>
+                
+                <div className="text-center">
+                  <a 
+                    href="/pdfs/VDAT25_Fellowship_Student_Round_2.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors shadow-md"
+                  >
+                    <Download size={20} className="mr-2" />
+                    Download Student List
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200 mt-6">
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200">
             <div className="flex items-center justify-center">
               <AlertCircle className="h-5 w-5 text-indigo-600 mr-2" />
               <p className="text-indigo-700 text-center">
-                <strong>Note:</strong> These lists contain the names of selected fellowship recipients. Please verify your name in the appropriate list.
+                <strong>Note:</strong> These lists contain the names of selected fellowship recipients from both rounds. Please verify your name in the appropriate list.
               </p>
             </div>
           </div>
