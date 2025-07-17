@@ -64,6 +64,8 @@ export default function EnhancedTutorialComponent({
   speakerWebsites = [],
   basicStructure = "",
   youtubeVideoId = "",
+  videoType = "youtube",      // add this
+  videoId = "",               // add this
 }) {
   const [darkMode, setDarkMode] = useState(false);
   const [expandedSections, setExpandedSections] = useState({});
@@ -576,14 +578,21 @@ export default function EnhancedTutorialComponent({
             </div>
 
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-              <iframe
-                src={`https://drive.google.com/file/d/${youtubeVideoId}/preview`}
-                title="Tutorial Preview"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
+          <iframe
+            src={
+              youtubeVideoId?.includes("http") // optional full link passed?
+                ? youtubeVideoId
+                : videoType === "gdrive"
+                ? `https://drive.google.com/file/d/${videoId}/preview`
+                : `https://www.youtube.com/embed/${videoId}`
+            }
+            title="Tutorial Preview"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+
           </motion.section>
         )}
 

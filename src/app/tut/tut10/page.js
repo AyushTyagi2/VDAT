@@ -71,6 +71,8 @@ Presenter- Satyajit & Vishwanath Madhugiri (10 minutes)
 5. Interactive Audience Question and Answers Sessions`,
 
     youtubeVideoId: "1uJq5RijCkVZf5RWc-9FAm5wmaq6L576D", 
+    videoId:"1uJq5RijCkVZf5RWc-9FAm5wmaq6L576D",
+    videoType:"gdrive,"
   };
 
   return (

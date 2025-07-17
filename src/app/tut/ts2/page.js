@@ -94,6 +94,8 @@ will be highly relevant to students, researchers, and professionals working in t
 – Use cases and design motivations across versions`,
 
     youtubeVideoId: "1Ur7ozXrS2Sw5DsSufq4lY_xhHX4uMarq", // Replace with actual video ID
+    videoId: "1Ur7ozXrS2Sw5DsSufq4lY_xhHX4uMarq",
+    videoType:"gdrive"
   };
 
   return (

@@ -115,6 +115,10 @@ will be highly relevant to students, researchers, and professionals working in t
 – Open discussion and clarification on topics covered`,
 
     youtubeVideoId: "1gEyRUslR2OmUOCT8PhWC5oH1TbdpI06e", // Replace with actual video ID
+    videoId: "1qtrfUlwZ2h7vQqiODmSRWxy-wK6V6QB6",
+    videoType: "gdrive"
+
+    
   };
 
   return (
