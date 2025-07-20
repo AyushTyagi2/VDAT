@@ -18,11 +18,13 @@ const Navbar = () => {
   const [isPapersDropdownOpen, setIsPapersDropdownOpen] = useState(false);
   const [isVenueDropdownOpen, setIsVenueDropdownOpen] = useState(false);
   const [isprevyeardropdownopen, setIsprevyeardropdownopen] = useState(false);
+  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
   
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const toggleprevyear = () => setIsprevyeardropdownopen(!isprevyeardropdownopen);
   const togglePapersDropdown = () => setIsPapersDropdownOpen(!isPapersDropdownOpen);
   const toggleVenueDropdown = () => setIsVenueDropdownOpen(!isVenueDropdownOpen);
+  const toggleProgramDropdown = () => setIsProgramDropdownOpen(!isProgramDropdownOpen);
 
   const menuItems = [
     { label: "Home", href: "/" },
@@ -42,7 +44,7 @@ const Navbar = () => {
     },
      {
       label: "Program",
-      onClick: togglePapersDropdown,
+      onClick: toggleProgramDropdown,
       dropdown: [
         { label: "Main Program", href: "/mpro" },
         { label: "Tutorials", href: "/tut" },
@@ -117,13 +119,14 @@ const Navbar = () => {
                 className="block w-full text-left px-6 py-3 text-lg font-medium hover:bg-gray-800 hover:text-purple-500 transition-colors duration-300 rounded-lg"
                 onClick={() => {
                   if (item.dropdown) {
-                    if (item.label === "Call for Submissions") {
+                    if (item.label === "Authors") {
                       setIsPapersDropdownOpen(!isPapersDropdownOpen);
+                    } else if (item.label === "Program") {
+                      setIsProgramDropdownOpen(!isProgramDropdownOpen);
                     } else if (item.label === "Venue") {
                       setIsVenueDropdownOpen(!isVenueDropdownOpen);
-                    }
-                    else if(item.label === "Previous Years"){
-                      setIsprevyeardropdownopen(!isprevyeardropdownopen)
+                    } else if (item.label === "Previous Years") {
+                      setIsprevyeardropdownopen(!isprevyeardropdownopen);
                     }
                   } else {
                     if (item.href) {
@@ -138,8 +141,9 @@ const Navbar = () => {
               {item.dropdown && (
                 <div
                   className={`pl-6 ${
-                    (item.label === "Call for Submissions" && isPapersDropdownOpen) ||
-                    (item.label === "Venue" && isVenueDropdownOpen)||
+                    (item.label === "Authors" && isPapersDropdownOpen) ||
+                    (item.label === "Program" && isProgramDropdownOpen) ||
+                    (item.label === "Venue" && isVenueDropdownOpen) ||
                     (item.label === "Previous Years" && isprevyeardropdownopen)
                       ? "block"
                       : "hidden"
@@ -149,7 +153,7 @@ const Navbar = () => {
                     <Link key={idx} href={dropdownItem.href} className="block px-6 py-3 text-base font-medium hover:bg-gray-800 hover:text-purple-500" onClick={toggleMobileMenu}>
                       {dropdownItem.label}
                     </Link>
-                  ))}
+                    ))}
                 </div>
               )}
             </React.Fragment>
