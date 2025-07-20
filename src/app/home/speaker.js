@@ -50,38 +50,37 @@ const SpeakersSection = ({ speakers: propSpeakers = speakers }) => { // Default 
         </div>
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {speakerData.map((speaker, index) => (
-            <motion.div
-              key={speaker.name + index} // Better key using speaker name + index
-              className="relative bg-white rounded-lg shadow-md overflow-hidden group"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="relative h-full w-full"> {/* Container for image with fixed height */}
-                <img
-                  src={speaker.image}
-                  alt={`${speaker.name}'s photo`}
-                  className="object-cover w-full h-full" // Use object-cover for proper scaling
-                />
-              </div>
-              <motion.div
-                className="absolute inset-0 bg-gray-800 bg-opacity-75 text-white p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <h3 className="text-xl font-semibold">{speaker.name}</h3>
-                <p className="text-gray-200 text-sm">{speaker.title}</p>
-                <p className="text-gray-400 text-sm mb-4">{speaker.affiliation}</p>
-                <a
-                  href={speaker.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 underline"
-                >
-                  Learn More
-                </a>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
+  {speakerData.map((speaker, index) => (
+    <motion.div
+      key={speaker.name + index}
+      className="bg-white rounded-lg shadow-md overflow-hidden group"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="relative h-64 w-full overflow-hidden">
+        <img
+          src={speaker.image}
+          alt={`${speaker.name}'s photo`}
+          className="object-cover w-full h-full"
+        />
+      </div>
+      
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">{speaker.name}</h3>
+        <p className="text-gray-700 text-sm mb-1">{speaker.title}</p>
+        <p className="text-gray-500 text-sm mb-4">{speaker.affiliation}</p>
+        <a
+          href={speaker.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800 underline text-sm font-medium"
+        >
+          Learn More
+        </a>
+      </div>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );
