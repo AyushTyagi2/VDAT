@@ -191,24 +191,24 @@ const MProTable = () => {
       isBreak: false,
       sessions: {
         session2a: {
-          title: "Session 2a: PhD Forum",
-          papers: "Paper id: 378, 326, 277, 235, 29, 25"
+          title: "Session 2a: Startup Contest - pitching session",
+          papers: ""
         },
         session2b: {
-          title: "Session 2b: Embedded",
-          papers: "Paper id: 61, 184, 225, 168, 107, 67"
+          title: "Session 2b: PhD Forum",
+          papers: ""
         },
         session2c: {
-          title: "Session 2c: Analog and Digital",
-          papers: "Paper id: 126, 79, 211, 256, 165, 36"
+          title: "Session 2c: Embedded",
+          papers: "Paper id: 378, 326, 277, 235, 29, 25"
         },
         session2d: {
-          title: "Session 2d: FPGA and",
-          papers: ""
+          title: "Session 2d: FPGA and Processor",
+          papers: "Paper id: 61, 184, 225, 168, 107, 67"
         },
         session2e: {
-          title: "Session 2e: Startup Contest - pitching session",
-          papers: ""
+          title: "Session 2e: Analog and Digital",
+          papers: "Paper id: 126, 79, 211, 256, 165, 36"
         }
       }
     },
@@ -290,11 +290,11 @@ const MProTable = () => {
         },
         session3d: {
           title: "Session 3d: FPGA",
-          papers: "Paper id: 312, 205, 255, 399, 345, 43"
+          papers: "Paper id: 136, 224, 265, 317, 333, 144"
         },
         session3e: {
           title: "Session 3e: Digital",
-          papers: ""
+          papers: "Paper id: 312, 205, 255, 399, 345, 43"
         }
       }
     },
@@ -308,24 +308,24 @@ const MProTable = () => {
       isBreak: false,
       sessions: {
         session4a: {
-          title: "Session 4a: Digital and Memory",
+          title: "Session 4a: Emerging Devices and In-memory",
           papers: "Paper id: 350, 91, 103, 242, 20, 297, 410, 143"
         },
         session4b: {
-          title: "Session 4b: Emerging Devices and Digital & Embedded",
-          papers: "Paper id: 110, 180, 183, 140, 234, 151"
+          title: "Session 4b: Digital and Memory",
+          papers: "Paper id: 110, 180, 183, 140, 234, 151, 351"
         },
         session4c: {
           title: "Session 4c: Accelerator",
-          papers: "Paper id: 262, 325, 213, 358, 347, 302"
+          papers: "Paper id: 262, 325, 213, 358, 347, 302, 216"
         },
         session4d: {
           title: "Session 4d: FPGA",
-          papers: "Paper id: 136, 224, 265, 317, 333, 144"
+          papers: "Paper id: 412, 313, 361, 274, 362, 403, 299"
         },
         session4e: {
-          title: "Session 4e",
-          papers: "Paper id: 412, 313, 361, 274, Paper id: 257, 152, 308, 306, 365, 243"
+          title: "Session 4e:  Digital & Embedded System",
+          papers: "Paper id: 257, 152, 308, 306, 365, 243, 288"
         }
       }
     },
