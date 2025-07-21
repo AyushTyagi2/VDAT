@@ -221,7 +221,8 @@ const MProTable = () => {
       time: "6:25 PM - 6:55 PM",
       isBreak: false,
       special: true,
-      title: "Banquet speech"
+      title: "Banquet speech",
+      description: "Sarita Alhawat, Founder and CEO of Botlabs"
     },
     {
       time: "6:55 PM - 7:40 PM",
