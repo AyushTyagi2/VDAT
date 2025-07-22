@@ -652,6 +652,147 @@ return (
 );
 };
 
+const FinalPitchingSchedule = () => {
+  const teams = [
+    {
+      teamName: "Numelo Technologies",
+      teamLead: "Dr. Shreeniwas Deulabed",
+      thematicArea: "Product Circuit Design Innovation"
+    },
+    {
+      teamName: "Aura Flo",
+      teamLead: "Angand Singh",
+      thematicArea: "SaaS"
+    },
+    {
+      teamName: "RTC Rangers",
+      teamLead: "Shreeyatsa Alawandi",
+      thematicArea: "AI Optimized Hardware Design for Real Time Image Detection"
+    },
+    {
+      teamName: "Yodhas",
+      teamLead: "Sambhav Mehta",
+      thematicArea: "Hardware-Software Co-Design Tool for Embedded System"
+    },
+    {
+      teamName: "Power Research Consulting",
+      teamLead: "Dr. Rahul Gupta",
+      thematicArea: "Product Circuit Design Innovation"
+    },
+    {
+      teamName: "Jatayuu",
+      teamLead: "Astik Thukral",
+      thematicArea: "Product Circuit Design Innovation"
+    },
+    {
+      teamName: "RADARCan",
+      teamLead: "Keyur Mahant",
+      thematicArea: "AI Optimized Hardware Design for Real Time Image Detection"
+    },
+    {
+      teamName: "Team Leprocare",
+      teamLead: "Mownish Bugatha",
+      thematicArea: "AI Optimized Hardware Design for Real Time Image Detection"
+    },
+    {
+      teamName: "SSIT",
+      teamLead: "Tejeswari Rao Padla",
+      thematicArea: "Secure Hardware for IoT Communication"
+    },
+    {
+      teamName: "NeuroSilica",
+      teamLead: "Dharshan P",
+      thematicArea: "AI Optimized Hardware Design for Real Time Image Detection"
+    }
+  ];
+
+  return (
+    <section className="relative py-12 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-xl shadow-xl mb-4 overflow-hidden">
+      {/* Circuit pattern overlay */}
+      <CircuitPattern />
+
+      {/* Accent lines */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-900 via-purple-500 to-purple-900"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-6">
+            <Icon
+              name="calendar"
+              className="h-12 w-12 text-purple-300 mr-4"
+            />
+            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-200">
+              Final Pitching Schedule
+            </h2>
+          </div>
+          <div className="h-1 w-32 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            Meet the shortlisted teams competing in CIRCUITPRENEUR-VDAT 2025
+          </p>
+        </div>
+
+        {/* Teams Table */}
+        <div className="overflow-x-auto bg-black bg-opacity-30 backdrop-blur-sm border border-purple-600/30 rounded-lg shadow-lg">
+          <table className="min-w-full divide-y divide-purple-700">
+            <thead className="bg-purple-800/50">
+              <tr>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-purple-200 uppercase tracking-wider"
+                >
+                  Team Name
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-purple-200 uppercase tracking-wider"
+                >
+                  Team Lead
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-purple-200 uppercase tracking-wider"
+                >
+                  Thematic Area
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-purple-700">
+              {teams.map((team, index) => (
+                <tr key={index} className="hover:bg-purple-900/30 transition-colors duration-200">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <Icon name="users" className="h-5 w-5 text-purple-400 mr-3" />
+                      <div className="text-sm font-medium text-gray-100">{team.teamName}</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-200">{team.teamLead}</div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="text-sm text-gray-200">{team.thematicArea}</div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Bottom message */}
+        <div className="text-center mt-8">
+          <div className="bg-black bg-opacity-30 backdrop-blur-sm border border-purple-600/30 rounded-xl p-6">
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              🎉 Congratulations to all shortlisted teams! Get ready to showcase your innovative solutions at VDAT 2025.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
 // Updated content sections with appropriate backgrounds
 const CONTENT_SECTIONS = [
   {
@@ -798,13 +939,13 @@ const Circuitpreneur = () => {
         </div>
       </header>
 
-      {/* New Evaluation Process Section */}
-  
       <main className="container mx-auto px-4 py-10">
         <div className="max-w-10xl mx-auto">
+          {/* Important Dates Section added here */}
+          <FinalPitchingSchedule /> 
           <EvaluationProcess />
           <EvaluatorImages />
-          <CircuitpreneurBanner />
+          {/* <CircuitpreneurBanner /> */}
           {/* Map through content sections for cleaner rendering */}
           {CONTENT_SECTIONS.map((section, index) => (
             <ContentSection

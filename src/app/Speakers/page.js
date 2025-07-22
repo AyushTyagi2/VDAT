@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../footer/footer';
 import Navbar from '../home/Navbar';
 
+
 // Speaker Title Card Component
 const SpeakerCard = ({ name, title, organization, photo, linkedin, website }) => {
   return (
@@ -12,7 +13,7 @@ const SpeakerCard = ({ name, title, organization, photo, linkedin, website }) =>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10"></div>
         
         {/* Image container */}
-        <div className="relative h-80 overflow-hidden bg-gradient-to-r from-purple-100 to-indigo-100">
+        <div className="relative h-48 overflow-hidden bg-gradient-to-r from-purple-100 to-indigo-100">
           {photo ? (
             <img 
               src={photo} 
@@ -51,7 +52,7 @@ const SpeakerCard = ({ name, title, organization, photo, linkedin, website }) =>
                 aria-label="Personal Website"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9 3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </a>
             )}
@@ -76,52 +77,157 @@ const SpeakerCard = ({ name, title, organization, photo, linkedin, website }) =>
 };
 
 const SpeakersSection = () => {
-  // Speaker data
+  // Comprehensive speaker data from both images
   const speakers = [
+    // First row from Image 1
     {
-      name: "Tapas Nandy",
+      name: "Sunita Verma",
+      title: "Group Coordinator (R&D)",
+      organization: "MeitY",
+      photo: "/images/sunita.png",
+      linkedin: "https://www.linkedin.com/in/sunita-verma-b38979157/?originalSubdomain=in",
+      website: ""
+    },
+    {
+      name: "Prof. Rajeev Ahuja",
+      title: "Director",
+      organization: "IIT Ropar",
+      photo: "/images/rajeev.png",
+      linkedin: 
+          "https://www.linkedin.com/in/prof-rajeev-ahuja-6436b3335/?originalSubdomain=in",
+      website: ""
+    },
+    {
+      name: "Prof. Lakxmidhar Behera",
+      title: "Director",
+      organization: "IIT Mandi",
+      photo: "/images/laxmi.png",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Dr. Kamaljeet Singh",
+      title: "Director General",
+      organization: "SCL",
+      photo: "/images/kamli.png",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Dr. S. D. Sudarshan",
+      title: "Executive Director",
+      organization: "C-DAC",
+      photo: "/images/sd.png",
+      linkedin: "",
+      website: ""
+    },
+    // Second row from Image 1
+    {
+      name: "Dr. Satya Gupta",
+      title: "President",
+      organization: "VLSI Society",
+      photo: "/images/satya.png",
+      linkedin:
+          "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
+      website: ""
+    },
+    {
+      name: "Rajeev Madhavan",
+      title: "Clear Ventures & Magma",
+      organization: "",
+      photo: "/images/rm.png",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Dr. Ravi Mahajan",
+      title: "Fellow",
+      organization: "Intel",
+      photo: "/images/ravi.png",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Wilfred Gomes",
+      title: "Founder & CEO",
+      organization: "Mueon",
+      photo: "/images/gomes.png",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Prof. Shanti Pavan",
+      title: "Professor",
+      organization: "IIT Madras",
+      photo: "/images/shanti.png",
+      linkedin: "https://www.linkedin.com/in/shanthi-pavan-39715a137/",
+      website: "https://www.ee.iitm.ac.in/faculty/profile/shanthi.pavan"
+    },
+    // From Image 2 - First row
+    {
+      name: "Sarita Ahlawat",
+      title: "",
+      organization: "Botlabs",
+      photo: "/images/sarita.png",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Chitra Hariharan",
+      title: "",
+      organization: "Renesas",
+      photo: "/images/chitra.jpg",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Preet Yadav",
+      title: "",
+      organization: "NXP",
+      photo: "/images/preet.jpg",
+      linkedin: "",
+      website: ""
+    },
+    {
+      name: "Tapas Nandi",
       title: "Sr. Director, Microsoft / Sr. Member, IEEE",
-      organization: "IEEE",
-      photo: "/images/tapasnandy.jpg", // Update with correct path
+      organization: "Microsoft",
+      photo: "/images/tapasnandy.jpg",
       linkedin: "https://www.linkedin.com/in/tapas-nandy-35133518/?originalSubdomain=in",
+      website: ""
+    },
+    {
+      name: "Nishit Gupta",
+      title: "Scientist E",
+      organization: "MeitY",
+      photo: "/images/nishit.png",
+      linkedin: "",
+      website: ""
+    },
+    // From Image 2 - Second row
+    {
+      name: "Gaurav Goel",
+      title: "Senior Principal Engineer",
+      organization: "Renesas",
+      photo: "/images/gauravgoel.jpeg",
+      linkedin: "https://www.linkedin.com/in/gaurav-goel-01185a5/",
       website: ""
     },
     {
       name: "Dipan Sahu",
       title: "Assistant Innovation Director",
       organization: "Ministry of Education's Innovation Cell",
-      photo: "/images/dipansahu.jpg", // Update with correct path
+      photo: "/images/dipansahu.jpg",
       linkedin: "https://www.linkedin.com/in/deepansahu/?originalSubdomain=in",
       website: ""
     },
-//     Following two people need to be added as speaker: Prof Santhi Pawan, IIT Madras
-//     Speaker:  Ganesan Narayanasamy
-// Designation: President, OpenPOWER Foundation,USA
-// Affiliation: CEO at Object Automation Inc. – USA & India
-// https://www.linkedin.com/in/ganesannarayanasamy/
     {
       name: "Ganesan Narayanasamy",
       title: "President, OpenPOWER Foundation",
       organization: "CEO at Object Automation Inc. – USA & India",
-      photo: "/images/ganesan.jpeg", // Update with correct path
+      photo: "/images/ganesan.jpeg",
       linkedin: "https://www.linkedin.com/in/ganesannarayanasamy/",
       website: ""
-    },
-    {
-      name: "Shanthi Pavan",
-      title: "Professor",
-      organization: "IIT Madras",
-      photo: "/images/shanthi.jpeg", // Update with correct path
-      linkedin: "https://www.linkedin.com/in/shanthi-pavan-39715a137/",
-      website: "https://www.ee.iitm.ac.in/faculty/profile/shanthi.pavan"
-    },
-    {
-      name:"Gaurav Goel",
-      title:"Senior Principal Engineer",
-      organization:"Renesas Electronics",
-      photo: "/images/gauravgoel.jpeg", // Update with correct path
-      linkedin: "https://www.linkedin.com/in/gaurav-goel-01185a5/",
-      website :""
     }
   ];
 
@@ -129,11 +235,13 @@ const SpeakersSection = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      {/* Hero Section */}
       {/* Hero Section with Parallax Effect */}
       <header
         className="text-center text-white py-20 relative bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/images/iit-ropar-5.avif')" }}
+        style={{ 
+          backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          minHeight: "400px"
+        }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-violet-900/80"></div>
         <div className="relative z-10 px-4 py-16">
@@ -151,13 +259,17 @@ const SpeakersSection = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Meet Our Distinguished Speakers</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {speakers.map((speaker, index) => (
               <SpeakerCard key={index} {...speaker} />
             ))}
           </div>
           
-          
+          <div className="text-center mt-12">
+            <p className="text-gray-600 text-lg">
+              Join us for an inspiring event featuring {speakers.length} distinguished speakers from leading organizations worldwide.
+            </p>
+          </div>
         </div>
       </main>
       

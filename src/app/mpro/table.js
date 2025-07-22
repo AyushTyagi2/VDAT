@@ -3,89 +3,16 @@
 import React, { useState } from "react";
 import { Cpu, CircuitBoard, Layers, ExternalLink, Calendar, Clock } from "lucide-react";
 const MProTable = () => {
-    const [selectedDay, setSelectedDay] = useState(1);
+  const [selectedDay, setSelectedDay] = useState(1);
 
   const day1Schedule = [
     {
-      time: "9:00 AM - 9:30 AM",
-      isBreak: true,
-      breakTitle: "Registration"
-    },
-    {
-      time: "9:30 AM - 1:00 PM",
-      isBreak: false,
-      sessions: {
-        tutorial1: {
-          title: "Tutorial 1: System-RISCV",
-          type: "Tutorial"
-        },
-        tutorial3: {
-          title: "Tutorial 3: DFT", 
-          type: "Tutorial"
-        },
-        tutorial2: {
-          title: "Tutorial 2: Analog Design",
-          type: "Tutorial"
-        },
-        tutorial4: {
-          title: "Tutorial 4: Fabrication",
-          type: "Tutorial"
-        }
-      }
-    },
-    {
-      time: "1:00 PM - 2:00 PM",
-      isBreak: true,
-      breakTitle: "Lunch Break"
-    },
-    {
-      time: "2:00 PM - 3:30 PM",
-      isBreak: false,
-      sessions: {
-        tutorial5: {
-          title: "Tutorial 5: Accelerators",
-          type: "Tutorial"
-        },
-        tutorial6: {
-          title: "Tutorial 6: Analog",
-          type: "Tutorial"
-        },
-        tutorial7: {
-          title: "Tutorial 7",
-          type: "Tutorial"
-        },
-        tutorial8: {
-          title: "Tutorial 8: Devices",
-          type: "Tutorial"
-        }
-      }
-    },
-    {
-      time: "3:30 PM - 4:00 PM",
-      isBreak: true,
-      breakTitle: "Tea Break"
-    },
-    {
-      time: "4:00 PM - 5:30 PM",
-      isBreak: false,
-      sessions: {
-        tutorial9: {
-          title: "Tutorial 9: Embedded System",
-          type: "Tutorial"
-        },
-        tutorial10: {
-          title: "Tutorial 10: Neuromorphic",
-          type: "Tutorial"
-        },
-        tutorial11: {
-          title: "Tutorial 11: HLS",
-          type: "Tutorial"
-        },
-        tutorial12: {
-          title: "Tutorial 12: Devices",
-          type: "Tutorial"
-        }
-      }
+      time: "Full Day", // You can adjust the time as appropriate
+      isBreak: false, // Not a break, but a special entry
+      special: true,
+      title: "Go to Tutorial Page", // The text for the link
+      link: "/tut", // The link to your main tutorial page
+      description: "Click here to view all tutorial details." // Optional description
     }
   ];
 
@@ -192,6 +119,7 @@ const MProTable = () => {
       sessions: {
         session2a: {
           title: "Session 2a: Startup Contest - pitching session",
+          link: "/circuitpreneur",
           papers: ""
         },
         session2b: {
@@ -351,32 +279,40 @@ const MProTable = () => {
     }
   };
 
+  // SessionLink component with reduced padding
   const SessionLink = ({ session }) => (
-    <div className="p-3 h-full">
-      <div className="text-sm leading-relaxed text-gray-800">
-        <span className="font-medium block mb-1">{session.title}</span>
-        {session.papers && (
-          <span className="text-xs text-gray-600 block">{session.papers}</span>
+    <div className="p-2 h-full">
+      <div className="text-xs leading-tight text-gray-800">
+        {session.link ? (
+          <a href={session.link} className="font-medium block mb-1 text-blue-700 hover:underline flex items-center gap-1">
+            {session.title} {session.type && <span className="text-xs text-blue-600 inline-block px-1 py-0.5 bg-blue-50 rounded">{session.type}</span>} <ExternalLink size={12} />
+          </a>
+        ) : (
+          <>
+            <span className="font-medium block mb-1 text-xs">{session.title}</span>
+            {session.type && (
+              <span className="text-xs text-blue-600 inline-block mt-1 px-1 py-0.5 bg-blue-50 rounded">{session.type}</span>
+            )}
+          </>
         )}
-        {session.type && (
-          <span className="text-xs text-blue-600 inline-block mt-1 px-2 py-1 bg-blue-50 rounded">{session.type}</span>
+        {session.papers && (
+          <span className="text-xs text-gray-600 block mt-1">{session.papers}</span>
         )}
       </div>
     </div>
   );
+
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans">
-      
-
-      <div className="max-w-full mx-auto p-4 sm:p-6 bg-gray-50 min-h-screen">
+      <div className="max-w-full mx-auto p-2 sm:p-4 bg-gray-50 min-h-screen">
         {/* Day Selection */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-4">
           <div className="bg-white rounded-lg shadow-md p-1 flex">
             {[1, 2, 3].map((day) => (
               <button
                 key={day}
                 onClick={() => setSelectedDay(day)}
-                className={`px-6 py-3 rounded-md text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-md text-xs font-medium transition-all ${
                   selectedDay === day
                     ? 'bg-blue-600 text-white shadow-sm'
                     : 'text-gray-600 hover:bg-gray-100'
@@ -389,33 +325,29 @@ const MProTable = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="bg-gradient-to-r from-slate-600 to-slate-700 text-white p-4">
-            <h2 className="text-xl sm:text-2xl font-semibold text-center">
+          <div className="bg-gradient-to-r from-slate-600 to-slate-700 text-white p-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-center">
               Day {selectedDay}: August {selectedDay + 6}, 2025
             </h2>
           </div>
-          
+
           <div className="w-full overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 text-sm bg-gray-200 min-w-[140px]">
+                  <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 text-xs bg-gray-200 min-w-[120px]">
                     Time
                   </th>
+                  {/* Reduced column widths */}
                   {selectedDay === 1 ? (
-                    <>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-pink-50 text-sm min-w-[200px]">Tutorial 1</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-yellow-50 text-sm min-w-[200px]">Tutorial 2</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-blue-50 text-sm min-w-[200px]">Tutorial 3</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-green-50 text-sm min-w-[200px]">Tutorial 4</th>
-                    </>
+                    <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 bg-pink-50 text-xs min-w-[160px]" colSpan={4}>Tutorials</th>
                   ) : (
                     <>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-pink-50 text-sm min-w-[200px]">Track A</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-yellow-50 text-sm min-w-[200px]">Track B</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-blue-50 text-sm min-w-[200px]">Track C</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-green-50 text-sm min-w-[200px]">Track D</th>
-                      <th className="border border-gray-300 p-3 text-center font-semibold text-gray-700 bg-purple-50 text-sm min-w-[200px]">Track E</th>
+                      <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 bg-pink-50 text-xs min-w-[160px]">Track A</th>
+                      <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 bg-yellow-50 text-xs min-w-[160px]">Track B</th>
+                      <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 bg-blue-50 text-xs min-w-[160px]">Track C</th>
+                      <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 bg-green-50 text-xs min-w-[160px]">Track D</th>
+                      <th className="border border-gray-300 p-2 text-center font-semibold text-gray-700 bg-purple-50 text-xs min-w-[160px]">Track E</th>
                     </>
                   )}
                 </tr>
@@ -423,22 +355,28 @@ const MProTable = () => {
               <tbody>
                 {getCurrentSchedule().map((row, index) => (
                   <tr key={index} className={row.isBreak ? "bg-gray-50" : "hover:bg-gray-50/50 transition-colors"}>
-                    <td className="border border-gray-300 p-3 text-sm font-medium text-gray-700 bg-gray-50 text-center">
+                    <td className="border border-gray-300 p-2 text-xs font-medium text-gray-700 bg-gray-50 text-center">
                       <div className="whitespace-nowrap">{row.time}</div>
                     </td>
                     {row.isBreak ? (
-                      <td className="border border-gray-300 bg-gray-100 text-center py-4 px-4" colSpan={selectedDay === 1 ? 4 : 5}>
-                        <div className="text-orange-600 font-medium text-sm">
+                      <td className="border border-gray-300 bg-gray-100 text-center py-2 px-2" colSpan={selectedDay === 1 ? 4 : 5}>
+                        <div className="text-orange-600 font-medium text-xs">
                           {row.breakTitle}
                         </div>
                       </td>
                     ) : row.special ? (
-                      <td className="border border-gray-300 bg-blue-50 text-center py-4 px-4" colSpan={selectedDay === 1 ? 4 : 5}>
-                        <div className="text-blue-800 font-medium text-sm mb-2">
-                          {row.title}
-                        </div>
+                      <td className="border border-gray-300 bg-blue-50 text-center py-2 px-2" colSpan={selectedDay === 1 ? 4 : 5}>
+                        {row.link ? (
+                          <a href={row.link} className="text-blue-800 font-medium text-sm flex items-center justify-center gap-1 hover:underline">
+                            {row.title} <ExternalLink size={16} />
+                          </a>
+                        ) : (
+                          <div className="text-blue-800 font-medium text-sm">
+                            {row.title}
+                          </div>
+                        )}
                         {row.description && (
-                          <div className="text-gray-600 text-xs leading-relaxed">
+                          <div className="text-gray-600 text-xs leading-tight mt-1">
                             {row.description}
                           </div>
                         )}
@@ -460,16 +398,16 @@ const MProTable = () => {
               </tbody>
             </table>
           </div>
-          
-          <div className="bg-gray-50 p-4 border-t border-gray-200">
-            <p className="text-sm text-gray-600 text-center">
-              <span className="font-medium">Note:</span> All sessions and timings are as per the official program. 
+
+          <div className="bg-gray-50 p-3 border-t border-gray-200">
+            <p className="text-xs text-gray-600 text-center">
+              <span className="font-medium">Note:</span> All sessions and timings are as per the official program.
               Subject to change without prior notice.
             </p>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   );
 };
 export default MProTable;
