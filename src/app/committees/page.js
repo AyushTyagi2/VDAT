@@ -97,7 +97,7 @@ const committees = [
         institute: "Renesas",
         linkedin:
           "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in",
-        image: "./images/chitra.jpg",
+        image: "./images/chit.jpg",
       },
       {
         name: "RAJNISH SHARMA",

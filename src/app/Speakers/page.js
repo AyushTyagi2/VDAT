@@ -176,7 +176,7 @@ const SpeakersSection = () => {
       name: "Chitra Hariharan",
       title: "",
       organization: "Renesas",
-      photo: "/images/chitra.jpg",
+      photo: "/images/chit.jpg",
       linkedin: "",
       website: ""
     },
