@@ -114,9 +114,9 @@ const SpeakersSection = () => {
       website: ""
     },
     {
-      name: "Dr. S. D. Sudarshan",
+      name: "Dr. SD Sudarsan",
       title: "Executive Director",
-      organization: "C-DAC",
+      organization: "C-DAC Banglore",
       photo: "/images/sd.png",
       linkedin: "",
       website: ""
