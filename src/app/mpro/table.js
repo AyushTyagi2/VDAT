@@ -27,7 +27,7 @@ const MProTable = () => {
       isBreak: false,
       special: true,
       title: "VDAT-2025 Inauguration",
-      description: "Chief Guest-Sunita Verma (TBC), IIT Ropar Director, IIT Mandi Director, Prof Animesh Biswas (IIT Mandi), Prof Bhatia (PEC Director), Prof Madhu Chitkara, Prof. Manna (CU), SCL, General Chairs, PC Chair, VSI President"
+      description: "Chief Guest-Sunita Verma (TBC), Sanjeev Arora (Minister for Investment Promotion of Punjab), Hitesh Garg (NXP), IIT Ropar Director, IIT Mandi Director, Prof Animesh Biswas (IIT Mandi), Prof Bhatia (PEC Director), Prof Madhu Chitkara, Prof. Manna (CU), SCL, General Chairs, PC Chair, VSI President"
     },
     {
       time: "10:10 AM - 10:40 AM",
@@ -51,25 +51,29 @@ const MProTable = () => {
       time: "11:30 AM - 11:55 AM",
       isBreak: false,
       special: true,
-      title: "Keynote 1"
+      title: "Keynote 1",
+      description: "Sunita Verma, Group Co-ordinator, Electronics R&D, MeitY"
     },
     {
       time: "11:55 AM - 12:20 PM",
       isBreak: false,
       special: true,
-      title: "Keynote: 2 Dr. Sudarshan, Executive Director, C-DAC"
+      title: "Keynote: 2",
+      description: " Dr. SD Sudarsan, Executive Director, C-DAC Bangalore"
     },
     {
       time: "12:20 PM - 12:40 PM",
       isBreak: false,
       special: true,
-      title: "Invited Talk: Gaurav Goel, Renesas"
+      title: "Invited Talk:",
+      description: "Gaurav Goel, Sr Principal Engineer, Renesas"
     },
     {
       time: "12:40 PM - 1:00 PM",
       isBreak: false,
       special: true,
-      title: "Invited talk: Ganesan, OpenPower"
+      title: "Invited talk:",
+      description: " Ganesan Narayanasamy, Founder and CEO, Object Automation System Solutions Inc"
     },
     {
       time: "1:00 PM - 2:00 PM",
@@ -111,7 +115,8 @@ const MProTable = () => {
       time: "3:50 PM - 4:10 PM",
       isBreak: false,
       special: true,
-      title: "Invited Talk: Dipan Sahu, MoE"
+      title: "Invited Talk:",
+      description: "Dipan Sahu, Asst. Innovation Director, Ministry of Education"
     },
     {
       time: "4:10 PM - 5:40 PM",
@@ -181,19 +186,21 @@ const MProTable = () => {
       time: "10:00 AM - 10:20 AM",
       isBreak: false,
       special: true,
-      title: "Invited Talk: Shanthi Pavan (IIT Madras)"
+      title: "Invited Talk:",
+      description: "Prof Shanthi Pavan (IIT Madras)"
     },
     {
       time: "10:20 AM - 10:40 AM",
       isBreak: false,
       special: true,
-      title: "Invited Talk: Tapas Nandi (Microsoft)"
+      title: "Invited Talk:",
+      description: "Tapas Nandy, Sr. Director, Microsoft"
     },
     {
       time: "10:40 AM - 11:25 AM",
       isBreak: false,
       special: true,
-      title: "Student Open House - Ask me anything panel"
+      title: "Student Open House - Unleashing the opportunities in Golden Era of Semicon & VLSI  Ask Me Anything Session"
     },
     {
       time: "11:25 AM - 11:45 AM",

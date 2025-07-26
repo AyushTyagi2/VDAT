@@ -114,7 +114,7 @@ const SpeakersSection = () => {
     {
       name: "Dr. SD Sudarsan",
       title: "Executive Director",
-      organization: "C-DAC Banglore",
+      organization: "CDAC Banglore",
       photo: "/images/sd.png",
       linkedin: "",
       website: ""
@@ -187,7 +187,7 @@ const SpeakersSection = () => {
       website: ""
     },
     {
-      name: "Tapas Nandi",
+      name: "Tapas Nandy",
       title: "Sr. Director, Microsoft / Sr. Member, IEEE",
       organization: "Microsoft",
       photo: "/images/tapasnandy.jpg",
