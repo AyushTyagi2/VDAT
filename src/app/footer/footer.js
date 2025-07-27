@@ -14,6 +14,7 @@ const Footer = () => {
 
   const sponsorLogos = {
     "Platinum Partner": "/logos/iit-mandi1.png",
+    "Silver Partner" : "/logos/OS.png",
     "Gold Partner": "/images/Agmatel_Keyisght Logo HD.png",
     "Gold Partner, Media Partner": "/images/yourpedia.png",
     "Publication Sponsor": "/images/springer.png",
@@ -75,6 +76,8 @@ const Footer = () => {
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                   <div className={`px-4 py-2 rounded-full text-xs font-bold shadow-lg ${
                     category.includes('Platinum') 
+                      ? 'bg-gradient-to-r from-gray-400 to-gray-600 text-white' 
+                    : category.includes('Silver') 
                       ? 'bg-gradient-to-r from-gray-400 to-gray-600 text-white' 
                       : category.includes('Gold') 
                       ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-black' 

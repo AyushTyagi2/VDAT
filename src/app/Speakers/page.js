@@ -81,6 +81,19 @@ const SpeakersSection = () => {
   const speakers = [
     // First row from Image 1
     {
+      name: "Sanjeev Arora",
+      title: "Minister for Investment Promotion of Punjab",
+      photo: "/images/Sanjeev.avif",
+    },
+    {
+      name: "Hitesh Garg",
+      title: "Vice President and India Country Manager",
+      organization: " NXP Semiconductors",
+      photo: "/images/hitesh.jpeg",
+      linkedin: "https://www.linkedin.com/in/hiteshgarg/",
+      website: ""
+    },
+    {
       name: "Sunita Verma",
       title: "Group Coordinator (R&D)",
       organization: "MeitY",

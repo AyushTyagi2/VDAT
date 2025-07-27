@@ -283,6 +283,7 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mx-auto max-w-7xl">
           {[
             { src: './logos/mandi__.png', alt: 'Mandi Logo' },
+            { src: './logos/OS.png', alt: 'Orbit & Skyline India' },
             { src: './images/Agmatel_Keyisght Logo HD.png', alt: 'Agmatel-Keysight Logo' },
             { src: './images/yourpedia.png', alt: 'YourPedia Logo' },
             { src: './images/springer.png', alt: 'Springer Logo' },
