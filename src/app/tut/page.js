@@ -3,26 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Cpu, CircuitBoard, Layers, ExternalLink, Clock, Calendar, Users } from "lucide-react";
+import Footer from "../footer/footer";
+import Navbar from "../home/Navbar";
 
-// Mock components for demonstration
-const Footer = () => (
-  <footer className="bg-gray-800 text-white p-4 text-center">
-    <p>&copy; 2025 Conference. All rights reserved.</p>
-  </footer>
-);
 
-const Navbar = () => (
-  <nav className="bg-black text-white p-4">
-    <div className="container mx-auto flex justify-between items-center">
-      <h1 className="text-xl font-bold">Conference 2025</h1>
-      <div className="space-x-4">
-        <Link href="/" className="hover:text-gray-300">Home</Link>
-        <Link href="/schedule" className="hover:text-gray-300">Schedule</Link>
-        <Link href="/speakers" className="hover:text-gray-300">Speakers</Link>
-      </div>
-    </div>
-  </nav>
-);
+
 
 const ConferenceScheduleTable = () => {
   const scheduleData = [
