@@ -7,68 +7,55 @@ import TutorialComponent from "../tutcomponent.js";
 const TutorialPage = () => {
   const tutorialData = {
     title:
-      "Design techniques for dc-dc boost converters with a high voltage conversion ratio.",
+      "CMOS ANALOG DESIGN",
     duration: "90 minutes",
-    speakers: ["Saravana Kumar M"],
-    format: "Presentation",
+    speakers: ["Prof HS Jattana"],
+    format: "Presentation and discussion",
     //autofill from above, TAKE THE TEXT EXACTLY AS IT IS
     // from the above text, do not change the text, just copy paste it
     abstract:
-      `A boost converter, also known as a step-up converter, is a type of DC-DC switched-mode
-power supply that efficiently increases a lower input voltage to a higher output voltage. The
-basic blocks of a boost converter are an inductor, two power switches and an output
-capacitor. The power switch is driven by a control signal, whose duty cycle can be adjusted to
-achieve a high output voltage. In this tutorial, I will start with the basics of boost converters
-where I will discuss different performance metrics which determine the values of the inductor,
-capacitor, frequency of the control signal and its duty cycle.
-
-The control signal is generated using a negative feedback loop. Based on its implementation,
-there are two popular types of control – the voltage mode control and the current mode
-control. Voltage-mode control regulates the output voltage by adjusting the duty cycle of the
-switching transistor based on voltage feedback. While straightforward, it faces challenges due
-to the inherent complex poles and right-half-plane (RHP) zero, which can complicate stability
-analysis and design. Current-mode control enhances the voltage-mode approach by adding
-an inner current feedback loop.
-
-This method improves transient response and provides inherent overcurrent protection. 
-However, it may require additional components like current sense resistors or transformers,
-and careful design. We will discuss both these techniques in this tutorial. The current mode 
-control has different sub-types namely CCM, DCM and BCM control. 
-Each of them has their own merits and demerits which will be discussed at length in
-the tutorial. We also finally discuss the various factors which determine the efficiency of boost
-converters.
-
-Finally, I will discuss the design details of a BCM current mode control boost converter along
-with the feedback circuitry. I am confident this tutorial will provide a comprehensive learning
-curve for the audience in the area of boost converter design.`,
+      `The tutorial will cover the available components in CMOS technology for design of analog
+and mixed signal products, like various types of Tx, resistors, capacitors and Inductors - how
+to use these in circuit design in terms of advantages and layout. The tutorial will focus on
+design issues in the complete process of product development - " from specifications to
+qualified product". The test case of radiation hardened ADC for military and space
+applications will be discussed`,
 
     domain:
-      "Analog circuit design, Power management circuit design",
+      "VLSI CIRCUITS AND SOC DESIGN",
     keywords:
-      "dc-dc, boost converter, voltage-mode control, current-mode control, duty cycle.",
+      "CMOS TECHNOLOGY DEEP SUB MICRON VLSI DESIGN RADIATION HARDENED QUALIFIED PRODUCT",
     learningOutcomes: [
-      "a) Understanding the basic specifications of a boost converter. b) Learning about two control techniques in a boost converter. c) Design challenges in a boost converter with a high voltage conversion ratio.",
+      "1. to know about available components in Deep Sub Micron DSM CMOS Technology 2. To learn the design flow of analog products 3. Front end analog design and physical design issues 4. To know issues in designing military and space qualified products",
     ],
     targetAudience:
-      "Master’s and Ph.D students, Researchers and Industry professionals.",
+      "UG,PG, Scholars",
     prerequisites:
-      "Basic circuit analysis, Laplace transform analysis, Transfer function design.",
+      "NIL",
     speakerBiographies: [
-      `
-Saravana Kumar is an Assistant Professor in the Microelectronics and VLSI group, Department of Electronics and Communication Engineering (ECE), of Indian Institute of Technology (IIT) Roorkee. He works in the area of Analog and Mixed signal integrated circuit (IC) design withspecial focus on high performance and high bandwidth data converters. He received the bachelor’s degree in Electronics and Communication Engineering from the Madras Institute of Technology, Anna University, Chennai, in 2009, and the M. Tech degree from the Indian Institute of Technology Delhi, New Delhi, in 2011.
-From 2011 to 2014, he worked as a Design Engineer at Analog Devices, Bengaluru, India, where he worked on high-speed chip-to-chip serial link communication. He obtained his PhD degree from the Indian Institute of Technology Madras, Chennai, in 2021, in the area of data-converter design.`,
+      `Received his engineering education from BITS Pilani. Worked as Design Engineer with
+Rockwell semiconductor, Newport Beach USA for 1.5 years where he worked in design of
+65C series of digital devices. Later Joined Semiconductor Lab (SCL).
+Has hands-on experience in different areas of semiconductor technology like CMOS Process
+development & Integration, VLSI Design, VLSI testing and characterization.
+As Scientist G and Group Head of Design and Process Group he led a team of 74 Scientists
+and the Group developed 95 standard products, space qualified and used in space
+technology and applications. These were different architectures of ADC/DAC, LDOs, Data
+communication protocols, etc.
+The compatible processes developed under his leadership were – Analog modules on
+baseline TS180SL, Bipolar device technology, CCD technology & Devices like TDI, FT And SOI
+CMOS.
+Was awarded ISRO award for his contribution to Space launch Vehicle and Spacecraft
+electronics for the year 2020.
+At present he is Adjunct Prof at DhiruBhai Ambani University (DAU) Gandhinagar, MNIT
+Jaipur and PGIMER and is taking courses on VLSI Design and Technology.
+He is actively involved in the promotion of semiconductor manufacturing schemes of MEITY
+as member and chairman of few committees in C2S, DLI etc.`,
     ],
     basicStructure: `
-a) Introduction to dc-dc boost converters
-b) Control techniques in boost converters – Voltage mode and Current mode control.
-c) Voltage mode control – design specifications, challenges involving stability
-d) Current mode control – design specifications, stability considerations.
-e) Types of current mode control – CCM, DCM and BCM
-f) Design example of a boost converter with a high voltage conversion ratio
-g) Advanced control techniques.
-h) Conclusion`,
+1 speaker`,
 
-    youtubeVideoId: "", // Replace with actual video ID
+    youtubeVideoId: "6oDRag_Glv8", // Replace with actual video ID
   };
 
   return (

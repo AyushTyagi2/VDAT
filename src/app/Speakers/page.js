@@ -89,7 +89,7 @@ const SpeakersSection = () => {
       name: "Hitesh Garg",
       title: "Vice President and India Country Manager",
       organization: " NXP Semiconductors",
-      photo: "/images/hitesh.jpeg",
+      photo: "/images/hitesh.jpg",
       linkedin: "https://www.linkedin.com/in/hiteshgarg/",
       website: ""
     },
@@ -125,6 +125,13 @@ const SpeakersSection = () => {
       photo: "/images/kamli.png",
       linkedin: "",
       website: ""
+    },
+    {
+      name: "Dr. Sharon Zhou",
+      title: "Vice President of Artificial Intelligence",
+      organization: "AMD",
+      photo: "/images/sharon.jpeg",
+      linkedin: "https://www.linkedin.com/in/zhousharon/"
     },
     {
       name: "Dr. SD Sudarsan",

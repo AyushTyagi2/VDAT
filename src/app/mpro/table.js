@@ -33,7 +33,8 @@ const MProTable = () => {
       time: "10:10 AM - 10:40 AM",
       isBreak: false,
       special: true,
-      title: "Vision Address"
+      title: "Vision Address",
+      description: "Sharon Zhou, Vice President of Artificial Intelligence, AMD"
     },
     {
       time: "10:40 AM - 11:10 AM",
@@ -86,23 +87,18 @@ const MProTable = () => {
       sessions: {
         session1a: {
           title: "Session 1a: Emerging Devices",
-          papers: "Paper id: 132, 149, 200, 198, 172, 340"
         },
         session1b: {
           title: "Session 1b: RF-IC",
-          papers: "Paper id: 336, 179, 373, 282, 293, 354"
         },
         session1c: {
           title: "Session 1c: Accelerator",
-          papers: "Paper id: 1, 269, 147, 187, 164, 371"
         },
         session1d: {
           title: "Session 1d: Memory",
-          papers: "Paper id: 169, 158, 263, 414, 186, 177"
         },
         session1e: {
           title: "Session 1e: Digital",
-          papers: "Paper id: 203, 385, 251, 212, 226, 301"
         }
       }
     },
@@ -133,15 +129,12 @@ const MProTable = () => {
         },
         session2c: {
           title: "Session 2c: Embedded",
-          papers: "Paper id: 378, 326, 277, 235, 29, 25"
         },
         session2d: {
           title: "Session 2d: FPGA and Processor",
-          papers: "Paper id: 61, 184, 225, 168, 107, 67"
         },
         session2e: {
           title: "Session 2e: Analog and Digital",
-          papers: "Paper id: 126, 79, 211, 256, 165, 36"
         }
       }
     },
