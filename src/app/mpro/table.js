@@ -11,7 +11,7 @@ const MProTable = () => {
       isBreak: false, // Not a break, but a special entry
       special: true,
       title: "Go to Tutorial Page", // The text for the link
-      link: "/tut", // The link to your main tutorial page
+      link: "tut", // The link to your main tutorial page
       description: "Click here to view all tutorial details." // Optional description
     }
   ];
