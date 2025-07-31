@@ -149,7 +149,7 @@ const ConferenceScheduleTable = () => {
   const SessionLink = ({ session, track }) => (
     <div className="p-2 sm:p-3 h-full">
       <Link 
-        href={`tut_struct/${session.path}`}
+        href={`tut_struct/tutorial1`}
         className="block text-xs sm:text-sm leading-tight sm:leading-relaxed hover:text-blue-600 transition-all duration-300 group transform hover:scale-[1.02]"
         onMouseEnter={() => setHoveredSession(session.path)}
         onMouseLeave={() => setHoveredSession(null)}
