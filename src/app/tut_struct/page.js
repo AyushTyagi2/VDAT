@@ -3,26 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Cpu, CircuitBoard, Layers, ExternalLink, Clock, Calendar, Users } from "lucide-react";
+import Navbar from "../home/Navbar";
+import Footer from "../footer/footer";
 
-// Mock components for demonstration
-const Footer = () => (
-  <footer className="bg-gray-800 text-white p-4 text-center">
-    <p>&copy; 2025 Conference. All rights reserved.</p>
-  </footer>
-);
-
-const Navbar = () => (
-  <nav className="bg-black text-white p-4">
-    <div className="container mx-auto flex justify-between items-center">
-      <h1 className="text-xl font-bold">Conference 2025</h1>
-      <div className="space-x-4">
-        <Link href="/" className="hover:text-gray-300">Home</Link>
-        <Link href="/schedule" className="hover:text-gray-300">Schedule</Link>
-        <Link href="/speakers" className="hover:text-gray-300">Speakers</Link>
-      </div>
-    </div>
-  </nav>
-);
 
 const ConferenceScheduleTable = () => {
   const scheduleData = [
@@ -189,10 +172,10 @@ const ConferenceScheduleTable = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans">
-      <div className="bg-black">
+    <div className="bg-black to-white min-h-screen font-sans">
+  
         <Navbar />
-      </div>
+     
       
       {/* Enhanced Header */}
       <header className="text-center text-white py-16 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
