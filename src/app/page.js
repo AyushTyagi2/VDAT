@@ -287,6 +287,7 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
             { src: './images/Agmatel_Keyisght Logo HD.png', alt: 'Agmatel-Keysight Logo' },
             { src: './images/yourpedia.png', alt: 'YourPedia Logo' },
             { src: './images/springer.png', alt: 'Springer Logo' },
+            { src: './logos/NXP.jpg', alt: 'NXP Logo' },
           ].map((logo, i) => (
             <div
               key={i}

@@ -82,14 +82,14 @@ const SpeakersSection = () => {
     // First row from Image 1
     {
       name: "Sanjeev Arora",
-      title: "Minister for Investment Promotion of Punjab",
-      photo: "/images/Sanjeev.avif",
+      title: "Cabinet Minister, Punjab Industries & Commerce, Investment Promotion and NRI Affairs",
+      photo: "/images/sanjeev.png",
     },
     {
       name: "Hitesh Garg",
       title: "Vice President and India Country Manager",
       organization: " NXP Semiconductors",
-      photo: "/images/hitesh.jpg",
+      photo: "/images/hitesh.png",
       linkedin: "https://www.linkedin.com/in/hiteshgarg/",
       website: ""
     },
@@ -203,9 +203,9 @@ const SpeakersSection = () => {
     {
       name: "Preet Yadav",
       title: "",
-      organization: "NXP",
+      organization: "NXP Semiconductors ",
       photo: "/images/preet.jpg",
-      linkedin: "",
+      linkedin: "http://www.linkedin.com/in/preet-yadav",
       website: ""
     },
     {

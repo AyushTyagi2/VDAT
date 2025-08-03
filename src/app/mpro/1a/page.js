@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Footer from './../../footer/footer';
+import Navbar from './../../home/Navbar';
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -97,6 +99,11 @@ export default function SessionLayout({
 
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-900 transition-colors duration-700 min-h-screen">
+      
+      <header>
+        <Navbar />
+      </header>
+
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse" />
@@ -375,6 +382,7 @@ export default function SessionLayout({
           ))}
         </motion.div>
       </main>
+      <Footer />
     </div>
   );
 }

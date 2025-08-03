@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Cpu, CircuitBoard, Layers, ExternalLink, Calendar, Clock } from "lucide-react";
 
 const MProTable = () => {
-  const [selectedDay, setSelectedDay] = useState(1);
+  const [selectedDay, setSelectedDay] = useState(2);
 
   const day1Schedule = [
     {
@@ -24,28 +24,35 @@ const MProTable = () => {
       breakTitle: "Registration"
     },
     {
-      time: "9:30 AM - 10:10 AM",
+      time: "9:30 AM - 10:00 AM",
       isBreak: false,
       special: true,
       title: "VDAT-2025 Inauguration",
-      description: "Chief Guest-Sunita Verma (TBC), Sanjeev Arora (Minister for Investment Promotion of Punjab), Hitesh Garg (NXP), IIT Ropar Director, IIT Mandi Director, Prof Animesh Biswas (IIT Mandi), Prof Bhatia (PEC Director), Prof Madhu Chitkara, Prof. Manna (CU), SCL, General Chairs, PC Chair, VSI President"
+      description: "Chief Guest : Shri. Sanjeev Arora (Minister for Investment Promotion of Punjab), Sunita Verma, Group Coordinator R&D at Ministry of Electronics & IT (MeitY), Hitesh Garg, Vice President and India Country Manager, NXP Semiconductors, Prof. Rajeev Ahuja, Director IIT Ropar, Prof. Laxmidhar Behera, Director IIT Mandi, Prof Animesh Biswas, Professor IIT Kanpur, Prof. Rajesh Kumar Bhatia, Director PEC - Chandigarh, Madhu Chitkara, Pro Chancellor Chitkara University, Prof. Manpreet Singh Manna, Vice-Chancellor, Chandigarh University, Dr. Satya Gupta, President VSI, Prof. Rohit Sharma, Professor IIT Ropar, Prof. Neeraj Goel, Professor IIT Ropar, Prof. Hitesh Shrimali, Professor IIT Mandi, Prof. Brajesh Rawat, Professor IIT Ropar, Prof. Shivani Malhotra, Professor Chitkara University"
     },
     {
-      time: "10:10 AM - 10:40 AM",
+      time: "10:00 AM - 10:15 AM",
+      isBreak: false,
+      special: true,
+      title: "Invited Talk",
+      description: "Hitesh Garg, Vice President and India Country Manager, NXP Semiconductors"
+    },
+    {
+      time: "10:15 AM - 10:45 AM",
       isBreak: false,
       special: true,
       title: "Vision Address",
       description: "Sharon Zhou, Vice President of Artificial Intelligence, AMD"
     },
     {
-      time: "10:40 AM - 11:10 AM",
+      time: "10:45 AM - 11:15 AM",
       isBreak: false,
       special: true,
       title: "Fireside Chat: Advance 3D Packaging",
       description: "Dr. Satya Gupta, Raj Mahajan (Intel), Wilfred Gomes (Mueon)"
     },
     {
-      time: "11:10 AM - 11:30 AM",
+      time: "11:15 AM - 11:30 AM",
       isBreak: true,
       breakTitle: "Tea Break"
     },
@@ -183,7 +190,8 @@ const MProTable = () => {
       time: "9:30 AM - 10:00 AM",
       isBreak: false,
       special: true,
-      title: "Global Vision Address"
+      title: "Global Vision Address",
+      description: "Rajeev Madhavan, Founder Clear Ventures, Founder Magma Design Automation"
     },
     {
       time: "10:00 AM - 10:20 AM",
@@ -203,7 +211,7 @@ const MProTable = () => {
       time: "10:40 AM - 11:25 AM",
       isBreak: false,
       special: true,
-      title: "Student Open House - Unleashing the opportunities in Golden Era of Semicon & VLSI  Ask Me Anything Session"
+      title: "Student Open House - Unleashing the opportunities in Golden Era of Semicon & VLSI Ask Me Anything Session"
     },
     {
       time: "11:25 AM - 11:45 AM",
