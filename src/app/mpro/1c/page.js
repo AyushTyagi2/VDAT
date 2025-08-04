@@ -45,13 +45,14 @@ export default function SessionLayout({
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1 : Prof. Binod Kumar, Chair 2 : Prof. Abhishek Sharma",
   sessionDescription = "",
   
   // Papers Array
 papers = [
   {
     id: '1',
+    time: '2:00 PM - 2:15 PM',
     title: 'An Area-Efficient Hardware Architecture and Implementation of Back-Propagation Algorithm-based Training Accelerator for Convolutional Neural Network',
     authors: ['Rahul Shrestha', 'Nitesh Kumar Saini'],
     abstract: `This work presents an area-efficient hardware-accelerator design for training the fully-connected layers of convolutional neural networks (CNNs)...`,
@@ -61,37 +62,8 @@ papers = [
     }
   },
   {
-    id: '147',
-    title: 'A Methodology for Security-Aware Lightweight Deep Neural Network Acceleration Implementation',
-    authors: ['Abhishek Yadav', 'Ayush Dixit', 'Vyom Gupta', 'Binod Kumar'],
-    abstract: `Deep Neural Network (DNN)-based Systems are widely becoming popular... The proposed methodology offers multiple benefits through reduced latency, real-time performance, and enhanced security features...`,
-    mainContact: {
-      name: 'Abhishek Yadav',
-      email: 'yadav.49@iitj.ac.in',
-    }
-  },
-  {
-    id: '164',
-    title: 'POLARON: Precision-aware On-device Learning and Adaptive Runtime-cONfigurable AI acceleration',
-    authors: ['Mukul Vishnu Lokhande', 'Santosh Vishvakarma'],
-    abstract: `The increasing complexity of AI models requires flexible hardware capable of supporting diverse precision formats, particularly for energy-constrained edge platforms...`,
-    mainContact: {
-      name: 'Santosh Vishvakarma',
-      email: 'skvishvakarma@iiti.ac.in',
-    }
-  },
-  {
-    id: '187',
-    title: 'Magnetic Skyrmions-Based Rectified Linear Unit (ReLU) for Deep Neural Networks',
-    authors: ['Shivangi Shringi', 'Srinivasu Bodapati', 'Srikant Srinivasan'],
-    abstract: `This paper presents a novel spintronic design for implementing the Rectified Linear Unit (ReLU) activation function using magnetic skyrmions in a ferromagnet-heavy metal (FM-HM) bilayer structure...`,
-    mainContact: {
-      name: 'Shivangi Shringi',
-      email: 'shivangishringi@gmail.com',
-    }
-  },
-  {
     id: '269',
+    time: '2:15 PM - 2:30 PM',
     title: 'ReMAC: A Multi-precision Reconfigurable MAC Array Architecture for Arbitrary-Kernel based Hardware Accelerator',
     authors: ['Teena Jangid', 'Anand Darji'],
     abstract: `This paper presents ReMAC (Reconfigurable Multiply-Accumulate Core), an area and power efficient MAC Unit that supports variable kernel sizes using a fixed 4×4 MAC tile...`,
@@ -101,7 +73,41 @@ papers = [
     }
   },
   {
+    id: '147',
+    time: '2:30 PM - 2:45 PM',
+    title: 'A Methodology for Security-Aware Lightweight Deep Neural Network Acceleration Implementation',
+    authors: ['Abhishek Yadav', 'Ayush Dixit', 'Vyom Gupta', 'Binod Kumar'],
+    abstract: `Deep Neural Network (DNN)-based Systems are widely becoming popular... The proposed methodology offers multiple benefits through reduced latency, real-time performance, and enhanced security features...`,
+    mainContact: {
+      name: 'Abhishek Yadav',
+      email: 'yadav.49@iitj.ac.in',
+    }
+  },
+  {
+    id: '187',
+    time: '2:45 PM - 3:00 PM',
+    title: 'Magnetic Skyrmions-Based Rectified Linear Unit (ReLU) for Deep Neural Networks',
+    authors: ['Shivangi Shringi', 'Srinivasu Bodapati', 'Srikant Srinivasan'],
+    abstract: `This paper presents a novel spintronic design for implementing the Rectified Linear Unit (ReLU) activation function using magnetic skyrmions in a ferromagnet-heavy metal (FM-HM) bilayer structure...`,
+    mainContact: {
+      name: 'Shivangi Shringi',
+      email: 'shivangishringi@gmail.com',
+    }
+  },
+  {
+    id: '164',
+    time: '3:00 PM - 3:15 PM',
+    title: 'POLARON: Precision-aware On-device Learning and Adaptive Runtime-cONfigurable AI acceleration',
+    authors: ['Mukul Vishnu Lokhande', 'Santosh Vishvakarma'],
+    abstract: `The increasing complexity of AI models requires flexible hardware capable of supporting diverse precision formats, particularly for energy-constrained edge platforms...`,
+    mainContact: {
+      name: 'Santosh Vishvakarma',
+      email: 'skvishvakarma@iiti.ac.in',
+    }
+  },
+  {
     id: '371',
+    time: '3:15 PM - 3:30 PM',
     title: 'A Systematic Approach for Implementing Variants of Exponentiation and Logarithmic Functions on Stochastic Bitstreams',
     authors: ['Shyamali Mitra', 'Sohan Debnath', 'Nibaran Das', 'Mrinal K Naskar'],
     abstract: `This paper presents a systematic approach to design novel architectures for implementing variants of exponentiation and logarithmic functions like a^x and ln(1+8x)/ln(9) using stochastic architectures...`,
@@ -231,7 +237,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -276,6 +285,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

@@ -45,13 +45,14 @@ export default function SessionLayout({
   sessionTime = "4:10 PM - 5:40 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. Bikram Paul, Chair 2: Prof. Amit Kumar",
   sessionDescription = "",
   
   // Papers Array
 papers = [
   {
     id: '378',
+    time: '4:50 PM - 5:05 PM',
     title: 'Efficient Spiking Neural Network for ECG Arrhythmia Detection Using Inter-Spike Interval Encoding and BPTT Training',
     authors: ['CHUNDI SAHITHI', 'PRIYA K', 'Binsu Kailath'],
     abstract: `This work presents a real-time, compact, and hardware-efficient Spiking Neural Network (SNN) architecture built with Leaky Integrate-and-Fire (LIF) neurons and trained using Backpropagation Through Time (BPTT). The input is derived from inter-spike intervals (ISIs) between successive R-peaks in electrocardiogram (ECG) signals, processed into a 33-dimensional feature vector. These features are encoded as input currents to a two-hidden layer SNN via input spiking neurons. The proposed model is evaluated for two classification tasks: a three-class classification (normal (N), supraventricular (S), and ventricular (V)) based on AAMI standards, and a five-class classification (normal (N), left bundle branch block (L), right bundle branch block (R), atrial premature (A), and ventricular ectopic (V)) using MIT-BIH annotations. Trained and tested on records from the MIT-BIH Arrhythmia Database, the network achieves classification accuracies of 92.77% for the three-class task and 85.85% for the five-class task, demonstrating its effectiveness and suitability for real-time, resource-constrained arrhythmia detection.`,
@@ -62,6 +63,7 @@ papers = [
   },
   {
     id: '326',
+    time: '5:05 PM - 5:20 PM',
     title: 'Low-Latency Stereo Vision Capture using Synchronized Dual USB Cameras on Resource Constrained Hardware',
     authors: ['Sanyam Aggarwal', 'Sambhav Mehta', 'Anil Singh', 'Manu Bansal'],
     abstract: `Achieving accurate stereo vision on embedded platforms using asynchronous USB 2.0 cameras presents significant challenges, particularly in the absence of hardware triggers, high-speed interfaces, or abundant memory. This paper introduces a fully software-driven synchronization framework for stereo vision applications on constrained embedded systems. The proposed approach employs multithreaded frame acquisition, dynamic frame rate estimation through sliding windows, and timestamp-based pairing to enable reliable temporal alignment of stereo image pairs. Evaluated on a lightweight SoC platform with limited RAM, the system achieves synchronization within 0.30 seconds and sustains throughput exceeding 28 frames per second (FPS) for 320×240 grayscale stereo streams. A memory-aware buffering scheme enables continuous stereo capture without frame loss or overruns. Importantly, the method operates without requiring USB 3.0 bandwidth or external synchronization circuitry, showcasing the viability of real-time stereo vision on minimal hardware. These results enable broader deployment of stereo depth sensing in mobile robotics, edge perception, and low-power vision systems.`,
@@ -72,6 +74,7 @@ papers = [
   },
   {
     id: '277',
+    time: '5:20 PM - 5:35 PM',
     title: 'A Novel Object Lock and Track Algorithm for Fast and Agile Autonomous UAV Flight',
     authors: ['Bhavya Bansal', 'Kritarth Upadhyay', 'Vaibhav Gupta', 'Anil Singh', 'Alpana Agarwal', 'Manu Bansal'],
     abstract: `This paper introduces an object tracking system for unmanned aerial vehicles (UAVs), integrating the advantages of software-based image processing with hardware-level control to achieve real-time performance. The system is designed to detect and follow human faces using an onboard camera, enabling the UAV to adjust its position and orientation in response to the target's movement. A microcontroller processes the video stream and identifies the target using classical computer vision techniques, while a field-programmable gate array (FPGA) handles the control logic to ensure quick and precise responses. This separation of tasks allows high-level visual interpretation and low-level actuation to operate in parallel, significantly reducing overall system latency. The combination results in a responsive and efficient platform capable of performing stable tracking under varying environmental conditions. The hybrid architecture supports real-time operation with detection rates of up to 60 frames per second and control signal response times under 2 milliseconds. This work demonstrates a practical and scalable approach to embedded vision and control in UAVs, offering potential for a wide range of applications including surveillance, autonomous navigation, and interactive robotics.`,
@@ -82,6 +85,7 @@ papers = [
   },
   {
     id: '235',
+    time: '5:35 PM - 5:50 PM',
     title: 'WEMOS: A Cost-Effective and Inclusive Weather Station Using Raspberry Pi Pico W',
     authors: ['Govind Prasad', 'Agamdeep Singh', 'Aditya N. Patil', 'Vijaya Sinha', 'Shayan Dasgupta'],
     abstract: ``,
@@ -91,17 +95,8 @@ papers = [
     }
   },
   {
-    id: '25',
-    title: 'Embedded Vision-Based Eye Tracking for Enhancing Caretaker Communication in Paralyzed Patients',
-    authors: ['Gnanavardhan Koppolu', 'YBR. Krishna Vamshi', 'Sitadevi Bharatula', 'B Naresh Kumar Reddy'],
-    abstract: `This study introduces an innovative eye movement detection system aimed at assisting communication for patients with full paralysis. The system utilizes advanced eye-tracking technology to allow users to communicate with caretakers through a simple, intuitive interface. Through precise monitoring and interpretation of eye movements, the system translates the gestures into effective commands or messages, thereby bridging the communication gap for individuals with extreme mobility impairments. The solution features real-time feedback options, allowing users to convey their needs and preferences with minimal physical exertion. The system is also extremely flexible, supporting varying levels of eye movement control and different environmental conditions. Blending both software and hardware elements, this system aims to enhance the quality of life for patients through the provision of a stable means of communication and improved caretaker-patient interaction.`,
-    mainContact: {
-      name: 'B Naresh Kumar Reddy',
-      email: 'bnkreddy@nitt.edu',
-    }
-  },
-  {
     id: '29',
+    time: '5:50 PM - 6:05 PM',
     title: 'Lyapunov-Stable Adaptive Harmonic Scheduling: A Precision RTOS Framework for 2nd-Order Medical Control Systems',
     authors: ['Durga Lakshmi Mownish Bugutha', 'Vinod Babu Pusuluri'],
     abstract: `This paper presents Adaptive Harmonic Scheduling (AHS), a novel real-time scheduling algorithm designed for medical dosage management systems requiring high precision and adaptability. Unlike traditional scheduling methods such as Rate Monotonic Scheduling (RMS) and Earliest Deadline First (EDF), AHS dynamically prioritizes tasks based on second-order error dynamics, ensuring superior stability and responsiveness in physiological control applications.
@@ -113,7 +108,18 @@ Empirical evaluations demonstrate that AHS achieves jitter below 5 μs, a 35 ms 
       name: 'Durga Lakshmi Mownish Bugatha',
       email: 'mownishbugutha123@gmail.com',
     }
-  }
+  },
+  {
+    id: '25',
+    time: '6:05 PM - 6:20 PM',
+    title: 'Embedded Vision-Based Eye Tracking for Enhancing Caretaker Communication in Paralyzed Patients',
+    authors: ['Gnanavardhan Koppolu', 'YBR. Krishna Vamshi', 'Sitadevi Bharatula', 'B Naresh Kumar Reddy'],
+    abstract: `This study introduces an innovative eye movement detection system aimed at assisting communication for patients with full paralysis. The system utilizes advanced eye-tracking technology to allow users to communicate with caretakers through a simple, intuitive interface. Through precise monitoring and interpretation of eye movements, the system translates the gestures into effective commands or messages, thereby bridging the communication gap for individuals with extreme mobility impairments. The solution features real-time feedback options, allowing users to convey their needs and preferences with minimal physical exertion. The system is also extremely flexible, supporting varying levels of eye movement control and different environmental conditions. Blending both software and hardware elements, this system aims to enhance the quality of life for patients through the provision of a stable means of communication and improved caretaker-patient interaction.`,
+    mainContact: {
+      name: 'B Naresh Kumar Reddy',
+      email: 'bnkreddy@nitt.edu',
+    }
+  },
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -235,7 +241,10 @@ Empirical evaluations demonstrate that AHS achieves jitter below 5 μs, a 35 ms 
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -280,6 +289,9 @@ Empirical evaluations demonstrate that AHS achieves jitter below 5 μs, a 35 ms 
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

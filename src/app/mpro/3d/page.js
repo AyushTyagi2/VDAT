@@ -45,13 +45,14 @@ export default function SessionLayout({
   sessionTime = "11:45 AM - 1:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1:  Prof. Lipika Gupta, Chair 2: Prof. Neeraj Goel",
   sessionDescription = "",
   
   // Papers Array
 papers = [
      {
     id: '136',
+    time: '11:30 AM - 11:45 AM',
     title: 'FPGA-Based Autonomous Ship for Real-Time Navigation and Object Detection',
     authors: ['Tejeswara Rao PADDA', 'Dr.Yaswanth Bhanumurthy M', 'PRABHAS S', 'JALANDHAR S', 'LEELA NIKHIL S'],
     abstract: `This FPGA-based autonomous ship prototype addresses maritime challenges like collisions and emissions through real-time navigation and object detection. Deployed on the DE10-Nano, it leverages YOLOv3-tiny, GPS-based A* routing, and ultrasonic sensors to achieve 92\% detection accuracy and 1.5s latency. The Hard Processor System enables Azure IoT Hub connectivity via MQTT for fleet monitoring and predictive maintenance. Field tests demonstrate 3.1W power consumption, 40\% lower than GPUs, and 18\% fuel reduction. With parallel FPGA processing and cloud analytics, the system scales for maritime IoT, enhancing safety and efficiency in congested waterways.`,
@@ -61,17 +62,8 @@ papers = [
     }
   },
   {
-    id: '144',
-    title: 'Efficient License Plate Detection and Recognition with FPGA-Based Hardware-Software Co-Design',
-    authors: ['Swati K', 'Disha Lad', 'Jay Modi', 'Pinalkumar Engineer'],
-    abstract: `With the exponential growth in vehicular density, manual vehicle monitoring has become increasingly ineffective, necessitating automated, intelligent solutions such as Automatic License Plate Recognition (ALPR). Traditional cloud-based approaches often suffer from network dependency, latency, and privacy concerns, making them less suitable for time-sensitive or bandwidth-constrained environments. Leveraging the paradigm shift toward edge and fog computing, this work presents a complete hardware-software co-design framework for ALPR, implemented on an FPGA platform with sequential processing of first detecting the license plate followed by recognizing characters present. The system utilizes a quantized YOLOv3-Tiny model for efficient license plate detection and a custom convolutional neural network (CNN) for character recognition. Key operations are mapped onto the FPGA fabric, where parallelism and pipelined execution reduce inference latency and improve throughput. The proposed architecture is modular, scalable, and energy-efficient, making it ideal for deployment in intelligent transportation systems, toll automation, smart parking, and urban surveillance. This FPGA-based implementation offers a robust, real-world deployable solution that addresses the constraints of edge environments while supporting the broader goals of smart infrastructure and decentralized computing. Experimental evaluation demonstrates that the proposed FPGA-based implementation achieves over 3.6$\times$ speedup compared to microcontroller-based solutions, with a substantial reduction in power consumption. These results underscore the framework's suitability for deployment in resource-constrained, latency-sensitive environments, supporting the broader vision of decentralized and smart infrastructure.`,
-    mainContact: {
-      name: 'Contact',
-      email: 'd20ec012@eced.svnit.ac.in'
-    }
-  },
-  {
     id: '224',
+    time: '11:45 AM - 12:00 PM',
     title: 'PACE: A Power-Aware Clock Enhancement Technique for CRYSTALS-Kyber on FPGA',
     authors: ['DIXIT DUTT BOHRA', 'Dip Sankar Banerjee', 'Somitra Sanadhya'],
     abstract: 'The National Institute of Standards and Technology (NIST) has standardized CRYSTALS-Kyber, a post-quantum key encapsulation mechanism (KEM) designed to safeguard systems against emerging quantum-era threats. Its hardware, however, requires meticulous optimization to achieve ultra-low power for IoT resource-constrained domains while retaining universal applicability. We present PACE (Power-Aware Clock Enhancement), a pioneering methodology exploiting a Power- Timing Trade-Off Model (PTTM) with adaptive parametric tuning for precise clock period optimization. PACE dynamically balances timing slack across critical paths to mitigate variability under process, voltage, and temperature (PVT) corners, ensuring robust operation. Deployed on Kyber KEM hardware across Artix-7, Basys, and Zybo Z7-20 FPGAs, PACE reduces power by 34.8%–40.1%, strategically lowering the clock from 169.92 MHz to an IoT-optimized 91.29 MHz (10.954 ns). This energy optimized frequency ensures millisecond-scale throughput—ideal for IoT tasks like periodic key exchanges—while preserving timing robustness and cryptographic strength. Unlike speed- centric designs that inflate power, PACE strikes an optimal power-performance balance. Through a scalable, model-driven approach, PACE minimizes dynamic power, broadening Kyber reach across IoT and other domains.',
@@ -82,6 +74,7 @@ papers = [
   },
   {
     id: '265',
+    time: '12:00 PM - 12:15 PM',
     title: 'Efficient FPGA and ASIC Implementations of ASCON for IoT and Blockchain',
     authors: ['Ritika Choudhary', 'srinivasu bodapati', 'Kamal Raj'],
     abstract: `With the critical importance of robust and secure communication in the Internet of Things (IoT), preventing cybersecurity breaches is paramount. ASCON is a lightweight cryptography algorithm chosen by the National Institute of Standards and Technology (NIST) as the standard for resource limited environments. This paper presents an FPGA-based optimized approach for implementing ASCON hashing, encryption, and decryption within a single hardware unit, achieving a high throughput of 795 Mbps. Additionally, a detailed comparison of the proposed design with the best existing designs has been presented. Moreover, the ASCON hash has achieved a throughput of 917 Mbps, marking a 27.2% improvement over previous implementations. This high throughput is vital for optimizing real-time applications and blockchain technologies. Furthermore, a frequency of 266 MHz has been achieved for the ASCON-128, representing an 8.32% increase over previous implementations. The ASIC synthesis of designs is performed using UMC 90 nm technology. This work also presents a novel approach that combines blockchain technology with lightweight cryptography.`,
@@ -92,6 +85,7 @@ papers = [
   },
   {
     id: '317',
+    time: '12:15 PM - 12:30 PM',
     title: 'FPGA Implementation of High throughput On-board Pre-processing for Hyper/Multi-spectral Image Compression',
     authors: ['Priyankkumar Prajapati', 'Poorna Chandra Bandaru', 'Anand Darji', 'Amit Joshi', 'Jimit Gadhia', 'Ankur Garg'],
     abstract: `In space data applications, the Onboard satellite hyper and multi-spectral image compression system design is challenging due to its limited power, storage, and bandwidth for communication. This work focuses on implementation of spectral pre-processing as per consultative committee for space data system design (CCSDS) recommended 122.1b1 hyper and multi-spectral image compression standard. Hyper/Multi spectral image compression is performed with and without preprocessing using the Pairwise Orthogonal Transform (POT) in software. This work shows a 58.26% improvement in the image compression ratio for the pre-processed images using POT. Further, efficient hardware is realized for the POT based pre-processing method on KCU105(xcku040-ffva1156-2-e) FPGA board. The hardware utilized is only 1.23% LUTs and maximum operating frequency is observed as 174.48MHz with throughput of 300MSPS(@150MHz). The implementation is helpful for efficient compression of the Hyper/multi-spectral image captured during satellite imaging, which will reduce the transmission power of the satellite system.`,
@@ -102,6 +96,7 @@ papers = [
   },
   {
     id: '333',
+    time: '12:30 PM - 12:45 PM',
     title: 'SysJoin:A Novel EquiJOin Acceleration Architecture For FPGA and ASIC Implementation',
     authors: ['Sudeendra Kumar K', 'Lasya Chidanand Hegde'],
     abstract: `This paper presents SysJoin, a lightweight, high-throughput hardware architecture for accelerating Equi-join operations in relational databases using a systolic array. Equi-joins are computationally intensive and frequently executed in large-scale data analytics. Existing Equi-Join architectures are not modular and scalable for the varying sizes of data inputs and current architectures for FPGA implementation are targeted to specific FPGA based on the availability of BRAM's in that particular device and not portable across different types of FPGAs. The proposed SysJoin architecture based on one-dimensional systolic array of simple processing elements which perform N-bit comparisons with minimum control overhead. The proposed SysJoin implementation utilizes the very less FPGA resources in comparison with existing techniques and at the same time throughput is also significantly high. The proposed architecture utilizes the 78% less hardware resources in FPGAs in comparison with existing techniques and throughput also higher by 42% on an average. We have verified the proposed generic SysJoin architecture for ASIC implementation and reduced the power by employing clock gating. The results of ASIC implementation are also presented.`,
@@ -109,7 +104,18 @@ papers = [
       name: 'Sudeendra Kumar K',
       email: 'kumar.sudeendra@gmail.com'
     }
-  }
+  },
+  {
+    id: '144',
+    time: '12:45 PM - 1:00 PM',
+    title: 'Efficient License Plate Detection and Recognition with FPGA-Based Hardware-Software Co-Design',
+    authors: ['Swati K', 'Disha Lad', 'Jay Modi', 'Pinalkumar Engineer'],
+    abstract: `With the exponential growth in vehicular density, manual vehicle monitoring has become increasingly ineffective, necessitating automated, intelligent solutions such as Automatic License Plate Recognition (ALPR). Traditional cloud-based approaches often suffer from network dependency, latency, and privacy concerns, making them less suitable for time-sensitive or bandwidth-constrained environments. Leveraging the paradigm shift toward edge and fog computing, this work presents a complete hardware-software co-design framework for ALPR, implemented on an FPGA platform with sequential processing of first detecting the license plate followed by recognizing characters present. The system utilizes a quantized YOLOv3-Tiny model for efficient license plate detection and a custom convolutional neural network (CNN) for character recognition. Key operations are mapped onto the FPGA fabric, where parallelism and pipelined execution reduce inference latency and improve throughput. The proposed architecture is modular, scalable, and energy-efficient, making it ideal for deployment in intelligent transportation systems, toll automation, smart parking, and urban surveillance. This FPGA-based implementation offers a robust, real-world deployable solution that addresses the constraints of edge environments while supporting the broader goals of smart infrastructure and decentralized computing. Experimental evaluation demonstrates that the proposed FPGA-based implementation achieves over 3.6$\times$ speedup compared to microcontroller-based solutions, with a substantial reduction in power consumption. These results underscore the framework's suitability for deployment in resource-constrained, latency-sensitive environments, supporting the broader vision of decentralized and smart infrastructure.`,
+    mainContact: {
+      name: 'Contact',
+      email: 'd20ec012@eced.svnit.ac.in'
+    }
+  },
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,7 +237,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -276,6 +285,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

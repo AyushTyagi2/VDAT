@@ -45,33 +45,15 @@ export default function SessionLayout({
   sessionTime = "2:15 PM - 4:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof.Rohit Sharma, Chair 2: Prof. Kumar Prasannajit Pradhan",
   sessionDescription = "",
   
   // Papers Array
 papers = [
-     {
-    id: '213',
-    title: 'Hardware Implementation of Swish Activation Function Using Piecewise Regression Trees for Deep Neural Networks',
-    authors: ['Akash Dev Roshan', 'Prithwijit Guha', 'Gaurav Trivedi'],
-    abstract: ``,
-    mainContact: {
-      name: 'Akash Dev Roshan',
-      email: 'akash_dev@iitg.ac.in'
-    }
-  },
-  {
-    id: '216',
-    title: 'Analysis of Circuits with Partially Correlated Multi-Vt Cell Variations using Sensitivity Modeling and Propagation.',
-    authors: ['Mohd Abu Ubaida ' , ' Prashasti Pandey ',' Sneh Saurabh', 'Ajoy Mandal' , 'Venkatraman Ramakrishnan'],
-    abstract: `Traditional static timing analysis (STA) tools consider the global variations in low-threshold voltage (LVT) and high-threshold voltage (HVT) transistors as fully correlated. However, in reality, due to differences in fabrication, the variations in these transistors are partially correlated, introducing inaccuracies in computing statistical attributes of delay in multiVt circuits. In this paper, we present an analytical framework to compute cell delay variance, accounting for global variations in LVT and HVT transistors. We introduce a novel approach for computing the variance of total path delay in a mixed LVT HVT circuit that considers partial correlation between LVT-HVT transistors. We propose characterizing a sensitivity library that enables the analytical computation of cell delay variance and the propagation of cross sensitivities, i.e., the sensitivity of LVT cell delay with respect to HVT device parameters and vice-versa.We demonstrate that the standard deviation of path delay in an inverter chain computed using the proposed framework agrees quite well with the Monte Carlo SPICE simulations, exhibiting errors less than 5%. Moreover, the proposed framework can capture the effects of varying slews, load, correlation between LVT and HVT devices, and configuration. This work also demonstrates the application of multi-Vt cells to mitigate the impact of process-induced variations and provides insights into their effectiveness for circuit design.`,
-    mainContact: {
-      name: 'Mohd Abu Ubaida',
-      email: 'abu23216@iiitd.ac.in'
-    }
-  },
+  
   {
     id: '262',
+    time: '2:00 PM - 2:15 PM',
     title: 'Hardware Accelerator for 2D DCT/ IDCT with Improved Loeffler Architecture and CSD Coding',
     authors: ['Yogeshwar Rai' , 'Sovanjyoti Giri ' , ' B Naresh Kumar Reddy'],
     abstract: 'This paper introduces a methodology for identifying process variability of chips based on PMOS sensitive and NMOS sensitive ring oscillators (RO) and classification-based Machine Learning algorithms. These ring oscillators produce frequencies indicative of the operational process of the chip. Schmitt Trigger usage increases the sensitivity of inverters with respect to variations in process. The combination of frequencies from NMOS-sensitive RO (freq_3n_st) and NMOS-cap RO (freq_n_cap), PMOS-sensitive RO (freq_3p_st) and PMOS-cap RO (freq_p_cap) becomes the primary features of Machine Learning algorithms. The model predicts whether NMOS or PMOS devices are in a fast, slow or typical range individually. Experimental validation demonstrates classification accuracy of 89% for NMOS and 92% for PMOS devices across various process corners. This methodology provides an efficient solution for on-chip process monitoring.',
@@ -81,17 +63,8 @@ papers = [
     }
   },
   {
-    id: '302',
-    title: 'Bidirectional Multi-process Recurrent Neural Networks Based Signal Integrity Assessment for N-Line Coaxial-Through Glass Vias in 3D Integration',
-    authors: ['Suyash Sachdeva', 'K. Madhu Kiran' , 'Rohit Dhiman'],
-    abstract: `In the domain of high-frequency three-dimensional integrated circuits (3D-ICs), the accurate analysis of signal integrity across Through-Glass Vias (TGVs) is essential, especially in dense multi-line interconnect environments. Traditional electromagnetic simulations, while accurate, are computationally intensive when modeling complex interactions such as crosstalk in high-density TGV arrays. This work proposes a deep learning-based alternative leveraging a multi-path Long Short-Term Memory (LSTM) model, designed to learn the temporal and spatial dependencies of crosstalk effects within coaxial TGV structures. A custom simulation dataset comprising N signal lines was generated to emulate realistic high-frequency behavior in a coaxial-TGV interconnect scenario. The proposed model achieved an R² score of 0.9263 on the test set, indicating strong predictive accuracy in modeling the nonlinear and multi-path signal behavior across the TGV lines.`,
-    mainContact: {
-      name: 'Contact',
-      email: '20dec001@nith.ac.in'
-    }
-  },
-  {
     id: '325',
+    time: '2:15 PM - 2:30 PM',
     title: 'Ternary Approximate Max Pooling Architecture Using Multi-Trit Borrow Generators',
     authors: ['Hemanth Krishna Lavati' ,'srinivasu bodapati'],
     abstract: `This paper presents novel ternary multi-trit borrow generator architectures for efficient max pooling operations. We propose both exact and approximate designs for 3-trit and 6-trit borrow generators, using a modified ternary full subtractor. The 6-trit borrow generator is hierarchically constructed using three 3-trit borrow generators in a borrow-select-based configuration. Based on the positional arrangement of the 3-trit modules, we introduce three distinct approximate 6-trit max operator designs, each offering a unique trade-off between accuracy and hardware efficiency. These approximate max operators are employed to perform max pooling for both $2 \times 2$ and $3 \times 3$ windows. Experimental results demonstrate that the proposed approximate designs achieve superior PSNR of 35 dB and SSIM values are more than 90\% over the conventional exact pooling layer, thereby validating their effectiveness in image processing applications.`,
@@ -100,26 +73,52 @@ papers = [
       email: 'hemanth.krishna412@gmail.com'
     }
   },
-  {
-    id: '347',
-    title: 'Neural Network-Based Offset Calibration using Capacitor Arrays in Dynamic Comparators',
-    authors: ['Angel Garg ', ' Anil Singh ',' Alpana Agarwal'],
-    abstract: `Dynamic comparators are essential components in analog-to-digital converters (ADCs) [1], but are prone to offset voltage errors due to process-induced mismatches. This paper presents a hybrid calibration technique that combines traditional capacitor-based offset calibration [2] with a neural network (NN) to effectively minimize offset. The neural network-based offset calibration technique significantly improves efficiency by automatically predicting optimal capacitor array configurations for dynamic comparators, eliminating time-consuming manual tuning procedures, and achieving offset compensation. The time-based offset polarity classification approach is made, where the zero-crossing timing is extracted using a derivative circuit followed by a time-to-digital converter (TDC). The TDC output is then fed into the neural network, which predicts the optimal capacitor array configuration.`,
-    mainContact: {
-      name: 'Angel Garg',
-      email: 'agarg8_be23@thapar.edu'
-    }
-  },
-  {
-    id: '358',
-    title: 'Mixed Adaptive Precision SIMD Systolic Array Accelerator for Deep Learning',
-    authors: ['GOPAL RAUT' , 'DAVID SELVAKUMAR', 'PRANOSE J. EDAVOOR',' RITAMBHARA THAKUR'],
+     {
+    id: '213',
+    time: '2:30 PM - 2:45 PM',
+    title: 'Hardware Implementation of Swish Activation Function Using Piecewise Regression Trees for Deep Neural Networks',
+    authors: ['Akash Dev Roshan', 'Prithwijit Guha', 'Gaurav Trivedi'],
     abstract: ``,
     mainContact: {
-      name: 'David Selvakumar',
-      email: 'david@cdac.in'
+      name: 'Akash Dev Roshan',
+      email: 'akash_dev@iitg.ac.in'
     }
-  }
+  },
+
+  {
+   id: '358',
+   time: '2:45 PM - 3:00 PM',
+   title: 'Mixed Adaptive Precision SIMD Systolic Array Accelerator for Deep Learning',
+   authors: ['GOPAL RAUT' , 'DAVID SELVAKUMAR', 'PRANOSE J. EDAVOOR',' RITAMBHARA THAKUR'],
+   abstract: ``,
+   mainContact: {
+     name: 'David Selvakumar',
+     email: 'david@cdac.in'
+   }
+ },
+ {
+   id: '347',
+   time: '3:00 PM - 3:15 PM',
+   title: 'Neural Network-Based Offset Calibration using Capacitor Arrays in Dynamic Comparators',
+   authors: ['Angel Garg ', ' Anil Singh ',' Alpana Agarwal'],
+   abstract: `Dynamic comparators are essential components in analog-to-digital converters (ADCs) [1], but are prone to offset voltage errors due to process-induced mismatches. This paper presents a hybrid calibration technique that combines traditional capacitor-based offset calibration [2] with a neural network (NN) to effectively minimize offset. The neural network-based offset calibration technique significantly improves efficiency by automatically predicting optimal capacitor array configurations for dynamic comparators, eliminating time-consuming manual tuning procedures, and achieving offset compensation. The time-based offset polarity classification approach is made, where the zero-crossing timing is extracted using a derivative circuit followed by a time-to-digital converter (TDC). The TDC output is then fed into the neural network, which predicts the optimal capacitor array configuration.`,
+   mainContact: {
+     name: 'Angel Garg',
+     email: 'agarg8_be23@thapar.edu'
+   }
+ },
+  {
+    id: '302',
+    time: '3:15 PM - 3:30 PM',
+    title: 'Bidirectional Multi-process Recurrent Neural Networks Based Signal Integrity Assessment for N-Line Coaxial-Through Glass Vias in 3D Integration',
+    authors: ['Suyash Sachdeva', 'K. Madhu Kiran' , 'Rohit Dhiman'],
+    abstract: `In the domain of high-frequency three-dimensional integrated circuits (3D-ICs), the accurate analysis of signal integrity across Through-Glass Vias (TGVs) is essential, especially in dense multi-line interconnect environments. Traditional electromagnetic simulations, while accurate, are computationally intensive when modeling complex interactions such as crosstalk in high-density TGV arrays. This work proposes a deep learning-based alternative leveraging a multi-path Long Short-Term Memory (LSTM) model, designed to learn the temporal and spatial dependencies of crosstalk effects within coaxial TGV structures. A custom simulation dataset comprising N signal lines was generated to emulate realistic high-frequency behavior in a coaxial-TGV interconnect scenario. The proposed model achieved an R² score of 0.9263 on the test set, indicating strong predictive accuracy in modeling the nonlinear and multi-path signal behavior across the TGV lines.`,
+    mainContact: {
+      name: 'Contact',
+      email: '20dec001@nith.ac.in'
+    }
+  },
+ 
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -241,7 +240,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -286,6 +288,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

@@ -45,13 +45,14 @@ export default function SessionLayout({
   sessionTime = "2:15 PM - 4:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. T V kalyan, Chair 2: Prof. Bikram Paul",
   sessionDescription = "",
   
   // Papers Array
 papers = [
    {
     id: '257',
+    time: '2:00 PM - 2:15 PM',
     title: 'MAGIC-Based ASCON Substitution Box for In-Memory Computing using Memristor',
     authors: ['Ritika Choudhary', 'Sumit Kumar Suman', 'Srinivasu Bodapati'],
     abstract: `This work presents a MAGIC-based implementation of the ASCON S-box, targeting in-memory computing applications using memristors. It focuses on reducing hardware complexity and improving security. The design is evaluated using performance metrics including power, area, and delay, showing improvements over traditional CMOS-based approaches. Post-layout simulations are conducted to verify robustness.`,
@@ -62,6 +63,7 @@ papers = [
   },
   {
     id: '152',
+    time: '2:15 PM - 2:30 PM',
     title: 'Data Level Parallelism based High Throughput BCD Multiplier Design',
     authors: ['Mohamed Asan Basiri M', 'Suraj Kumar Pal'],
     abstract: `An efficient BCD multiplier design exploiting data-level parallelism is presented. The multiplier performs simultaneous partial multiplications (N×2×N/2) and supports high throughput BCD operations. Verified with Verilog HDL and 45 nm CMOS tech using Cadence, the 16×16-bit pipeline version achieves a 75% throughput improvement compared to conventional array multipliers.`,
@@ -72,6 +74,7 @@ papers = [
   },
   {
     id: '308',
+    time: '2:30 PM - 2:45 PM',
     title: 'Design and Implementation of a Quadratic Boost with Digital Controller for Energy Harvesting',
     authors: ['Shailendra Kumar Paswan', 'Vikas Das', 'Vijay Kumar Gupta', 'Bipin Chandra Mandi'],
     abstract: `The digital controller uses STM32 for quadratic boost operation aimed at low-voltage energy harvesting. A PI controller ensures stability and a fourth-order transfer function boosts power output. Evaluation through MATLAB simulation and hardware testing demonstrates effectiveness under variable input voltages (3.7±0.5V).`,
@@ -82,6 +85,7 @@ papers = [
   },
   {
     id: '306',
+    time: '2:45 PM - 3:00 PM',
     title: 'Approximate Signed Multiplier with Sign-Focused Compression for Edge Detection Applications',
     authors: ['Hemanth Krishna Lavati', 'Srinivasu Bodapati', 'Sreehari Veeramachaneni', 'Bhaskar Jamm Rao', 'Noor Mahammad Sk'],
     abstract: `An approximate Baugh-Wooley multiplier using sign-focused compressors is proposed. It achieves 29.21% PDP reduction and 14.39% delay improvement. Integrated in a CNN-based edge detector, it demonstrates superior efficiency over existing 8-bit multipliers. Designed for real-world signal processing.`,
@@ -92,6 +96,7 @@ papers = [
   },
   {
     id: '365',
+    time: '3:00 PM - 3:15 PM',
     title: 'ASIC Implementation of CAN-XL protocol',
     authors: ['Madhumitha B M', 'Sharanya Shetty', 'Aryan Kumar', 'Sudeendra Kumar K'],
     abstract: `CAN-XL, an extension to Classical CAN, is analyzed for ASIC implementation. Results using 90nm library show 5.32% area savings, 18.3% higher power usage due to increased switching, and 972.76 MHz frequency. Despite slightly lower frequency, CAN-XL enables modern vehicular communication while retaining CAN and Ethernet compatibility.`,
@@ -102,6 +107,7 @@ papers = [
   },
   {
     id: '243',
+    time: '3:15 PM - 3:30 PM',
     title: 'An Approximate CLA using Carry Equation of Two Bits',
     authors: ['Menka Yadav', 'Ekagra Sikka', 'Aabhaas Sikka'],
     abstract: `A carry-lookahead adder based on a new 2-bit carry equation is proposed to reduce the area and delay of the CLA design. This approach simplifies logic, achieving a 5.9% improvement in PDP and reducing the number of logic gates compared to traditional CLA. Evaluated through 28nm ASIC synthesis.`,
@@ -110,16 +116,16 @@ papers = [
       email: 'menka.ece@mnit.ac.in',
     }
   },
-  {
-    id: '288',
-    title: 'Low-Power Approximate Multiplier Architecture for Deep Neural Networks',
-    authors: ['Pragun Jaswal, Hemanth Krishna Lavati and srinivasu bodapati'],
-    abstract: `This paper proposes an energy-efficient approximate multiplier architecture for deep neural network (DNN) applications. A 4:2 compressor, introducing only a single combination error, is designed and integrated into an 8×8 unsigned multiplier. This integration significantly reduces the usage of exact compressors while preserving low error rates. The proposed multiplier is employed within a custom convolution layer and evaluated on neural network tasks, including image recognition and denoising. Hardware evaluation demonstrates that the proposed design achieves up to 30.24\% energy savings compared to the best of existing multipliers. In image denoising, the custom approximate convolution layer achieves improved Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index Measure (SSIM) compared to other approximate designs. Additionally, when applied to handwritten digit recognition, the model maintains high classification accuracy. These results demonstrate that the proposed architecture offers a favorable balance between energy efficiency and computational precision, making it suitable for low-power AI hardware implementations.`,
-    mainContact: {
-      name: 'Hemanth Krishna Lavati',
-      email: 'hemanth.krishna412@gmail.com',
-    }
-  }
+  // {
+  //   id: '288',
+  //   title: 'Low-Power Approximate Multiplier Architecture for Deep Neural Networks',
+  //   authors: ['Pragun Jaswal, Hemanth Krishna Lavati and srinivasu bodapati'],
+  //   abstract: `This paper proposes an energy-efficient approximate multiplier architecture for deep neural network (DNN) applications. A 4:2 compressor, introducing only a single combination error, is designed and integrated into an 8×8 unsigned multiplier. This integration significantly reduces the usage of exact compressors while preserving low error rates. The proposed multiplier is employed within a custom convolution layer and evaluated on neural network tasks, including image recognition and denoising. Hardware evaluation demonstrates that the proposed design achieves up to 30.24\% energy savings compared to the best of existing multipliers. In image denoising, the custom approximate convolution layer achieves improved Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index Measure (SSIM) compared to other approximate designs. Additionally, when applied to handwritten digit recognition, the model maintains high classification accuracy. These results demonstrate that the proposed architecture offers a favorable balance between energy efficiency and computational precision, making it suitable for low-power AI hardware implementations.`,
+  //   mainContact: {
+  //     name: 'Hemanth Krishna Lavati',
+  //     email: 'hemanth.krishna412@gmail.com',
+  //   }
+  // }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -241,7 +247,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -286,6 +295,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

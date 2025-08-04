@@ -45,43 +45,25 @@ export default function SessionLayout({
   sessionTime = "2:15 PM - 4:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. Mahendra Sakare, Chair 2: Prof. Gaganpreet Kaur",
   sessionDescription = "",
   
   // Papers Array
 papers = [
-     {
-    id: '274',
-    title: 'Theory and Design of a mmWave Oscillator Utilizing high-Q Active-Mode On-Chip MEMS Resonators for Improved Fundamental Limits of Phase Noise',
-    authors: ['Abhishek Srivastava', 'Narahari N. Moudhgalya', 'Adarsh Yadav'],
-    abstract: `Recent progress in MEMS resonant-fin-transistors (RFT) has enabled very high-Q active mode resonators, promising crystal-less monolithic clock generation for Millimeter-wave (mmWave) systems. However, there is a strong need for design of mmWave oscillators that utilize the high-Q of active-mode RFT (AM-RFT) optimally, while handling unique challenges such as resonator's low electromechanical transduction. In this brief, we develop a theory and through design and post-layout simulations in 14 nm Global Foundry (GF) process, we show the first active oscillator with AM-RFT at 30 GHz, which improves the fundamental limits of phase noise (PN) and figure-of-merit (FoM) when compared with the oscillators with conventional LC resonators. For AM-RFT with Q-factor of ~10k, post layout simulation results show that the proposed oscillator exhibits phase noise of less than -140 dBc/Hz and FoM greater than 228 dBc/Hz at a 1 MHz offset for 30 GHz center frequency, which are 25 dBc/Hz better than the existing monolithic LC oscillators.`,
+    {
+    id: '412',
+    time: '2:00 PM - 2:15 PM',
+    title: 'FPGA-Based Real-Time DoA Estimation System Using AVS Array Implementation on PYNQ-SoC Platform',
+    authors: ['Ehtesham Ahmed', 'Shashwat Anand Pandey', 'Adeeba Khan', 'Mohd Wajid'],
+    abstract: `Modern acoustic systems used in robotics, situational awareness, and surveillance depend heavily on sound source localization. Acoustic Vector Sensors (AVS), simultaneously capture both pressure and particle velocity components of a sound field and help in compact and accurate Direction Of Arrival (DoA) estimation, even with a single sensor unit. This work presents a hardware implementation of a simple and accurate DoA estimation algorithm using an AVS array on a Field-Programmable Gate Array (FPGA) platform. A pipelined Radix-4 Fast Fourier Transform (FFT) IP core is implemented to convert time-domain audio signals into the frequency domain, followed by Cross Power Spectral Density (CPSD) analysis to compute phase differences between vector components. The final angle is estimated using a CORDIC (Coordinate Rotation Digital Computer) IP core to calculate arctangent values efficiently. The FPGA-based system achieves real-time processing with low latency and reduced computational overhead compared to a software-only approach. The implementation is evaluated based on the mean absolute error in the estimated angle and computation time. Results demonstrate that the system achieved the same results on FPGA as on ARM processor with approximately 62 times faster computation.`,
     mainContact: {
-      name: 'Adarsh Yadav',
-      email: 'adarsh.yadav@research.iiit.ac.in'
+      name: 'Shashwat Anand Pandey',
+      email: 'shashwatpandey01010@gmail.com'
     }
   },
-  {
-    id: '299',
-    title: 'Hardware Implementation of True Motion Prediction for WebP Lossy Image Compression',
-    authors: ['Anurag Sharma', 'Srinivasu Bodapati'],
-    abstract: `With the rapid growth of visual data in multimedia and embedded systems, there is a pressing need for lightweight and efficient image compression for IoT applications. This work presents a hardware architecture for the True Motion Prediction (TM_PRED) utilized in the WebP lossy image compression, which is a key contributor to spatial redundancy removal. The proposed architecture, synthesized on FPGA, utilizes 310 LUTs, 221 flip-flops, a BRAM, and achieves a maximum operating frequency of 253 MHz. The predicted pixel values are further utilized in a software-based WebP encoder to evaluate end-to-end compression performance. The proposed architecture is validated using grayscale images from the IEEE C4L dataset, and the results reveal that the TM_PRED achieves 6%–11% improvement in PSNR, 3%–12% improvement in SSIM, and 33%–58% reduction in file size compared to JPEG across varying quality levels. The results demonstrate that offloading the intra prediction module to hardware can significantly enhance compression efficiency while remaining suitable for real-time image applications.`,
-    mainContact: {
-      name: 'Contact',
-      email: 's23079@students.iitmandi.ac.in'
-    }
-  },
-  {
-    id: '313',
-    title: 'Precision Implementation of Sigmoid and Trigonometric Functions with Hyperbolic and Circular CORDIC using PYNQ Z2 FPGA',
-    authors: ['Abhishek Kumar', 'Mohammad Adnaan Shaikh', 'Kritarth Srivastava', 'Prasanna Kumar Misra'],
-    abstract: '',
-    mainContact: {
-      name: 'Abhishek Kumar',
-      email: 'abhigoogl123@gmail.com'
-    }
-  },
-  {
+    {
     id: '361',
+    time: '2:15 PM - 2:30 PM',
     title: 'FPGA Implementation of Image Preprocessing Techniques for ADAS Applications',
     authors: ['Adil Naz Muhammed', 'Lakshmi L', 'Amala Rachel Zachariah', 'Lucy Maria Binod', 'Aimy Jose', 'Jagadeesh Kumar P', 'Vijayalakshmi K', 'Jobymol Jacob'],
     abstract: `Advanced Driver Assistance Systems play an essential role in improving road safety and driving efficiency. The diverse and challenging conditions of rural roads, including unstructured layouts, traffic, environmental haze, noise, and low contrast, present unique challenges in the implementation of ADAS. In this work, we propose image preprocessing techniques such as bilateral filtering for noise reduction, contrast enhancement using an advanced histogram method, and dehazing with dark channel prior that address these challenges, emphasizing their ability to achieve real-time performance and high computational efficiency. By focusing on custom-made hardware accelerated solutions, this work generated an improved image containing the artefacts mentioned above by optimizing algorithms and making use of the PYNQ Z2 Field Programmable Gate Array board.`,
@@ -90,18 +72,33 @@ papers = [
       email: 'adilnazmuhammed2506@gmail.com'
     }
   },
-  {
-    id: '362',
-    title: 'Energy Efficient V-Band Low Noise Amplifier with Enhanced Noise Performance for Satellite Communications.',
-    authors: ['Namrata Tripathi', 'Saroj Mondal'],
-    abstract: `This paper presents a V-band low-noise amplifier (LNA) designed using a two-stage cascode architecture in 65 nm CMOS technology. Incorporating source degeneration and noise canceling techniques, the LNA achieves a peak gain of 20.8 dB at 56.8 GHz, with a 3-dB bandwidth ranging from 54 to 60.6 GHz. Operating from a 1.2 V supply, it consumes 7.2 mW of DC power and attains a minimum noise figure (NF) of 4.25 dB. The input 1-dB compression point (IP1dB) is −11.68 dBm at 58 GHz. These performance metrics demonstrate the LNA's suitability for low-power satellite communication applications.`,
+     {
+    id: '274',
+    time: '2:30 PM - 2:45 PM',
+    title: 'Theory and Design of a mmWave Oscillator Utilizing high-Q Active-Mode On-Chip MEMS Resonators for Improved Fundamental Limits of Phase Noise',
+    authors: ['Abhishek Srivastava', 'Narahari N. Moudhgalya', 'Adarsh Yadav'],
+    abstract: `Recent progress in MEMS resonant-fin-transistors (RFT) has enabled very high-Q active mode resonators, promising crystal-less monolithic clock generation for Millimeter-wave (mmWave) systems. However, there is a strong need for design of mmWave oscillators that utilize the high-Q of active-mode RFT (AM-RFT) optimally, while handling unique challenges such as resonator's low electromechanical transduction. In this brief, we develop a theory and through design and post-layout simulations in 14 nm Global Foundry (GF) process, we show the first active oscillator with AM-RFT at 30 GHz, which improves the fundamental limits of phase noise (PN) and figure-of-merit (FoM) when compared with the oscillators with conventional LC resonators. For AM-RFT with Q-factor of ~10k, post layout simulation results show that the proposed oscillator exhibits phase noise of less than -140 dBc/Hz and FoM greater than 228 dBc/Hz at a 1 MHz offset for 30 GHz center frequency, which are 25 dBc/Hz better than the existing monolithic LC oscillators.`,
     mainContact: {
-      name: 'Contact',
-      email: 'ee23ms004@iitdh.ac.in'
+      name: 'Adarsh Yadav',
+      email: 'adarsh.yadav@research.iiit.ac.in'
     }
   },
+  
+  // {
+  //   id: '313',
+  //   title: 'Precision Implementation of Sigmoid and Trigonometric Functions with Hyperbolic and Circular CORDIC using PYNQ Z2 FPGA',
+  //   authors: ['Abhishek Kumar', 'Mohammad Adnaan Shaikh', 'Kritarth Srivastava', 'Prasanna Kumar Misra'],
+  //   abstract: '',
+  //   mainContact: {
+  //     name: 'Abhishek Kumar',
+  //     email: 'abhigoogl123@gmail.com'
+  //   }
+  // },
+
+
   {
     id: '403',
+    time: '2:45 PM - 3:00 PM',
     title: 'Ising Model-Based P-bit Solver for the Max-Cut Problem with FPGA Implementation',
     authors: ['Amit Kumar Jangid', 'AMIT SINGH', 'Srinivasu Bodapati'],
     abstract: `This paper presents a novel approach to solving the Max-Cut problem using probabilistic bits (p-bits), modeled through the Ising Hamiltonian framework. Two methods—based on weighted and unweighted Ising Hamiltonians—are proposed to encode the Max-Cut problem into a cost function. The p-bits, which naturally explore low-energy configurations due to their stochastic behavior, are utilized to find a solution with high probability. A Python-based simulation is used to validate the solver against standard G-set benchmark problems, demonstrating correct and scalable performance under varying inverse temperature (1/σ) values and Nτ iteration counts. To assess hardware feasibility, the solver is synthesized using MyHDL and implemented on a Nexys 4 DDR FPGA, highlighting the potential of probabilistic spin logic for solving NP-hard problems with possible applications in circuit layout design, machine learning, and statistical physics. A 5-node unweighted Max-Cut example is demonstrated in hardware, with output states displayed using LEDs to represent the maximum probability configuration. For a graph density of 0.8, the design consumes 145 LUTs and 114 LUTs for the weighted and unweighted approaches, respectively, both using 36 flip-flops. The proposed approach shows promise for real-time, low-power hardware accelerators for combinatorial optimization using interpretable probabilistic circuits.`,
@@ -110,16 +107,18 @@ papers = [
       email: 's23054@students.iitmandi.ac.in'
     }
   },
+
   {
-    id: '412',
-    title: 'FPGA-Based Real-Time DoA Estimation System Using AVS Array Implementation on PYNQ-SoC Platform',
-    authors: ['Ehtesham Ahmed', 'Shashwat Anand Pandey', 'Adeeba Khan', 'Mohd Wajid'],
-    abstract: `Modern acoustic systems used in robotics, situational awareness, and surveillance depend heavily on sound source localization. Acoustic Vector Sensors (AVS), simultaneously capture both pressure and particle velocity components of a sound field and help in compact and accurate Direction Of Arrival (DoA) estimation, even with a single sensor unit. This work presents a hardware implementation of a simple and accurate DoA estimation algorithm using an AVS array on a Field-Programmable Gate Array (FPGA) platform. A pipelined Radix-4 Fast Fourier Transform (FFT) IP core is implemented to convert time-domain audio signals into the frequency domain, followed by Cross Power Spectral Density (CPSD) analysis to compute phase differences between vector components. The final angle is estimated using a CORDIC (Coordinate Rotation Digital Computer) IP core to calculate arctangent values efficiently. The FPGA-based system achieves real-time processing with low latency and reduced computational overhead compared to a software-only approach. The implementation is evaluated based on the mean absolute error in the estimated angle and computation time. Results demonstrate that the system achieved the same results on FPGA as on ARM processor with approximately 62 times faster computation.`,
-    mainContact: {
-      name: 'Shashwat Anand Pandey',
-      email: 'shashwatpandey01010@gmail.com'
+      id: '342',
+      time: '3:00 PM - 3:15 PM',
+      title: 'BHARATH-TPM: Micro-Architecture Design of AXI enabled SHA-3 Hardware Accelerator for a RISC-V Trusted Platform Module',
+      authors: ['Aneesh Raveendran', 'Sheetal B V', 'Dr. Raja Sekar K', 'Vivian D', 'Hari Babu P', 'Dr. S D Sudarsan'],
+      abstract: ``,
+      mainContact: {
+        name: 'Aneesh Raveendran',
+        email: 'raneesh@cdac.in'
+      }
     }
-  }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -241,7 +240,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -286,6 +288,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                      </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

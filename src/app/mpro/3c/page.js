@@ -45,13 +45,47 @@ export default function SessionLayout({
   sessionTime = "11:45 AM - 1:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. Shubham Sahay, Chair 2: Prof. Rahul Shrestha",
   sessionDescription = "",
   
   // Papers Array
 papers = [
+  {
+    id: '206',
+    time: '11:30 AM - 11:45 AM',
+    title: 'VLSI Architecture of Hardware Accelerator for Transformer AI Model',
+    authors: ['MD NAJRUL ISLAM'],
+    abstract: `Transformers are the heart of natural language processing(NLP) and are used for ML applications. The architecture of the transformers is made up of stacking of the encoder and decoder layers. This paper proposes a VLSI architecture of hardware accelerator for such transformer models. This architecture supports a dimensionality of 512, which has a 512×512 matrix as an output for detection. In this architecture a memory module for positional encoding (POS) part consists of precomputed POS values of sine and cosine, which makes the architecture both hardware and energy efficient. For calculating the soft-max function, a simplified soft-max function is deployed in both blocks, which takes fewer LUTs, and an efficient matrix multiplication block is used to achieve a more efficient result and less computational power, reducing the area for this architecture.`,
+    mainContact: {
+      name: 'MD NAJRUL ISLAM',
+      email: 'najrulislam095@gmail.com'
+    }
+  },
+    {
+    id: '291',
+    time: '11:45 AM - 12:00 PM',
+    title: 'Highly scalable monolithic integration of neuron and synapse for SNN',
+    authors: ['Aravind Ananthakrishnan', 'Rajakumari V', 'Kumar Prasannajit Pradhan'],
+    abstract: `This work presents a compact, device-level integration of neuronal and synaptic functions using two identical N-MOSFETs on a common Buried Oxide (BOX) layer. The leaky Integral-and-fire (LIF) model of a biological neuron is emulated, with one MOSFET configured as the neuron and the other as the synapse, separated by an interlayer oxide (ILO). The neuronal drain is connected to the synaptic gate, allowing synchronous operation of the integrated device. Through Sentaurus TCAD simulations, key parameters such as spike threshold, spiking frequency, and synaptic weight adaptability are validated. The spiking mechanism is governed by the Single Transistor Latch (STL) behavior, enabled by electrostatic potential buildup at the drain under negative gate bias. The synaptic device, being short-channel, exhibits current flow even at zero drain voltage, once the gate potential crosses the neuronal threshold. The impact of interface trap density on synaptic current and threshold voltage is analyzed, highlighting conductance modulation via charge trapping. Additionally, the role of ILO length is studied, revealing its inverse relationship with spike timing due to variations in the electrostatic potential gradient across the drain. The results provide a deeper understanding of the impact of scaling on co-integrated neuromorphic devices and pave the way for the development of more compact and energy-efficient neuromorphic hardware.`,
+    mainContact: {
+      name: 'Kumar Prasannajit Pradhan',
+      email: 'kppradhan@iiitdm.ac.in'
+    }
+  },
+    {
+    id: '415',
+    time: '12:00 PM - 12:15 PM',
+    title: 'LIDER: A Tool Framework Leveraging Large Language Model (LLM) for Incremental Design Refinement',
+    authors: ['Shivam Shukla', 'Utkarsh Choudhary', 'Sneh Saurabh'],
+    abstract: `In this paper, we propose a generalized tool framework, LIDER (LLM-based Incremental Design Engineering and Refinement), that leverages Large Language Models (LLMs) to automatically fill the verification and implementation gaps using successive refinement, reducing the manual intervention of traditional design flows significantly. We demonstrate LIDER's application in the automatic discovery of timing violations and their resolution using Google's Gemini 2.0 Flash API and the open-source timing analysis tool OpenSTA. Moreover, LIDER can produce design analysis reports, interpret timing analysis results, generate and refine timing constraints, and perform self-documentation. Hence, it can significantly reduce engineering effort while enhancing the accuracy, consistency, and speed of design closure in complex digital systems. Additionally, this work highlights the need for domain-specific fine-tuning of LLMs for more effectiveness. Therefore, a unified framework spanning across design flow tasks, such as LIDER, will facilitate the shared investment in fine-tuning and capability development, thereby promoting scalability and broader utility across the design ecosystem.`,
+    mainContact: {
+      name: 'Shivam Shukla',
+      email: 'shivam22478@iiitd.ac.in'
+    }
+  },
      {
     id: '130',
+    time: '12:15 PM - 12:30 PM',
     title: 'TYTAN: Taylor-series based Non-Linear Activation Engine for Deep Learning Accelerators',
     authors: ['Soham Pramanik', 'Vimal William', 'Arnab Raha', 'Debayan Das', 'Amitava Mukherjee', 'Janet L. Paluh'],
     abstract: `The rapid advancement in AI architectures and the proliferation of AI-enabled systems have intensified the need for domain-specific architectures that enhance both the acceleration and energy efficiency of AI inference, particularly at the edge. This need arises from the significant resource constraints—such as computational cost and energy consumption—associated with deploying AI algorithms, which involve intensive mathematical operations across multiple layers. High-power-consuming oper- ations, including General Matrix Multiplications (GEMMs) and activation functions, can be optimized to address these challenges. Optimization strategies for AI at the edge include algorithmic approaches like quantization and pruning, as well as hardware methodologies such as domain-specific accelerators. This paper proposes TYTAN: TaYlor-series based non-linear acTivAtion eNgine, which explores the development of a General-Purpose Non-linear Approximation Engine (GPNAE). TYTAN targets the acceleration of non-linear activation functions while minimizing power consumption. The TYTAN integrates a re-configurable hardware design with a specialized algorithm that dynami- cally estimates the necessary approximation for each activation function, aimed at achieving minimal deviation from baseline accuracy. The proposed system is validated through performance evaluations with state-of-the-art AI architectures, including Con- volutional Neural Networks (CNNs) and Transformers. Results from system-level simulations using Silvaco's FreePDK45 process node demonstrate TYTAN's capability to operate at a clock frequency > 950M Hz, showcasing its effectiveness in supporting accelerated, energy-efficient AI inference at the edge, which is ∼ 2× performance improvement, with ∼ 56% power reduction and ∼ 35× lower area compared to the baseline open-source NVIDIA Deep Learning Accelerator NVDLA implementation.`,
@@ -61,17 +95,8 @@ papers = [
     }
   },
   {
-    id: '206',
-    title: 'VLSI Architecture of Hardware Accelerator for Transformer AI Model',
-    authors: ['MD NAJRUL ISLAM'],
-    abstract: `Transformers are the heart of natural language processing(NLP) and are used for ML applications. The architecture of the transformers is made up of stacking of the encoder and decoder layers. This paper proposes a VLSI architecture of hardware accelerator for such transformer models. This architecture supports a dimensionality of 512, which has a 512×512 matrix as an output for detection. In this architecture a memory module for positional encoding (POS) part consists of precomputed POS values of sine and cosine, which makes the architecture both hardware and energy efficient. For calculating the soft-max function, a simplified soft-max function is deployed in both blocks, which takes fewer LUTs, and an efficient matrix multiplication block is used to achieve a more efficient result and less computational power, reducing the area for this architecture.`,
-    mainContact: {
-      name: 'MD NAJRUL ISLAM',
-      email: 'najrulislam095@gmail.com'
-    }
-  },
-  {
     id: '240',
+    time: '12:30 PM - 12:45 PM',
     title: 'ARIES: ADC-Less 3T1R-based nvCIM macro for Edge AI applications',
     authors: ['Ankit Kumar Tenwar', 'Radheshyam Sharma', 'Mukul Vishnu Lokhande', 'Santosh Vishvakarma'],
     abstract: 'Data-intensive applications have advanced rapidly, increasing the need for computing solutions that are both energyefficient and high-performing. This research presents a CIM (compute-in-memory) architecture without ADCs, utilizing a 3T1R bitcell inspired by the ReCAM framework and an effective voltage division method. Designed with 65nm CMOS technology, this architecture removes the requirement for high-power analogto-digital converters, leading to significant cuts in energy use and complexity. The 3T1R bitcell facilitates robust in-situ logic operations, providing stable rail-to-rail digital outputs compatible with subsequent circuit stages. Simulation results indicate a minimum latency 0.35 ns realizing an energy-efficient, low-latency and drop in energy consumption for Multiply-Accumulate (MAC) operations when contrasted with existing ADC-based systems. The design supports binary neural network (BNN) applications, offering scalability proven through a 25×25 macro, highlighting its suitability for edge AI systems with limited resources.',
@@ -80,18 +105,10 @@ papers = [
       email: 'skvishvakarma@iiti.ac.in'
     }
   },
-  {
-    id: '291',
-    title: 'Highly scalable monolithic integration of neuron and synapse for SNN',
-    authors: ['Aravind Ananthakrishnan', 'Rajakumari V', 'Kumar Prasannajit Pradhan'],
-    abstract: `This work presents a compact, device-level integration of neuronal and synaptic functions using two identical N-MOSFETs on a common Buried Oxide (BOX) layer. The leaky Integral-and-fire (LIF) model of a biological neuron is emulated, with one MOSFET configured as the neuron and the other as the synapse, separated by an interlayer oxide (ILO). The neuronal drain is connected to the synaptic gate, allowing synchronous operation of the integrated device. Through Sentaurus TCAD simulations, key parameters such as spike threshold, spiking frequency, and synaptic weight adaptability are validated. The spiking mechanism is governed by the Single Transistor Latch (STL) behavior, enabled by electrostatic potential buildup at the drain under negative gate bias. The synaptic device, being short-channel, exhibits current flow even at zero drain voltage, once the gate potential crosses the neuronal threshold. The impact of interface trap density on synaptic current and threshold voltage is analyzed, highlighting conductance modulation via charge trapping. Additionally, the role of ILO length is studied, revealing its inverse relationship with spike timing due to variations in the electrostatic potential gradient across the drain. The results provide a deeper understanding of the impact of scaling on co-integrated neuromorphic devices and pave the way for the development of more compact and energy-efficient neuromorphic hardware.`,
-    mainContact: {
-      name: 'Kumar Prasannajit Pradhan',
-      email: 'kppradhan@iiitdm.ac.in'
-    }
-  },
+
   {
     id: '401',
+    time: '12:45 PM - 1:00 PM',
     title: 'Design of Invertible Comparators and Max Pooling Layer using p-bits for Neural Networks',
     authors: ['Amit Kumar Jangid', 'AMIT SINGH', 'srinivasu bodapati'],
     abstract: `Invertible computing presents a viable avenue for energy-efficient machine learning by facilitating low-power, probabilistic logic circuits with an invertible nature. This paper delineates the design and execution of invertible comparators and an invertible max-pooling layer utilizing probabilistic bits (p-bits) for neural networks. In contrast to conventional digital circuits, p-bit-based architectures utilize inherent stochastic behaviour to execute both forward and backward operations inside the same hardware, facilitating efficient bidirectional computations. This work offers innovative p-bit circuits that execute the comparison operation in an invertible fashion and expand these designs to develop a probabilistic max-pooling layer, an essential element in convolutional neural networks. Presented designs maintain the functional integrity of conventional forward max-pooling while facilitating invertible inference, advantageous for energy-based learning and generative models. The simulation findings indicate proper functioning, resilience to noise, and scalability of the proposed designs.`,
@@ -100,16 +117,7 @@ papers = [
       email: 's22052@students.iitmandi.ac.in'
     }
   },
-  {
-    id: '415',
-    title: 'LIDER: A Tool Framework Leveraging Large Language Model (LLM) for Incremental Design Refinement',
-    authors: ['Shivam Shukla', 'Utkarsh Choudhary', 'Sneh Saurabh'],
-    abstract: `In this paper, we propose a generalized tool framework, LIDER (LLM-based Incremental Design Engineering and Refinement), that leverages Large Language Models (LLMs) to automatically fill the verification and implementation gaps using successive refinement, reducing the manual intervention of traditional design flows significantly. We demonstrate LIDER's application in the automatic discovery of timing violations and their resolution using Google's Gemini 2.0 Flash API and the open-source timing analysis tool OpenSTA. Moreover, LIDER can produce design analysis reports, interpret timing analysis results, generate and refine timing constraints, and perform self-documentation. Hence, it can significantly reduce engineering effort while enhancing the accuracy, consistency, and speed of design closure in complex digital systems. Additionally, this work highlights the need for domain-specific fine-tuning of LLMs for more effectiveness. Therefore, a unified framework spanning across design flow tasks, such as LIDER, will facilitate the shared investment in fine-tuning and capability development, thereby promoting scalability and broader utility across the design ecosystem.`,
-    mainContact: {
-      name: 'Shivam Shukla',
-      email: 'shivam22478@iiitd.ac.in'
-    }
-  }
+
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,7 +239,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -276,6 +287,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

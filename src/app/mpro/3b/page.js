@@ -45,33 +45,14 @@ export default function SessionLayout({
   sessionTime = "11:45 AM - 1:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. Gargi Khanna , Chair 2:  Prof. Manu Bansal", 
   sessionDescription = "",
   
   // Papers Array
 papers = [
-     {
-    id: '193',
-    title: 'Energy-Efficient Pore-Confined Phase Change Memory Using Current-Crowding Effect: A Simulation Study',
-    authors: ['Rekib Uddin Ahmed', 'Arun Tej Mallajosyula', 'Basant Saini', 'Udayan Ganguly'],
-    abstract: `Phase-Change Memory (PCM) is a non-volatile memory technology that stores data by switching a chalcogenide material between amorphous and crystalline states using Joule heating, offering fast switching performance. To enhance energy efficiency, previous studies have explored PCM structures such as the mushroom, confined, and pore-confined type. These designs confine current and heat to reduce programming energy and improve thermal stability, although often at the cost of reliability and scalability. Nevertheless, PCM still suffers from high RESET energy, large amorphous volumes that increase SET current, and reliability issues such as void formation and RESET-stuck failures, which limit its viability for low-power and scaled applications. This paper proposes a pore-confined PCM design that induces a current-crowding effect, forming a dumbbell-shaped amorphous region. This design improves thermal confinement and accelerates recrystallization during the SET process by promoting nucleation in the thinned amorphous region. Compared to traditional confined-type, RESET and SET energies are significantly reduced. The proposed design demonstrates a 49.86% reduction in RESET energy compared to conventional confined-type designs, while achieving a memory window of 608.39 - comparable to the state-of-the-art works.`,
-    mainContact: {
-      name: 'Rekib Uddin Ahmed',
-      email: 'rekib48@gmail.com'
-    }
-  },
-  {
-    id: '201',
-    title: 'Design & Analysis of Low Power 9T SRAM Cell',
-    authors: ['Abhishek Prakash', 'SUNANDA AMBULKER'],
-    abstract: `Static Random Access Memory (SRAM) is a crucial component of the memory hierarchy, which requires high endurance, high speed and low power consumption performance. In this work a 9T SRAM cell has been designed by utilizing stacking & voltage lowering technique for low power high speed operation. A detailed comparison of proposed 9T SRAM cell also been done with conventional 6T and state of art 9T cells. Simulation has been performed by using SCL180nm PDK technology at 1.8V supply voltage. The simulation results shows that the proposed 9T SRAM cell having enhanced read operation with low power consumption which makes it a good prospect for low-power and high-speed applications.`,
-    mainContact: {
-      name: 'Abhishek Prakash',
-      email: 'abhishekprakash440@gmail.com'
-    }
-  },
   {
     id: '258',
+    time: '11:30 AM - 11:45 AM',
     title: 'Energy-Efficient Ternary-SRAM cell in CNFET and FinFET Technologies using Static Ternary Inverter (STI)',
     authors: ['SEKHAR DEVANDLA', 'LOKESH CHOWKACHERLA', 'Nitesh Kumar Rathore', 'Ramakant Yadav', 'Pooran Singh'],
     abstract: 'This research uses fin-field effect transistors (FinFETs) and carbon nanotube FETs (CNFETs) to provide an exciting low-power consumption and high-performance SRAM bit cell using the proposed 6-transistor-based standard ternary inverter (STI). Ternary logic has various advantages over binary logic, including higher bit density and energy efficiency. When comparing the proposed CNFET STI to the traditional design STI, there is a 99.7% improvement in the power-delay product (PDP). Then, the proposed STI ternary logic has been used to design an SRAM bit cell using the CNFET and FinFET technologies in 32nm. This study shows that the proposed STI ternary CNFET-based SRAM cell design outperforms both the proposed FinFET-based and the conventional ternary SRAM designs in terms of write and read delay time, and dynamic power dissipation. Compared to conventional CNFET, proposed FinFET, and conventional FinFET SRAM cells, the proposed design achieves improved write delay (1.43×, 1.51×, 4.81×), read delay (1.22×, 0.6×, 2.54×), reduced write dynamic power (9.44×, 5.63×, 6.32×), and reduced read dynamic power (1.9×, 37.8×, 15.8×), respectively.',
@@ -80,18 +61,9 @@ papers = [
       email: 'pooran.singh@mahindrauniversity.edu.in'
     }
   },
-  {
-    id: '279',
-    title: 'Efficient Low-Power 6T SRAM Design with MTCMOS in 90nm CMOS Technology',
-    authors: ['Aaryan Jha', 'Amit Kumar'],
-    abstract: `This paper presents the design of efficient low-power 6T SRAM that incorporates multi-threshold CMOS (MTCMOS) technology using 90nm standard CMOS process in Cadence analog design environment (ADE). The proposed design stencils additional PMOS and NMOS transistors to boost performance, improving upon conventional 6T and MTCMOS-based SRAM structures. The results demonstrate a significant reduction in write latency from 4 ns (conventional 6T SRAM) to 1.91 ns in the proposed design, achieving over 50% improvement in write speed with lower power consumption. Additionally, the proposed design achieves better rise and fall times compared to conventional 6T SRAM, further enhancing operational speed. The proposed SRAM design provides an effective solution for high-speed, low-power SRAM applications in modern VLSI systems.`,
-    mainContact: {
-      name: 'Amit Kumar',
-      email: 'mgva.amit@gmail.com'
-    }
-  },
-  {
+    {
     id: '305',
+    time: '11:45 AM - 12:00 PM',
     title: 'A Low Read Power Single-Ended Half-Select Immune RHBD SRAM for Space Applications',
     authors: ['Biby Joseph', 'Arvindaksha G', 'Nirupama K. G.', 'R. K. Kavitha'],
     abstract: `This paper presents a low read power single-ended half-select immune radiation-hardened-by design (SEHI-RHBD16T) SRAM cell targeted for space applications. It withstands all single-event upset (SEU) at sensitive nodes. To analyze the performance of SEHI-RHBD16T, the design is laid out in UMC 65 nm technology, and compared with other bench-mark radiation-hardened cells. Simulation results shows the robustness of the SEHI-RHBD16T, exhibiting 4.8, 5.4, 2.3, 5.5, 2.7, 1.9, 12, and 2.83 times low read power dissipation as compared with DICE12T, QUCCE12T, RHSC12T, LWS14T, RHPD12T, RHBD13T, RHBD16T, and 6TSRAM, respectively. The proposed design has the least read power dissipation of 0.06 µW due to single bit line configuration and has high write stability of 725 mV. The half-select disturbance issue is mitigated by adding a decoupled gate diffusion input (GDI) inverter. To further demonstrate the robustness against Single Event Upsets (SEUs) and immunity to half-select disturbances, a 2000-point Monte Carlo (MC) analysis is conducted under varying Process, Voltage, and Temperature (PVT) conditions.`,
@@ -101,7 +73,31 @@ papers = [
     }
   },
   {
+    id: '158',
+    time: '12:00 PM - 12:15 PM',
+    title: 'Comparative Analysis of STT-SHE and SOT in 6T-Based Non-Volatile SRAM',
+    authors: ['Sangeetha C. Soman', 'SUNANDA AMBULKER'],
+    abstract: `This work features a comparative analysis of Spin Transfer Torque - Spin Hall Effect Non Volatile Static Random Access Memory (STT-SHE NVSRAM) and Spin Orbit Torque Non Volatile Static Random Access Memory (SOT NVSRAM) with respect to influential performance parameters like delay, stability, power consumption, and noise margin. For the fair comparison both the designs have been simulated in the same simulation environment by using same 45nm CMOS technology. Simulation results indicate that SOT NVSRAM has lesser read, write, store, and restore delays because of its highly effective read and write path separation, while STT-SHE NVSRAM has greater delays because of the integrated SHE-STT switching mechanism. With regard to stability, STT-SHE NVSRAM exhibits higher read and hold static noise margin (SNM), and SOT NVSRAM enhances write SNM, providing greater write stability. At 1.2v supply voltage the simulation results also reveals about the reduced write switching power in SOT NVSRAM as a result of the one-way current flow in SOT switching. STT-SHE NVSRAM exhibits lower power consumption because of effective Spin Hall Effect-based switching, which employs a lateral current path and prevents current flow through the MTJ, resulting in lower current. STT-SHE NVSRAM can be used in applications requiring less power consumption, whereas SOT NVSRAM is used where there is a need for high speeds due to better read and write delays. The results emphasize the compromise among speed, power, and stability in non-volatile SRAM, which gives useful insights into designing energy-efficient and high-speed memory.`,
+    mainContact: {
+      name: 'Sangeetha C. Soman',
+      email: 'sangeethasoman6@gmail.com',
+    }
+  },
+  {
+    id: '279',
+    time: '12:15 PM - 12:30 PM',
+    title: 'Efficient Low-Power 6T SRAM Design with MTCMOS in 90nm CMOS Technology',
+    authors: ['Aaryan Jha', 'Amit Kumar'],
+    abstract: `This paper presents the design of efficient low-power 6T SRAM that incorporates multi-threshold CMOS (MTCMOS) technology using 90nm standard CMOS process in Cadence analog design environment (ADE). The proposed design stencils additional PMOS and NMOS transistors to boost performance, improving upon conventional 6T and MTCMOS-based SRAM structures. The results demonstrate a significant reduction in write latency from 4 ns (conventional 6T SRAM) to 1.91 ns in the proposed design, achieving over 50% improvement in write speed with lower power consumption. Additionally, the proposed design achieves better rise and fall times compared to conventional 6T SRAM, further enhancing operational speed. The proposed SRAM design provides an effective solution for high-speed, low-power SRAM applications in modern VLSI systems.`,
+    mainContact: {
+      name: 'Amit Kumar',
+      email: 'mgva.amit@gmail.com'
+    }
+  },
+
+  {
     id: '363',
+    time: '12:30 PM - 12:45 PM',
     title: '6T SRAM BASED IN-MEMORY COMPUTING USING RECONFIGURABLE ASSIST SENSE AMPLIFIER',
     authors: ['Kshitiz Shukla', 'Gargi Khanna'],
     abstract: `The Von Neumann architecture's disadvantages, particularly the bottleneck brought on by numerous data transfers between cores of the central processing unit and storage, are supposed to be addressed by a novel approach termed in-memory computing (IMC). This work uses a Reconfigurable Assist Sense Amplifier (RASA) to demonstrate a novel SRAM-based method for efficient in/near-memory Boolean computations. The RASA optimizes computational efficiency without interrupting the conventional read process by utilizing assist transistors to carry out NAND/AND, NOR/OR, and XOR/XNOR operations. By utilizing a single sense amplifier (SA), the proposed method effectively eliminates the need for dual SAs, a common feature in state-of-the-art solutions. This results in increased memory density and a reduction in the cost per bit compared to existing architectures, which incur significant area overhead. This work demonstrates how the RASA-based SRAM design can provide a scalable solution for energy-efficient, high-performance computing in data-intensive applications. Simulation demonstrates 8 bit addition capability, 76.98 mW average power dissipation, and significant improvements over state-of-the-art IMC schemes.`,
@@ -109,7 +105,19 @@ papers = [
       name: 'Contact',
       email: '23mec011@nith.ac.ina'
     }
-  }
+  },
+     {
+    id: '193',
+    time: '12:45 PM - 1:00 PM',
+    title: 'Energy-Efficient Pore-Confined Phase Change Memory Using Current-Crowding Effect: A Simulation Study',
+    authors: ['Rekib Uddin Ahmed', 'Arun Tej Mallajosyula', 'Basant Saini', 'Udayan Ganguly'],
+    abstract: `Phase-Change Memory (PCM) is a non-volatile memory technology that stores data by switching a chalcogenide material between amorphous and crystalline states using Joule heating, offering fast switching performance. To enhance energy efficiency, previous studies have explored PCM structures such as the mushroom, confined, and pore-confined type. These designs confine current and heat to reduce programming energy and improve thermal stability, although often at the cost of reliability and scalability. Nevertheless, PCM still suffers from high RESET energy, large amorphous volumes that increase SET current, and reliability issues such as void formation and RESET-stuck failures, which limit its viability for low-power and scaled applications. This paper proposes a pore-confined PCM design that induces a current-crowding effect, forming a dumbbell-shaped amorphous region. This design improves thermal confinement and accelerates recrystallization during the SET process by promoting nucleation in the thinned amorphous region. Compared to traditional confined-type, RESET and SET energies are significantly reduced. The proposed design demonstrates a 49.86% reduction in RESET energy compared to conventional confined-type designs, while achieving a memory window of 608.39 - comparable to the state-of-the-art works.`,
+    mainContact: {
+      name: 'Rekib Uddin Ahmed',
+      email: 'rekib48@gmail.com'
+    }
+  },
+  
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,7 +239,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -276,6 +287,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

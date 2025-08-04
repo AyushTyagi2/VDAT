@@ -45,23 +45,26 @@ export default function SessionLayout({
   sessionTime = "11:45 AM - 1:15 PM",
   sessionDate = "August 9, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. Bikram Paul, Chair 2: Prof. Alpana Agrawal ",
   sessionDescription = "",
   
   // Papers Array
 papers = [
-     {
-    id: '43',
-    title: 'A Low-power 8GHz CML-Based Phase Interpolator for High-Speed SerDes Applications in 6nm FinFET Process',
-    authors: ['Yaswanth Kumar Aguru', 'Siva Kumar Rapina', 'Ekta Goel'],
-    abstract: `This paper presents the design of a Phase Interpolator (PI) for high-speed Serializer/Deserializer (SerDes) applications. The PI selects a pair of clock phases from eight different clock phases at 8 GHz using a Current Mode Logic Multiplexer (CML Mux) and interpolates these phases with precise and finer steps of 8-bit resolution to generate output clock phases. The PI consists of a CML Mux, a CML PI, and a CML-to-CMOS converter. The primary objective of this PI is to enhance Differential Non-Linearity (DNL) and Integral Non-Linearity (INL). To achieve this, two weighted mechanisms for PI tail current—binary weighted and thermometric weighted—were implemented and evaluated. Compared with the binary weighted PI, the thermometer weighted PI achieves a lower DNL and exhibits monotonic behavior. This paper provides a comprehensive review of existing phase interpolation techniques and the implementation of cross coupling capacitors technique in between input and output of differential pair in CML-Based PI to improve DNL and INL, using a 6nm FinFET process technology. The achieved DNL and INL are 0.25 LSB and 1.6 LSB, respectively, with an average power consumption of 4.43 mW at a nominal supply voltage of 0.8V. Reported performance metrics are the post layout simulation results.`,
+
+  {
+    id: '312',
+    time: '11:30 AM - 11:45 AM',
+    title: 'Energy Efficient Approximate CNTFET Based Ternary half-adders and Multipliers',
+    authors: ['Aiman Malik', 'Mohd Wajid', 'Mohammad Hasan'],
+    abstract: `Researchers are looking into methods like multi valued logic (MVL) and approximate computing to meet the growing demand for energy-efficient computing for portable battery-operated devices. Multi-valued logic, specifically ternary logic, reduces circuit complexity and power consumption by employing three voltage levels instead of the conventional binary approach. Approximate computing, on the other hand, enables a trade-off between computational accuracy and energy or area efficiency. Approximate ternary half-adder (THA) and ternary multiplier (TMUL) circuits based on carbon nanotube field-effect transistors (CNTFETs) are presented in this work. Though with different levels of accuracy, these systems provide noticeable gains in power consumption and latency when compared to their precise equivalents. When the diameter of the nanotubes is changed, CNTFETs can display a variety of threshold voltages, which is why they are selected. To enhance performance, only the "sum" and "product" blocks are approximated in the proposed designs, with reductions in circuit size applied to different extents. As a result, some loss of precision is observed in these outputs. In comparison to their current counterparts, the suggested approximation THAs and TMULs show reduced power consumption and power delay product (PDP). The improvement in PDP of the proposed approximate THAs varies from 10 to 26% as compared to the existing best designs. Similarly, the approximate TMULs show improvement up to 75% . The "carry" circuit remains exact, as it propagates to higher computation stages and plays a critical role in maintaining overall accuracy.`,
     mainContact: {
-      name: 'Yaswanth Kumar Aguru',
-      email: 'yaswanth.kumar@microchip.com'
+      name: 'Aiman Malik',
+      email: 'aimanmalik417@gmail.com'
     }
   },
   {
     id: '205',
+    time: '11:45 AM - 12:00 PM',
     title: 'Design of Operand-rounding based Approximate Multiplier for Error-resilient Applications',
     authors: ['Vasundhara Trivedi', 'Santosh Vishvakarma'],
     abstract: `This work presents a novel approach for approximate multiplier design for applications with error-tolerance capabilities based on pre-processing of input operands for energy-efficient implementation. The 8-bit inputs are processed to 5 bits, and multiplication is carried out on this 5-bit operand, followed by appropriate shifting to minimise error and enable resource-efficient multiplication. The efficacy of the proposed design is computed based on error and performance metrics. Furthermore, when employed in the MAC unit, the LUT utilisation decreases by 24.4% with a 37.53% reduction in critical path delay with respect to the conventional implementation. The architecture exhibits the least delay among the compared state-of-the-art works. The proposed multiplier showcases only 4.84% average relative error with respect to the accurate multiplication. Moreover, the design is tested for edge detection applications to demonstrate its applicability in image processing applications.`,
@@ -72,6 +75,7 @@ papers = [
   },
   {
     id: '255',
+    time: '12:00 PM - 12:15 PM',
     title: 'A Novel High Speed D Flip Flop Architecture in 180nm CMOS Technology',
     authors: ['Sagnik Maitra', 'Abhijit Roy', 'Sounak Roy'],
     abstract: 'This paper introduces a compact and high-speed D flip-flop (DFF) design implemented in 180nm CMOS technology, optimized for operation at 4 GHz. The architecture features a 14-transistor topology utilizing a True Single-Phase Clock (TSPC) structure, which enhances both data retention and glitch suppression. Post-layout simulation results confirm a propagation delay of just 84.84 ps, demonstrating robust functionality across multiple clock cycles. In contrast to traditional master-slave flip-flops, which typically require 40 transistors and have delays exceeding 700 ps, the proposed design significantly reduces both area and latency. With careful optimization of transistor sizing and clock gating, this layout is well-suited for high-frequency, low-power applications, making it ideal for use in Flash ADCs, clock distribution networks, and pipelined datapaths.',
@@ -80,18 +84,21 @@ papers = [
       email: 'abhijit.roy@iiitg.ac.in'
     }
   },
+  
   {
-    id: '312',
-    title: 'Energy Efficient Approximate CNTFET Based Ternary half-adders and Multipliers',
-    authors: ['Aiman Malik', 'Mohd Wajid', 'Mohammad Hasan'],
-    abstract: `Researchers are looking into methods like multi valued logic (MVL) and approximate computing to meet the growing demand for energy-efficient computing for portable battery-operated devices. Multi-valued logic, specifically ternary logic, reduces circuit complexity and power consumption by employing three voltage levels instead of the conventional binary approach. Approximate computing, on the other hand, enables a trade-off between computational accuracy and energy or area efficiency. Approximate ternary half-adder (THA) and ternary multiplier (TMUL) circuits based on carbon nanotube field-effect transistors (CNTFETs) are presented in this work. Though with different levels of accuracy, these systems provide noticeable gains in power consumption and latency when compared to their precise equivalents. When the diameter of the nanotubes is changed, CNTFETs can display a variety of threshold voltages, which is why they are selected. To enhance performance, only the "sum" and "product" blocks are approximated in the proposed designs, with reductions in circuit size applied to different extents. As a result, some loss of precision is observed in these outputs. In comparison to their current counterparts, the suggested approximation THAs and TMULs show reduced power consumption and power delay product (PDP). The improvement in PDP of the proposed approximate THAs varies from 10 to 26% as compared to the existing best designs. Similarly, the approximate TMULs show improvement up to 75% . The "carry" circuit remains exact, as it propagates to higher computation stages and plays a critical role in maintaining overall accuracy.`,
+    id: '399',
+    time: '12:15 PM - 12:30 PM',
+    title: 'Design and Implementation of Low Power Variable bit CSLA using 18nm FinFET Technology',
+    authors: ['Swetha Siliveri', 'Andoju Pranay Bhargav'],
+    abstract: `In energy-constrained digital systems, low-power and high-speed arithmetic design is critical. This work extends an earlier Variable Bit Carry Look-Ahead (CLA)-based Carry Select Adder (CSLA) architecture by integrating FinFET-based Modified Gate Diffusion Input (MGDI) logic to enhance performance. The combined approach leverages FinFET's superior short-channel control and MGDI's low-transistor logic style to optimize power and speed. Implementations of 4-, 8-, 16-, and 32-bit CSLA variants are evaluated. Simulation results demonstrate up to 46% power savings and 36% delay reduction compared to conventional CMOS-based designs. A detailed analysis explains non-linear power trends across bit-widths. Layouts for smaller configurations and schematic-level validation confirm physical feasibility. This study shows that integrating advanced device and logic techniques with proven architectures can significantly improve efficiency in next-generation low-power digital circuits.`,
     mainContact: {
-      name: 'Aiman Malik',
-      email: 'aimanmalik417@gmail.com'
+      name: 'Swetha Siliveri',
+      email: 's.swetha@cvr.ac.in'
     }
   },
   {
     id: '345',
+    time: '12:30 PM - 12:45 PM',
     title: 'Designing Reconfigurable Encoder and Decoder Circuits using Memristor Logic Gates',
     authors: ['Anirdesh Sreenath Yalamarthi', 'Sasindrakumar Sivasankaran', 'Tejendra Dixit'],
     abstract: `In light of recent developments in memory technology, the scalability of semiconductors has been encountering significant challenges. In the past two decades, memristors have experienced a growth in popularity as a compelling alternative and unorthodox option to the typical CMOS devices. This may be attributed to the fact that memristors possess distinctive traits and characteristics. We offer a bespoke model that makes use of a modification of a window function. This modification gives us the ability to simulate the essential logic gates, which include a 4:2 Basic Encoder and a 2:4 Line Decoder which consume nearly 3 times lesser power than their CMOS counterparts. The ability to construct combinational and sequential circuits that are more complicated will be made possible by this proof of concept.`,
@@ -100,16 +107,17 @@ papers = [
       email: 'anirdeshys0502@gmail.com'
     }
   },
-  {
-    id: '399',
-    title: 'Design and Implementation of Low Power Variable bit CSLA using 18nm FinFET Technology',
-    authors: ['Swetha Siliveri', 'Andoju Pranay Bhargav'],
-    abstract: `In energy-constrained digital systems, low-power and high-speed arithmetic design is critical. This work extends an earlier Variable Bit Carry Look-Ahead (CLA)-based Carry Select Adder (CSLA) architecture by integrating FinFET-based Modified Gate Diffusion Input (MGDI) logic to enhance performance. The combined approach leverages FinFET's superior short-channel control and MGDI's low-transistor logic style to optimize power and speed. Implementations of 4-, 8-, 16-, and 32-bit CSLA variants are evaluated. Simulation results demonstrate up to 46% power savings and 36% delay reduction compared to conventional CMOS-based designs. A detailed analysis explains non-linear power trends across bit-widths. Layouts for smaller configurations and schematic-level validation confirm physical feasibility. This study shows that integrating advanced device and logic techniques with proven architectures can significantly improve efficiency in next-generation low-power digital circuits.`,
+       {
+    id: '43',
+    time: '12:45 PM - 1:00 PM',
+    title: 'A Low-power 8GHz CML-Based Phase Interpolator for High-Speed SerDes Applications in 6nm FinFET Process',
+    authors: ['Yaswanth Kumar Aguru', 'Siva Kumar Rapina', 'Ekta Goel'],
+    abstract: `This paper presents the design of a Phase Interpolator (PI) for high-speed Serializer/Deserializer (SerDes) applications. The PI selects a pair of clock phases from eight different clock phases at 8 GHz using a Current Mode Logic Multiplexer (CML Mux) and interpolates these phases with precise and finer steps of 8-bit resolution to generate output clock phases. The PI consists of a CML Mux, a CML PI, and a CML-to-CMOS converter. The primary objective of this PI is to enhance Differential Non-Linearity (DNL) and Integral Non-Linearity (INL). To achieve this, two weighted mechanisms for PI tail current—binary weighted and thermometric weighted—were implemented and evaluated. Compared with the binary weighted PI, the thermometer weighted PI achieves a lower DNL and exhibits monotonic behavior. This paper provides a comprehensive review of existing phase interpolation techniques and the implementation of cross coupling capacitors technique in between input and output of differential pair in CML-Based PI to improve DNL and INL, using a 6nm FinFET process technology. The achieved DNL and INL are 0.25 LSB and 1.6 LSB, respectively, with an average power consumption of 4.43 mW at a nominal supply voltage of 0.8V. Reported performance metrics are the post layout simulation results.`,
     mainContact: {
-      name: 'Swetha Siliveri',
-      email: 's.swetha@cvr.ac.in'
+      name: 'Yaswanth Kumar Aguru',
+      email: 'yaswanth.kumar@microchip.com'
     }
-  }
+  },
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,7 +239,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -276,6 +287,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                      </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

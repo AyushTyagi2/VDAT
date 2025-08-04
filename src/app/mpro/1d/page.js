@@ -45,13 +45,14 @@ export default function SessionLayout({
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1: Prof. Sudeb Dasgupta, Chair 2: Prof. Ambika Prasad Shah",
   sessionDescription = "",
   
   // Papers Array
 papers = [
   {
   id: '169',
+  time: '2:00 PM - 2:15 PM',
   title: 'Spin-TLB: STT-RAM-based Translation Hierarchy for Server Applications in CPUs',
   authors: ['Tejeshwar Bhagatsing Thorawade', 'Varun Venkitaraman Iyer', 'Ankith R', 'Newton Singh', 'Virendra Singh'],
   abstract: `Translation Look-aside Buffers (TLBs) are essential for efficient memory virtualization in modern processors. They cache recent address translations to avoid costly page-table walks. As server applications become increasingly data-intensive, their working dataset grows, making address translation a significant performance bottleneck. Thus, optimizing TLBs has become increasingly important. Addressing the demands of larger workloads necessitates larger TLBs; however, conventional SRAM-based TLBs have scalability challenges. As their capacity increases, they incur higher access latency, increased area overhead, and greater energy consumption.
@@ -64,18 +65,21 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
     email: 'tejeshwart@iitb.ac.in',
   }
 },
-{
-  id: '158',
-  title: 'Comparative Analysis of STT-SHE and SOT in 6T-Based Non-Volatile SRAM',
-  authors: ['Sangeetha C. Soman', 'SUNANDA AMBULKER'],
-  abstract: `This work features a comparative analysis of Spin Transfer Torque - Spin Hall Effect Non Volatile Static Random Access Memory (STT-SHE NVSRAM) and Spin Orbit Torque Non Volatile Static Random Access Memory (SOT NVSRAM) with respect to influential performance parameters like delay, stability, power consumption, and noise margin. For the fair comparison both the designs have been simulated in the same simulation environment by using same 45nm CMOS technology. Simulation results indicate that SOT NVSRAM has lesser read, write, store, and restore delays because of its highly effective read and write path separation, while STT-SHE NVSRAM has greater delays because of the integrated SHE-STT switching mechanism. With regard to stability, STT-SHE NVSRAM exhibits higher read and hold static noise margin (SNM), and SOT NVSRAM enhances write SNM, providing greater write stability. At 1.2v supply voltage the simulation results also reveals about the reduced write switching power in SOT NVSRAM as a result of the one-way current flow in SOT switching. STT-SHE NVSRAM exhibits lower power consumption because of effective Spin Hall Effect-based switching, which employs a lateral current path and prevents current flow through the MTJ, resulting in lower current. STT-SHE NVSRAM can be used in applications requiring less power consumption, whereas SOT NVSRAM is used where there is a need for high speeds due to better read and write delays. The results emphasize the compromise among speed, power, and stability in non-volatile SRAM, which gives useful insights into designing energy-efficient and high-speed memory.`,
-  mainContact: {
-    name: 'Sangeetha C. Soman',
-    email: 'sangeethasoman6@gmail.com',
-  }
-},
+ {
+    id: '201',
+    time: '2:15 PM - 2:30 PM',
+    title: 'Design & Analysis of Low Power 9T SRAM Cell',
+    authors: ['Abhishek Prakash', 'SUNANDA AMBULKER'],
+    abstract: `Static Random Access Memory (SRAM) is a crucial component of the memory hierarchy, which requires high endurance, high speed and low power consumption performance. In this work a 9T SRAM cell has been designed by utilizing stacking & voltage lowering technique for low power high speed operation. A detailed comparison of proposed 9T SRAM cell also been done with conventional 6T and state of art 9T cells. Simulation has been performed by using SCL180nm PDK technology at 1.8V supply voltage. The simulation results shows that the proposed 9T SRAM cell having enhanced read operation with low power consumption which makes it a good prospect for low-power and high-speed applications.`,
+    mainContact: {
+      name: 'Abhishek Prakash',
+      email: 'abhishekprakash440@gmail.com'
+    }
+  },
+
 {
   id: '263',
+  time: '2:30 PM - 2:45 PM',
   title: 'High-Speed and Low-Cost SRAM Cell Using a 2×1 MUX in Quantum-Dot Cellular Automata (QCA)',
   authors: ['Nitesh Kumar Rathore', 'Pooran Singh'],
   abstract: `To enhance stability and efficiency, this research proposes a novel Static Random-Access Memory (SRAM) bitcell utilizing Quantum-dot Cellular Automata (QCA) technology. As technology nodes continue to scale down, traditional CMOS-based SRAM faces significant challenges related to power consumption and scalability. The design and development of logic circuits using QCA technology have become an important area of research. The main advantages of this approach include a smaller area, reduced operating speed, minimal power consumption, and improved switching rates in nanoscale technology, making it particularly appealing. The proposed single-bit SRAM cell in QCA is designed by integrating a single (MUX) with an AND gate. The benefits of this design in terms of cell count, total footprint, and clock cycle delay are evidenced by the observed results. Notably, when compared to other proposed QCA SRAM circuits, the proposed layout achieves an outstanding increase of 85.44% overall cell number, 99.2% on the QCA cost, and 75% on clock cycle latency.`,
@@ -86,6 +90,7 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
 },
 {
   id: '414',
+  time: '2:45 PM - 3:00 PM',
   title: 'Low-Power NBTI Resilient 12T SRAM Cell with Enhanced Reliability',
   authors: ['Vipul Sahu', 'ARYAN KANNAUJIYA', 'Pranjal Verma', 'Ambika Prasad Shah'],
   abstract: `This work briefs an aging resilient SRAM cell for reliable data storage. The proposed R-SRAM cell is configured with 12 transistors. The performance parameters, such as SRRV, WRRV, N-curve, have been evaluated for large-scale applicability. Further, HSNM, RSNM, WSNM of R-SRAM is improved by 1.15×, 1.26×, 1.08× than the conventional 6T SRAM cell. However, less aging effect by analysing threshold voltage shift over five years on applying stress voltage of 1V shows that there is 1.16× improvement in the threshold voltage (Vth) of the NBTI-resilient (NR)-SRAM cell in relation to 6T SRAM cell. For process variation and process mismatch analysis, 2000 Montecarlo simulations for Vth reveals that the R-SRAM has an improvement for 1.32× of σ and 1.05× of μ than that of 6T SRAM cell. Thus, the proposed R-SRAM cell is NBTI resilient, having reduced leakage power embedded with different control signals for data storage. All simulation work have been completed by using industry-standard 40nm UMC technology node.`,
@@ -95,15 +100,38 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
   }
 },
 {
-  id: '177',
-  title: 'FRRH14T: FinFET based Fast Recovering Radiation Hardened 14T SRAM for Space Applications',
-  authors: ['Ganesh Prasad B K', 'Ayush Maurya', 'Ravi S Siddanath', 'Mohit Gupta', 'Dr. Prasanna Kumar Misra', 'Manish Goswami', 'Kavindra Kandpal'],
-  abstract: `Memory circuits in space are susceptible to instability and reliability issues due to charged particles like alpha particles, neutrons, heavy ions, and photons. When these particles pass through the memory device, they generate an ion track that can interfere with stored data. Traditional 6T SRAM (Static Random Access Memory) is particularly prone to such disruptions. To tackle this issue, researchers have developed radiation-hardened SRAM cells, often by adding extra redundant nodes to improve reliability. This study introduces a fast FRRH14T (Fast Recovering Radiation Hardened 14 Transistor) SRAM cell with redundant nodes to protect against soft errors.The performance of the presented cell is evaluated using Cadence Virtuoso at 18 nm FinFET technology and 0.8 V supply voltage. Its performance is compared with other reliable radiation-hardened memory designs, including RSP12T, RHB12T, HSLC12T, NRHC14T, and SIMR18T. The FRRH14T cell is designed to resist single-event upset disruptions by optimizing node placement to minimize sensitivity, giving a recovery time of 1.2 ns. Additionally, it demonstrates significantly better write access time ranging from 1.09× to 2.2×—compared to the current radiation-hardened memory architectures.`,
+  id: '414',
+  time: '2:45 PM - 3:00 PM',
+  title: 'Low-Power NBTI Resilient 12T SRAM Cell with Enhanced Reliability',
+  authors: ['Vipul Sahu', 'ARYAN KANNAUJIYA', 'Pranjal Verma', 'Ambika Prasad Shah'],
+  abstract: `This work briefs an aging resilient SRAM cell for reliable data storage. The proposed R-SRAM cell is configured with 12 transistors. The performance parameters, such as SRRV, WRRV, N-curve, have been evaluated for large-scale applicability. Further, HSNM, RSNM, WSNM of R-SRAM is improved by 1.15×, 1.26×, 1.08× than the conventional 6T SRAM cell. However, less aging effect by analysing threshold voltage shift over five years on applying stress voltage of 1V shows that there is 1.16× improvement in the threshold voltage (Vth) of the NBTI-resilient (NR)-SRAM cell in relation to 6T SRAM cell. For process variation and process mismatch analysis, 2000 Montecarlo simulations for Vth reveals that the R-SRAM has an improvement for 1.32× of σ and 1.05× of μ than that of 6T SRAM cell. Thus, the proposed R-SRAM cell is NBTI resilient, having reduced leakage power embedded with different control signals for data storage. All simulation work have been completed by using industry-standard 40nm UMC technology node.`,
   mainContact: {
-    name: 'Kavindra Kandpal',
-    email: 'kavindra@iiita.ac.in',
+    name: 'Ambika Prasad Shah',
+    email: 'ambika.shah@iitjammu.ac.in',
   }
-}
+},
+{
+  id: '166',
+  time: '3:15 PM - 3:30 PM',
+  title: 'A Scalable FSM-Controlled SRAM Architecture for Robust Hardware Memory Security',
+  authors: ['Bhavin Bhavani ', ' Anupam Mathur', 'Sreeja Rajendran', 'Vinay Palaparthy' , 'Yash Agrawal'],
+  abstract: `In the rapidly evolving landscape of digital systems, ensuring hardware security has become paramount, particularly in the protection of on-chip memory such as SRAM. Conventional methods of securing memory are increasingly vulnerable to sophisticated threats like hardware Trojans and reverse engineering attacks. In this work, we propose a novel Finite State Machine (FSM)-based locking mechanism designed to enhance the security of SRAM arrays through logic obfuscation. The proposed architecture requires specific input sequences to activate memory operations, thereby restricting unauthorized access and significantly improving system resilience against SAT-based and redesign attacks. To validate the approach, the locking mechanism is implemented on a 32×32 SRAM memory array, demonstrating its effectiveness at the architectural level. To address the scalability and power efficiency challenges associated with existing key-based approaches, our design minimizes circuit redundancy and ensures constant overhead irrespective of memory size. Furthermore, low-power design techniques specifically Dynamic VDD and Gated Ground are integrated into the memory architecture. These methods effectively reduce power consumption without compromising access times, thus demonstrating the viability of our solution in energy-constrained environments. Simulation results on a 180nm technology node affirm that the proposed approach offers a compelling balance of security, scalability, and energy efficiency for future memory systems.`,
+  mainContact: {
+    name: 'Contact',
+    email: '202311052@daiict.ac.in',
+  }
+},
+
+// {
+//   id: '177',
+//   title: 'FRRH14T: FinFET based Fast Recovering Radiation Hardened 14T SRAM for Space Applications',
+//   authors: ['Ganesh Prasad B K', 'Ayush Maurya', 'Ravi S Siddanath', 'Mohit Gupta', 'Dr. Prasanna Kumar Misra', 'Manish Goswami', 'Kavindra Kandpal'],
+//   abstract: `Memory circuits in space are susceptible to instability and reliability issues due to charged particles like alpha particles, neutrons, heavy ions, and photons. When these particles pass through the memory device, they generate an ion track that can interfere with stored data. Traditional 6T SRAM (Static Random Access Memory) is particularly prone to such disruptions. To tackle this issue, researchers have developed radiation-hardened SRAM cells, often by adding extra redundant nodes to improve reliability. This study introduces a fast FRRH14T (Fast Recovering Radiation Hardened 14 Transistor) SRAM cell with redundant nodes to protect against soft errors.The performance of the presented cell is evaluated using Cadence Virtuoso at 18 nm FinFET technology and 0.8 V supply voltage. Its performance is compared with other reliable radiation-hardened memory designs, including RSP12T, RHB12T, HSLC12T, NRHC14T, and SIMR18T. The FRRH14T cell is designed to resist single-event upset disruptions by optimizing node placement to minimize sensitivity, giving a recovery time of 1.2 ns. Additionally, it demonstrates significantly better write access time ranging from 1.09× to 2.2×—compared to the current radiation-hardened memory architectures.`,
+//   mainContact: {
+//     name: 'Kavindra Kandpal',
+//     email: 'kavindra@iiita.ac.in',
+//   }
+// }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -225,7 +253,10 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <User className="w-5 h-5" />
+                          <span>{sessionChairperson}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -270,6 +301,9 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

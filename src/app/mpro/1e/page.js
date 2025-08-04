@@ -45,13 +45,14 @@ export default function SessionLayout({
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
-  sessionChairperson = "",
+  sessionChairperson = "Chair 1:  Prof. Ankessh Jain, Chair 2: Prof. Sagar Juneja ",
   sessionDescription = "",
   
   // Papers Array
 papers = [
   {
     id: '203',
+    time: '2:00 PM - 2:15 PM',
     title: 'Efficient Fixed-Point Implementation of the Exponential Function',
     authors: ['Joanna Philip', 'Niyaf Ahmed', 'Raghuram S', 'Mogallapalli Naga Sarvani', 'Aishwarya S'],
     abstract: `This paper presents a resource-efficient hardware architecture for computing the exponential function using the IEEE 754 single-precision (FP32) format. It employs a 32-state finite state machine (FSM) for a stepwise subtract-and-multiply process. Based on the input exponent, the corresponding exponential is computed with modular operations and low memory usage. At a precision of 4 decimal places, the implementation results in an average relative error of 0.0033% with a worst-case delay of 38.346 ns in 90 nm technology. The design is ideal for real-time machine learning applications on resource-constrained hardware.`,
@@ -61,7 +62,30 @@ papers = [
     }
   },
   {
+    id: '385',
+    time: '2:15 PM - 2:30 PM',
+    title: 'MeMu-Link: A Simulink Tool for Enhanced Design Exploration of IMC Architectures',
+    authors: ['Mohd Aamir', 'Talha Bin Aslam', 'Anuj Grover'],
+    abstract: `Introduces MeMu-Link, a MATLAB Simulink-based tool for power estimation and design space exploration of In-Memory Computing (IMC) architectures. The tool is flexible and validated across multiple bit-cell designs, aiding early-stage decisions in power-optimized edge computing applications.`,
+    mainContact: {
+      name: 'Talha Bin Aslam',
+      email: 'talhaa@iiitd.ac.in',
+    }
+  },
+  {
+    id: '251',
+    time: '2:30 PM - 2:45 PM',
+    title: 'PG-TSPC: Pulse Generator based TSPC PFD using 13 μW Power, 20 MHz to 5 GHz, with Zero Dead Zone and Improved Blind Zone',
+    authors: ['MAYANK KUMAR SINGH', 'Rishabh Saxena', 'Rajasekhar Nagulapalli', 'Pardeep Duhan', 'Mahendra Sakare'],
+    abstract: `A low-power, high-speed Pulse Frequency Detector (PFD) optimized for Phase-Locked Loop (PLL) systems. Designed using 65 nm CMOS tech, it operates at 1 MHz–5 GHz with a power of 13 μW and area of 3876 μm². It outperforms conventional TSPC-based designs in terms of jitter, power, and blind zone minimization.`,
+    mainContact: {
+      name: 'Contact',
+      email: '2023eem1024@iitrpr.ac.in',
+    }
+  },
+  {
     id: '212',
+    time: '2:45 PM - 3:00 PM',
     title: 'MiniMac: Design of Heterogeneous Computing Units for Matrix Multiplication',
     authors: ['Imlijungla Longchar', 'Hemangee Kapoor'],
     abstract: `This paper presents the design of a matrix multiplication unit named MiniBit. The system incorporates 4b4b, 8b8b, and mixed multiplier configurations, efficiently managing various operand sizes for heterogeneous tasks. The architecture is scalable and suited for tasks with varying matrix multiplication needs, enhancing resource reuse and energy efficiency.`,
@@ -72,6 +96,7 @@ papers = [
   },
   {
     id: '226',
+    time: '3:00 PM - 3:15 PM',
     title: 'Hardware-Efficient Matrix Multiplication using Tiled Singular Value Decomposition',
     authors: ['Vaishnavi Dilip Sawant', 'Nisha Abdul Kareem', 'Sudhish N. George'],
     abstract: `Proposes Tiled SVD (TSVD) for efficient matrix multiplication using smaller tiles and Hestenes-Jacobi-based computation. Synthesized on GPDK 90nm with 100 MHz, it achieves 77% power savings, 69% area reduction, and 88% lower dynamic power vs conventional methods, while improving latency and throughput.`,
@@ -81,17 +106,8 @@ papers = [
     }
   },
   {
-    id: '251',
-    title: 'PG-TSPC: Pulse Generator based TSPC PFD using 13 μW Power, 20 MHz to 5 GHz, with Zero Dead Zone and Improved Blind Zone',
-    authors: ['MAYANK KUMAR SINGH', 'Rishabh Saxena', 'Rajasekhar Nagulapalli', 'Pardeep Duhan', 'Mahendra Sakare'],
-    abstract: `A low-power, high-speed Pulse Frequency Detector (PFD) optimized for Phase-Locked Loop (PLL) systems. Designed using 65 nm CMOS tech, it operates at 1 MHz–5 GHz with a power of 13 μW and area of 3876 μm². It outperforms conventional TSPC-based designs in terms of jitter, power, and blind zone minimization.`,
-    mainContact: {
-      name: 'Contact',
-      email: '2023eem1024@iitrpr.ac.in',
-    }
-  },
-  {
     id: '301',
+    time: '3:15 PM - 3:30 PM',
     title: 'A Strassen-Inspired Hardware-Efficient Parallel Architecture for Approximate DCT',
     authors: ['Anurag Sharma', 'Srinivasu Bodapati'],
     abstract: `Introduces an approximate DCT (ADCT) architecture using Strassen’s matrix multiplication for image/video compression. Processes 8x8 blocks via 4x4 parallel sub-blocks. Implemented on Nexys 4 DDR FPGA, it consumes 1162 LUTs, 996 FFs, and runs at 194.89 MHz with a 4.51 ns critical path delay. Achieves significant LUT (37–86%), FF (41–85%), and frequency (44–56%) savings over traditional methods.`,
@@ -100,16 +116,6 @@ papers = [
       email: 's23079@students.iitmandi.ac.in',
     }
   },
-  {
-    id: '385',
-    title: 'MeMu-Link: A Simulink Tool for Enhanced Design Exploration of IMC Architectures',
-    authors: ['Mohd Aamir', 'Talha Bin Aslam', 'Anuj Grover'],
-    abstract: `Introduces MeMu-Link, a MATLAB Simulink-based tool for power estimation and design space exploration of In-Memory Computing (IMC) architectures. The tool is flexible and validated across multiple bit-cell designs, aiding early-stage decisions in power-optimized edge computing applications.`,
-    mainContact: {
-      name: 'Talha Bin Aslam',
-      email: 'talhaa@iiitd.ac.in',
-    }
-  }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,7 +237,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-
+             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                                      <User className="w-5 h-5" />
+                                      <span>{sessionChairperson}</span>
+                                    </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -276,6 +285,9 @@ papers = [
                     <h3 className="text-xl md:text-2xl font-bold leading-tight">
                       {paper.title}
                     </h3>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {paper.time}
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
