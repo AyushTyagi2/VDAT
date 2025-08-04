@@ -288,6 +288,7 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
             { src: './images/yourpedia.png', alt: 'YourPedia Logo' },
             { src: './images/springer.png', alt: 'Springer Logo' },
             { src: './logos/NXP.jpg', alt: 'NXP Logo' },
+            { src: './logos/SOC.png', alt: 'SOC TeamUp' },
           ].map((logo, i) => (
             <div
               key={i}

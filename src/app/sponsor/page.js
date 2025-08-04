@@ -130,6 +130,21 @@
             </div>
           </div>
         </div>
+
+        <div>
+          <h3 className="text-2xl font-bold text-center text-violet-700 mb-4 mt-4">StartUp Partner</h3>
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
+              <img 
+                src="./logos/SOC.png" 
+                alt="Yourpedia Logo" 
+                className="max-w-full max-h-full"
+                style={{ paddingRight: "30px" }}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Publication Sponsors */}
         <div className="py-8">
           <h3 className="text-2xl font-bold text-center text-violet-700 mb-8">Inaugration Sponsors</h3>
