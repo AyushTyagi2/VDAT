@@ -95,23 +95,23 @@ const MProTable = () => {
       sessions: {
         session1a: {
           title: "Session 1a: Emerging Devices",
-          link: "mpro/1a",
+          link: "/mpro/1a",
         },
         session1b: {
           title: "Session 1b: RF-IC",
-          link: "mpro/1b",
+          link: "/mpro/1b",
         },
         session1c: {
           title: "Session 1c: Accelerator",
-          link: "mpro/1c",
+          link: "/mpro/1c",
         },
         session1d: {
           title: "Session 1d: Memory",
-          link: "mpro/1d",
+          link: "/mpro/1d",
         },
         session1e: {
           title: "Session 1e: Digital",
-          link: "mpro/1e",
+          link: "/mpro/1e",
         }
       }
     },
@@ -147,11 +147,11 @@ const MProTable = () => {
         },
         session2d: {
           title: "Session 2d: FPGA and Processor",
-          link: "mpro/2d",
+          link: "/mpro/2d",
         },
         session2e: {
           title: "Session 2e: Analog and Digital",
-          link: "mpro/2e",
+          link: "/mpro/2e",
         }
       }
     },
@@ -224,23 +224,23 @@ const MProTable = () => {
       sessions: {
         session3a: {
           title: "Session 3a: Processor and FPGA",
-          link: "mpro/3a",
+          link: "/mpro/3a",
         },
         session3b: {
           title: "Session 3b: Digital and Analog",
-          link: "mpro/3b",
+          link: "/mpro/3b",
         },
         session3c: {
           title: "Session 3c: Accelerator",
-          link: "mpro/3c",
+          link: "/mpro/3c",
         },
         session3d: {
           title: "Session 3d: FPGA",
-          link: "mpro/3d",
+          link: "/mpro/3d",
         },
         session3e: {
           title: "Session 3e: Digital",
-          link: "mpro/3e",
+          link: "/mpro/3e",
         }
       }
     },
@@ -255,23 +255,23 @@ const MProTable = () => {
       sessions: {
         session4a: {
           title: "Session 4a: Emerging Devices and In-memory",
-          link: "mpro/4a",
+          link: "/mpro/4a",
         },
         session4b: {
           title: "Session 4b: Digital and Memory",
-          link: "mpro/4b",
+          link: "/mpro/4b",
         },
         session4c: {
           title: "Session 4c: Accelerator",
-          link: "mpro/4c",
+          link: "/mpro/4c",
         },
         session4d: {
           title: "Session 4d: FPGA",
-          link: "mpro/4d",
+          link: "/mpro/4d",
         },
         session4e: {
           title: "Session 4e:  Digital & Embedded System",
-          link: "mpro/4e",
+          link: "/mpro/4e",
         }
       }
     },
