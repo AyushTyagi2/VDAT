@@ -47,7 +47,7 @@ const Navbar = () => {
       onClick: toggleProgramDropdown,
       dropdown: [
         { label: "Main Program", href: "/mpro" },
-        { label: "Tutorials", href: "/tut" },
+        { label: "Tutorials", href: "/tut_struct" },
 
       ],
     },
