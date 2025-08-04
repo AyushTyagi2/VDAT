@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from './../../footer/footer';
-import Navbar from './../../home/Navbar';
+import Footer from '../../footer/footer';
+import Navbar from '../../home/Navbar';
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -41,75 +41,79 @@ const staggerChildren = {
 
 export default function SessionLayout({
   // Session Details
-  sessionTitle = "Emerging Devices",
-  sessionTime = "2:00 PM - 3:30 PM",
+  sessionTitle = "Embedded",
+  sessionTime = "4:10 PM - 5:40 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
   sessionChairperson = "",
   sessionDescription = "",
   
   // Papers Array
-  papers = [
-    {
-      id: 'paper-79',
-      title: 'On-Wafer Measurements of 19.7 dB Gain 0.64 dB NF Wi-Fi LNA with On-Chip Active Biasing',
-      authors: ['Vasu K. Reddy', 'Mudi Gupta'],
-      abstract: 'This paper describes the design and measurement of a low-power 5.5 GHz LNA with an on-chip biasing circuit for Wi-Fi applications. The LNA parameters may vary from wafer/site to wafer/site when they are biased externally or on-chip voltage references. The cascode current mirror is embedded to generate on-chip bias for common-source (CS) and common-gate (CG) devices. The on-chip biasing circuit reduces the wafer to wafer deviation of the biasing point which improves the stability and consistency of LNA performance. The LNA is designed using floating body FET for CS device and body contacted FET for CG device. The noise figure of LNA is improved by optimizing the gate inductor with tapered dual thick copper metals. The prototype is fabricated and measured on a high resistivity SOI process with 65nm gate length. The measurements are performed across different wafers and sites to validate the importance of on-chip biasing for LNA. The measurements show that the gain is 19.7 dB, noise figure of 0.64 dB and IIP3 of -1.8dBm while consuming 6.6mA from a 1.6V supply. More importantly, wafer to wafer variation of LNA gain and current is only 0.25 dB and 18.29 uA, respectively.',
-      mainContact: {
-        name: 'Vasu K. Reddy',
-        email: 'guptamudi213@gmail.co',
-      }
-    },
-    {
-      id: 'paper-336',
-      title: 'A Wide Tuning Range Enhanced NF and IIP3 Variable Gain LNA for Narrowband Applications',
-      authors: ['Pulkit Kathuria', 'Krishnan Rengarajan', 'Saroj Mondal'],
-      abstract: 'In this paper, we proposed a wide tuning range, enhanced noise figure (NF) and high linearity variable-gain low noise amplifier (VGLNA) for Narrowband (NB) applications. The wide tuning range and variable gain were achieved in both modes by employing a variable resistor at the output. In addition, the proposed VGLNA utilises folded-cascode topology in low gain mode to achieve high linearity. Moreover, a bulk-to-source resistance is employed to achieve sub-1 dB NF in both modes of operation. The proposed VGLNA has been designed and simulated in 0.18 μm CMOS technology and is operating at 2.4GHz frequency. The post-layout simulations exhibit the power gain, input return loss, and NF of 13 dB, 20dB, and 1.1 dB at low-gain mode and 23 dB, 18 dB, and 1.18 dB at high-gain mode, respectively. Also, the proposed VGLNA exhibits IIP3 of +4.5 dBm at low-gain mode and 4.8 dBm at high-gain mode. The VGLNA consumes 7.2 mW at low-gain mode and 13.8 mW at high-gain mode for a supply voltage of 1.2 V.',
-      mainContact: {
-        name: 'Pulkit Kathuria',
-        email: '210020039@iitdh.ac.in',
-      }
-    },
-    {
-      id: 'paper-373',
-      title: 'Design and Implementation of novel XFMR for low-voltage mmWave-frequency VCO applications',
-      authors: ['Saurabh Zope', 'Narahari N. Mouthgalya', 'Adarsh Yadav', 'Abhishek Srivastava'],
-      abstract: 'This paper presents a novel Transformer (XFMR) design intended for integrated mmWave applications. The XFMR design consists of an 8-shaped primary inductor and a dumbbell-shaped secondary inductor. This structure addresses key challenges in on-chip XFMR design by improving electromagnetic interference (EMI) suppression, reducing unwanted signal coupling, and optimizing magnetic field symmetry. Additionally, the geometry exploits better layout efficiency and isolation, contributing to improved performance in tightly integrated environments. To demonstrate the practical advantages of the proposed XFMR, it is implemented in a low-voltage, low-phase-noise (PN) LC VCO designed for 23.8 - 27.2 GHz operation. Simulation results in TSMC 65 nm CMOS technology shows a tuning range of 3.4 GHz, a PN lesser than -110 dBc/Hz at 1 MHz offset, and a figure-of-merit (FoM) greater than 185 dBc/Hz, at 0.5 V supply. These results validate the effectiveness of the XFMR in enhancing VCO performance, highlighting its potential for use in high-performance mmWave design.',
-      mainContact: {
-        name: 'Saurabh Zope',
-        email: 'saurabh.zope@research.iiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-282',
-      title: 'A Resistorless Active Inductor Based CTLE',
-      authors: ['Puneet Singh', 'Rahul Walia', 'Rajaseshan Nagatappa', 'Mahendra Sakare'],
-      abstract: 'This paper presents a resistorless continuous-time linear equalizer (CTLE) architecture utilizing a PMOS-based active inductor as its load element. The proposed design eliminates traditional resistive and capacitive peaking components, replacing them with a novel low-frequency gain introduced through the active inductor. This approach not only enables effective bandwidth extension under low-voltage operation without the need for voltage boosting but also significantly reduces the silicon area typically required by conventional CTLE structures. The proposed resistorless active inductor-based CTLE has been designed using a standard 65 nm CMOS process with a 1 V supply. The CTLE occupies a compact active area of 0.0012 mm². Post-layout simulations confirm the effectiveness of the design and demonstrate reliable operation over a 12-inch channel at 10 Gb/s. The equalizer achieves an eye width of 86.15 ps, eye height of 215.7 mV, and a jitter of 13.27 ps, while maintaining a low power consumption of 4.67 mW and achieving a figure of merit (FoM) of 0.46 pJ/bit. These results underscore the potential of the proposed CTLE for use in high-speed, area-constrained communication systems.',
-      mainContact: {
-        name: 'Puneet Singh',
-        email: 'puneet.19eez0003@lnmiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-293',
-      title: 'Demystifying Dual-Band Impedance Matching Strategy for RF Energy Harvesting Systems',
-      authors: ['Soumya Rank', 'Chaya Hegde', 'Sonal Kothari'],
-      abstract: 'This paper presents a novel mathematical approach for designing dual-band impedance matching networks that act as an equivalent CL matching network at both frequencies. This paper mainly focuses on the CL match network for a rectifier whose equivalent parallel RC precludes the use of LC matching. The proposed technique incorporates inductor non-idealities during the design process, and the simulated S11 values of the dual-band impedance matching network operating at frequencies 953 MHz and 2.45 GHz are -19.43 dB and -18.29 dB, respectively.',
-      mainContact: {
-        name: 'Soumya Rank',
-        email: 'soumyarank@gmail.com',
-      }
-    },
-    {
-      id: 'paper-354',
-      title: 'A Switchless Resonant Circuit Based Multi-Band Matching Network for RF Energy Harvesting Applications',
-      authors: ['Chaya Hegde', 'Nagaratna Shanbhag', 'Saroj Mondal'],
-      abstract: 'This paper presents a systematic design methodology of switchless resonant circuits based multi-band matching network by utilizing lumped components. For RF Energy harvesting systems, matching network should be capable of matching frequency dependent complex impedance to the antennas impedance. To illustrate the same, dual-band network is designed and implemented at 953 MHz and 2.45 GHz. The results exhibit a reflection coefficient of magnitude greater than 20 dB at both the frequencies.',
-      mainContact: {
-        name: 'Chaya Hegde',
-        email: '221022001@iitdh.ac.in',
-      }
+papers = [
+  {
+    id: '378',
+    title: 'Efficient Spiking Neural Network for ECG Arrhythmia Detection Using Inter-Spike Interval Encoding and BPTT Training',
+    authors: ['CHUNDI SAHITHI', 'PRIYA K', 'Binsu Kailath'],
+    abstract: `This work presents a real-time, compact, and hardware-efficient Spiking Neural Network (SNN) architecture built with Leaky Integrate-and-Fire (LIF) neurons and trained using Backpropagation Through Time (BPTT). The input is derived from inter-spike intervals (ISIs) between successive R-peaks in electrocardiogram (ECG) signals, processed into a 33-dimensional feature vector. These features are encoded as input currents to a two-hidden layer SNN via input spiking neurons. The proposed model is evaluated for two classification tasks: a three-class classification (normal (N), supraventricular (S), and ventricular (V)) based on AAMI standards, and a five-class classification (normal (N), left bundle branch block (L), right bundle branch block (R), atrial premature (A), and ventricular ectopic (V)) using MIT-BIH annotations. Trained and tested on records from the MIT-BIH Arrhythmia Database, the network achieves classification accuracies of 92.77% for the three-class task and 85.85% for the five-class task, demonstrating its effectiveness and suitability for real-time, resource-constrained arrhythmia detection.`,
+    mainContact: {
+      name: 'Binsu Kailath',
+      email: 'bkailath@iiitdm.ac.in',
     }
+  },
+  {
+    id: '326',
+    title: 'Low-Latency Stereo Vision Capture using Synchronized Dual USB Cameras on Resource Constrained Hardware',
+    authors: ['Sanyam Aggarwal', 'Sambhav Mehta', 'Anil Singh', 'Manu Bansal'],
+    abstract: `Achieving accurate stereo vision on embedded platforms using asynchronous USB 2.0 cameras presents significant challenges, particularly in the absence of hardware triggers, high-speed interfaces, or abundant memory. This paper introduces a fully software-driven synchronization framework for stereo vision applications on constrained embedded systems. The proposed approach employs multithreaded frame acquisition, dynamic frame rate estimation through sliding windows, and timestamp-based pairing to enable reliable temporal alignment of stereo image pairs. Evaluated on a lightweight SoC platform with limited RAM, the system achieves synchronization within 0.30 seconds and sustains throughput exceeding 28 frames per second (FPS) for 320×240 grayscale stereo streams. A memory-aware buffering scheme enables continuous stereo capture without frame loss or overruns. Importantly, the method operates without requiring USB 3.0 bandwidth or external synchronization circuitry, showcasing the viability of real-time stereo vision on minimal hardware. These results enable broader deployment of stereo depth sensing in mobile robotics, edge perception, and low-power vision systems.`,
+    mainContact: {
+      name: 'Sanyam Aggarwal',
+      email: 'saggarwal2_be22@thapar.edu',
+    }
+  },
+  {
+    id: '277',
+    title: 'A Novel Object Lock and Track Algorithm for Fast and Agile Autonomous UAV Flight',
+    authors: ['Bhavya Bansal', 'Kritarth Upadhyay', 'Vaibhav Gupta', 'Anil Singh', 'Alpana Agarwal', 'Manu Bansal'],
+    abstract: `This paper introduces an object tracking system for unmanned aerial vehicles (UAVs), integrating the advantages of software-based image processing with hardware-level control to achieve real-time performance. The system is designed to detect and follow human faces using an onboard camera, enabling the UAV to adjust its position and orientation in response to the target's movement. A microcontroller processes the video stream and identifies the target using classical computer vision techniques, while a field-programmable gate array (FPGA) handles the control logic to ensure quick and precise responses. This separation of tasks allows high-level visual interpretation and low-level actuation to operate in parallel, significantly reducing overall system latency. The combination results in a responsive and efficient platform capable of performing stable tracking under varying environmental conditions. The hybrid architecture supports real-time operation with detection rates of up to 60 frames per second and control signal response times under 2 milliseconds. This work demonstrates a practical and scalable approach to embedded vision and control in UAVs, offering potential for a wide range of applications including surveillance, autonomous navigation, and interactive robotics.`,
+    mainContact: {
+      name: 'Kritarth Upadhyay',
+      email: 'kupadhyay_be22@thapar.edu',
+    }
+  },
+  {
+    id: '235',
+    title: 'WEMOS: A Cost-Effective and Inclusive Weather Station Using Raspberry Pi Pico W',
+    authors: ['Govind Prasad', 'Agamdeep Singh', 'Aditya N. Patil', 'Vijaya Sinha', 'Shayan Dasgupta'],
+    abstract: ``,
+    mainContact: {
+      name: 'Govind Prasad',
+      email: 'govindp317@gmail.com',
+    }
+  },
+  {
+    id: '25',
+    title: 'Embedded Vision-Based Eye Tracking for Enhancing Caretaker Communication in Paralyzed Patients',
+    authors: ['Gnanavardhan Koppolu', 'YBR. Krishna Vamshi', 'Sitadevi Bharatula', 'B Naresh Kumar Reddy'],
+    abstract: `This study introduces an innovative eye movement detection system aimed at assisting communication for patients with full paralysis. The system utilizes advanced eye-tracking technology to allow users to communicate with caretakers through a simple, intuitive interface. Through precise monitoring and interpretation of eye movements, the system translates the gestures into effective commands or messages, thereby bridging the communication gap for individuals with extreme mobility impairments. The solution features real-time feedback options, allowing users to convey their needs and preferences with minimal physical exertion. The system is also extremely flexible, supporting varying levels of eye movement control and different environmental conditions. Blending both software and hardware elements, this system aims to enhance the quality of life for patients through the provision of a stable means of communication and improved caretaker-patient interaction.`,
+    mainContact: {
+      name: 'B Naresh Kumar Reddy',
+      email: 'bnkreddy@nitt.edu',
+    }
+  },
+  {
+    id: '29',
+    title: 'Lyapunov-Stable Adaptive Harmonic Scheduling: A Precision RTOS Framework for 2nd-Order Medical Control Systems',
+    authors: ['Durga Lakshmi Mownish Bugutha', 'Vinod Babu Pusuluri'],
+    abstract: `This paper presents Adaptive Harmonic Scheduling (AHS), a novel real-time scheduling algorithm designed for medical dosage management systems requiring high precision and adaptability. Unlike traditional scheduling methods such as Rate Monotonic Scheduling (RMS) and Earliest Deadline First (EDF), AHS dynamically prioritizes tasks based on second-order error dynamics, ensuring superior stability and responsiveness in physiological control applications.
+
+Second-order control systems, such as Proportional-Integral-Derivative-Acceleration (PIDA) controllers, respond more effectively to rapid physiological fluctuations than conventional PID controllers. However, they impose strict temporal constraints and necessitate adaptive resource allocation for stability. AHS addresses these challenges by incorporating Lyapunov-based stability guarantees, where worst-case latency is bounded by the derivative time constant. Additionally, energy-aware slack reclamation is integrated to optimize PID gain in real time, while preemption thresholds are employed to minimize context-switching overhead during steady-state operation.
+
+Empirical evaluations demonstrate that AHS achieves jitter below 5 μs, a 35 ms settling time, and a 60° phase margin, outperforming RMS and EDF. Lyapunov stability analysis confirms that stability is maintained for damping ratio greater than zero and natural frequency within appropriate bounds. By dynamically prioritizing control tasks based on real-time error acceleration, AHS enhances scheduling precision, reduces CPU overhead, and improves energy efficiency, making it a robust solution for safety-critical medical applications.`,
+    mainContact: {
+      name: 'Durga Lakshmi Mownish Bugatha',
+      email: 'mownishbugutha123@gmail.com',
+    }
+  }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,14 +235,7 @@ export default function SessionLayout({
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <MapPin className="w-5 h-5" />
-              <span>{sessionLocation}</span>
-            </div> */}
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <User className="w-5 h-5" />
-              <span>Chair: {sessionChairperson}</span>
-            </div> */}
+
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -367,23 +364,8 @@ export default function SessionLayout({
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {/* <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                                {paper.mainContact.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-gray-900 dark:text-gray-100">
-                                  {paper.mainContact.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-                                  <Building className="w-4 h-4" />
-                                  {paper.mainContact.affiliation}
-                                </p>
-                              </div>
-                            </div>
-                          </div> */}
-                          
+
+    
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                               <Mail className="w-4 h-4 text-indigo-600" />
@@ -395,29 +377,7 @@ export default function SessionLayout({
                               </a>
                             </div>
                             
-                            {/* <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                              <Phone className="w-4 h-4 text-indigo-600" />
-                              <a 
-                                href={`tel:${paper.mainContact.phone}`}
-                                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                              >
-                                {paper.mainContact.phone}
-                              </a>
-                            </div> */}
-                            
-                            {/* {paper.mainContact.website && (
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <Globe className="w-4 h-4 text-indigo-600" />
-                                <a 
-                                  href={paper.mainContact.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                                >
-                                  Website
-                                </a>
-                              </div>
-                            )} */}
+
                           </div>
                         </div>
                       </div>

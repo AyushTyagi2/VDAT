@@ -81,7 +81,7 @@ const SpeakersSection = () => {
     {
       name: "Sanjeev Arora",
       title: "Cabinet Minister, Punjab Industries & Commerce, Investment Promotion and NRI Affairs",
-      photo: "/images/sanjeev.png",
+      photo: "/images/Sanjeev.png",
     },
     {
       name: "Hitesh Garg",

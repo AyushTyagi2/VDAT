@@ -103,15 +103,15 @@ const MProTable = () => {
         },
         session1c: {
           title: "Session 1c: Accelerator",
-          link: "/sessions/day2/session1c",
+          link: "mpro/1c",
         },
         session1d: {
           title: "Session 1d: Memory",
-          link: "/sessions/day2/session1d",
+          link: "mpro/1d",
         },
         session1e: {
           title: "Session 1e: Digital",
-          link: "/sessions/day2/session1e",
+          link: "mpro/1e",
         }
       }
     },
@@ -143,15 +143,15 @@ const MProTable = () => {
         },
         session2c: {
           title: "Session 2c: Embedded",
-          link: "/sessions/day2/session2c",
+          link: "/mpro/2c",
         },
         session2d: {
           title: "Session 2d: FPGA and Processor",
-          link: "/sessions/day2/session2d",
+          link: "mpro/2d",
         },
         session2e: {
           title: "Session 2e: Analog and Digital",
-          link: "/sessions/day2/session2e",
+          link: "mpro/2e",
         }
       }
     },
@@ -224,27 +224,27 @@ const MProTable = () => {
       sessions: {
         session3a: {
           title: "Session 3a: Processor and FPGA",
-          link: "/sessions/day3/session3a",
+          link: "mpro/3a",
           papers: "Paper id: 342, 92, 332, 85, 323, 335"
         },
         session3b: {
           title: "Session 3b: Digital and Analog",
-          link: "/sessions/day3/session3b",
+          link: "mpro/3b",
           papers: "Paper id: 258, 305, 201, 279, 363, 193"
         },
         session3c: {
           title: "Session 3c: Accelerator",
-          link: "/sessions/day3/session3c",
+          link: "mpro/3c",
           papers: "Paper id: 206, 291, 415, 130, 240, 401"
         },
         session3d: {
           title: "Session 3d: FPGA",
-          link: "/sessions/day3/session3d",
+          link: "mpro/3d",
           papers: "Paper id: 136, 224, 265, 317, 333, 144"
         },
         session3e: {
           title: "Session 3e: Digital",
-          link: "/sessions/day3/session3e",
+          link: "mpro/3e",
           papers: "Paper id: 312, 205, 255, 399, 345, 43"
         }
       }
@@ -260,28 +260,27 @@ const MProTable = () => {
       sessions: {
         session4a: {
           title: "Session 4a: Emerging Devices and In-memory",
-          link: "/sessions/day3/session4a",
+          link: "mpro/4a",
           papers: "Paper id: 350, 91, 103, 242, 20, 297, 410, 143"
         },
         session4b: {
           title: "Session 4b: Digital and Memory",
-          link: "/sessions/day3/session4b",
+          link: "mpro/4b",
           papers: "Paper id: 110, 180, 183, 140, 234, 151, 351"
         },
         session4c: {
           title: "Session 4c: Accelerator",
-          link: "/sessions/day3/session4c",
+          link: "mpro/4c",
           papers: "Paper id: 262, 325, 213, 358, 347, 302, 216"
         },
         session4d: {
           title: "Session 4d: FPGA",
-          link: "/sessions/day3/session4d",
+          link: "mpro/4d",
           papers: "Paper id: 412, 313, 361, 274, 362, 403, 299"
         },
         session4e: {
           title: "Session 4e:  Digital & Embedded System",
-          link: "/sessions/day3/session4e",
-          papers: "Paper id: 257, 152, 308, 306, 365, 243, 288"
+          link: "mpro/4e",
         }
       }
     },

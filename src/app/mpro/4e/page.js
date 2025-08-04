@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Footer from '../../footer/footer';
+import Navbar from '../../home/Navbar';
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -39,29 +41,86 @@ const staggerChildren = {
 
 export default function SessionLayout({
   // Session Details
-  sessionTitle = "Session Title Here",
-  sessionTime = "9:00 AM - 10:30 AM",
-  sessionDate = "March 15, 2024",
-  sessionLocation = "Conference Hall A",
-  sessionChairperson = "Dr. Session Chair",
-  sessionDescription = "Session description goes here...",
+  sessionTitle = "Digital and Embedded System",
+  sessionTime = "2:15 PM - 4:15 PM",
+  sessionDate = "August 9, 2025",
+  // sessionLocation = "",
+  sessionChairperson = "",
+  sessionDescription = "",
   
   // Papers Array
-  papers = [
-    {
-      id: 'paper-001',
-      title: 'Sample Paper Title',
-      authors: ['Author One', 'Author Two', 'Author Three'],
-      abstract: 'This is a sample abstract that describes the research work, methodology, and key findings...',
-      mainContact: {
-        name: 'Dr. Contact Person',
-        email: 'contact@university.edu',
-        phone: '+1-555-0123',
-        affiliation: 'University Name',
-        website: 'https://website.com'
-      }
+papers = [
+   {
+    id: '257',
+    title: 'MAGIC-Based ASCON Substitution Box for In-Memory Computing using Memristor',
+    authors: ['Ritika Choudhary', 'Sumit Kumar Suman', 'Srinivasu Bodapati'],
+    abstract: `This work presents a MAGIC-based implementation of the ASCON S-box, targeting in-memory computing applications using memristors. It focuses on reducing hardware complexity and improving security. The design is evaluated using performance metrics including power, area, and delay, showing improvements over traditional CMOS-based approaches. Post-layout simulations are conducted to verify robustness.`,
+    mainContact: {
+      name: 'Contact',
+      email: 's23055@students.iitmandi.ac.in',
     }
-  ]
+  },
+  {
+    id: '152',
+    title: 'Data Level Parallelism based High Throughput BCD Multiplier Design',
+    authors: ['Mohamed Asan Basiri M', 'Suraj Kumar Pal'],
+    abstract: `An efficient BCD multiplier design exploiting data-level parallelism is presented. The multiplier performs simultaneous partial multiplications (N×2×N/2) and supports high throughput BCD operations. Verified with Verilog HDL and 45 nm CMOS tech using Cadence, the 16×16-bit pipeline version achieves a 75% throughput improvement compared to conventional array multipliers.`,
+    mainContact: {
+      name: 'Mohamed Asan Basiri M',
+      email: 'asanbasiri@gmail.com',
+    }
+  },
+  {
+    id: '308',
+    title: 'Design and Implementation of a Quadratic Boost with Digital Controller for Energy Harvesting',
+    authors: ['Shailendra Kumar Paswan', 'Vikas Das', 'Vijay Kumar Gupta', 'Bipin Chandra Mandi'],
+    abstract: `The digital controller uses STM32 for quadratic boost operation aimed at low-voltage energy harvesting. A PI controller ensures stability and a fourth-order transfer function boosts power output. Evaluation through MATLAB simulation and hardware testing demonstrates effectiveness under variable input voltages (3.7±0.5V).`,
+    mainContact: {
+      name: 'Shailendra Kumar Paswan',
+      email: 'shailendra@iiitnr.edu.in',
+    }
+  },
+  {
+    id: '306',
+    title: 'Approximate Signed Multiplier with Sign-Focused Compression for Edge Detection Applications',
+    authors: ['Hemanth Krishna Lavati', 'Srinivasu Bodapati', 'Sreehari Veeramachaneni', 'Bhaskar Jamm Rao', 'Noor Mahammad Sk'],
+    abstract: `An approximate Baugh-Wooley multiplier using sign-focused compressors is proposed. It achieves 29.21% PDP reduction and 14.39% delay improvement. Integrated in a CNN-based edge detector, it demonstrates superior efficiency over existing 8-bit multipliers. Designed for real-world signal processing.`,
+    mainContact: {
+      name: 'Noor Mahammad Sk',
+      email: 'noor@iiitdm.ac.in',
+    }
+  },
+  {
+    id: '365',
+    title: 'ASIC Implementation of CAN-XL protocol',
+    authors: ['Madhumitha B M', 'Sharanya Shetty', 'Aryan Kumar', 'Sudeendra Kumar K'],
+    abstract: `CAN-XL, an extension to Classical CAN, is analyzed for ASIC implementation. Results using 90nm library show 5.32% area savings, 18.3% higher power usage due to increased switching, and 972.76 MHz frequency. Despite slightly lower frequency, CAN-XL enables modern vehicular communication while retaining CAN and Ethernet compatibility.`,
+    mainContact: {
+      name: 'Sudeendra Kumar K',
+      email: 'kumar.sudeendra@gmail.com',
+    }
+  },
+  {
+    id: '243',
+    title: 'An Approximate CLA using Carry Equation of Two Bits',
+    authors: ['Menka Yadav', 'Ekagra Sikka', 'Aabhaas Sikka'],
+    abstract: `A carry-lookahead adder based on a new 2-bit carry equation is proposed to reduce the area and delay of the CLA design. This approach simplifies logic, achieving a 5.9% improvement in PDP and reducing the number of logic gates compared to traditional CLA. Evaluated through 28nm ASIC synthesis.`,
+    mainContact: {
+      name: 'Menka Yadav',
+      email: 'menka.ece@mnit.ac.in',
+    }
+  },
+  {
+    id: '288',
+    title: 'Low-Power Approximate Multiplier Architecture for Deep Neural Networks',
+    authors: ['Pragun Jaswal, Hemanth Krishna Lavati and srinivasu bodapati'],
+    abstract: `This paper proposes an energy-efficient approximate multiplier architecture for deep neural network (DNN) applications. A 4:2 compressor, introducing only a single combination error, is designed and integrated into an 8×8 unsigned multiplier. This integration significantly reduces the usage of exact compressors while preserving low error rates. The proposed multiplier is employed within a custom convolution layer and evaluated on neural network tasks, including image recognition and denoising. Hardware evaluation demonstrates that the proposed design achieves up to 30.24\% energy savings compared to the best of existing multipliers. In image denoising, the custom approximate convolution layer achieves improved Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index Measure (SSIM) compared to other approximate designs. Additionally, when applied to handwritten digit recognition, the model maintains high classification accuracy. These results demonstrate that the proposed architecture offers a favorable balance between energy efficiency and computational precision, making it suitable for low-power AI hardware implementations.`,
+    mainContact: {
+      name: 'Hemanth Krishna Lavati',
+      email: 'hemanth.krishna412@gmail.com',
+    }
+  }
+]
 }) {
   const [darkMode, setDarkMode] = useState(false);
   const [expandedPapers, setExpandedPapers] = useState({});
@@ -97,6 +156,11 @@ export default function SessionLayout({
 
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-900 transition-colors duration-700 min-h-screen">
+      
+      <header>
+        <Navbar />
+      </header>
+
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse" />
@@ -177,14 +241,7 @@ export default function SessionLayout({
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <MapPin className="w-5 h-5" />
-              <span>{sessionLocation}</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <User className="w-5 h-5" />
-              <span>Chair: {sessionChairperson}</span>
-            </div>
+
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -313,23 +370,8 @@ export default function SessionLayout({
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                                {paper.mainContact.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-gray-900 dark:text-gray-100">
-                                  {paper.mainContact.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-                                  <Building className="w-4 h-4" />
-                                  {paper.mainContact.affiliation}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          
+
+    
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                               <Mail className="w-4 h-4 text-indigo-600" />
@@ -341,29 +383,7 @@ export default function SessionLayout({
                               </a>
                             </div>
                             
-                            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                              <Phone className="w-4 h-4 text-indigo-600" />
-                              <a 
-                                href={`tel:${paper.mainContact.phone}`}
-                                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                              >
-                                {paper.mainContact.phone}
-                              </a>
-                            </div>
-                            
-                            {paper.mainContact.website && (
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <Globe className="w-4 h-4 text-indigo-600" />
-                                <a 
-                                  href={paper.mainContact.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                                >
-                                  Website
-                                </a>
-                              </div>
-                            )}
+
                           </div>
                         </div>
                       </div>
@@ -375,6 +395,7 @@ export default function SessionLayout({
           ))}
         </motion.div>
       </main>
+      <Footer />
     </div>
   );
 }

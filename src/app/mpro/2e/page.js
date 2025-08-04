@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from './../../footer/footer';
-import Navbar from './../../home/Navbar';
+import Footer from '../../footer/footer';
+import Navbar from '../../home/Navbar';
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -41,75 +41,75 @@ const staggerChildren = {
 
 export default function SessionLayout({
   // Session Details
-  sessionTitle = "Emerging Devices",
-  sessionTime = "2:00 PM - 3:30 PM",
+  sessionTitle = "Analog and Digital",
+  sessionTime = "4:10 PM - 5:40 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
   sessionChairperson = "",
   sessionDescription = "",
   
   // Papers Array
-  papers = [
-    {
-      id: 'paper-79',
-      title: 'On-Wafer Measurements of 19.7 dB Gain 0.64 dB NF Wi-Fi LNA with On-Chip Active Biasing',
-      authors: ['Vasu K. Reddy', 'Mudi Gupta'],
-      abstract: 'This paper describes the design and measurement of a low-power 5.5 GHz LNA with an on-chip biasing circuit for Wi-Fi applications. The LNA parameters may vary from wafer/site to wafer/site when they are biased externally or on-chip voltage references. The cascode current mirror is embedded to generate on-chip bias for common-source (CS) and common-gate (CG) devices. The on-chip biasing circuit reduces the wafer to wafer deviation of the biasing point which improves the stability and consistency of LNA performance. The LNA is designed using floating body FET for CS device and body contacted FET for CG device. The noise figure of LNA is improved by optimizing the gate inductor with tapered dual thick copper metals. The prototype is fabricated and measured on a high resistivity SOI process with 65nm gate length. The measurements are performed across different wafers and sites to validate the importance of on-chip biasing for LNA. The measurements show that the gain is 19.7 dB, noise figure of 0.64 dB and IIP3 of -1.8dBm while consuming 6.6mA from a 1.6V supply. More importantly, wafer to wafer variation of LNA gain and current is only 0.25 dB and 18.29 uA, respectively.',
-      mainContact: {
-        name: 'Vasu K. Reddy',
-        email: 'guptamudi213@gmail.co',
-      }
-    },
-    {
-      id: 'paper-336',
-      title: 'A Wide Tuning Range Enhanced NF and IIP3 Variable Gain LNA for Narrowband Applications',
-      authors: ['Pulkit Kathuria', 'Krishnan Rengarajan', 'Saroj Mondal'],
-      abstract: 'In this paper, we proposed a wide tuning range, enhanced noise figure (NF) and high linearity variable-gain low noise amplifier (VGLNA) for Narrowband (NB) applications. The wide tuning range and variable gain were achieved in both modes by employing a variable resistor at the output. In addition, the proposed VGLNA utilises folded-cascode topology in low gain mode to achieve high linearity. Moreover, a bulk-to-source resistance is employed to achieve sub-1 dB NF in both modes of operation. The proposed VGLNA has been designed and simulated in 0.18 μm CMOS technology and is operating at 2.4GHz frequency. The post-layout simulations exhibit the power gain, input return loss, and NF of 13 dB, 20dB, and 1.1 dB at low-gain mode and 23 dB, 18 dB, and 1.18 dB at high-gain mode, respectively. Also, the proposed VGLNA exhibits IIP3 of +4.5 dBm at low-gain mode and 4.8 dBm at high-gain mode. The VGLNA consumes 7.2 mW at low-gain mode and 13.8 mW at high-gain mode for a supply voltage of 1.2 V.',
-      mainContact: {
-        name: 'Pulkit Kathuria',
-        email: '210020039@iitdh.ac.in',
-      }
-    },
-    {
-      id: 'paper-373',
-      title: 'Design and Implementation of novel XFMR for low-voltage mmWave-frequency VCO applications',
-      authors: ['Saurabh Zope', 'Narahari N. Mouthgalya', 'Adarsh Yadav', 'Abhishek Srivastava'],
-      abstract: 'This paper presents a novel Transformer (XFMR) design intended for integrated mmWave applications. The XFMR design consists of an 8-shaped primary inductor and a dumbbell-shaped secondary inductor. This structure addresses key challenges in on-chip XFMR design by improving electromagnetic interference (EMI) suppression, reducing unwanted signal coupling, and optimizing magnetic field symmetry. Additionally, the geometry exploits better layout efficiency and isolation, contributing to improved performance in tightly integrated environments. To demonstrate the practical advantages of the proposed XFMR, it is implemented in a low-voltage, low-phase-noise (PN) LC VCO designed for 23.8 - 27.2 GHz operation. Simulation results in TSMC 65 nm CMOS technology shows a tuning range of 3.4 GHz, a PN lesser than -110 dBc/Hz at 1 MHz offset, and a figure-of-merit (FoM) greater than 185 dBc/Hz, at 0.5 V supply. These results validate the effectiveness of the XFMR in enhancing VCO performance, highlighting its potential for use in high-performance mmWave design.',
-      mainContact: {
-        name: 'Saurabh Zope',
-        email: 'saurabh.zope@research.iiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-282',
-      title: 'A Resistorless Active Inductor Based CTLE',
-      authors: ['Puneet Singh', 'Rahul Walia', 'Rajaseshan Nagatappa', 'Mahendra Sakare'],
-      abstract: 'This paper presents a resistorless continuous-time linear equalizer (CTLE) architecture utilizing a PMOS-based active inductor as its load element. The proposed design eliminates traditional resistive and capacitive peaking components, replacing them with a novel low-frequency gain introduced through the active inductor. This approach not only enables effective bandwidth extension under low-voltage operation without the need for voltage boosting but also significantly reduces the silicon area typically required by conventional CTLE structures. The proposed resistorless active inductor-based CTLE has been designed using a standard 65 nm CMOS process with a 1 V supply. The CTLE occupies a compact active area of 0.0012 mm². Post-layout simulations confirm the effectiveness of the design and demonstrate reliable operation over a 12-inch channel at 10 Gb/s. The equalizer achieves an eye width of 86.15 ps, eye height of 215.7 mV, and a jitter of 13.27 ps, while maintaining a low power consumption of 4.67 mW and achieving a figure of merit (FoM) of 0.46 pJ/bit. These results underscore the potential of the proposed CTLE for use in high-speed, area-constrained communication systems.',
-      mainContact: {
-        name: 'Puneet Singh',
-        email: 'puneet.19eez0003@lnmiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-293',
-      title: 'Demystifying Dual-Band Impedance Matching Strategy for RF Energy Harvesting Systems',
-      authors: ['Soumya Rank', 'Chaya Hegde', 'Sonal Kothari'],
-      abstract: 'This paper presents a novel mathematical approach for designing dual-band impedance matching networks that act as an equivalent CL matching network at both frequencies. This paper mainly focuses on the CL match network for a rectifier whose equivalent parallel RC precludes the use of LC matching. The proposed technique incorporates inductor non-idealities during the design process, and the simulated S11 values of the dual-band impedance matching network operating at frequencies 953 MHz and 2.45 GHz are -19.43 dB and -18.29 dB, respectively.',
-      mainContact: {
-        name: 'Soumya Rank',
-        email: 'soumyarank@gmail.com',
-      }
-    },
-    {
-      id: 'paper-354',
-      title: 'A Switchless Resonant Circuit Based Multi-Band Matching Network for RF Energy Harvesting Applications',
-      authors: ['Chaya Hegde', 'Nagaratna Shanbhag', 'Saroj Mondal'],
-      abstract: 'This paper presents a systematic design methodology of switchless resonant circuits based multi-band matching network by utilizing lumped components. For RF Energy harvesting systems, matching network should be capable of matching frequency dependent complex impedance to the antennas impedance. To illustrate the same, dual-band network is designed and implemented at 953 MHz and 2.45 GHz. The results exhibit a reflection coefficient of magnitude greater than 20 dB at both the frequencies.',
-      mainContact: {
-        name: 'Chaya Hegde',
-        email: '221022001@iitdh.ac.in',
-      }
+papers = [
+  {
+    id: '126',
+    title: 'An Audio 0.85-V 130-μW ΔΣ Modulator',
+    authors: ['Mohd Asim Saeed', 'Sumit Soin', 'Devarshi Mrinal Das'],
+    abstract: `This paper presents a passive charge compensation (PCC) based switched capacitor (SC) 2-1 cascaded delta sigma modulator (DSM). The transients during switching of SC integrator (SCI) used in DSM causes the slewing of the OTA which consumes large amount of time available for settling reducing the speed of DSM. The proposed DSM uses a passive charge compensation (PCC) technique which reduces the slewing of OTA without requiring any extra biasing current. Additionally an optimized value of CC capacitor (CM_OP T ) is used which is calculated while considering the slewing of SCI during integration phase (IP) and sampling phase (SP) unlike the conventional PCC technique in which the value CC capacitor (CM ) is calculated while considering the slewing only during IP of SCI. The DSM is fabricated in 0.18-μm CMOS technology with a die area of 1.3 mm2. The experimental results shows that the PCC based DSM with CM_OPT achieves a peak SNDR of 82.5 dB while PCC based DSM with CM achieves a peak SNDR of 77.2 dB over 20-kHz bandwidth with a 5-MHz sampling frequency and 0.85-V supply voltage while consuming only 130-μW of power.`,
+    mainContact: {
+      name: 'Mohd Asim Saeed',
+      email: 'asim.19eez0030@iitpr.ac.in',
     }
+  },
+  {
+    id: '79',
+    title: 'A 16.28 ppm/°C Temperature Coefficient, 0.5V Low-Voltage CMOS Voltage Reference with Curvature Compensation',
+    authors: ['Harshith Reddy', 'Pankaj Arora'],
+    abstract: `This paper presents a fully-integrated CMOS voltage reference designed in a 90 nm process node using low voltage threshold (LVT) transistor models. The voltage reference leverages subthreshold operation and near-weak inversion characteristics, backed by an all-region MOSFET model. The proposed design achieves a very low operating supply voltage of 0.5 V and a remarkably low temperature coefficient of 16.28 ppm/°C through the mutual compensation of CTAT, PTAT, and curvature-correction currents, over a wide range from -40 °C to 130 °C. A stable reference voltage of 205 mV is generated with a line sensitivity of 1.65 %/V and a power supply rejection ratio (PSRR) of -50 dB at 10 kHz. The circuit achieves all these parameters while maintaining a good power efficiency, consuming only 0.67 μW.`,
+    mainContact: {
+      name: 'Contact',
+      email: 'f20220025@pilani.bits-pilani.ac.in',
+    }
+  },
+  {
+    id: '211',
+    title: 'A 2.7 GHz, –161.18 dBc/Hz FoM, Auxiliary-Controlled Dual-Differential Delay Cell-based Multi-Phase Four-Stage Ring VCO',
+    authors: ['MAYANK KUMAR SINGH', 'Rajasekhar Nagulapalli', 'Devarshi Mrinal Das', 'Mahendra Sakare'],
+    abstract: `An auxiliary-controlled dual-differential (AC-DD) delay cell is proposed for a multi-phase, four-stage ring voltage-controlled oscillator (RVCO) to support high-frequency operation. The AC-DD delay cell incorporates one PMOS and one NMOS cross-coupled pair where the PMOS pair operates as a latch, and the NMOS pair enhances the oscillation frequency. Frequency tuning is achieved through auxiliary inputs connected via PMOS transistors from the output terminals. This configuration enables precise frequency control and improved high-speed performance. Post-layout simulations were performed using a 65 nm CMOS technology with a 1V supply voltage. At an operating frequency of 2.7 GHz, the AC-DD delay cell-based RVCO has a phase noise of –103.7 dBc/Hz and a power dissipation of 13 mW. Furthermore, it achieves a figure of merit (FoM) of –161.18 dBc/Hz, improving 6 dB over conventional RVCO design, highlighting its enhanced efficiency and performance.`,
+    mainContact: {
+      name: 'MAYANK KUMAR SINGH',
+      email: 'mayank.19eez0008@iitpr.ac.in',
+    }
+  },
+  {
+    id: '256',
+    title: 'A 2.6 mW, -111.6 dBc/Hz Phase Noise, LC-VCO using Harmonic Control for High Frequency Applications',
+    authors: ['Ayanmani Das', 'MAYANK KUMAR SINGH', 'Rajasekhar Nagulapalli', 'Mahendra Sakare'],
+    abstract: `This paper proposes an LC Voltage-Controlled Oscillator (LC-VCO) architecture that achieves low phase noise by leveraging a high-Q LC tank. The Q-factor is enhanced through a parallel-series LC configuration, which filters out even harmonics and utilizes odd harmonics to boost the output swing. The proposed LC-VCO operates at a frequency of 4.6 GHz, with a power dissipation of 2.61 mW and phase noise of -90.64 dBc/Hz at 100 kHz offset and -111.6 dBc/Hz at 1 MHz offset. The phase noise has improved by 4 dB and it has an FoM of -160.68 dBc/Hz at 1 MHz offset, which is 3.81 dB better than conventional design. PVT and Monte Carlo simulations were conducted at post-layout level using 65 nm CMOS technology, at a supply voltage of 1 V.`,
+    mainContact: {
+      name: 'Ayanmani Das',
+      email: 'ayanmani.1999.20@gmail.com',
+    }
+  },
+  {
+    id: '165',
+    title: 'A Wideband SIW-based Hammer-Shaped Slot Antenna for Handheld Sensing Applications',
+    authors: ['Ritesh Kumar Ojha', 'Sayyed Arif Ali', 'Abhishek Srivastava', 'Mohd Wajid'],
+    abstract: `This paper presents a wideband tapered feed hammer-shaped slot antenna using substrate-integrated waveguide (SIW) technology. The longitudinal hammer-shaped slot etched in the SIW cavity excites radiation at the 24 GHz band at TE110 mode and offers a wide bandwidth. The antenna is excited using the microstrip to SIW transition. Compared to a traditional rectangular slot (I-shaped), the proposed hammer-shaped slot improves the impedance matching in this antenna. Parametric analysis of the slot has been performed to achieve the best optimization. Finally, the antenna is fabricated, and its performance is experimentally verified. The measurement of the fabricated antenna shows that the covered bandwidth of this antenna is 1000 MHz and achieved a fractional bandwidth of 3.93% at 10 dB with a cross-polarization level below -28 dB. The compact PCB footprint (0.95λg × 0.95λg × 0.25λg) of this antenna makes it a good contender for portable embedded devices and IoT devices, short-range radars, or low-profile handheld sensing applications.`,
+    mainContact: {
+      name: 'Ritesh Kumar Ojha',
+      email: 'riteshojha3@gmail.com',
+    }
+  },
+  {
+    id: '36',
+    title: 'Solving Formal Complexity for Linked List Hardware Designs',
+    authors: ['Ankit Saxena', 'Radheshyam Baviskar', 'Shubhangi Goel'],
+    abstract: `Exhaustive verification of hardware linked lists has become extremely important to ensure no hardware issues such as dead-lock or memory leakage happens due to them. Because of micro-architecture defined concurrency (for example, concurrent updates to head-pointer, tail-pointer, links and free-pointers for different linked-lists IDs) in the linked list designs, it is very hard to get sufficient coverage and confidence using traditional simulation-based approach. Formal verification, due to its exhaustive nature, can provide exhaustive coverage and confidence – though only after we solve formal complexity i.e., we ensure that bounded proofs have reached sufficient depths. In this paper, we will discuss how we can solve formal complexity for linked list designs. First, we will discuss the micro-architecture components of linked list designs (such as free-pointers initialization sequence, various memories) which cause formal complexity either due to high-sequential depth of scenarios or due to high flip-flop count. Then, we will discuss how we can write efficient checkers in formal using symbolic variables. Then, we will discuss the complexity solving methods which can be used to solve the formal complexity and more importantly we will discuss how to apply them on linked list designs. Here we will discuss how to apply memory abstraction models on head-pointer memory, tail-pointer memory, data memory and free-list memory. After that we will discuss why we cannot apply memory abstraction on links memory. Then, we will discuss how to apply abstraction models for size counters and initial value abstraction for the case when free-list needs to be initialized. In the end, we will see the results where we applied this methodology on a linked list design and how we were able to achieve 100% coverage for a linked list design having a large number (2,048) of pointers.`,
+    mainContact: {
+      name: 'Ankit Saxena',
+      email: 'ankitsaxena@marvell.com',
+    }
+  }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,14 +231,7 @@ export default function SessionLayout({
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <MapPin className="w-5 h-5" />
-              <span>{sessionLocation}</span>
-            </div> */}
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <User className="w-5 h-5" />
-              <span>Chair: {sessionChairperson}</span>
-            </div> */}
+
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -367,23 +360,8 @@ export default function SessionLayout({
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {/* <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                                {paper.mainContact.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-gray-900 dark:text-gray-100">
-                                  {paper.mainContact.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-                                  <Building className="w-4 h-4" />
-                                  {paper.mainContact.affiliation}
-                                </p>
-                              </div>
-                            </div>
-                          </div> */}
-                          
+
+    
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                               <Mail className="w-4 h-4 text-indigo-600" />
@@ -395,29 +373,7 @@ export default function SessionLayout({
                               </a>
                             </div>
                             
-                            {/* <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                              <Phone className="w-4 h-4 text-indigo-600" />
-                              <a 
-                                href={`tel:${paper.mainContact.phone}`}
-                                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                              >
-                                {paper.mainContact.phone}
-                              </a>
-                            </div> */}
-                            
-                            {/* {paper.mainContact.website && (
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <Globe className="w-4 h-4 text-indigo-600" />
-                                <a 
-                                  href={paper.mainContact.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                                >
-                                  Website
-                                </a>
-                              </div>
-                            )} */}
+
                           </div>
                         </div>
                       </div>

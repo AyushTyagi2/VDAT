@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from './../../footer/footer';
-import Navbar from './../../home/Navbar';
+import Footer from '../../footer/footer';
+import Navbar from '../../home/Navbar';
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -41,7 +41,7 @@ const staggerChildren = {
 
 export default function SessionLayout({
   // Session Details
-  sessionTitle = "Emerging Devices",
+  sessionTitle = "Memory",
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
@@ -49,67 +49,61 @@ export default function SessionLayout({
   sessionDescription = "",
   
   // Papers Array
-  papers = [
-    {
-      id: 'paper-79',
-      title: 'On-Wafer Measurements of 19.7 dB Gain 0.64 dB NF Wi-Fi LNA with On-Chip Active Biasing',
-      authors: ['Vasu K. Reddy', 'Mudi Gupta'],
-      abstract: 'This paper describes the design and measurement of a low-power 5.5 GHz LNA with an on-chip biasing circuit for Wi-Fi applications. The LNA parameters may vary from wafer/site to wafer/site when they are biased externally or on-chip voltage references. The cascode current mirror is embedded to generate on-chip bias for common-source (CS) and common-gate (CG) devices. The on-chip biasing circuit reduces the wafer to wafer deviation of the biasing point which improves the stability and consistency of LNA performance. The LNA is designed using floating body FET for CS device and body contacted FET for CG device. The noise figure of LNA is improved by optimizing the gate inductor with tapered dual thick copper metals. The prototype is fabricated and measured on a high resistivity SOI process with 65nm gate length. The measurements are performed across different wafers and sites to validate the importance of on-chip biasing for LNA. The measurements show that the gain is 19.7 dB, noise figure of 0.64 dB and IIP3 of -1.8dBm while consuming 6.6mA from a 1.6V supply. More importantly, wafer to wafer variation of LNA gain and current is only 0.25 dB and 18.29 uA, respectively.',
-      mainContact: {
-        name: 'Vasu K. Reddy',
-        email: 'guptamudi213@gmail.co',
-      }
-    },
-    {
-      id: 'paper-336',
-      title: 'A Wide Tuning Range Enhanced NF and IIP3 Variable Gain LNA for Narrowband Applications',
-      authors: ['Pulkit Kathuria', 'Krishnan Rengarajan', 'Saroj Mondal'],
-      abstract: 'In this paper, we proposed a wide tuning range, enhanced noise figure (NF) and high linearity variable-gain low noise amplifier (VGLNA) for Narrowband (NB) applications. The wide tuning range and variable gain were achieved in both modes by employing a variable resistor at the output. In addition, the proposed VGLNA utilises folded-cascode topology in low gain mode to achieve high linearity. Moreover, a bulk-to-source resistance is employed to achieve sub-1 dB NF in both modes of operation. The proposed VGLNA has been designed and simulated in 0.18 μm CMOS technology and is operating at 2.4GHz frequency. The post-layout simulations exhibit the power gain, input return loss, and NF of 13 dB, 20dB, and 1.1 dB at low-gain mode and 23 dB, 18 dB, and 1.18 dB at high-gain mode, respectively. Also, the proposed VGLNA exhibits IIP3 of +4.5 dBm at low-gain mode and 4.8 dBm at high-gain mode. The VGLNA consumes 7.2 mW at low-gain mode and 13.8 mW at high-gain mode for a supply voltage of 1.2 V.',
-      mainContact: {
-        name: 'Pulkit Kathuria',
-        email: '210020039@iitdh.ac.in',
-      }
-    },
-    {
-      id: 'paper-373',
-      title: 'Design and Implementation of novel XFMR for low-voltage mmWave-frequency VCO applications',
-      authors: ['Saurabh Zope', 'Narahari N. Mouthgalya', 'Adarsh Yadav', 'Abhishek Srivastava'],
-      abstract: 'This paper presents a novel Transformer (XFMR) design intended for integrated mmWave applications. The XFMR design consists of an 8-shaped primary inductor and a dumbbell-shaped secondary inductor. This structure addresses key challenges in on-chip XFMR design by improving electromagnetic interference (EMI) suppression, reducing unwanted signal coupling, and optimizing magnetic field symmetry. Additionally, the geometry exploits better layout efficiency and isolation, contributing to improved performance in tightly integrated environments. To demonstrate the practical advantages of the proposed XFMR, it is implemented in a low-voltage, low-phase-noise (PN) LC VCO designed for 23.8 - 27.2 GHz operation. Simulation results in TSMC 65 nm CMOS technology shows a tuning range of 3.4 GHz, a PN lesser than -110 dBc/Hz at 1 MHz offset, and a figure-of-merit (FoM) greater than 185 dBc/Hz, at 0.5 V supply. These results validate the effectiveness of the XFMR in enhancing VCO performance, highlighting its potential for use in high-performance mmWave design.',
-      mainContact: {
-        name: 'Saurabh Zope',
-        email: 'saurabh.zope@research.iiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-282',
-      title: 'A Resistorless Active Inductor Based CTLE',
-      authors: ['Puneet Singh', 'Rahul Walia', 'Rajaseshan Nagatappa', 'Mahendra Sakare'],
-      abstract: 'This paper presents a resistorless continuous-time linear equalizer (CTLE) architecture utilizing a PMOS-based active inductor as its load element. The proposed design eliminates traditional resistive and capacitive peaking components, replacing them with a novel low-frequency gain introduced through the active inductor. This approach not only enables effective bandwidth extension under low-voltage operation without the need for voltage boosting but also significantly reduces the silicon area typically required by conventional CTLE structures. The proposed resistorless active inductor-based CTLE has been designed using a standard 65 nm CMOS process with a 1 V supply. The CTLE occupies a compact active area of 0.0012 mm². Post-layout simulations confirm the effectiveness of the design and demonstrate reliable operation over a 12-inch channel at 10 Gb/s. The equalizer achieves an eye width of 86.15 ps, eye height of 215.7 mV, and a jitter of 13.27 ps, while maintaining a low power consumption of 4.67 mW and achieving a figure of merit (FoM) of 0.46 pJ/bit. These results underscore the potential of the proposed CTLE for use in high-speed, area-constrained communication systems.',
-      mainContact: {
-        name: 'Puneet Singh',
-        email: 'puneet.19eez0003@lnmiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-293',
-      title: 'Demystifying Dual-Band Impedance Matching Strategy for RF Energy Harvesting Systems',
-      authors: ['Soumya Rank', 'Chaya Hegde', 'Sonal Kothari'],
-      abstract: 'This paper presents a novel mathematical approach for designing dual-band impedance matching networks that act as an equivalent CL matching network at both frequencies. This paper mainly focuses on the CL match network for a rectifier whose equivalent parallel RC precludes the use of LC matching. The proposed technique incorporates inductor non-idealities during the design process, and the simulated S11 values of the dual-band impedance matching network operating at frequencies 953 MHz and 2.45 GHz are -19.43 dB and -18.29 dB, respectively.',
-      mainContact: {
-        name: 'Soumya Rank',
-        email: 'soumyarank@gmail.com',
-      }
-    },
-    {
-      id: 'paper-354',
-      title: 'A Switchless Resonant Circuit Based Multi-Band Matching Network for RF Energy Harvesting Applications',
-      authors: ['Chaya Hegde', 'Nagaratna Shanbhag', 'Saroj Mondal'],
-      abstract: 'This paper presents a systematic design methodology of switchless resonant circuits based multi-band matching network by utilizing lumped components. For RF Energy harvesting systems, matching network should be capable of matching frequency dependent complex impedance to the antennas impedance. To illustrate the same, dual-band network is designed and implemented at 953 MHz and 2.45 GHz. The results exhibit a reflection coefficient of magnitude greater than 20 dB at both the frequencies.',
-      mainContact: {
-        name: 'Chaya Hegde',
-        email: '221022001@iitdh.ac.in',
-      }
-    }
+papers = [
+  {
+  id: '169',
+  title: 'Spin-TLB: STT-RAM-based Translation Hierarchy for Server Applications in CPUs',
+  authors: ['Tejeshwar Bhagatsing Thorawade', 'Varun Venkitaraman Iyer', 'Ankith R', 'Newton Singh', 'Virendra Singh'],
+  abstract: `Translation Look-aside Buffers (TLBs) are essential for efficient memory virtualization in modern processors. They cache recent address translations to avoid costly page-table walks. As server applications become increasingly data-intensive, their working dataset grows, making address translation a significant performance bottleneck. Thus, optimizing TLBs has become increasingly important. Addressing the demands of larger workloads necessitates larger TLBs; however, conventional SRAM-based TLBs have scalability challenges. As their capacity increases, they incur higher access latency, increased area overhead, and greater energy consumption.
+
+To address these limitations, this paper proposes a novel TLB architecture that leverages STT-RAM technology. To the best of our knowledge, this is the first use of STT-RAM in CPU TLB architectures. STT-RAM offers about 4× the density of SRAM, enabling larger TLBs within the same area. STT-RAM also offers similar read latency and energy per read access as SRAM. While STT-RAM exhibits higher write latency and energy per write, TLBs perform very few write operations, making these drawbacks have minimal impact. These characteristics make STT-RAM a promising alternative for building scalable and energy-efficient TLBs.
+
+We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into the Data-TLB (DTLB) and Secondary-TLB (STLB). This design choice is based on the observation that DTLBs and STLBs benefit more from increased capacity than Instruction-TLBs (ITLBs). Our experimental evaluation demonstrates that Spin-TLB improves system performance (IPC) by up to 15.2% compared to a baseline with SRAM-based TLBs. It also reduces average TLB energy consumption by 64.3% and lowers the number of page walks by an average of 95.6%. These results highlight the potential of STT-RAM-based TLBs to significantly enhance CPU performance and energy efficiency.`,
+  mainContact: {
+    name: 'Tejeshwar Bhagatsing Thorawade',
+    email: 'tejeshwart@iitb.ac.in',
+  }
+},
+{
+  id: '158',
+  title: 'Comparative Analysis of STT-SHE and SOT in 6T-Based Non-Volatile SRAM',
+  authors: ['Sangeetha C. Soman', 'SUNANDA AMBULKER'],
+  abstract: `This work features a comparative analysis of Spin Transfer Torque - Spin Hall Effect Non Volatile Static Random Access Memory (STT-SHE NVSRAM) and Spin Orbit Torque Non Volatile Static Random Access Memory (SOT NVSRAM) with respect to influential performance parameters like delay, stability, power consumption, and noise margin. For the fair comparison both the designs have been simulated in the same simulation environment by using same 45nm CMOS technology. Simulation results indicate that SOT NVSRAM has lesser read, write, store, and restore delays because of its highly effective read and write path separation, while STT-SHE NVSRAM has greater delays because of the integrated SHE-STT switching mechanism. With regard to stability, STT-SHE NVSRAM exhibits higher read and hold static noise margin (SNM), and SOT NVSRAM enhances write SNM, providing greater write stability. At 1.2v supply voltage the simulation results also reveals about the reduced write switching power in SOT NVSRAM as a result of the one-way current flow in SOT switching. STT-SHE NVSRAM exhibits lower power consumption because of effective Spin Hall Effect-based switching, which employs a lateral current path and prevents current flow through the MTJ, resulting in lower current. STT-SHE NVSRAM can be used in applications requiring less power consumption, whereas SOT NVSRAM is used where there is a need for high speeds due to better read and write delays. The results emphasize the compromise among speed, power, and stability in non-volatile SRAM, which gives useful insights into designing energy-efficient and high-speed memory.`,
+  mainContact: {
+    name: 'Sangeetha C. Soman',
+    email: 'sangeethasoman6@gmail.com',
+  }
+},
+{
+  id: '263',
+  title: 'High-Speed and Low-Cost SRAM Cell Using a 2×1 MUX in Quantum-Dot Cellular Automata (QCA)',
+  authors: ['Nitesh Kumar Rathore', 'Pooran Singh'],
+  abstract: `To enhance stability and efficiency, this research proposes a novel Static Random-Access Memory (SRAM) bitcell utilizing Quantum-dot Cellular Automata (QCA) technology. As technology nodes continue to scale down, traditional CMOS-based SRAM faces significant challenges related to power consumption and scalability. The design and development of logic circuits using QCA technology have become an important area of research. The main advantages of this approach include a smaller area, reduced operating speed, minimal power consumption, and improved switching rates in nanoscale technology, making it particularly appealing. The proposed single-bit SRAM cell in QCA is designed by integrating a single (MUX) with an AND gate. The benefits of this design in terms of cell count, total footprint, and clock cycle delay are evidenced by the observed results. Notably, when compared to other proposed QCA SRAM circuits, the proposed layout achieves an outstanding increase of 85.44% overall cell number, 99.2% on the QCA cost, and 75% on clock cycle latency.`,
+  mainContact: {
+    name: 'Pooran Singh',
+    email: 'pooran.singh@mahindrauniversity.edu.in',
+  }
+},
+{
+  id: '414',
+  title: 'Low-Power NBTI Resilient 12T SRAM Cell with Enhanced Reliability',
+  authors: ['Vipul Sahu', 'ARYAN KANNAUJIYA', 'Pranjal Verma', 'Ambika Prasad Shah'],
+  abstract: `This work briefs an aging resilient SRAM cell for reliable data storage. The proposed R-SRAM cell is configured with 12 transistors. The performance parameters, such as SRRV, WRRV, N-curve, have been evaluated for large-scale applicability. Further, HSNM, RSNM, WSNM of R-SRAM is improved by 1.15×, 1.26×, 1.08× than the conventional 6T SRAM cell. However, less aging effect by analysing threshold voltage shift over five years on applying stress voltage of 1V shows that there is 1.16× improvement in the threshold voltage (Vth) of the NBTI-resilient (NR)-SRAM cell in relation to 6T SRAM cell. For process variation and process mismatch analysis, 2000 Montecarlo simulations for Vth reveals that the R-SRAM has an improvement for 1.32× of σ and 1.05× of μ than that of 6T SRAM cell. Thus, the proposed R-SRAM cell is NBTI resilient, having reduced leakage power embedded with different control signals for data storage. All simulation work have been completed by using industry-standard 40nm UMC technology node.`,
+  mainContact: {
+    name: 'Ambika Prasad Shah',
+    email: 'ambika.shah@iitjammu.ac.in',
+  }
+},
+{
+  id: '177',
+  title: 'FRRH14T: FinFET based Fast Recovering Radiation Hardened 14T SRAM for Space Applications',
+  authors: ['Ganesh Prasad B K', 'Ayush Maurya', 'Ravi S Siddanath', 'Mohit Gupta', 'Dr. Prasanna Kumar Misra', 'Manish Goswami', 'Kavindra Kandpal'],
+  abstract: `Memory circuits in space are susceptible to instability and reliability issues due to charged particles like alpha particles, neutrons, heavy ions, and photons. When these particles pass through the memory device, they generate an ion track that can interfere with stored data. Traditional 6T SRAM (Static Random Access Memory) is particularly prone to such disruptions. To tackle this issue, researchers have developed radiation-hardened SRAM cells, often by adding extra redundant nodes to improve reliability. This study introduces a fast FRRH14T (Fast Recovering Radiation Hardened 14 Transistor) SRAM cell with redundant nodes to protect against soft errors.The performance of the presented cell is evaluated using Cadence Virtuoso at 18 nm FinFET technology and 0.8 V supply voltage. Its performance is compared with other reliable radiation-hardened memory designs, including RSP12T, RHB12T, HSLC12T, NRHC14T, and SIMR18T. The FRRH14T cell is designed to resist single-event upset disruptions by optimizing node placement to minimize sensitivity, giving a recovery time of 1.2 ns. Additionally, it demonstrates significantly better write access time ranging from 1.09× to 2.2×—compared to the current radiation-hardened memory architectures.`,
+  mainContact: {
+    name: 'Kavindra Kandpal',
+    email: 'kavindra@iiita.ac.in',
+  }
+}
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,14 +225,7 @@ export default function SessionLayout({
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <MapPin className="w-5 h-5" />
-              <span>{sessionLocation}</span>
-            </div> */}
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <User className="w-5 h-5" />
-              <span>Chair: {sessionChairperson}</span>
-            </div> */}
+
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -367,23 +354,8 @@ export default function SessionLayout({
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {/* <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                                {paper.mainContact.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-gray-900 dark:text-gray-100">
-                                  {paper.mainContact.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-                                  <Building className="w-4 h-4" />
-                                  {paper.mainContact.affiliation}
-                                </p>
-                              </div>
-                            </div>
-                          </div> */}
-                          
+
+    
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                               <Mail className="w-4 h-4 text-indigo-600" />
@@ -395,29 +367,7 @@ export default function SessionLayout({
                               </a>
                             </div>
                             
-                            {/* <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                              <Phone className="w-4 h-4 text-indigo-600" />
-                              <a 
-                                href={`tel:${paper.mainContact.phone}`}
-                                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                              >
-                                {paper.mainContact.phone}
-                              </a>
-                            </div> */}
-                            
-                            {/* {paper.mainContact.website && (
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <Globe className="w-4 h-4 text-indigo-600" />
-                                <a 
-                                  href={paper.mainContact.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                                >
-                                  Website
-                                </a>
-                              </div>
-                            )} */}
+
                           </div>
                         </div>
                       </div>

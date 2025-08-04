@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from './../../footer/footer';
-import Navbar from './../../home/Navbar';
+import Footer from '../../footer/footer';
+import Navbar from '../../home/Navbar';
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -41,75 +41,75 @@ const staggerChildren = {
 
 export default function SessionLayout({
   // Session Details
-  sessionTitle = "Emerging Devices",
-  sessionTime = "2:00 PM - 3:30 PM",
+  sessionTitle = "FPGA and Processor",
+  sessionTime = "4:10 PM - 5:40 PM",
   sessionDate = "August 8, 2025",
   // sessionLocation = "",
   sessionChairperson = "",
   sessionDescription = "",
   
   // Papers Array
-  papers = [
+papers = [
     {
-      id: 'paper-79',
-      title: 'On-Wafer Measurements of 19.7 dB Gain 0.64 dB NF Wi-Fi LNA with On-Chip Active Biasing',
-      authors: ['Vasu K. Reddy', 'Mudi Gupta'],
-      abstract: 'This paper describes the design and measurement of a low-power 5.5 GHz LNA with an on-chip biasing circuit for Wi-Fi applications. The LNA parameters may vary from wafer/site to wafer/site when they are biased externally or on-chip voltage references. The cascode current mirror is embedded to generate on-chip bias for common-source (CS) and common-gate (CG) devices. The on-chip biasing circuit reduces the wafer to wafer deviation of the biasing point which improves the stability and consistency of LNA performance. The LNA is designed using floating body FET for CS device and body contacted FET for CG device. The noise figure of LNA is improved by optimizing the gate inductor with tapered dual thick copper metals. The prototype is fabricated and measured on a high resistivity SOI process with 65nm gate length. The measurements are performed across different wafers and sites to validate the importance of on-chip biasing for LNA. The measurements show that the gain is 19.7 dB, noise figure of 0.64 dB and IIP3 of -1.8dBm while consuming 6.6mA from a 1.6V supply. More importantly, wafer to wafer variation of LNA gain and current is only 0.25 dB and 18.29 uA, respectively.',
-      mainContact: {
-        name: 'Vasu K. Reddy',
-        email: 'guptamudi213@gmail.co',
-      }
-    },
-    {
-      id: 'paper-336',
-      title: 'A Wide Tuning Range Enhanced NF and IIP3 Variable Gain LNA for Narrowband Applications',
-      authors: ['Pulkit Kathuria', 'Krishnan Rengarajan', 'Saroj Mondal'],
-      abstract: 'In this paper, we proposed a wide tuning range, enhanced noise figure (NF) and high linearity variable-gain low noise amplifier (VGLNA) for Narrowband (NB) applications. The wide tuning range and variable gain were achieved in both modes by employing a variable resistor at the output. In addition, the proposed VGLNA utilises folded-cascode topology in low gain mode to achieve high linearity. Moreover, a bulk-to-source resistance is employed to achieve sub-1 dB NF in both modes of operation. The proposed VGLNA has been designed and simulated in 0.18 μm CMOS technology and is operating at 2.4GHz frequency. The post-layout simulations exhibit the power gain, input return loss, and NF of 13 dB, 20dB, and 1.1 dB at low-gain mode and 23 dB, 18 dB, and 1.18 dB at high-gain mode, respectively. Also, the proposed VGLNA exhibits IIP3 of +4.5 dBm at low-gain mode and 4.8 dBm at high-gain mode. The VGLNA consumes 7.2 mW at low-gain mode and 13.8 mW at high-gain mode for a supply voltage of 1.2 V.',
-      mainContact: {
-        name: 'Pulkit Kathuria',
-        email: '210020039@iitdh.ac.in',
-      }
-    },
-    {
-      id: 'paper-373',
-      title: 'Design and Implementation of novel XFMR for low-voltage mmWave-frequency VCO applications',
-      authors: ['Saurabh Zope', 'Narahari N. Mouthgalya', 'Adarsh Yadav', 'Abhishek Srivastava'],
-      abstract: 'This paper presents a novel Transformer (XFMR) design intended for integrated mmWave applications. The XFMR design consists of an 8-shaped primary inductor and a dumbbell-shaped secondary inductor. This structure addresses key challenges in on-chip XFMR design by improving electromagnetic interference (EMI) suppression, reducing unwanted signal coupling, and optimizing magnetic field symmetry. Additionally, the geometry exploits better layout efficiency and isolation, contributing to improved performance in tightly integrated environments. To demonstrate the practical advantages of the proposed XFMR, it is implemented in a low-voltage, low-phase-noise (PN) LC VCO designed for 23.8 - 27.2 GHz operation. Simulation results in TSMC 65 nm CMOS technology shows a tuning range of 3.4 GHz, a PN lesser than -110 dBc/Hz at 1 MHz offset, and a figure-of-merit (FoM) greater than 185 dBc/Hz, at 0.5 V supply. These results validate the effectiveness of the XFMR in enhancing VCO performance, highlighting its potential for use in high-performance mmWave design.',
-      mainContact: {
-        name: 'Saurabh Zope',
-        email: 'saurabh.zope@research.iiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-282',
-      title: 'A Resistorless Active Inductor Based CTLE',
-      authors: ['Puneet Singh', 'Rahul Walia', 'Rajaseshan Nagatappa', 'Mahendra Sakare'],
-      abstract: 'This paper presents a resistorless continuous-time linear equalizer (CTLE) architecture utilizing a PMOS-based active inductor as its load element. The proposed design eliminates traditional resistive and capacitive peaking components, replacing them with a novel low-frequency gain introduced through the active inductor. This approach not only enables effective bandwidth extension under low-voltage operation without the need for voltage boosting but also significantly reduces the silicon area typically required by conventional CTLE structures. The proposed resistorless active inductor-based CTLE has been designed using a standard 65 nm CMOS process with a 1 V supply. The CTLE occupies a compact active area of 0.0012 mm². Post-layout simulations confirm the effectiveness of the design and demonstrate reliable operation over a 12-inch channel at 10 Gb/s. The equalizer achieves an eye width of 86.15 ps, eye height of 215.7 mV, and a jitter of 13.27 ps, while maintaining a low power consumption of 4.67 mW and achieving a figure of merit (FoM) of 0.46 pJ/bit. These results underscore the potential of the proposed CTLE for use in high-speed, area-constrained communication systems.',
-      mainContact: {
-        name: 'Puneet Singh',
-        email: 'puneet.19eez0003@lnmiit.ac.in',
-      }
-    },
-    {
-      id: 'paper-293',
-      title: 'Demystifying Dual-Band Impedance Matching Strategy for RF Energy Harvesting Systems',
-      authors: ['Soumya Rank', 'Chaya Hegde', 'Sonal Kothari'],
-      abstract: 'This paper presents a novel mathematical approach for designing dual-band impedance matching networks that act as an equivalent CL matching network at both frequencies. This paper mainly focuses on the CL match network for a rectifier whose equivalent parallel RC precludes the use of LC matching. The proposed technique incorporates inductor non-idealities during the design process, and the simulated S11 values of the dual-band impedance matching network operating at frequencies 953 MHz and 2.45 GHz are -19.43 dB and -18.29 dB, respectively.',
-      mainContact: {
-        name: 'Soumya Rank',
-        email: 'soumyarank@gmail.com',
-      }
-    },
-    {
-      id: 'paper-354',
-      title: 'A Switchless Resonant Circuit Based Multi-Band Matching Network for RF Energy Harvesting Applications',
-      authors: ['Chaya Hegde', 'Nagaratna Shanbhag', 'Saroj Mondal'],
-      abstract: 'This paper presents a systematic design methodology of switchless resonant circuits based multi-band matching network by utilizing lumped components. For RF Energy harvesting systems, matching network should be capable of matching frequency dependent complex impedance to the antennas impedance. To illustrate the same, dual-band network is designed and implemented at 953 MHz and 2.45 GHz. The results exhibit a reflection coefficient of magnitude greater than 20 dB at both the frequencies.',
-      mainContact: {
-        name: 'Chaya Hegde',
-        email: '221022001@iitdh.ac.in',
-      }
+    id: '61',
+    title: 'Efficient Neural Network based Audio Processing using FPGA',
+    authors: ['Mohinuddin Farook Holy', 'Yash Agrawal', 'Pankaj Kumar'],
+    abstract: `The study proposes FPGA-based audio classification using Deep Neural Networks (DNNs) for MFCC features. The Verilog-implemented DNN on PYNQ-ZU FPGA reduces processing time from 63.38ms to 5ms compared to Python, demonstrating improved latency and efficiency for real-time audio applications.`,
+    mainContact: {
+      name: 'Mohinuddin Farook Holy',
+      email: 'mohinuddinholy92@gmail.com',
     }
+  },
+  {
+    id: '184',
+    title: 'Quantized Residual CNN on FPGA for Real-Time Driver Attention Detection Using hls4ml',
+    authors: ['Joel Dan Philip', 'Asif Muhammed', 'Nalesh S', 'Kala S'],
+    abstract: `A lightweight ResNet-based CNN is quantized to 8-bit using QAT and pruning for driver attention detection. Implemented on Xilinx UltraScale+ FPGA using hls4ml, the system achieves 87% accuracy with 0.39ms latency at 200 MHz, demonstrating real-time AI deployment on constrained devices.`,
+    mainContact: {
+      name: 'Kala S',
+      email: 'kalas19@gmail.com',
+    }
+  },
+  {
+    id: '225',
+    title: 'An Efficient Hardware-Software Co-Design for Dense layer Acceleration on FPGA Using Reusable MAC Arrays: SDK vs Overlay Approaches',
+    authors: ['Swati K', 'Shubham Kamble', 'Pinalkumar Engineer'],
+    abstract: `Proposes a reusable MAC array-based FPGA framework for dense layer acceleration. Compares SDK vs overlay approaches on metrics like modularity, scalability, and throughput. Results show notable improvements in hardware reusability and computational efficiency for edge AI systems.`,
+    mainContact: {
+      name: 'Contact',
+      email: 'd20ec012@eced.svnit.ac.in',
+    }
+  },
+  {
+    id: '168',
+    title: 'Computational Acceleration of Edge DSP Applications Using RISC-V P-SIMD Instructions',
+    authors: ['Sreenivas S Pai', 'Simi Sukumaran', 'Jagadeesh Kumar P', 'Tripti S Warrier'],
+    abstract: `This paper evaluates SIMD-enhanced DSP operations for FFT, matrix multiplication, and K-means on edge devices using RISC-V P-SIMD v0.9.11. Achieves 2.58x speedup and 40% cycle savings, validated on ARTIX-7 FPGA. Demonstrates reduced critical path to 6.64 ns for real-time DSP acceleration.`,
+    mainContact: {
+      name: 'Sreenivas S Pai',
+      email: 'sreenivasspai.mec@gmail.com',
+    }
+  },
+  {
+    id: '107',
+    title: 'QForce-RL: Quantized FPGA-Optimized Reinforcement Learning Compute Engine',
+    authors: ['Anushka Jha', 'Tanushree Dewangan', 'Mukul Lokhande', 'Santosh Vishvakarma'],
+    abstract: `QForce-RL enhances lightweight RL deployment on FPGAs using quantization and SIMD. Scalable architecture offers up to 2.3× improvement in performance and 2.6× FPS boost over SoTA. Balances latency, power, and throughput for edge devices running decision-making models.`,
+    mainContact: {
+      name: 'Santosh Vishvakarma',
+      email: 'skvishvakarma@iiti.ac.in',
+    }
+  },
+  {
+    id: '67',
+    title: 'Evaluating Cache Replacement Policies for Chip Multicore Processors: Insights and a Novel Approach',
+    authors: ['Jayashree Mallidu', 'Saroja Siddamal', 'Neha Divakar'],
+    abstract: `Proposes a Hybrid TreePLRU policy implemented in gem5 simulator, improving L2 cache hit rate by up to 17.76%, reducing AMAT by 1.42%, and lowering power usage by 0.40%. Offers better efficiency than LRU and TreePLRU for multi-core processors.`,
+    mainContact: {
+      name: 'Jayashree Mallidu',
+      email: 'jayashree.mallidu@kletech.ac.in',
+    }
+  }
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -231,14 +231,7 @@ export default function SessionLayout({
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <MapPin className="w-5 h-5" />
-              <span>{sessionLocation}</span>
-            </div> */}
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
-              <User className="w-5 h-5" />
-              <span>Chair: {sessionChairperson}</span>
-            </div> */}
+
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <FileText className="w-5 h-5" />
               <span>{papers.length} Paper{papers.length > 1 ? 's' : ''}</span>
@@ -367,23 +360,8 @@ export default function SessionLayout({
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {/* <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                                {paper.mainContact.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-gray-900 dark:text-gray-100">
-                                  {paper.mainContact.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-                                  <Building className="w-4 h-4" />
-                                  {paper.mainContact.affiliation}
-                                </p>
-                              </div>
-                            </div>
-                          </div> */}
-                          
+
+    
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                               <Mail className="w-4 h-4 text-indigo-600" />
@@ -395,29 +373,7 @@ export default function SessionLayout({
                               </a>
                             </div>
                             
-                            {/* <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                              <Phone className="w-4 h-4 text-indigo-600" />
-                              <a 
-                                href={`tel:${paper.mainContact.phone}`}
-                                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                              >
-                                {paper.mainContact.phone}
-                              </a>
-                            </div> */}
-                            
-                            {/* {paper.mainContact.website && (
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <Globe className="w-4 h-4 text-indigo-600" />
-                                <a 
-                                  href={paper.mainContact.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                                >
-                                  Website
-                                </a>
-                              </div>
-                            )} */}
+
                           </div>
                         </div>
                       </div>
