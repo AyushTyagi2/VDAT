@@ -52,7 +52,7 @@ export default function SessionLayout({
 papers = [
     {
     id: '61',
-    time: '4:50 PM - 5:05 PM',
+    time: '4:10 PM - 4:25 PM',
     title: 'Efficient Neural Network based Audio Processing using FPGA',
     authors: ['Mohinuddin Farook Holy', 'Yash Agrawal', 'Pankaj Kumar'],
     abstract: `The study proposes FPGA-based audio classification using Deep Neural Networks (DNNs) for MFCC features. The Verilog-implemented DNN on PYNQ-ZU FPGA reduces processing time from 63.38ms to 5ms compared to Python, demonstrating improved latency and efficiency for real-time audio applications.`,
@@ -63,7 +63,7 @@ papers = [
   },
   {
     id: '184',
-    time: '5:05 PM - 5:20 PM',
+    time: '4:25 PM - 4:40 PM',
     title: 'Quantized Residual CNN on FPGA for Real-Time Driver Attention Detection Using hls4ml',
     authors: ['Joel Dan Philip', 'Asif Muhammed', 'Nalesh S', 'Kala S'],
     abstract: `A lightweight ResNet-based CNN is quantized to 8-bit using QAT and pruning for driver attention detection. Implemented on Xilinx UltraScale+ FPGA using hls4ml, the system achieves 87% accuracy with 0.39ms latency at 200 MHz, demonstrating real-time AI deployment on constrained devices.`,
@@ -74,7 +74,7 @@ papers = [
   },
   {
     id: '225',
-    time: '5:20 PM - 5:35 PM',
+    time: '4:40 PM - 4:55 PM',
     title: 'An Efficient Hardware-Software Co-Design for Dense layer Acceleration on FPGA Using Reusable MAC Arrays: SDK vs Overlay Approaches',
     authors: ['Swati K', 'Shubham Kamble', 'Pinalkumar Engineer'],
     abstract: `Proposes a reusable MAC array-based FPGA framework for dense layer acceleration. Compares SDK vs overlay approaches on metrics like modularity, scalability, and throughput. Results show notable improvements in hardware reusability and computational efficiency for edge AI systems.`,
@@ -85,7 +85,7 @@ papers = [
   },
   {
     id: '168',
-    time: '5:35 PM - 5:50 PM',
+    time: '4:55 PM - 5:10 PM',
     title: 'Computational Acceleration of Edge DSP Applications Using RISC-V P-SIMD Instructions',
     authors: ['Sreenivas S Pai', 'Simi Sukumaran', 'Jagadeesh Kumar P', 'Tripti S Warrier'],
     abstract: `This paper evaluates SIMD-enhanced DSP operations for FFT, matrix multiplication, and K-means on edge devices using RISC-V P-SIMD v0.9.11. Achieves 2.58x speedup and 40% cycle savings, validated on ARTIX-7 FPGA. Demonstrates reduced critical path to 6.64 ns for real-time DSP acceleration.`,
@@ -96,7 +96,7 @@ papers = [
   },
   {
     id: '107',
-    time: '5:50 PM - 6:05 PM',
+    time: '5:10 PM - 5:25 PM',
     title: 'QForce-RL: Quantized FPGA-Optimized Reinforcement Learning Compute Engine',
     authors: ['Anushka Jha', 'Tanushree Dewangan', 'Mukul Lokhande', 'Santosh Vishvakarma'],
     abstract: `QForce-RL enhances lightweight RL deployment on FPGAs using quantization and SIMD. Scalable architecture offers up to 2.3× improvement in performance and 2.6× FPS boost over SoTA. Balances latency, power, and throughput for edge devices running decision-making models.`,
@@ -107,7 +107,7 @@ papers = [
   },
   {
     id: '67',
-    time: '6:05 PM - 6:20 PM',
+    time: '5:25 PM - 5:40 PM',
     title: 'Evaluating Cache Replacement Policies for Chip Multicore Processors: Insights and a Novel Approach',
     authors: ['Jayashree Mallidu', 'Saroja Siddamal', 'Neha Divakar'],
     abstract: `Proposes a Hybrid TreePLRU policy implemented in gem5 simulator, improving L2 cache hit rate by up to 17.76%, reducing AMAT by 1.42%, and lowering power usage by 0.40%. Offers better efficiency than LRU and TreePLRU for multi-core processors.`,
