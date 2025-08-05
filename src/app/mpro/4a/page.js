@@ -52,7 +52,7 @@ export default function SessionLayout({
 papers = [
    {
     id: '350',
-    time: '2:00 PM - 2:15 PM',
+    time: '2:15 PM - 2:30 PM',
     title: 'First Principle Modeling of Lead Adsorption on Armchair Graphene Nanoribbon',
     authors: ['Kamal Solanki', 'Sandhya Rathore', 'Prachi Kesharwani', 'Manoj Kumar Majumder'],
     abstract: `The growing issue of lead (Pb) emissions from battery recycling and industrial processes presents a significant threat to public health and the environment, necessitating the development of a highly sensitive sensor. In response, the research proposed hydrogen (H)-passivated narrowest armchair graphene nanoribbons (ArGNRs) as an effective platform for Pb detection. Further, to ensure improved accuracy, the research employed the first-principles density functional theory (DFT) based on linear combination of atomic orbitals (LCAO) alongside a semi-empirical calculator to investigate the adsorption behavior of Pb in doped/undoped ArGNRs. These nanoribbons were successively substituted by transition metal dopant, manganese (Mn), in combination with successive substitution of group V non-metals, including nitrogen (N) and phosphorus (P), achieving a total co-doping concentration of 33%. This doping strategy introduces localized reactive sites at the ribbon edges, significantly enhancing the interaction with the Pb due to increased chemical reactivity. Among the various configurations analysed, the Mn-P co-doped ArGNR demonstrates the most favorable property, exhibiting an optimal adsorption energy (Eads) of -2.50 eV, with a reduced bandgap (EG) variation of -61.06%, forming a semiconducting to semi-metallic transition, an essential feature for practical sensing applications. In addition, it depicts a desorption (rdes) of 4.40%, facilitating sensor regeneration and long-term durability. Furthermore, it exhibits an escalating current conductivity of 339 and 127× higher than the pristine and Mn-N doped ArGNR. Overall, the co-doping of Mn with P in a width-3 narrowest ArGNR offers the ideal balance between quantum confinement and EG modulation, ensuring superior performance for Pb sensing.`,
@@ -63,7 +63,7 @@ papers = [
   },
   {
     id: '91',
-    time: '2:15 PM - 2:30 PM',
+    time: '2:30 PM - 2:45 PM',
     title: 'Electrically tunable Magnetoresistance in Organic Magnetic Tunnel Junctions',
     authors: ['Sree Thulasi Mallineni', 'Sandhya Sai Maruti Chilukuri', 'Pamulapati Soujanya', 'Syam Sundar Pillalamarri', 'Debajit Deb'],
     abstract: `We investigated the magnetoresistance (MR) response of ITO/NiFe2O4(NFO)/Alq3/Co/Au organic magnetic tunnel junctions (MTJs). Cross-sectional image from field emission gun scanning electron microscopy image revealed well defined interfaces with minimal lattice defects,indicating coherent spin transport.The NFO Fermi level's position within the lowest unoccupied molecular orbital (LUMO)- highest occupied molecular orbital (HOMO) optical gap of Alq3 suggests that carrier tunneling is the primary charge transport mechanism. The magnetic field-enhanced charge carrier transport shown by the negative magnetoresistance effect may be caused by spin dependent tunneling or scattering within the MTJ structure. A significant MR of an high as 1000% has been observed at positive bias indicating enhanced spin polarized tunneling across the device. These findings provide key insights into the spin transport mechanisms governing organic MTJs, paving the way for future advancements in organic spintronic devices.`,
@@ -75,7 +75,7 @@ papers = [
  
   {
     id: '103',
-    time: '2:30 PM - 2:45 PM',
+    time: '2:45 PM - 3:00 PM',
     title: 'Ab-initio Tight Binding Study on Defects in Armchair Silicene Nanoribbon Double Gate Field Effect Transistor',
     authors: ['Ganesh C. Patil', 'Rajesh C. Junghare'],
     abstract: 'In this paper detailed analysis on defects in silicene nanoribbon (SiNR) channel double gate field effect transistor (DGFET) is presented. The transport equations are solved by using the NEGF formalism and the maximally localized Wannier functions. It is found that, armchair SiNR with seven pair of atoms along width direction has optimum bandgap of ~ 0.6 eV. Further, when the phosphorus atom defects are substituted in intrinsic channel of SiNR DGFET, the on-state drive current (ION) is reduced by 70 % and the off-state leakage current (IOFF) is increased by ~10^5 times. This clearly shows that, due to phosphors defects the ION/IOFF ratio of the SiNR DGFET is reduced by ~10^5 times over the intrinsic channel SiNR DGFET. This is mainly because, the substitution of phosphorous defects in intrinsic channel adds the states within the bandgap closer to the conduction band, which leads to variations in the transport current of the device.',
@@ -87,7 +87,7 @@ papers = [
    
   {
     id: '410',
-    time: '2:45 PM - 3:00 PM',
+    time: '3:00 PM - 3:15 PM',
     title: 'Process Variation Dependent Performance Evaluation of a Molecular Single Electron Transistor: A Computational Investigation',
     authors: ['Nishant Agrawal', 'Awanish Kumar Singh', 'Pratik Kumar', 'Sumit Saurabh', 'Sanjai Singh', 'Anurag Srivastava', 'Boddepalli SanthiBhushan'],
     abstract: `Single Electron Transistor (SET) is a promising candidate for the design of next generation integrated circuits, owing to its very special attribute i.e ‘lack of scaling limits'. Even though this fascinating tunnel device is being explored for various applications for the past three decades, the process variation insights are not available so far. This work reports for the first time a comprehensive process variation analysis of a benzene based molecular SET device using the density functional theory based first principles approach. The investigation is performed by systematically varying the design parameters viz. gate dielectric thickness, tunnel junction thickness, dielectric type, electrode type and the number of gates. The process variation insights are provided in terms of the performance metrics namely degeneracy voltages and charging energies, as extracted from the charge stability diagrams. The results reveal clear patterns in the performance metrics when the device parameters are subjected to process variation. The results suggest that a SET architecture with sufficiently smaller gate dielectric thickness, higher dielectric constant of gate oxide, moderate tunnel junction thickness, smaller electrode work function, and multi gate can offer maximum performance. The results presented in this work could be of significant interest to the experimental researchers working in this domain.`,
@@ -99,7 +99,7 @@ papers = [
 
       {
     id: '20',
-    time: '3:00 PM - 3:15 PM',
+    time: '3:15 PM - 3:30 PM',
     title: 'Role of Intrinsic Layer Thickness on the Performance of GeSn p-i-n Photodetectors',
     authors: ['Dhrish Bhansali', 'Keerthana P. Balakrishnan', 'Manish Gupta', 'Ramesh Vasan', 'Rahul Kumar'],
     abstract: `In this paper, we have simulated a Ge0.9Sn0.1 based photodetector aimed at applications in the short-wave infrared (SWIR) and mid-wave infrared (MWIR) regions. GeSn-based alloys have become very popular for photodetector applications because of their tunable band gap and compatibility with CMOS processes. We have emphasized the variation of different parameters such as dark current, photocurrent, 3-dB bandwidth, and detectivity with respect to the thickness of the intrinsic GeSn layer. A good balance between various device parameters can be obtained by carefully optimizing the intrinsic layer thickness. This makes the proposed photodetector topology a promising candidate for next-generation optical communication systems operating in the MWIR band.`,
@@ -110,7 +110,7 @@ papers = [
   },
   {
     id: '143',
-    time: '3:15 PM - 3:30 PM',
+    time: '3:30 PM - 3:45 PM',
     title: 'Gamma Gate GaN HEMTs: Enhanced DC RF Performance with temperature modeling for High-Power applications',
     authors: ['Aayush Gupta', 'Pankaj Kumar'],
     abstract: `In this work, we demonstrate the transformative advantages of the Γ-gate architecture over planar AlGaN/GaN HEMTs using Silvaco TCAD. The Γ-gate design achieves a 186% higher breakdown voltage and 105.7% improvement in cutoff frequency (fc = 123.4 GHz) by redistributing electric fields, reducing the peak conduction current density by 30×(5.04 × 10−7 A/cm2) and hole current density by 65%. Enhanced electrostatic control enables a 16.7% higher saturation current (0.7 A/mm at VG = 0 V) and 50% increase at VD = 10 V, alongside 40% higher transconductance (2.1 mS/mm). We also developed a predictive temperature model that forecasts the overall device temperature under all operating conditions, demonstrating 60% cooler operation (100 K vs. 250 K at 10 V bias) and 40% lower thermal resistance compared to planar designs. These advancements, validated by suppressed leakage currents and field plate heat dissipation, position Γ-gate HEMTs as critical enablers for high-power, high-frequency electronics.`,
