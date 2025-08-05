@@ -44,7 +44,7 @@ export default function SessionLayout({
   sessionTitle = "FPGA and Processor",
   sessionTime = "4:10 PM - 5:40 PM",
   sessionDate = "August 8, 2025",
-  // sessionLocation = "",
+  sessionLocation = "Anjuman Hall",
   sessionChairperson = "Chair 1: Prof. Srinivasu Bodhapati, Chair 2: Prof. Kala S ",
   sessionDescription = "",
   
@@ -237,6 +237,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <MapPin className="w-5 h-5" />
+                          <span>{sessionLocation}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
                           <User className="w-5 h-5" />
                           <span>{sessionChairperson}</span>

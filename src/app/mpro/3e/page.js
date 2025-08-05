@@ -44,7 +44,7 @@ export default function SessionLayout({
   sessionTitle = "Digital",
   sessionTime = "11:45 AM - 1:15 PM",
   sessionDate = "August 9, 2025",
-  // sessionLocation = "",
+  sessionLocation = "Board Room",
   sessionChairperson = "Chair 1: Prof. Bikram Paul, Chair 2: Prof. Alpana Agrawal ",
   sessionDescription = "",
   
@@ -239,6 +239,10 @@ papers = [
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <MapPin className="w-5 h-5" />
+                          <span>{sessionLocation}</span>
+                        </div>
              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
                           <User className="w-5 h-5" />
                           <span>{sessionChairperson}</span>

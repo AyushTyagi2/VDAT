@@ -44,7 +44,7 @@ export default function SessionLayout({
   sessionTitle = "Emerging Devices",
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
-  // sessionLocation = "",
+  sessionLocation = "Majlis Main",
   sessionChairperson = "Chair 1:  Prof. Shubham Sahay, Chair 2: Prof. Ravindra Naik Bukke",
   sessionDescription = "",
   
@@ -237,10 +237,10 @@ export default function SessionLayout({
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
-            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <MapPin className="w-5 h-5" />
               <span>{sessionLocation}</span>
-            </div> */}
+            </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <User className="w-5 h-5" />
               <span>{sessionChairperson}</span>

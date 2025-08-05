@@ -44,7 +44,7 @@ export default function SessionLayout({
   sessionTitle = "RF-IC",
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
-  // sessionLocation = "",
+  sessionLocation = "Majlis Second Hall",
   sessionChairperson = ['Chair 1:  Prof. Animesh Biswas'  ,  'Chair 2:   Prof. Gaganpreet Kaur'],
   sessionDescription = "",
   
@@ -236,6 +236,10 @@ papers = [
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <MapPin className="w-5 h-5" />
+                          <span>{sessionLocation}</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
               <Users className="w-5 h-5" />

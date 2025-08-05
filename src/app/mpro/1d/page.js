@@ -44,7 +44,7 @@ export default function SessionLayout({
   sessionTitle = "Memory",
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
-  // sessionLocation = "",
+  sessionLocation = "Anjuman Hall",
   sessionChairperson = "Chair 1: Prof. Sudeb Dasgupta, Chair 2: Prof. Ambika Prasad Shah",
   sessionDescription = "",
   
@@ -86,17 +86,6 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
   mainContact: {
     name: 'Pooran Singh',
     email: 'pooran.singh@mahindrauniversity.edu.in',
-  }
-},
-{
-  id: '414',
-  time: '2:45 PM - 3:00 PM',
-  title: 'Low-Power NBTI Resilient 12T SRAM Cell with Enhanced Reliability',
-  authors: ['Vipul Sahu', 'ARYAN KANNAUJIYA', 'Pranjal Verma', 'Ambika Prasad Shah'],
-  abstract: `This work briefs an aging resilient SRAM cell for reliable data storage. The proposed R-SRAM cell is configured with 12 transistors. The performance parameters, such as SRRV, WRRV, N-curve, have been evaluated for large-scale applicability. Further, HSNM, RSNM, WSNM of R-SRAM is improved by 1.15×, 1.26×, 1.08× than the conventional 6T SRAM cell. However, less aging effect by analysing threshold voltage shift over five years on applying stress voltage of 1V shows that there is 1.16× improvement in the threshold voltage (Vth) of the NBTI-resilient (NR)-SRAM cell in relation to 6T SRAM cell. For process variation and process mismatch analysis, 2000 Montecarlo simulations for Vth reveals that the R-SRAM has an improvement for 1.32× of σ and 1.05× of μ than that of 6T SRAM cell. Thus, the proposed R-SRAM cell is NBTI resilient, having reduced leakage power embedded with different control signals for data storage. All simulation work have been completed by using industry-standard 40nm UMC technology node.`,
-  mainContact: {
-    name: 'Ambika Prasad Shah',
-    email: 'ambika.shah@iitjammu.ac.in',
   }
 },
 {
@@ -264,6 +253,10 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <MapPin className="w-5 h-5" />
+                          <span>{sessionLocation}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
                           <User className="w-5 h-5" />
                           <span>{sessionChairperson}</span>

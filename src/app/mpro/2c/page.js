@@ -44,7 +44,7 @@ export default function SessionLayout({
   sessionTitle = "Embedded",
   sessionTime = "4:10 PM - 5:40 PM",
   sessionDate = "August 8, 2025",
-  // sessionLocation = "",
+  sessionLocation = "Adab Arz Hall",
   sessionChairperson = "Chair 1: Prof. Bikram Paul, Chair 2: Prof. Amit Kumar",
   sessionDescription = "",
   
@@ -241,6 +241,10 @@ Empirical evaluations demonstrate that AHS achieves jitter below 5 μs, a 35 ms 
               <Clock className="w-5 h-5" />
               <span>{sessionTime}</span>
             </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
+                          <MapPin className="w-5 h-5" />
+                          <span>{sessionLocation}</span>
+                        </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full">
                           <User className="w-5 h-5" />
                           <span>{sessionChairperson}</span>

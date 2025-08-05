@@ -112,22 +112,27 @@ const MProTable = () => {
         session1a: {
           title: "Session 1a: Emerging Devices",
           link: "/mpro/1a",
+          location: "Majlis Main",
         },
         session1b: {
           title: "Session 1b: RF-IC",
           link: "/mpro/1b",
+          location: "Majlis Second Hall",
         },
         session1c: {
           title: "Session 1c: Accelerator",
           link: "/mpro/1c",
+          location: "Adab Arz Hall",
         },
         session1d: {
           title: "Session 1d: Memory",
           link: "/mpro/1d",
+          location: "Anjuman Hall",
         },
         session1e: {
           title: "Session 1e: Digital",
           link: "/mpro/1e",
+          location: " Board Room",
         }
       }
     },
@@ -150,24 +155,29 @@ const MProTable = () => {
         session2a: {
           title: "Session 2a: Startup Contest - pitching session",
           link: "/circuitpreneur",
-          papers: ""
+          papers: "",
+          location: "Majlis Main"
         },
         session2b: {
           title: "Session 2b: PhD Forum",
           link: "/phdforum",
-          papers: ""
+          papers: "",
+          location: " Majlis Second Hall"
         },
         session2c: {
           title: "Session 2c: Embedded",
           link: "/mpro/2c",
+          location: "Adab Arz Hall"
         },
         session2d: {
           title: "Session 2d: FPGA and Processor",
           link: "/mpro/2d",
+          location: "Anjuman Hall"
         },
         session2e: {
           title: "Session 2e: Analog and Digital",
           link: "/mpro/2e",
+          location: "Board Room"
         }
       }
     },
@@ -241,22 +251,27 @@ const MProTable = () => {
         session3a: {
           title: "Session 3a: Processor and FPGA",
           link: "/mpro/3a",
+          location: "Majlis Main",
         },
         session3b: {
           title: "Session 3b: Digital and Analog",
           link: "/mpro/3b",
+          location: "Majlis Second Hall",
         },
         session3c: {
           title: "Session 3c: Accelerator",
           link: "/mpro/3c",
+          location: "Adab Arz Hall",
         },
         session3d: {
           title: "Session 3d: FPGA",
           link: "/mpro/3d",
+          location: "Anjuman Hall",
         },
         session3e: {
           title: "Session 3e: Digital",
           link: "/mpro/3e",
+          location: "Board Room",
         }
       }
     },
@@ -272,22 +287,27 @@ const MProTable = () => {
         session4a: {
           title: "Session 4a: Emerging Devices and In-memory",
           link: "/mpro/4a",
+          location: "Majlis Main",
         },
         session4b: {
           title: "Session 4b: Digital and Memory",
           link: "/mpro/4b",
+          location: "Majlis Second Hall",
         },
         session4c: {
           title: "Session 4c: Accelerator",
           link: "/mpro/4c",
+          location: "Adab Arz Hall",
         },
         session4d: {
           title: "Session 4d: FPGA",
           link: "/mpro/4d",
+          location: "Anjuman Hall",
         },
         session4e: {
           title: "Session 4e:  Digital & Embedded System",
           link: "/mpro/4e",
+          location: "Board Room",
         }
       }
     },
@@ -331,6 +351,9 @@ const MProTable = () => {
         )}
         {session.papers && (
           <span className="text-xs text-gray-600 block mt-1">{session.papers}</span>
+        )}
+        {session.location && (
+          <span className="text-xs text-gray-600 block mt-1">{session.location}</span>
         )}
       </div>
     </div>
