@@ -28,7 +28,23 @@ const MProTable = () => {
       isBreak: false,
       special: true,
       title: "VDAT-2025 Inauguration",
-      description: "Chief Guest : Shri. Sanjeev Arora (Minister for Investment Promotion of Punjab), Sunita Verma, Group Coordinator R&D at Ministry of Electronics & IT (MeitY), Hitesh Garg, Vice President and India Country Manager, NXP Semiconductors, Prof. Rajeev Ahuja, Director IIT Ropar, Prof. Laxmidhar Behera, Director IIT Mandi, Prof Animesh Biswas, Professor IIT Kanpur, Prof. Rajesh Kumar Bhatia, Director PEC - Chandigarh, Madhu Chitkara, Pro Chancellor Chitkara University, Prof. Manpreet Singh Manna, Vice-Chancellor, Chandigarh University, Dr. Satya Gupta, President VSI, Prof. Rohit Sharma, Professor IIT Ropar, Prof. Neeraj Goel, Professor IIT Ropar, Prof. Hitesh Shrimali, Professor IIT Mandi, Prof. Brajesh Rawat, Professor IIT Ropar, Prof. Shivani Malhotra, Professor Chitkara University"
+ description: [
+  "Chief Guest : Shri. Sanjeev Arora (Minister for Investment Promotion of Punjab)<br>",
+  "Sunita Verma, Group Coordinator R&D at Ministry of Electronics & IT (MeitY)<br>",
+  "Hitesh Garg, Vice President and India Country Manager, NXP Semiconductors<br>",
+  "Prof. Rajeev Ahuja, Director IIT Ropar<br>",
+  "Prof. Laxmidhar Behera, Director IIT Mandi<br>",
+  "Prof Animesh Biswas, Professor IIT Kanpur<br>",
+  "Prof. Rajesh Kumar Bhatia, Director PEC - Chandigarh<br>",
+  "Madhu Chitkara, Pro Chancellor Chitkara University<br>",
+  "Prof. Manpreet Singh Manna, Vice-Chancellor, Chandigarh University<br>",
+  "Dr. Satya Gupta, President VSI<br>",
+  "Prof. Rohit Sharma, Professor IIT Ropar<br>",
+  "Prof. Neeraj Goel, Professor IIT Ropar<br>",
+  "Prof. Hitesh Shrimali, Professor IIT Mandi<br>",
+  "Prof. Brajesh Rawat, Professor IIT Ropar<br>",
+  "Prof. Shivani Malhotra, Professor Chitkara University<br>"
+]
     },
     {
       time: "10:00 AM - 10:15 AM",
@@ -394,9 +410,10 @@ const MProTable = () => {
                           </div>
                         )}
                         {row.description && (
-                          <div className="text-gray-600 text-xs leading-tight mt-1">
-                            {row.description}
-                          </div>
+                          <div
+  className="text-gray-600 text-xs leading-tight mt-1"
+  dangerouslySetInnerHTML={{ __html: row.description }}
+/>
                         )}
                       </td>
                     ) : (
