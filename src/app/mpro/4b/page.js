@@ -109,17 +109,6 @@ papers = [
     }
   },
 
-    {
-    id: '216',
-    time: '3:15 PM - 3:30 PM',
-    title: 'Analysis of Circuits with Partially Correlated Multi-Vt Cell Variations using Sensitivity Modeling and Propagation.',
-    authors: ['Mohd Abu Ubaida ' , ' Prashasti Pandey ',' Sneh Saurabh', 'Ajoy Mandal' , 'Venkatraman Ramakrishnan'],
-    abstract: `Traditional static timing analysis (STA) tools consider the global variations in low-threshold voltage (LVT) and high-threshold voltage (HVT) transistors as fully correlated. However, in reality, due to differences in fabrication, the variations in these transistors are partially correlated, introducing inaccuracies in computing statistical attributes of delay in multiVt circuits. In this paper, we present an analytical framework to compute cell delay variance, accounting for global variations in LVT and HVT transistors. We introduce a novel approach for computing the variance of total path delay in a mixed LVT HVT circuit that considers partial correlation between LVT-HVT transistors. We propose characterizing a sensitivity library that enables the analytical computation of cell delay variance and the propagation of cross sensitivities, i.e., the sensitivity of LVT cell delay with respect to HVT device parameters and vice-versa.We demonstrate that the standard deviation of path delay in an inverter chain computed using the proposed framework agrees quite well with the Monte Carlo SPICE simulations, exhibiting errors less than 5%. Moreover, the proposed framework can capture the effects of varying slews, load, correlation between LVT and HVT devices, and configuration. This work also demonstrates the application of multi-Vt cells to mitigate the impact of process-induced variations and provides insights into their effectiveness for circuit design.`,
-    mainContact: {
-      name: 'Mohd Abu Ubaida',
-      email: 'abu23216@iiitd.ac.in'
-    }
-  },
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);

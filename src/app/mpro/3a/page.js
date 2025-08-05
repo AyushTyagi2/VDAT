@@ -52,7 +52,7 @@ export default function SessionLayout({
 papers = [
   {
     id: '288',
-    time: '11:30 AM - 11:45 AM',
+    time: '11:45 AM - 12:00 PM',
     title: 'Low-Power Approximate Multiplier Architecture for Deep Neural Networks',
     authors: ['Pragun Jaswal' , '  Hemanth Krishna Lavati ' , ' Srinivasu bodapati'],
     abstract: `This paper proposes an energy-efficient approximate multiplier architecture for deep neural network (DNN) applications. A 4:2 compressor, introducing only a single combination error, is designed and integrated into an 8×8 unsigned multiplier. This integration significantly reduces the usage of exact compressors while preserving low error rates. The proposed multiplier is employed within a custom convolution layer and evaluated on neural network tasks, including image recognition and denoising. Hardware evaluation demonstrates that the proposed design achieves up to 30.24\% energy savings compared to the best of existing multipliers. In image denoising, the custom approximate convolution layer achieves improved Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index Measure (SSIM) compared to other approximate designs. Additionally, when applied to handwritten digit recognition, the model maintains high classification accuracy. These results demonstrate that the proposed architecture offers a favorable balance between energy efficiency and computational precision, making it suitable for low-power AI hardware implementations.`,
@@ -63,7 +63,7 @@ papers = [
   },
   {
     id: '92',
-    time: '11:45 AM - 12:00 PM',
+    time: '12:00 PM - 12:15 PM',
     title: 'High-Performance Data Level Parallelism based Variable Precision 32-bit Co-Processor Design',
     authors: ['Mohamed Asan Basiri M', 'Joel Israel'],
     abstract: `A co-processor is a hardware accelerator used to improve the performance of the primary processor. One of the best methods to enhance the co-processor's performance is to take advantage of the idea of parallelism. In this paper, a high performance 32-bit co-processor is proposed. The proposed 32-bit co-processor exploits the idea of data-level parallelism (DLP), where multiple less precision operations such as additions, subtractions, multiplications, divisions, shiftings, and logical operations are performed in parallel. Also, we propose a variable precision 32 bit divider to perform one 32-bit division or tow 16-bit divisions or four 8-bit divisions in parallel. Similarly, we propose a 32-bit variable precision right/left shifter, where one 32-bit shift or two 16-bit shifts or four 8-bit shifts are performed in parallel. These proposed 32-bit variable precision divider and shifters are the part of our proposed 32-bit co-processor. As an application part, the proposed 32-bit co-processor is used in the calculation of the (32×32)-point forward 2D integer discrete cosine transform, which is used to compress a (32×32)-point greyscale image. The forward 2D integer discrete cosine transform of the image is calculated using our proposed co-processor with hardware software co-design in Xilinx SDK with Zynq 7000 SoC as the target FPGA.`,
@@ -74,7 +74,7 @@ papers = [
   },
   {
   id: '362',
-  time: '12:00 PM - 12:15 PM',
+  time: '12:15 PM - 12:30 PM',
   title: 'Energy Efficient V-Band Low Noise Amplifier with Enhanced Noise Performance for Satellite Communications.',
   authors: ['Namrata Tripathi', 'Saroj Mondal'],
   abstract: `This paper presents a V-band low-noise amplifier (LNA) designed using a two-stage cascode architecture in 65 nm CMOS technology. Incorporating source degeneration and noise canceling techniques, the LNA achieves a peak gain of 20.8 dB at 56.8 GHz, with a 3-dB bandwidth ranging from 54 to 60.6 GHz. Operating from a 1.2 V supply, it consumes 7.2 mW of DC power and attains a minimum noise figure (NF) of 4.25 dB. The input 1-dB compression point (IP1dB) is −11.68 dBm at 58 GHz. These performance metrics demonstrate the LNA's suitability for low-power satellite communication applications.`,
@@ -85,7 +85,7 @@ papers = [
 },
      {
     id: '85',
-    time: '12:15 PM - 12:30 PM',
+    time: '12:30 PM - 12:45 PM',
     title: 'HLS based Hardware Watermarking using an Integrated Framework based on Encoded Dependency Matrix and Encrypted Load-Factor Signature',
     authors: ['Anirban Sengupta', 'Vishal Chourasia'],
     abstract: `This paper presents a novel secure High-Level Synthesis (HLS) based hardware watermarking methodology for detective countermeasure against intellectual property (IP) piracy and false IP ownership attacks. The proposed HLS based watermarking technique exploits an integrated framework based on encoded dependency matrix and encrypted load-factor signature. The proposed approach can produce more robust and secure IP designs against ghost insertion search attack, false IP ownership and tampering or removal attack as indicated through significantly lower probability of coincidence and higher tamper tolerance values. Comparison of proposed approach with related works indicated superior security at zero design cost overhead`,
@@ -96,7 +96,7 @@ papers = [
   },
   {
     id: '299',
-    time: '12:30 PM - 12:45 PM',
+    time: '12:45 PM - 1:00 PM',
     title: 'Hardware Implementation of True Motion Prediction for WebP Lossy Image Compression',
     authors: ['Anurag Sharma', 'Srinivasu Bodapati'],
     abstract: `With the rapid growth of visual data in multimedia and embedded systems, there is a pressing need for lightweight and efficient image compression for IoT applications. This work presents a hardware architecture for the True Motion Prediction (TM_PRED) utilized in the WebP lossy image compression, which is a key contributor to spatial redundancy removal. The proposed architecture, synthesized on FPGA, utilizes 310 LUTs, 221 flip-flops, a BRAM, and achieves a maximum operating frequency of 253 MHz. The predicted pixel values are further utilized in a software-based WebP encoder to evaluate end-to-end compression performance. The proposed architecture is validated using grayscale images from the IEEE C4L dataset, and the results reveal that the TM_PRED achieves 6%–11% improvement in PSNR, 3%–12% improvement in SSIM, and 33%–58% reduction in file size compared to JPEG across varying quality levels. The results demonstrate that offloading the intra prediction module to hardware can significantly enhance compression efficiency while remaining suitable for real-time image applications.`,
@@ -117,7 +117,7 @@ papers = [
   // },
   {
     id: '335',
-    time: '12:45 PM - 1:00 PM',
+    time: '1:00 PM - 1:15 PM',
     title: 'Edge-AI based Real-Time Infant Monitoring using Multimodal Sensing',
     authors: ['Hrushikesh Ramilla', 'Ravindranadh Ambica Golakoti', 'Pradyut Kumar Sanki', 'Biswabandhu Jana'],
     abstract: `Abstract—Continuous parental supervision is particularly challenging during an infant's sleep, a period when many un- expected risks can arise. To enhance infant safety, we developed a lightweight, edge-AI based real-time infant monitoring system. The proposed system integrates both audio and visual surveil- lance to detect potential risks during sleep. For audio monitoring, we developed a deep learning model combining Convolutional Neural Networks (CNN), Bidirectional Long Short-Term Memory (BiLSTM), and an attention mechanism to differentiate between real distress cries and normal baby sounds. On the visual front, a camera feeds data into a MediaPipe-based module that assesses key safety parameters, including face visibility, body coverage, and safe sleeping posture. The entire system is implemented on a Raspberry Pi board, ensuring efficient, low-power edge processing. In manual testing, the system has achieved 90% and 94% accuracy for real-time audio and video performance. Overall, the proposed solution offers a practical, cost-effective approach for enhancing infant safety in home environments. Index Terms—Infant monitoring, Real-time systems, Deep learning, Computer vision`,

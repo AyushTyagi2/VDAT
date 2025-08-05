@@ -50,17 +50,6 @@ export default function SessionLayout({
   
   // Papers Array
 papers = [
-  {
-    id: '258',
-    time: '11:30 AM - 11:45 AM',
-    title: 'Energy-Efficient Ternary-SRAM cell in CNFET and FinFET Technologies using Static Ternary Inverter (STI)',
-    authors: ['SEKHAR DEVANDLA', 'LOKESH CHOWKACHERLA', 'Nitesh Kumar Rathore', 'Ramakant Yadav', 'Pooran Singh'],
-    abstract: 'This research uses fin-field effect transistors (FinFETs) and carbon nanotube FETs (CNFETs) to provide an exciting low-power consumption and high-performance SRAM bit cell using the proposed 6-transistor-based standard ternary inverter (STI). Ternary logic has various advantages over binary logic, including higher bit density and energy efficiency. When comparing the proposed CNFET STI to the traditional design STI, there is a 99.7% improvement in the power-delay product (PDP). Then, the proposed STI ternary logic has been used to design an SRAM bit cell using the CNFET and FinFET technologies in 32nm. This study shows that the proposed STI ternary CNFET-based SRAM cell design outperforms both the proposed FinFET-based and the conventional ternary SRAM designs in terms of write and read delay time, and dynamic power dissipation. Compared to conventional CNFET, proposed FinFET, and conventional FinFET SRAM cells, the proposed design achieves improved write delay (1.43×, 1.51×, 4.81×), read delay (1.22×, 0.6×, 2.54×), reduced write dynamic power (9.44×, 5.63×, 6.32×), and reduced read dynamic power (1.9×, 37.8×, 15.8×), respectively.',
-    mainContact: {
-      name: 'Pooran Singh',
-      email: 'pooran.singh@mahindrauniversity.edu.in'
-    }
-  },
     {
     id: '305',
     time: '11:45 AM - 12:00 PM',
@@ -118,6 +107,17 @@ papers = [
     }
   },
   
+      {
+      id: '216',
+      time: '1:00 PM - 1:15 PM',
+      title: 'Analysis of Circuits with Partially Correlated Multi-Vt Cell Variations using Sensitivity Modeling and Propagation.',
+      authors: ['Mohd Abu Ubaida ' , ' Prashasti Pandey ',' Sneh Saurabh', 'Ajoy Mandal' , 'Venkatraman Ramakrishnan'],
+      abstract: `Traditional static timing analysis (STA) tools consider the global variations in low-threshold voltage (LVT) and high-threshold voltage (HVT) transistors as fully correlated. However, in reality, due to differences in fabrication, the variations in these transistors are partially correlated, introducing inaccuracies in computing statistical attributes of delay in multiVt circuits. In this paper, we present an analytical framework to compute cell delay variance, accounting for global variations in LVT and HVT transistors. We introduce a novel approach for computing the variance of total path delay in a mixed LVT HVT circuit that considers partial correlation between LVT-HVT transistors. We propose characterizing a sensitivity library that enables the analytical computation of cell delay variance and the propagation of cross sensitivities, i.e., the sensitivity of LVT cell delay with respect to HVT device parameters and vice-versa.We demonstrate that the standard deviation of path delay in an inverter chain computed using the proposed framework agrees quite well with the Monte Carlo SPICE simulations, exhibiting errors less than 5%. Moreover, the proposed framework can capture the effects of varying slews, load, correlation between LVT and HVT devices, and configuration. This work also demonstrates the application of multi-Vt cells to mitigate the impact of process-induced variations and provides insights into their effectiveness for circuit design.`,
+      mainContact: {
+        name: 'Mohd Abu Ubaida',
+        email: 'abu23216@iiitd.ac.in'
+      }
+    },
 ]
 }) {
   const [darkMode, setDarkMode] = useState(false);

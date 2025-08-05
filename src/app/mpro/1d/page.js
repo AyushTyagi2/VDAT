@@ -111,6 +111,17 @@ We introduce Spin-TLB, a novel TLB architecture that incorporates STT-RAM into t
   }
 },
 {
+  id: '258',
+  time: '3:00 PM - 3:15 PM',
+  title: 'Energy-Efficient Ternary-SRAM cell in CNFET and FinFET Technologies using Static Ternary Inverter (STI)',
+  authors: ['SEKHAR DEVANDLA', 'LOKESH CHOWKACHERLA', 'Nitesh Kumar Rathore', 'Ramakant Yadav' , 'Pooran Singh'],
+  abstract: `This research uses fin-field effect transistors (FinFETs) and carbon nanotube FETs (CNFETs) to provide an exciting low-power consumption and high-performance SRAM bit cell using the proposed 6-transistor-based standard ternary inverter (STI). Ternary logic has various advantages over binary logic, including higher bit density and energy efficiency. When comparing the proposed CNFET STI to the traditional design STI, there is a 99.7% improvement in the power-delay product (PDP). Then, the proposed STI ternary logic has been used to design an SRAM bit cell using the CNFET and FinFET technologies in 32nm. This study shows that the proposed STI ternary CNFET-based SRAM cell design outperforms both the proposed FinFET-based and the conventional ternary SRAM designs in terms of write and read delay time, and dynamic power dissipation. Compared to conventional CNFET, proposed FinFET, and conventional FinFET SRAM cells, the proposed design achieves improved write delay (1.43×, 1.51×, 4.81×), read delay (1.22×, 0.6×, 2.54×), reduced write dynamic power (9.44×, 5.63×, 6.32×), and reduced read dynamic power (1.9×, 37.8×, 15.8×), respectively.`,
+  mainContact: {
+    name: 'Pooran Singh',
+    email: 'pooran.singh@mahindrauniversity.edu.in',
+  }
+},
+{
   id: '166',
   time: '3:15 PM - 3:30 PM',
   title: 'A Scalable FSM-Controlled SRAM Architecture for Robust Hardware Memory Security',
