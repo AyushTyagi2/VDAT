@@ -53,7 +53,7 @@ papers = [
   
   {
     id: '262',
-    time: '2:00 PM - 2:15 PM',
+    time: '2:15 PM - 2:30 PM',
     title: 'Hardware Accelerator for 2D DCT/ IDCT with Improved Loeffler Architecture and CSD Coding',
     authors: ['Yogeshwar Rai' , 'Sovanjyoti Giri ' , ' B Naresh Kumar Reddy'],
     abstract: 'This paper introduces a methodology for identifying process variability of chips based on PMOS sensitive and NMOS sensitive ring oscillators (RO) and classification-based Machine Learning algorithms. These ring oscillators produce frequencies indicative of the operational process of the chip. Schmitt Trigger usage increases the sensitivity of inverters with respect to variations in process. The combination of frequencies from NMOS-sensitive RO (freq_3n_st) and NMOS-cap RO (freq_n_cap), PMOS-sensitive RO (freq_3p_st) and PMOS-cap RO (freq_p_cap) becomes the primary features of Machine Learning algorithms. The model predicts whether NMOS or PMOS devices are in a fast, slow or typical range individually. Experimental validation demonstrates classification accuracy of 89% for NMOS and 92% for PMOS devices across various process corners. This methodology provides an efficient solution for on-chip process monitoring.',
@@ -64,7 +64,7 @@ papers = [
   },
   {
     id: '325',
-    time: '2:15 PM - 2:30 PM',
+    time: '2:30 PM - 2:45 PM',
     title: 'Ternary Approximate Max Pooling Architecture Using Multi-Trit Borrow Generators',
     authors: ['Hemanth Krishna Lavati' ,'srinivasu bodapati'],
     abstract: `This paper presents novel ternary multi-trit borrow generator architectures for efficient max pooling operations. We propose both exact and approximate designs for 3-trit and 6-trit borrow generators, using a modified ternary full subtractor. The 6-trit borrow generator is hierarchically constructed using three 3-trit borrow generators in a borrow-select-based configuration. Based on the positional arrangement of the 3-trit modules, we introduce three distinct approximate 6-trit max operator designs, each offering a unique trade-off between accuracy and hardware efficiency. These approximate max operators are employed to perform max pooling for both $2 \times 2$ and $3 \times 3$ windows. Experimental results demonstrate that the proposed approximate designs achieve superior PSNR of 35 dB and SSIM values are more than 90\% over the conventional exact pooling layer, thereby validating their effectiveness in image processing applications.`,
@@ -75,7 +75,7 @@ papers = [
   },
      {
     id: '213',
-    time: '2:30 PM - 2:45 PM',
+   time: '2:45 PM - 3:00 PM',
     title: 'Hardware Implementation of Swish Activation Function Using Piecewise Regression Trees for Deep Neural Networks',
     authors: ['Akash Dev Roshan', 'Prithwijit Guha', 'Gaurav Trivedi'],
     abstract: ``,
@@ -87,7 +87,7 @@ papers = [
 
   {
    id: '358',
-   time: '2:45 PM - 3:00 PM',
+   time: '3:00 PM - 3:15 PM',
    title: 'Mixed Adaptive Precision SIMD Systolic Array Accelerator for Deep Learning',
    authors: ['GOPAL RAUT' , 'DAVID SELVAKUMAR', 'PRANOSE J. EDAVOOR',' RITAMBHARA THAKUR'],
    abstract: ``,
@@ -98,7 +98,7 @@ papers = [
  },
  {
    id: '347',
-   time: '3:00 PM - 3:15 PM',
+    time: '3:15 PM - 3:30 PM',
    title: 'Neural Network-Based Offset Calibration using Capacitor Arrays in Dynamic Comparators',
    authors: ['Angel Garg ', ' Anil Singh ',' Alpana Agarwal'],
    abstract: `Dynamic comparators are essential components in analog-to-digital converters (ADCs) [1], but are prone to offset voltage errors due to process-induced mismatches. This paper presents a hybrid calibration technique that combines traditional capacitor-based offset calibration [2] with a neural network (NN) to effectively minimize offset. The neural network-based offset calibration technique significantly improves efficiency by automatically predicting optimal capacitor array configurations for dynamic comparators, eliminating time-consuming manual tuning procedures, and achieving offset compensation. The time-based offset polarity classification approach is made, where the zero-crossing timing is extracted using a derivative circuit followed by a time-to-digital converter (TDC). The TDC output is then fed into the neural network, which predicts the optimal capacitor array configuration.`,
@@ -109,7 +109,7 @@ papers = [
  },
   {
     id: '302',
-    time: '3:15 PM - 3:30 PM',
+    time: '3:30 PM - 3:45 PM',
     title: 'Bidirectional Multi-process Recurrent Neural Networks Based Signal Integrity Assessment for N-Line Coaxial-Through Glass Vias in 3D Integration',
     authors: ['Suyash Sachdeva', 'K. Madhu Kiran' , 'Rohit Dhiman'],
     abstract: `In the domain of high-frequency three-dimensional integrated circuits (3D-ICs), the accurate analysis of signal integrity across Through-Glass Vias (TGVs) is essential, especially in dense multi-line interconnect environments. Traditional electromagnetic simulations, while accurate, are computationally intensive when modeling complex interactions such as crosstalk in high-density TGV arrays. This work proposes a deep learning-based alternative leveraging a multi-path Long Short-Term Memory (LSTM) model, designed to learn the temporal and spatial dependencies of crosstalk effects within coaxial TGV structures. A custom simulation dataset comprising N signal lines was generated to emulate realistic high-frequency behavior in a coaxial-TGV interconnect scenario. The proposed model achieved an R² score of 0.9263 on the test set, indicating strong predictive accuracy in modeling the nonlinear and multi-path signal behavior across the TGV lines.`,

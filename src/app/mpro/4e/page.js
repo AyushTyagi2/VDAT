@@ -52,7 +52,7 @@ export default function SessionLayout({
 papers = [
    {
     id: '257',
-    time: '2:00 PM - 2:15 PM',
+    time: '2:15 PM - 2:30 PM',
     title: 'MAGIC-Based ASCON Substitution Box for In-Memory Computing using Memristor',
     authors: ['Ritika Choudhary', 'Sumit Kumar Suman', 'Srinivasu Bodapati'],
     abstract: `This work presents a MAGIC-based implementation of the ASCON S-box, targeting in-memory computing applications using memristors. It focuses on reducing hardware complexity and improving security. The design is evaluated using performance metrics including power, area, and delay, showing improvements over traditional CMOS-based approaches. Post-layout simulations are conducted to verify robustness.`,
@@ -63,7 +63,7 @@ papers = [
   },
   {
     id: '152',
-    time: '2:15 PM - 2:30 PM',
+        time: '2:30 PM - 2:45 PM',
     title: 'Data Level Parallelism based High Throughput BCD Multiplier Design',
     authors: ['Mohamed Asan Basiri M', 'Suraj Kumar Pal'],
     abstract: `An efficient BCD multiplier design exploiting data-level parallelism is presented. The multiplier performs simultaneous partial multiplications (N×2×N/2) and supports high throughput BCD operations. Verified with Verilog HDL and 45 nm CMOS tech using Cadence, the 16×16-bit pipeline version achieves a 75% throughput improvement compared to conventional array multipliers.`,
@@ -74,7 +74,7 @@ papers = [
   },
   {
     id: '308',
-    time: '2:30 PM - 2:45 PM',
+    time: '2:45 PM - 3:00 PM',
     title: 'Design and Implementation of a Quadratic Boost with Digital Controller for Energy Harvesting',
     authors: ['Shailendra Kumar Paswan', 'Vikas Das', 'Vijay Kumar Gupta', 'Bipin Chandra Mandi'],
     abstract: `The digital controller uses STM32 for quadratic boost operation aimed at low-voltage energy harvesting. A PI controller ensures stability and a fourth-order transfer function boosts power output. Evaluation through MATLAB simulation and hardware testing demonstrates effectiveness under variable input voltages (3.7±0.5V).`,
@@ -85,7 +85,7 @@ papers = [
   },
   {
     id: '306',
-    time: '2:45 PM - 3:00 PM',
+    time: '3:00 PM - 3:15 PM',
     title: 'Approximate Signed Multiplier with Sign-Focused Compression for Edge Detection Applications',
     authors: ['Hemanth Krishna Lavati', 'Srinivasu Bodapati', 'Sreehari Veeramachaneni', 'Bhaskar Jamm Rao', 'Noor Mahammad Sk'],
     abstract: `An approximate Baugh-Wooley multiplier using sign-focused compressors is proposed. It achieves 29.21% PDP reduction and 14.39% delay improvement. Integrated in a CNN-based edge detector, it demonstrates superior efficiency over existing 8-bit multipliers. Designed for real-world signal processing.`,
@@ -96,7 +96,7 @@ papers = [
   },
   {
     id: '365',
-    time: '3:00 PM - 3:15 PM',
+    time: '3:15 PM - 3:30 PM',
     title: 'ASIC Implementation of CAN-XL protocol',
     authors: ['Madhumitha B M', 'Sharanya Shetty', 'Aryan Kumar', 'Sudeendra Kumar K'],
     abstract: `CAN-XL, an extension to Classical CAN, is analyzed for ASIC implementation. Results using 90nm library show 5.32% area savings, 18.3% higher power usage due to increased switching, and 972.76 MHz frequency. Despite slightly lower frequency, CAN-XL enables modern vehicular communication while retaining CAN and Ethernet compatibility.`,
@@ -107,7 +107,7 @@ papers = [
   },
   {
     id: '243',
-    time: '3:15 PM - 3:30 PM',
+    time: '3:30 PM - 3:45 PM',
     title: 'An Approximate CLA using Carry Equation of Two Bits',
     authors: ['Menka Yadav', 'Ekagra Sikka', 'Aabhaas Sikka'],
     abstract: `A carry-lookahead adder based on a new 2-bit carry equation is proposed to reduce the area and delay of the CLA design. This approach simplifies logic, achieving a 5.9% improvement in PDP and reducing the number of logic gates compared to traditional CLA. Evaluated through 28nm ASIC synthesis.`,

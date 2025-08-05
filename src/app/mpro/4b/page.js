@@ -52,7 +52,7 @@ export default function SessionLayout({
 papers = [
     {
     id: '151',
-    time: '2:00 PM - 2:15 PM',
+    time: '2:15 PM - 2:30 PM',
     title: 'Hardware Implementation of a DCT Architecture with LMS Adaptation and Hybrid Arithmetic Units',
     authors: ['Kavipriyaa S T ' , ' Aniruddha Kanhe'],
     abstract: `This paper introduces a hardware architecture for the Discrete Cosine Transform, focusing on optimizations at the arithmetic level. The design efficiently handles 16-bits input and generates 32-bits output, making it ideal for sequential data applications. Central to the architecture is the integration of a finite impulse response filter with least mean square adaptation mechanism, which allows dynamic adjustment of coefficients based on discrepancies between expected and actual outputs. By utilizing a look-up table to store precomputed DCT coefficients, the design significantly reduces real-time computational demands. A notable contribution of this work is the implementation of hybrid arithmetic units for both adders and multipliers, which combine precise and approximate logic. This strategy minimizes hardware complexity and enhances computational efficiency while maintaining output accuracy. The architecture is fully described in Verilog, synthesized, and advanced through physical design to GDSII using a standard ASIC flow. Notably, the proposed hybrid design achieves an average error reduction of 11.15%, decreasing the error from 12.45% in traditional implementations to 11.28%. These results validate the architecture's capability to preserve output quality while leveraging approximate computing methods, particularly in audio compression applications.`,
@@ -63,7 +63,7 @@ papers = [
   },
    {
     id: '180',
-    time: '2:15 PM - 2:30 PM',
+    time: '2:30 PM - 2:45 PM',
     title: 'SADP Trim Placement Methodology for Faster Convergence with Complex Design Rules',
     authors: ['Deepak Karnatak', 'Sachin Shrivastava', 'Vishal Rastogi'],
     abstract: `Self Aligned Double Patterning has become the mainstream lithography method for sub 20-nm technology nodes. Trim layer provides a solution to the designers to achieve the smaller spacing between the line ends. However, in sub 10-nm technology nodes, rules have become very complex for trim placement. The trims now need to be aware of not only the line end spacing, but also need to be aware of the wires and other trims in the neighborhood. The designers need to run multiple iterations to fix the trim placement. In this paper, we propose a solution which takes care of complex DRC rules and place the trims with variable heights. The solution aims at correcting the trims at construct preventing the need of designers manually fixing them. Our experimental results show a marked improvement in the number of DRC clean trims that can be inserted using our methodology.`,
@@ -75,7 +75,7 @@ papers = [
 
     {
     id: '183',
-    time: '2:30 PM - 2:45 PM',
+    time: '2:45 PM - 3:00 PM',
     title: 'Method to Achieve Early CDC Closure using Graph Convolutional Network (GCN) and Isomorphism',
     authors: ['Pronay Biswas' , 'Rahul Roy', 'Usnish Mukherjee', 'Anshu Malani', 'Sudeep Mondal', 'Deepak Ahuja' , 'PARAS MAL JAIN'],
     abstract: 'Clock Domain Crossing (CDC) verification is a critical aspect of System on Chip (SoC) design, requiring extensive analysis using formal technologies such as False Path Identification, Qualifier Validation for Data Paths, and Data Loss Analysis for Fast to Slow Control Paths. However, formal verification is compute-intensive on large SoCs due to the necessity of checking all bits of buses for completeness, coupled with high memory and runtime requirements, often leaving formal analysis incomplete for end users. In this paper, we propose a novel approach to address these challenges by leveraging Graph Isomorphic properties with Graph Convolutional Networks (GCNs). It utilizes GCNs to detect graph isomorphisms by generating embeddings of the graphs and identifying similar logic circuits within the design. By detecting similar clusters, CDC analysis can be performed on a single cluster element, thereby significantly reducing the runtime and computational resources required for comprehensive CDC verification. The experimental results demonstrate about 5x gain with this approach, which results in a substantial reduction of verification time while maintaining the accuracy and completeness of the analysis.',
@@ -87,7 +87,7 @@ papers = [
 
      {
     id: '140',
-    time: '2:45 PM - 3:00 PM',
+    time: '3:00 PM - 3:15 PM',
     title: 'A Dynamically Biased, 0.46pJ/bit, 23.5Gbps, Inverter Intensive, PAM-4 Based Full-Duplex Interconnect',
     authors: ['Ganpat Anant Parulekar'],
     abstract: `This paper proposes a full-duplex input-output cell based on PAM-4 modulation, achieving a bi-directional throughput of 23.5 Gbps. The proposed design can be extended to the other modulation formats also. It features an inverter-based configuration with dynamic biasing. The inverter-based nature of this design makes it very easy to implement and power efficient in nature. The proof-of-concept circuit is implemented using the 65 nm UMC process. The proposed design achieves a figure of merit (power/frequency of operation) of 0.46 pJ/bit for 23.5 Gbps throughput in the simulations.`,
@@ -99,7 +99,7 @@ papers = [
 
      {
     id: '351',
-    time: '3:00 PM - 3:15 PM',
+    time: '3:15 PM - 3:30 PM',
     title: 'Edge-AI Driven PyramidNet for Chronic Wound Segmentation using Point-of-Care Devices',
     authors: ['Pritam Chakraborty', 'Tamoghna Sonowal', 'Mahua Bhattacharya', 'Pradyut Kumar Sanki' , 'Biswabandhu Jana'],
     abstract: `Accurate and efficient wound assessment is critical in clinical practice, especially in resource-constrained or rural healthcare environments where expert evaluation tools are often unavailable. This paper presents a lightweight and high-performing PyramidNet model for wound segmentation due to its capturing both fine-grained boundaries and global wound structure. To evaluate its clinical utility, we tested the model on a publicly available Chronic Wound dataset, achieving a remarkable IoU of 99.39%, Dice Score of 99.47%, and Recall of 99.98%, outperforming several state-of-the-art models with maintaining a compact size of 2 million parameters. To facilitate the growth of a point-of-care (PoC) device, the model is deployed on Raspberry Pi for real-time wound image segmentation. Overall, the approach enables scalable and accessible wound care automation in remote and underserved areas.`,
