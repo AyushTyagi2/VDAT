@@ -13,7 +13,7 @@ const committees = [
         institute: "VLSI Society of India",
         linkedin:
           "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-        image: "./images/satya.jpg",
+        image: "../images/satya.jpg",
       },
     ],
   },
@@ -26,13 +26,13 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/prof-rajeev-ahuja-6436b3335/?originalSubdomain=in",
         website: "https://www.iitrpr.ac.in/director",
-        image: "./images/rajeev.jpeg",
+        image: "../images/rajeev.jpeg",
       },
       {
         name: "Prof Laxmidhar Behera",
         institute: "Director, IIT Mandi",
         website: "https://iitmandi.ac.in/institute/director",
-        image: "./images/laxmi.png",
+        image: "../images/laxmi.png",
       },
       {
         name: "Prof Rajesh Bhatia",
@@ -40,7 +40,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/rajesh-bhatia-ab5aa235/?originalSubdomain=in",
         website: "https://pec.ac.in/director",
-        image: "./images/rajesh.jpg",
+        image: "../images/rajesh.jpg",
       },
       {
         name: "Dr Madhu Chitkara",
@@ -48,13 +48,13 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/dr-madhu-chitkara-97713b185/?originalSubdomain=in",
         website: "https://www.chitkara.edu.in/dr-madhu-chitkara/",
-        image: "./images/madhu.jpg",
+        image: "../images/madhu.jpg",
       },
       {
         name: "Prof. Manpreet Singh Manna",
         institute: "Vice Chancellor, Chandigarh University",
         linkedin: "https://www.linkedin.com/in/drmanna/",
-        image: "./images/manpreet.jpg",
+        image: "../images/manpreet.jpg",
       },
     ],
   },
@@ -67,7 +67,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/sudeb-dasgupta-2b19b64/?originalSubdomain=in",
         website: "https://ece.iitr.ac.in/sudeb-das-gupta/",
-        image: "./images/sudeb.jpg",
+        image: "../images/sudeb.jpg",
       },
       {
         name: "M Balakrishnan",
@@ -75,7 +75,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/m-balakrishnan-b3467924/?originalSubdomain=in",
         website: "https://www.cse.iitd.ernet.in/~mbala/",
-        image: "./images/MBala.jpg",
+        image: "../images/MBala.jpg",
       },
       {
         name: "R.K Sharma",
@@ -83,34 +83,34 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/r-k-sharma-21b3792a/?originalSubdomain=in",
         website: "https://nitkkr.ac.in/author/r-k-sharma/",
-        image: "./images/rk.jpg",
+        image: "../images/rk.jpg",
       },
       {
         name: "Vineet Sahula",
         institute: "MNIT Jaipur",
         linkedin: "https://www.linkedin.com/in/vineet07/?originalSubdomain=in",
         website: "https://mnit.ac.in/dept_ece/profile?fid=Q6w=",
-        image: "./images/vineet.jpg",
+        image: "../images/vineet.jpg",
       },
       {
         name: "Chitra Hariharan",
         institute: "Renesas",
         linkedin:
           "https://www.linkedin.com/in/chitra-hariharan-3a52691/?originalSubdomain=in",
-        image: "./images/chit.jpg",
+        image: "../images/chit.jpg",
       },
       {
         name: "RAJNISH SHARMA",
         institute: "Chitkara University",
         linkedin: "https://www.linkedin.com/in/rajnish-sharma-39948719/",
-        image: "./images/rajnish.jpg",
+        image: "../images/rajnish.jpg",
       },
       {
         name: "Yajvender Pal Verma",
         institute: " UIET Panjab University Chandigarh",
         linkedin:
           "https://www.linkedin.com/in/yajvender-pal-verma-042a5193/?originalSubdomain=in",
-        image: "./images/pal.jpg",
+        image: "../images/pal.jpg",
       },
     ],
   },
@@ -124,7 +124,7 @@ const committees = [
           "https://www.linkedin.com/in/rohit-sharma-9509b5197/?originalSubdomain=in",
         website:
           "https://www.iitrpr.ac.in/ee/profile.faculty.php?mail=rohit%40iitrpr.ac.in",
-        image: "./images/rohit.jpg",
+        image: "../images/rohit.jpg",
       },
       {
         name: "Neeraj Goel",
@@ -132,7 +132,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/neerajgoel/?originalSubdomain=in",
         website: "https://sites.google.com/view/neerajgoel",
-        image: "./images/neeraj.jpg",
+        image: "../images/neeraj.jpg",
       },
     ],
   },
@@ -145,7 +145,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/hitesh-shrimali-56183b19/?originalSubdomain=in",
         website: "https://faculty.iitmandi.ac.in/~hitesh/",
-        image: "./images/hitesh.jpg",
+        image: "../images/hitesh.jpg",
       },
       {
         name: "Brajesh Rawat",
@@ -153,14 +153,14 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/brajesh-rawat/?originalSubdomain=in",
         website: "https://www.iitrpr.ac.in/electrical/brajesh",
-        image: "./images/brajesh.jpg",
+        image: "../images/brajesh.jpg",
       },
       {
         name: "Shivani Malhotra",
         institute: "Chitkara University",
         linkedin:
           "https://www.linkedin.com/in/shivani-malhotra-6349b659/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-        image: "./images/shivani.jpg",
+        image: "../images/shivani.jpg",
       },
     ],
   },
@@ -173,7 +173,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/shubham-sahay-b1580bb0/?originalSubdomain=in",
         website: "https://home.iitk.ac.in/~ssahay/",
-        image: "./images/shubham.jpg",
+        image: "../images/shubham.jpg",
       },
       {
         name: "Saravana",
@@ -181,7 +181,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/saravana-kumar-687a6875/?originalSubdomain=in",
         website: "https://ece.iitr.ac.in/webpages/saravana/",
-        image: "./images/saravana.jpg",
+        image: "../images/saravana.jpg",
       },
       {
         name: "Sneh Saurabh",
@@ -189,14 +189,14 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/snehsaurabh/?originalSubdomain=in",
         website: "https://iiitd.ac.in/sneh",
-        image: "./images/sneh.jpg",
+        image: "../images/sneh.jpg",
       },
       {
         name: "Amit Kumar",
         institute: "Chitkara University",
         linkedin:
           "https://www.linkedin.com/in/amit-kumar-34228b139/?originalSubdomain=in",
-        image: "./images/amit.jpg",
+        image: "../images/amit.jpg",
       },
       {
         name: "Anupam Chattopadhyay",
@@ -204,7 +204,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/anupamchattopadhyay/?originalSubdomain=sg",
         website: "https://dr.ntu.edu.sg/cris/rp/rp01076",
-        image: "./images/anupam.jpg",
+        image: "../images/anupam.jpg",
       },
       {
         name: "Jai Narayan Tripathi",
@@ -212,14 +212,14 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/jai-narayan-tripathi-b189a88/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
         website: "http://home.iitj.ac.in/~jai/",
-        image: "./images/jai.jpg",
+        image: "../images/jai.jpg",
       },
       {
         name: "Aparna Akula",
         institute: "IEEE Chandigarh Subsection & CSIO Chandigarh",
         linkedin: "https://www.linkedin.com/in/anvaparna/",
         website: "https://icsio.csio.res.in/csio.ems/emp_profile.aspx?id=1021",
-        image: "./images/aparna.jpeg",
+        image: "../images/aparna.jpeg",
       },
     ],
   },
@@ -232,13 +232,13 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in",
         website: "https://sites.google.com/view/kalyantv",
-        image: "./images/tv.jpg",
+        image: "../images/tv.jpg",
       },
       {
         name: "Namrta",
         institute: "Aritrak Technologies",
         linkedin: "https://www.linkedin.com/in/namrta-sharma-blr/",
-        image: "./images/namrta.jpeg",
+        image: "../images/namrta.jpeg",
       },
     ],
   },
@@ -251,7 +251,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/pardeep-duhan-64262b74/?originalSubdomain=in",
         website: "https://www.iitrpr.ac.in/electrical/pardeepduhan",
-        image: "./images/pradeep.jpg",
+        image: "../images/pradeep.jpg",
       },
       {
         name: "Ruchika Gupta",
@@ -259,7 +259,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/ruchika-gupta-55bbb764/?originalSubdomain=in",
         website: "https://sites.google.com/view/ruchikagupta/",
-        image: "./images/ruchika.jpg",
+        image: "../images/ruchika.jpg",
       },
       {
         name: "Arun Singh",
@@ -267,7 +267,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/arun-kumar-singh-a5627742/?originalSubdomain=in",
         website: "https://pec.ac.in/ece/faculty/arun-kumar-singh",
-        image: "./images/arun.jpg",
+        image: "../images/arun.jpg",
       },
     ],
   },
@@ -279,7 +279,7 @@ const committees = [
         institute: "IIT Ropar",
         linkedin: "https://www.linkedin.com/in/mahendra-sakare-238134b/",
         website: "https://sites.google.com/a/iitrpr.ac.in/mahendra/home",
-        image: "./images/mahendra.jpg",
+        image: "../images/mahendra.jpg",
       },
     ],
   },
@@ -293,7 +293,7 @@ const committees = [
           "https://www.linkedin.com/in/alpana-agarwal-1542b118/?originalSubdomain=in",
         website:
           "https://www.thapar.edu/faculties/view/Dr.-Alpana-Agarwal/MTI5/MTU=",
-        image: "./images/alpana.jpg",
+        image: "../images/alpana.jpg",
       },
       {
         name: "Shonal Chouksey",
@@ -302,14 +302,14 @@ const committees = [
           "https://www.linkedin.com/in/shonal-chouksey-4a13568b/?originalSubdomain=in",
         website:
           "https://iiitu.ac.in/schools/soe/faculty/667b05e76914b0583f899e13",
-        image: "./images/shonal.webp",
+        image: "../images/shonal.webp",
       },
       {
         name: "Preet Yadav",
         institute: "NXP",
         linkedin:
           "https://www.linkedin.com/in/preet-yadav/?originalSubdomain=in",
-        image: "./images/preet.jpg",
+        image: "../images/preet.jpg",
       },
     ],
   },
@@ -322,7 +322,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/ambika-prasad-shah-ba978a22/?originalSubdomain=in",
         website: "https://www.iitjammu.ac.in/faculty/~ambikaprasadshah",
-        image: "./images/ambika.jpg",
+        image: "../images/ambika.jpg",
       },
       {
         name: "Shruti Jain",
@@ -331,7 +331,7 @@ const committees = [
           "https://www.linkedin.com/in/dr-shruti-jain-92705b130/?originalSubdomain=in",
         website:
           "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=1&year1=2021",
-        image: "./images/shruti.jpg",
+        image: "../images/shruti.jpg",
       },
       {
         name: "Balwinder Singh",
@@ -339,7 +339,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/dr-balwinder-singh-80a1b316/?originalSubdomain=in",
         website: "http://www.acsd.ac.in/Faculty_Balwinder.aspx",
-        image: "./images/balwinders.jpg",
+        image: "../images/balwinders.jpg",
       },
     ],
   },
@@ -350,7 +350,7 @@ const committees = [
         name: "Rajendra Pratap",
         institute: "HCL Tech",
         linkedin: "https://www.linkedin.com/in/rajendrapratap/",
-        image: "./images/rajendra.jpg",
+        image: "../images/rajendra.jpg",
       },
       {
         name: "John Jose",
@@ -358,14 +358,14 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/john-jose-bb8431106/?originalSubdomain=in",
         website: "https://www.iitg.ac.in/johnjose/",
-        image: "./images/john.jpg",
+        image: "../images/john.jpg",
       },
       {
         name: "Mohd Asim Saeed",
         institute: "SCL, Mohali",
         linkedin:
           "https://www.linkedin.com/in/asim-saeed-49097579/?originalSubdomain=in",
-        image: "./images/Asim.jpeg",
+        image: "../images/Asim.jpeg",
       },
     ],
   },
@@ -378,27 +378,27 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/venkata-kalyan-t-29ab28a0/?originalSubdomain=in",
         website: "https://sites.google.com/view/kalyantv",
-        image: "./images/tv.jpg",
+        image: "../images/tv.jpg",
       },
       {
         name: "Nishant Sahni",
         institute: "IIT Ropar",
         linkedin:
           "https://www.linkedin.com/in/nishant-sahni-a7b01130a/?originalSubdomain=in",
-        image: "./images/nishant.jpg",
+        image: "../images/nishant.jpg",
       },
       {
         name: "Aryan Singh",
         institute: "IIT Ropar",
         linkedin: "https://www.linkedin.com/in/aryan-singh-824329287/",
-        image: "./images/aryan.jpg",
+        image: "../images/aryan.jpg",
       },
       {
         name: "Ayush Tyagi",
         institute: "IIT Ropar",
         linkedin:
           "https://www.linkedin.com/in/ayush-tyagi-37154b2a4/?originalSubdomain=in",
-        image: "./images/ayush.jpg",
+        image: "../images/ayush.jpg",
       },
     ],
   },
@@ -408,7 +408,7 @@ const committees = [
       {
         name: "Gaganpreet Kaur",
         institute: "Thapar University",
-        image: "./images/gaganpreet.jpg",
+        image: "../images/gaganpreet.jpg",
       },
     ],
   },
@@ -419,7 +419,7 @@ const committees = [
         name: "Debiprasanna Sahoo",
         institute: "IIT Bhubaneswar",
         linkedin: "https://old.iitbbs.ac.in/profile.php/%20dpsahoo/",
-        image: "./images/debiprasanna.png",
+        image: "../images/debiprasanna.png",
       },
       {
         name: "Ganesh C. Patil",
@@ -427,7 +427,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/ganesh-c-patil-79b6306/?originalSubdomain=in",
         website: "https://vnit.ac.in/engineering/cvlsi/dr-ganesh-c-patil/",
-        image: "./images/ganesh.jpg",
+        image: "../images/ganesh.jpg",
       },
     ],
   },
@@ -441,14 +441,14 @@ const committees = [
           "https://www.linkedin.com/in/balwinderraj/?originalSubdomain=in",
         website:
           "https://departments.nitj.ac.in/dept/ece/Faculty/6430445538bff038a7805bcd",
-        image: "./images/balwinder.jpg",
+        image: "../images/balwinder.jpg",
       },
       {
         name: "Sivanantham",
         institute: "VIT Vellore",
         linkedin:
           "https://www.linkedin.com/in/vlsisiva/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-        image: "./images/sivanantham.jpg",
+        image: "../images/sivanantham.jpg",
       },
     ],
   },
@@ -460,7 +460,7 @@ const committees = [
         institute: "Chitkara University",
         linkedin: "https://www.linkedin.com/in/sagar-juneja/",
         website: "https://curin.chitkara.edu.in/profile/sagar-juneja/",
-        image: "./images/sagar.jpg",
+        image: "../images/sagar.jpg",
       },
       {
         name: "Gaurav Saini",
@@ -468,21 +468,21 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/dr-gaurav-saini-8a09ab18/?originalSubdomain=in",
         website: "https://nitkkr.ac.in/author/gaurav-saini/",
-        image: "./images/gaurav.jpg",
+        image: "../images/gaurav.jpg",
       },
       {
         name: "Gargi Khanna",
         institute: "NIT Hamirpur",
         linkedin:
           "https://www.linkedin.com/in/gargi-khanna-9605078/?originalSubdomain=in",
-        image: "./images/gargi.jpg",
+        image: "../images/gargi.jpg",
       },
       {
         name: "Navneet Sehgal",
         institute: "Chandigarh University",
         linkedin:
           "https://www.linkedin.com/in/dr-navneet-sehgal-b090389b/?originalSubdomain=in",
-        image: "./images/navneet.jpg",
+        image: "../images/navneet.jpg",
       },
     ],
   },
@@ -496,20 +496,20 @@ const committees = [
           "https://www.linkedin.com/in/dr-somesh-kumar-dahiya-b551a836/?originalSubdomain=in",
         website:
           "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Somesh",
-        image: "./images/somesh.jpg ",
+        image: "../images/somesh.jpg ",
       },
       {
         name: "Sharda Vashisth",
         institute: "The NorthCap University, Gurugoan",
         linkedin: "https://www.linkedin.com/in/dr-sharda-vashisth-23a25021/",
-        image: "./images/sharda.jpg",
+        image: "../images/sharda.jpg",
       },
       {
         name: "Simranjit Singh",
         institute: "IEEE Chandigarh Subsection & PEC Chandigarh",
         linkedin: "https://www.linkedin.com/in/simranjitsingh87/",
         website: "https://pec.ac.in/ece/faculty/simranjit-singh",
-        image: "./images/simranjit.jpg",
+        image: "../images/simranjit.jpg",
       },
       {
         name: "Ganesh C. Patil",
@@ -517,7 +517,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/ganesh-c-patil-79b6306/?originalSubdomain=in",
         website: "https://vnit.ac.in/engineering/cvlsi/dr-ganesh-c-patil/",
-        image: "./images/ganesh.jpg",
+        image: "../images/ganesh.jpg",
       },
     ],
   },
