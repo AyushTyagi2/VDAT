@@ -13,7 +13,7 @@ const committees = [
         institute: "VLSI Society of India",
         linkedin:
           "https://www.linkedin.com/in/dr-satya-gupta-950787/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-        image: "./images/satya.jpg",
+        image: "../images/satya.jpg",
       },
     ],
   },
