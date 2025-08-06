@@ -86,7 +86,7 @@
           <div className="flex justify-center items-center">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 h-48 flex items-center justify-center">
               <img 
-                src="./logos/mandi__.png" 
+                src="../logos/mandi__.png" 
                 alt="IIT Mandi Logo" 
                 className="max-w-full max-h-full"
               />
