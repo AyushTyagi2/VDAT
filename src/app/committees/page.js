@@ -145,7 +145,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/hitesh-shrimali-56183b19/?originalSubdomain=in",
         website: "https://faculty.iitmandi.ac.in/~hitesh/",
-        image: "../images/hitesh.jpg",
+        image: "../images/hitesh.png",
       },
       {
         name: "Brajesh Rawat",
