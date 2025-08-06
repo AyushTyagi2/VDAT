@@ -289,6 +289,7 @@ const SponsorsSection = ({ title, items, comingSoon = false }) => (
             { src: './images/springer.png', alt: 'Springer Logo' },
             { src: './logos/NXP.jpg', alt: 'NXP Logo' },
             { src: './logos/SOC.png', alt: 'SOC TeamUp' },
+            { src: './logos/sqube.png', alt: 'S-Qube systems' },
           ].map((logo, i) => (
             <div
               key={i}

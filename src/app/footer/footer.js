@@ -20,6 +20,7 @@ const Footer = () => {
     "Publication Sponsor": "/images/springer.png",
     "Inaugration Sponsor": "/logos/NXP.jpg",
     "Startup Partner": "/logos/SOC.png",
+    "Exhibitor": "/logos/sqube.png",
   };
 
   return (
