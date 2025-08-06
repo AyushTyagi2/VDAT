@@ -45,7 +45,7 @@ export default function SessionLayout({
   sessionTime = "2:00 PM - 3:30 PM",
   sessionDate = "August 8, 2025",
   sessionLocation = "Adab Arz Hall",
-  sessionChairperson = "Chair 1 : Prof. Binod Kumar, Chair 2 : Prof. Abhishek Sharma",
+  sessionChairperson = "Chair 1 :  Prof. Satinder Sharma., Chair 2 : Prof. Abhishek Sharma",
   sessionDescription = "",
   
   // Papers Array
