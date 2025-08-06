@@ -100,7 +100,7 @@
           <div className="flex flex-wrap justify-center items-center gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./images/Agmatel_Keyisght Logo HD.png" 
+                src="../images/Agmatel_Keyisght Logo HD.png" 
                 alt="Agmetal-Keysight Logo" 
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
@@ -108,7 +108,7 @@
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./images/yourpedia.png"
+                src="../images/yourpedia.png"
                 alt="Yourpedia Logo"
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
@@ -122,7 +122,7 @@
           <div className="flex flex-wrap justify-center items-center gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./images/yourpedia.png" 
+                src="../images/yourpedia.png" 
                 alt="Yourpedia Logo" 
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
@@ -136,7 +136,7 @@
           <div className="flex flex-wrap justify-center items-center gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./logos/SOC.png" 
+                src="../logos/SOC.png" 
                 alt="Yourpedia Logo" 
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
@@ -151,7 +151,7 @@
           <div className="flex flex-wrap justify-center items-center gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./logos/NXP.jpg" 
+                src="../logos/NXP.jpg" 
                 alt="NXP_Logo" 
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
@@ -164,7 +164,7 @@
           <div className="flex flex-wrap justify-center items-center gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./images/springer.png" 
+                src="../images/springer.png" 
                 alt="Springer Logo" 
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
@@ -177,7 +177,7 @@
           <div className="flex flex-wrap justify-center items-center gap-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-48 flex items-center justify-center">
               <img 
-                src="./logos/OS.png" 
+                src="../logos/OS.png" 
                 alt="Orbit & Skyline India Pvt. Ltd Logo" 
                 className="max-w-full max-h-full"
                 style={{ paddingRight: "30px" }}
