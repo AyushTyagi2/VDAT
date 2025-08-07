@@ -26,7 +26,7 @@ const committees = [
         linkedin:
           "https://www.linkedin.com/in/prof-rajeev-ahuja-6436b3335/?originalSubdomain=in",
         website: "https://www.iitrpr.ac.in/director",
-        image: "../images/rajeev.jpeg",
+        image: "../images/rajeev.png",
       },
       {
         name: "Prof Laxmidhar Behera",
