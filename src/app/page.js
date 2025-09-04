@@ -11,6 +11,7 @@ import AboutSection from "./home/about";
 import SpeakersSection from "./home/speaker";
 import Footer from "./footer/footer";
 import Navbar from "./home/Navbar";
+import AwardeesSection from "./awardee/page";
 
 // Improved Theme Banner Component with more visual elements
 const ThemeBanner = () => {
@@ -479,6 +480,7 @@ const HomePage = () => {
         setCurrentImageIndex={setCurrentImageIndex}
         swipeHandlers={handlers}
       />
+      <AwardeesSection/>
 
       <ThemeBanner />
       <SpeakersSection speakers={speakers} />
